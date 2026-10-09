@@ -434,7 +434,11 @@
   font-size: var(--ds-typography-body-small-font-size);
   cursor: pointer;
 }
-.ds-tag-chip__remove { padding-inline: var(--ds-size-space-2xs); }
+.ds-tag-chip__remove {
+  justify-content: center;
+  min-width: var(--ds-size-layout-target-minimum);
+  padding-inline: var(--ds-size-space-2xs);
+}
 
 /* Stat */
 .ds-stat {

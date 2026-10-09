@@ -55,3 +55,4 @@ With `prefers-reduced-motion: reduce`, every transition uses `motion.reduced-dur
 
 ## Touch targets
 Minimum control height `size.layout.control-height` = 44px. The `small` variants (32px) are only for dense desktop areas, never as the only control on a mobile card.
+No pointer target is ever smaller than `size.layout.target-minimum` (24 × 24px, WCAG 2.2 AA 2.5.8). Icon-only buttons inside other components (TagChip remove, Modal close, Notification dismiss, SearchField clear) get at least that hit area.

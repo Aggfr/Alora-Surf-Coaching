@@ -11,10 +11,22 @@ The design system for the **Coach** and **Surfer** platforms of Alora Surf Coach
 | A designer | The Figma library and [docs/principles.md](docs/principles.md) |
 | A developer | This README, [tokens/README.md](tokens/README.md) and each component's `.docs.md` |
 
+### Install
+The package is published to GitHub Packages. Add an `.npmrc` next to your app's `package.json`:
+```
+@aggfr:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
+`GITHUB_TOKEN` must be a token with `read:packages`. Then:
+```bash
+npm install @aggfr/alora-design-system
+```
+The app also needs `react` and `react-dom` (18 or later) and must load the Inter and Outfit fonts (e.g. from Google Fonts).
+
 ```tsx
-import './dist/tokens.css';
-import './styles/components.css';
-import { Button, FormField, Input } from './index';
+import '@aggfr/alora-design-system/tokens.css';
+import '@aggfr/alora-design-system/components.css';
+import { Button, FormField, Input } from '@aggfr/alora-design-system';
 
 <html data-theme="dark">   {/* or "light" */}
   <Button variant="primary" leadingIcon="upload" onPress={upload}>Upload clip</Button>
@@ -25,10 +37,13 @@ import { Button, FormField, Input } from './index';
 ```
 design-system/
 ├── MANIFEST.json                 Index of tokens and components (schema: docs/manifest.schema.json)
+├── package.json                  npm package @aggfr/alora-design-system
+├── CHANGELOG.md
 ├── index.ts                      Public API
+├── tests/                        Component tests (Vitest + Testing Library + axe)
 ├── tokens/
 │   ├── primitives.tokens.json    Layer 1 · base values (198)
-│   ├── semantic.tokens.json      Layer 2 · intent, dark theme (130)
+│   ├── semantic.tokens.json      Layer 2 · intent, dark theme (131)
 │   ├── semantic.light.tokens.json         light theme (72 color overrides)
 │   ├── component.tokens.json     Layer 3 · per component (86)
 │   └── README.md
@@ -76,10 +91,20 @@ Variables: **Primitives** (hidden from publishing), **Semantic** (Dark / Light m
 
 ## Workflow
 ```bash
-python3 scripts/build_tokens.py     # after editing tokens/*.json
-python3 scripts/build_docs.py       # after editing scripts/component_specs.py
-python3 scripts/check_hardcoded.py  # before every commit
+npm ci                      # once
+npm run tokens              # after editing tokens/*.json (validates layers, writes dist/)
+npm run docs                # after editing scripts/component_specs.py
+npm run lint:tokens         # no value bypasses the tokens
+npm run typecheck
+npm test                    # component behavior, keyboard and axe tests (tests/)
+npm run build               # builds the package into build/
 ```
+CI (`.github/workflows/design-system.yml`) runs all of these on every pull request and also fails if `dist/`, `MANIFEST.json` or the generated component docs were not regenerated. The Storybook workflow audits every story in both themes with axe (including contrast) and compares screenshots against `storybook/tests/__screenshots__`; see `storybook/README.md` to update the baselines.
+
+## Releasing
+1. Add the changes under **Unreleased** in [CHANGELOG.md](CHANGELOG.md) and pick the version with the rules at the top of that file.
+2. Set the same version in `package.json` (and in this README), move the changelog entries under it and merge to `main`.
+3. Tag the merge commit `design-system-v<version>` and push the tag. The release workflow runs the checks, publishes the package to GitHub Packages and creates a GitHub release.
 Component `.docs.md`, `.examples.md` and `.tokens.json` files are generated from `scripts/component_specs.py`: edit the spec, not the generated files.
 
 ## Design decisions
@@ -89,4 +114,4 @@ Component `.docs.md`, `.examples.md` and `.tokens.json` files are generated from
 4. **Light theme:** proposed by the system; the original designs are dark only.
 
 ## Changelog
-- **1.0.0** (2026-10-09): first version, extracted from Coach Platform and Surfer Platform.
+See [CHANGELOG.md](CHANGELOG.md).

@@ -9,12 +9,31 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
-    "types": ["vite/client", "node"],
+    "types": [
+      "vite/client",
+      "node"
+    ],
     "baseUrl": ".",
     "paths": {
-      "react": ["./node_modules/@types/react"],
-      "react/*": ["./node_modules/@types/react/*"]
+      "react": [
+        "./node_modules/@types/react"
+      ],
+      "react/*": [
+        "./node_modules/@types/react/*"
+      ]
     }
   },
-  "include": [".storybook/**/*", "stories/**/*", "../design-system/**/*.ts", "../design-system/**/*.tsx"]
+  "include": [
+    ".storybook/**/*",
+    "stories/**/*",
+    "../design-system/**/*.ts",
+    "../design-system/**/*.tsx"
+  ],
+  "exclude": [
+    "../design-system/node_modules",
+    "../design-system/build",
+    "../design-system/tests",
+    "../design-system/*.config.ts",
+    "tests"
+  ]
 }

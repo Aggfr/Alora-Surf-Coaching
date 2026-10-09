@@ -1,0 +1,72 @@
+{
+  "name": "@aggfr/alora-design-system",
+  "version": "1.0.0",
+  "description": "Alora Surf Coaching design system: DTCG tokens, React components and styles for the Coach and Surfer platforms.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aggfr/Alora-Surf-Coaching.git",
+    "directory": "design-system"
+  },
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./components.css": "./styles/components.css",
+    "./tokens.resolved.json": "./dist/tokens.resolved.json",
+    "./tokens/*.json": "./tokens/*.json",
+    "./manifest.json": "./MANIFEST.json",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "build",
+    "dist",
+    "styles",
+    "tokens",
+    "docs",
+    "MANIFEST.json",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "tokens": "python3 scripts/build_tokens.py",
+    "docs": "python3 scripts/build_docs.py",
+    "lint:tokens": "python3 scripts/check_hardcoded.py",
+    "check:generated": "npm run tokens && npm run docs && git diff --exit-code -- dist MANIFEST.json components",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "axe-core": "4.11.0",
+    "jsdom": "27.0.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tsup": "8.5.0",
+    "typescript": "5.9.3",
+    "vitest": "4.0.8"
+  }
+}

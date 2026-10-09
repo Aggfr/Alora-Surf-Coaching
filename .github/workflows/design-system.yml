@@ -1,0 +1,44 @@
+name: Design system
+
+on:
+  push:
+    branches: [main]
+    paths: ['design-system/**', '.github/workflows/design-system.yml']
+  pull_request:
+    paths: ['design-system/**', '.github/workflows/design-system.yml']
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: design-system-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: design-system
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: design-system/package-lock.json
+      - run: npm ci
+      - name: Tokens, docs and MANIFEST are regenerated and committed
+        run: npm run check:generated
+      - name: No values bypass the tokens
+        run: npm run lint:tokens
+      - run: npm run typecheck
+      - name: Component tests (behavior, keyboard, axe)
+        run: npm test
+      - run: npm run build
+      - name: Package contents
+        run: npm pack --dry-run
