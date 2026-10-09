@@ -946,7 +946,7 @@
     },
     "color.action.primary.background": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "color.action.primary.background-start": {
       "type": "color",
@@ -1778,7 +1778,7 @@
     },
     "avatar.background": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "avatar.foreground": {
       "type": "color",
@@ -1794,7 +1794,7 @@
     },
     "checkbox.background-checked": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "checkbox.foreground-checked": {
       "type": "color",
@@ -1822,7 +1822,7 @@
     },
     "switch.track-on": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "switch.thumb": {
       "type": "color",
@@ -2886,7 +2886,7 @@
     },
     "color.action.primary.background": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "color.action.primary.background-start": {
       "type": "color",
@@ -3718,7 +3718,7 @@
     },
     "avatar.background": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "avatar.foreground": {
       "type": "color",
@@ -3734,7 +3734,7 @@
     },
     "checkbox.background-checked": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "checkbox.foreground-checked": {
       "type": "color",
@@ -3762,7 +3762,7 @@
     },
     "switch.track-on": {
       "type": "color",
-      "value": "#3b8eaa"
+      "value": "#2f7189"
     },
     "switch.thumb": {
       "type": "color",

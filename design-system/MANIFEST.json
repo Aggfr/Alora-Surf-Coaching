@@ -3574,11 +3574,11 @@
       "cssVariable": "--ds-color-action-primary-background",
       "figmaVariable": "color/action/primary/background",
       "status": "stable",
-      "references": "color.ocean.600",
-      "description": "Main action of the view. One per view. Same teal as the Coach Platform CTA (#3b8eaa).",
+      "references": "color.ocean.700",
+      "description": "Solid brand fill for selected controls and avatars (checkbox, switch, avatar). Darker than the CTA gradient so white content meets 4.5:1.",
       "themes": {
-        "dark": "{color.ocean.600}",
-        "light": "{color.ocean.600}"
+        "dark": "{color.ocean.700}",
+        "light": "{color.ocean.700}"
       }
     },
     {

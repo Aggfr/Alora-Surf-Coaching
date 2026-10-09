@@ -127,8 +127,8 @@
       "primary": {
         "background": {
           "$type": "color",
-          "$value": "{color.ocean.600}",
-          "$description": "Main action of the view. One per view. Same teal as the Coach Platform CTA (#3b8eaa)."
+          "$value": "{color.ocean.700}",
+          "$description": "Solid brand fill for selected controls and avatars (checkbox, switch, avatar). Darker than the CTA gradient so white content meets 4.5:1."
         },
         "background-start": {
           "$type": "color",
