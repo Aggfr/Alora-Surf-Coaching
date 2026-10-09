@@ -41,6 +41,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: GitHub release
-        run: gh release create "$GITHUB_REF_NAME" --title "Design system ${GITHUB_REF_NAME#design-system-v}" --notes "See design-system/CHANGELOG.md."
+        run: gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1 || gh release create "$GITHUB_REF_NAME" --title "Design system ${GITHUB_REF_NAME#design-system-v}" --notes "See design-system/CHANGELOG.md."
         env:
           GH_TOKEN: ${{ github.token }}
