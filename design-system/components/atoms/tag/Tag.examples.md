@@ -1,14 +1,14 @@
-# Tag · Ejemplos
+# Tag · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Tag } from '@alora/design-system';
 
 <Tag tone="warning" icon="clock">1h 9m left</Tag>
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Tag onClick={…}>Filter</Tag>
 ```
-Por qué: Usar Tag como botón.
+Why: Using Tag as a button.

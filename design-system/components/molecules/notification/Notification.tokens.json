@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Notification. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: notification.background, notification.border, notification.radius, color.feedback.*, typography.heading-small, typography.body-small.",
+  "$description": "Notification tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: notification.background, notification.border, notification.radius, color.feedback.*, typography.heading-small, typography.body-small.",
   "notification": {
     "background": {
       "$type": "color",

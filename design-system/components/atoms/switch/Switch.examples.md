@@ -1,14 +1,14 @@
-# Switch · Ejemplos
+# Switch · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Switch } from '@alora/design-system';
 
 <Switch label="Email notifications" isOn={notify} onChange={setNotify} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Switch label="Accept terms" />
 ```
-Por qué: Switch dentro de un formulario con botón Guardar.
+Why: A Switch inside a form with a Save button.

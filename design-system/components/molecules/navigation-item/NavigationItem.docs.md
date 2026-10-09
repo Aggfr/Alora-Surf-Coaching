@@ -1,65 +1,65 @@
 # NavigationItem
 
-**Categoría Atomic Design:** Molecule · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [NavigationItem](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-293)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `NavigationItem` — Molecule.
 
-## 2. Propósito
-Entrada de navegación principal con icono y etiqueta.
+## 2. Purpose
+Main navigation entry with an icon and a label.
 
-## 3. Cuándo usarlo
-- Dentro de Sidebar.
+## 3. When to use
+- Inside Sidebar.
 
-## 4. Cuándo no usarlo
-- Acciones: Button.
+## 4. When not to use
+- Actions: Button.
 
-## 5. Anatomía
-1. Icono 28px
-2. Etiqueta
-3. Divisor inferior
+## 5. Anatomy
+1. 24px icon
+2. Label
+3. Bottom divider
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `string` | — | Sí | Destino. |
-| `icon` | `IconName` | — | Sí | Icono. |
-| `href` | `string` | — | Sí | URL. |
-| `isActive` | `boolean` | `false` | No | Página actual. |
+| `label` | `string` | — | Yes | Destination. |
+| `icon` | `IconName` | — | Yes | Icon. |
+| `href` | `string` | — | Yes | URL. |
+| `isActive` | `boolean` | `false` | No | Current page. |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `hover`, `active`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `hover`, `active`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `navigation-item.*`
 - `color.action.ghost.background-hover`
 - `size.space.large`
 
-Los tokens propios del componente están en [`NavigationItem.tokens.json`](./NavigationItem.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`NavigationItem.tokens.json`](./NavigationItem.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Hover tinta el fondo.
+## 9. Interaction
+- Hover tints the icon with the brand color.
 
-## 10. Accesibilidad
-- `<a>` con `aria-current=page` si está activo.
-- Activo se distingue por color y por icono relleno de marca, no solo por color de texto.
+## 10. Accessibility
+- `<a>` with `aria-current=page` when active.
+- Active state is shown by both text and icon color, not text color alone.
 
-## 11. Reglas de composición
-- Solo dentro de Sidebar.
-- Depende de: `Icon`, `Text`.
+## 11. Composition rules
+- Only inside Sidebar.
+- Depends on: `Icon`, `Text`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <NavigationItem label="Queue" icon="play-circle" href="/queue" isActive />
 ```
-Más ejemplos en [`NavigationItem.examples.md`](./NavigationItem.examples.md).
+More examples in [`NavigationItem.examples.md`](./NavigationItem.examples.md).
 
-## 13. Anti-patrones
-- Más de un activo a la vez.
+## 13. Anti-patterns
+- More than one active item at once.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

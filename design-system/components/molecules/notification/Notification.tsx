@@ -17,7 +17,7 @@ export interface NotificationProps {
   className?: string;
 }
 
-/** Molecule · Mensaje de sistema inline o toast. Docs: ./Notification.docs.md */
+/** Molecule · Inline or toast system message. Docs: ./Notification.docs.md */
 export function Notification({ tone = 'info', title, description, action, onDismiss, className }: NotificationProps) {
   return (
     <div role={tone === 'danger' ? 'alert' : 'status'} className={cx('ds-notification', `ds-notification--${tone}`, className)}>

@@ -11,7 +11,7 @@ export interface AuthTemplateProps {
   className?: string;
 }
 
-/** Template · Panel centrado para login, registro y recuperación. Docs: ./AuthTemplate.docs.md */
+/** Template · Centered panel for log in, sign up and password recovery. Docs: ./AuthTemplate.docs.md */
 export function AuthTemplate({ title, subtitle, children, className }: AuthTemplateProps) {
   return (
     <main className={cx('ds-auth-template', className)}>

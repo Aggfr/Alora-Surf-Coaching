@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Input. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: input.background, input.foreground, input.placeholder, input.border.default, input.border.hover, input.border.focus, input.border.error, input.radius, input.padding-horizontal, input.typography, size.layout.control-height, size.border.focus.",
+  "$description": "Input tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: input.background, input.foreground, input.placeholder, input.border.default, input.border.hover, input.border.focus, input.border.error, input.radius, input.padding-horizontal, input.typography, size.layout.control-height, size.border.focus.",
   "input": {
     "background": {
       "$type": "color",

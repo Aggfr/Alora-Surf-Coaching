@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Modal. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: modal.background, modal.overlay, modal.radius, modal.padding, modal.shadow, z-index.modal, motion.transition-enter.",
+  "$description": "Modal tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: modal.background, modal.overlay, modal.radius, modal.padding, modal.shadow, layer.modal, motion.transition-enter.",
   "modal": {
     "background": {
       "$type": "color",

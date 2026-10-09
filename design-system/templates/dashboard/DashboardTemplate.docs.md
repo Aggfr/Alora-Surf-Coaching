@@ -1,53 +1,53 @@
 # DashboardTemplate
 
-> **Nivel:** template · **Estado:** stable · **Figma:** [14:511](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-511)
+> **Level:** template · **Status:** stable · **Figma:** [14:511](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-511)
 
-## Propósito
-Estructura de todas las vistas autenticadas de Coach y Surfer: navegación fija a la izquierda y una única columna de contenido. Define dónde va cada cosa, no qué contenido lleva.
+## Purpose
+Structure of every authenticated Coach and Surfer view: fixed navigation on the left and a single content column. It defines where things go, not what content they hold.
 
-## Cuándo usarlo
-- Home, Queue, Surfers, Calendar, Sessions, Profile: cualquier vista con Sidebar.
+## When to use
+- Home, Queue, Surfers, Calendar, Sessions, Profile: any view with a Sidebar.
 
-## Cuándo NO usarlo
-- Login, registro, recuperación u onboarding: usar **AuthTemplate**.
-- Vistas a pantalla completa (reproductor de vídeo de revisión): pendiente de template propio.
+## When not to use
+- Log in, sign up, password recovery or onboarding: use **AuthTemplate**.
+- Full-screen views (review video player): a dedicated template is pending.
 
-## Anatomía
+## Anatomy
 ```
 ┌──────────┬──────────────────────────────────────────┐
-│          │  [Slot header] PageHeader                 │  gap: size.space.xl
+│          │  [Header slot] PageHeader                 │  gap: size.space.xl
 │ Sidebar  │  ┌─────────────────────────────────────┐  │
-│ 116px    │  │ [Slot content] máx. 810px           │  │  gap: size.space.large
-│          │  │ Stats · filtros · lista / cards      │  │
+│ 116px    │  │ [Content slot] max. 810px           │  │  gap: size.space.large
+│          │  │ Stats · filters · list / cards       │  │
 │          │  └─────────────────────────────────────┘  │
 └──────────┴──────────────────────────────────────────┘
           padding: size.space.page-gutter
 ```
 
 ## Props
-| Prop | Tipo | Requerido | Descripción |
+| Prop | Type | Required | Description |
 |---|---|---|---|
-| `navigation` | `SidebarProps` | sí | `product` ('coach' \| 'surfer') y `activeHref`. |
-| `header` | `ReactNode` | sí | Slot **Header**. Siempre un `PageHeader`. |
-| `children` | `ReactNode` | sí | Slot **Content**. Organismos apilados en una columna. |
+| `navigation` | `SidebarProps` | yes | `product` ('coach' \| 'surfer') and `activeHref`. |
+| `header` | `ReactNode` | yes | **Header** slot. Always a `PageHeader`. |
+| `children` | `ReactNode` | yes | **Content** slot. Organisms stacked in one column. |
 
 ## Tokens
-`color.background.canvas`, `size.space.page-gutter`, `size.space.xl`, `size.space.large`, `size.layout.content-width`, `size.layout.sidebar-width` (vía Sidebar).
+`color.background.canvas`, `size.space.page-gutter`, `size.space.xl`, `size.space.large`, `size.layout.content-width`, `size.layout.sidebar-width` (through Sidebar).
 
-## Reglas de composición
-- El slot Content solo admite organismos o filas de moléculas (`ds-stat-row`, `ds-toolbar`, `ds-stack`). Nunca átomos sueltos.
-- Una sola acción primaria por vista. Si el PageHeader tiene un Button primary, las cards usan secondary.
-- No anidar un DashboardTemplate dentro de otro.
+## Composition rules
+- The Content slot only accepts organisms or rows of molecules (`ds-stat-row`, `ds-toolbar`, `ds-stack`). Never loose atoms.
+- One primary action per view. If the PageHeader has a primary Button, cards use secondary.
+- Do not nest a DashboardTemplate inside another.
 
 ## Responsive
-Por debajo de `breakpoint.lg` (1024px) la Sidebar se sustituirá por **NavigationBar** (planned). Mientras tanto la columna de contenido ocupa el 100% del ancho disponible.
+Below `breakpoint.lg` (1024px) the Sidebar will be replaced by **NavigationBar** (planned). Until then, the content column takes 100% of the available width.
 
-## Accesibilidad
-- `<nav aria-label="Main">` + `<main>`: landmarks únicos por vista.
-- El `PageHeader` aporta el único `<h1>` de la página.
-- Añadir un enlace "Skip to content" en la app si la Sidebar crece de 5 items.
+## Accessibility
+- `<nav aria-label="Main">` + `<main>`: one landmark of each per view.
+- The `PageHeader` provides the page's only `<h1>`.
+- Add a "Skip to content" link in the app if the Sidebar grows beyond 5 items.
 
-## Ejemplo
+## Example
 ```tsx
 <DashboardTemplate
   navigation={{ product: 'coach', activeHref: '/queue' }}

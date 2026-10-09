@@ -26,7 +26,7 @@ export interface SidebarProps {
   className?: string;
 }
 
-/** Organism · Navegación principal vertical. Docs: ./Sidebar.docs.md */
+/** Organism · Vertical main navigation. Docs: ./Sidebar.docs.md */
 export function Sidebar({ product, activeHref, items = defaultItems[product], className }: SidebarProps) {
   return (
     <nav aria-label="Main" className={cx('ds-sidebar', className)}>

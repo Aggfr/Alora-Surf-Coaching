@@ -1,46 +1,46 @@
 # AuthTemplate
 
-> **Nivel:** template · **Estado:** stable · **Figma:** [14:550](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-550)
+> **Level:** template · **Status:** stable · **Figma:** [14:550](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-550)
 
-## Propósito
-Panel centrado para flujos sin sesión: log in, sign up, recuperación de contraseña y pasos de onboarding.
+## Purpose
+Centered panel for signed-out flows: log in, sign up, password recovery and onboarding steps.
 
-## Cuándo usarlo
-- Cualquier vista previa a la autenticación o con un único formulario como foco.
+## When to use
+- Any view before authentication, or any view whose single focus is one form.
 
-## Cuándo NO usarlo
-- Vistas autenticadas con navegación: usar **DashboardTemplate**.
-- Formularios dentro de una vista existente: usar **FormSection** o **Modal**.
+## When not to use
+- Authenticated views with navigation: use **DashboardTemplate**.
+- Forms inside an existing view: use **FormSection** or **Modal**.
 
-## Anatomía
+## Anatomy
 ```
 ┌──────────────────────────────────────────┐
 │               Heading (h1)                │
-│               Text secundario             │  gap: size.space.xl
+│               Secondary text              │  gap: size.space.xl
 │        ┌────────────────────────┐         │
-│        │ [Slot form] máx. 400px │         │
+│        │ [Form slot] max. 400px │         │
 │        └────────────────────────┘         │
 └──────────────────────────────────────────┘
-   centrado vertical y horizontal · fondo color.background.canvas
+   centered vertically and horizontally · color.background.canvas background
 ```
 
 ## Props
-| Prop | Tipo | Requerido | Descripción |
+| Prop | Type | Required | Description |
 |---|---|---|---|
-| `title` | `string` | sí | Título del paso ("Welcome back"). |
-| `subtitle` | `string` | no | Qué consigue el usuario al completar el formulario. |
-| `children` | `ReactNode` | sí | Slot **Form**. Siempre un `FormSection`. |
+| `title` | `string` | yes | Step title ("Welcome back"). |
+| `subtitle` | `string` | no | What the user gets by completing the form. |
+| `children` | `ReactNode` | yes | **Form** slot. Always a `FormSection`. |
 
 ## Tokens
 `color.background.canvas`, `size.layout.form-width`, `size.space.page-gutter`, `size.space.xl`.
 
-## Reglas de composición
-- Un único FormSection por vista. Los enlaces secundarios ("Create an account") van como `secondaryAction` del FormSection.
-- Sin Sidebar ni PageHeader.
+## Composition rules
+- One FormSection per view. Secondary links ("Create an account") go in the FormSection's `secondaryAction`.
+- No Sidebar or PageHeader.
 
-## Accesibilidad
-- `<main>` como landmark y `<h1>` único.
-- El foco inicial va al primer campo del formulario.
+## Accessibility
+- `<main>` landmark and a single `<h1>`.
+- Initial focus goes to the first form field.
 
-## Ejemplo
-Ver [SurferLoginPage](../../pages/surfer-login/SurferLoginPage.docs.md).
+## Example
+See [SurferLoginPage](../../pages/surfer-login/SurferLoginPage.docs.md).

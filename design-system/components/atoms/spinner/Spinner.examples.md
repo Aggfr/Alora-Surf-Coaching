@@ -1,14 +1,14 @@
-# Spinner · Ejemplos
+# Spinner · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Spinner } from '@alora/design-system';
 
 <Spinner size="small" label="Uploading video" />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <img src="loader.gif" />
 ```
-Por qué: Varios spinners simultáneos en una vista.
+Why: Several spinners at once in one view.

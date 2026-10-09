@@ -11,7 +11,7 @@ export interface EmptyStateProps {
   className?: string;
 }
 
-/** Organism · Explica un área sin contenido y ofrece el siguiente paso. Docs: ./EmptyState.docs.md */
+/** Organism · Explains an empty area and offers the next step. Docs: ./EmptyState.docs.md */
 export function EmptyState({ message, icon = 'info', action, className }: EmptyStateProps) {
   return (
     <section className={cx('ds-card', 'ds-empty-state', className)}>

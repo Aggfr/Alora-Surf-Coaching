@@ -1,64 +1,64 @@
 # Avatar
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Avatar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-119)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Avatar` — Atom.
 
-## 2. Propósito
-Representa a una persona con sus iniciales.
+## 2. Purpose
+Represents a person with their initials.
 
-## 3. Cuándo usarlo
-- Junto al nombre de un surfer o coach (listas, tarjetas, cabecera).
+## 3. When to use
+- Next to a surfer or coach name (lists, cards, header).
 
-## 4. Cuándo no usarlo
-- Como único identificador de una persona: mostrar siempre el nombre.
+## 4. When not to use
+- As the only identifier of a person: always show the name.
 
-## 5. Anatomía
-1. Círculo (`avatar.radius`)
-2. Iniciales
+## 5. Anatomy
+1. Circle (`avatar.radius`)
+2. Initials
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `name` | `string` | — | Sí | Nombre completo; se calculan las iniciales. |
+| `name` | `string` | — | Yes | Full name; initials are derived from it. |
 | `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | 24 / 32 / 64 px. |
-| `tone` | `'brand' \| 'elite' \| 'progression' \| 'neutral'` | `'brand'` | No | Color de fondo; los tonos de plan van con Badge de plan. |
+| `tone` | `'brand' \| 'elite' \| 'progression' \| 'neutral'` | `'brand'` | No | Background color; plan tones go with a plan Badge. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **size:** `small`, `medium`, `large`
 - **tone:** `brand`, `elite`, `progression`, `neutral`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `avatar.background`
 - `avatar.foreground`
 - `avatar.radius`
 - `color.plan.*.foreground`
 - `color.text.inverse`
 
-Los tokens propios del componente están en [`Avatar.tokens.json`](./Avatar.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Avatar.tokens.json`](./Avatar.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- No interactivo; si abre el perfil, envolver en un enlace con el nombre.
+## 9. Interaction
+- Not interactive; if it opens the profile, wrap it in a link with the name.
 
-## 10. Accesibilidad
-- Iniciales con `aria-hidden`; el nombre visible al lado da el contexto.
+## 10. Accessibility
+- Initials are `aria-hidden`; the visible name next to it gives context.
 
-## 11. Reglas de composición
+## 11. Composition rules
 - ListItem type=person, SubmissionCard, PageHeader.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Avatar name="Khata Kraiwan" tone="elite" />
 ```
-Más ejemplos en [`Avatar.examples.md`](./Avatar.examples.md).
+More examples in [`Avatar.examples.md`](./Avatar.examples.md).
 
-## 13. Anti-patrones
-- Comunicar el plan solo con el color del avatar.
+## 13. Anti-patterns
+- Communicating the plan only through the avatar color.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

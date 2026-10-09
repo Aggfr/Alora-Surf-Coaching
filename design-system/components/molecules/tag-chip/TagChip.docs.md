@@ -1,38 +1,38 @@
 # TagChip
 
-**Categoría Atomic Design:** Molecule · **Estado:** `beta` · **Versión:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `beta` · **Version:** 1.0.0
 **Figma:** [TagChip](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-139)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `TagChip` — Molecule.
 
-## 2. Propósito
-Chip seleccionable o eliminable.
+## 2. Purpose
+Selectable or removable chip.
 
-## 3. Cuándo usarlo
-- Filtros (nivel, tipo de ola), etiquetas que el usuario añade o quita.
+## 3. When to use
+- Filters (level, wave type), labels the user adds or removes.
 
-## 4. Cuándo no usarlo
-- Información estática: Tag o Badge.
+## 4. When not to use
+- Static information: Tag or Badge.
 
-## 5. Anatomía
-1. Contenedor píldora
+## 5. Anatomy
+1. Pill container
 2. Label
-3. Botón quitar opcional
+3. Optional remove button
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `string` | — | Sí | Texto. |
-| `isSelected` | `boolean` | `false` | No | Seleccionado. |
-| `onToggle` | `() => void` | — | No | Selección. |
-| `onRemove` | `() => void` | — | No | Muestra botón quitar. |
+| `label` | `string` | — | Yes | Text. |
+| `isSelected` | `boolean` | `false` | No | Selected. |
+| `onToggle` | `() => void` | — | No | Selection. |
+| `onRemove` | `() => void` | — | No | Shows a remove button. |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `hover`, `selected`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `hover`, `selected`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `tag.radius`
 - `tag.padding-horizontal`
 - `color.action.secondary.*`
@@ -40,28 +40,28 @@ Chip seleccionable o eliminable.
 - `color.border.brand`
 - `color.text.brand`
 
-Los tokens propios del componente están en [`TagChip.tokens.json`](./TagChip.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`TagChip.tokens.json`](./TagChip.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Clic alterna; el botón quitar no alterna.
+## 9. Interaction
+- Clicking toggles; the remove button does not toggle.
 
-## 10. Accesibilidad
-- `<button aria-pressed>`; quitar es otro botón con `aria-label="Remove {label}"`.
+## 10. Accessibility
+- `<button aria-pressed>`; remove is a separate button with `aria-label="Remove {label}"`.
 
-## 11. Reglas de composición
-- Grupos horizontales con wrap y gap `size.space.small`.
-- Depende de: `Text`, `Icon`.
+## 11. Composition rules
+- Horizontal groups that wrap, with a `size.space.small` gap.
+- Depends on: `Text`, `Icon`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <TagChip label="Advanced" isSelected onToggle={toggle} onRemove={remove} />
 ```
-Más ejemplos en [`TagChip.examples.md`](./TagChip.examples.md).
+More examples in [`TagChip.examples.md`](./TagChip.examples.md).
 
-## 13. Anti-patrones
-- Usar TagChip para estados del sistema.
+## 13. Anti-patterns
+- Using TagChip for system states.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `beta`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `beta`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

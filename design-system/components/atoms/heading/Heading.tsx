@@ -14,7 +14,7 @@ export interface HeadingProps {
   className?: string;
 }
 
-/** Atom · Títulos jerárquicos. Docs: ./Heading.docs.md */
+/** Atom · Hierarchical headings. Docs: ./Heading.docs.md */
 export function Heading({ children, level = 'medium', as, id, className }: HeadingProps) {
   const Tag = as ?? defaultElement[level];
   return <Tag id={id} className={cx('ds-heading', `ds-heading--${level}`, className)}>{children}</Tag>;

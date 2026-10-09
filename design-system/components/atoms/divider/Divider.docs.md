@@ -1,58 +1,58 @@
 # Divider
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Divider](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-186)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Divider` — Atom.
 
-## 2. Propósito
-Separa grupos de contenido.
+## 2. Purpose
+Separates groups of content.
 
-## 3. Cuándo usarlo
-- Entre el bloque de stats y la lista de envíos; entre filas de lista.
+## 3. When to use
+- Between the stats block and the submissions list; between list rows.
 
-## 4. Cuándo no usarlo
-- Para crear espacio: usar tokens `size.space.*`.
+## 4. When not to use
+- To create space: use `size.space.*` tokens.
 
-## 5. Anatomía
-1. Línea de 1px (`divider.color`)
+## 5. Anatomy
+1. 1px line (`divider.color`)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | No | Dirección. |
-| `isDecorative` | `boolean` | `true` | No | Si es false, `role=separator`. |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | No | Direction. |
+| `isDecorative` | `boolean` | `true` | No | When false, `role=separator`. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **orientation:** `horizontal`, `vertical`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `divider.color`
 - `size.border.default`
 
-Los tokens propios del componente están en [`Divider.tokens.json`](./Divider.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Divider.tokens.json`](./Divider.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- No interactivo.
+## 9. Interaction
+- Not interactive.
 
-## 10. Accesibilidad
-- Decorativo por defecto (`aria-hidden`).
+## 10. Accessibility
+- Decorative by default (`aria-hidden`).
 
-## 11. Reglas de composición
-- Libre.
+## 11. Composition rules
+- Free to use.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Divider />
 ```
-Más ejemplos en [`Divider.examples.md`](./Divider.examples.md).
+More examples in [`Divider.examples.md`](./Divider.examples.md).
 
-## 13. Anti-patrones
-- Bordes dibujados a mano con otros colores.
+## 13. Anti-patterns
+- Hand-drawn borders in other colors.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

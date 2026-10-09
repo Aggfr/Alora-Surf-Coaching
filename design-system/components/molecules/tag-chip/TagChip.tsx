@@ -9,7 +9,7 @@ export interface TagChipProps {
   className?: string;
 }
 
-/** Molecule · Chip seleccionable o eliminable. Docs: ./TagChip.docs.md */
+/** Molecule · Selectable or removable chip. Docs: ./TagChip.docs.md */
 export function TagChip({ label, isSelected = false, onToggle, onRemove, className }: TagChipProps) {
   return (
     <span className={cx('ds-tag-chip', isSelected && 'ds-tag-chip--selected', className)}>

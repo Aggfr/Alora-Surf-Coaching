@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Radio. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: radio.border, radio.border-checked, radio.dot, color.border.focus.",
+  "$description": "Radio tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: radio.border, radio.border-checked, radio.dot, color.border.focus.",
   "radio": {
     "border": {
       "$type": "color",

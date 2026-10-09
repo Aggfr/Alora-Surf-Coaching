@@ -10,7 +10,7 @@ export interface CheckboxProps {
   className?: string;
 }
 
-/** Atom · Selección múltiple o confirmación. Docs: ./Checkbox.docs.md */
+/** Atom · Multiple selection or confirmation. Docs: ./Checkbox.docs.md */
 export function Checkbox({ label, isChecked = false, isDisabled = false, onChange, className }: CheckboxProps) {
   const id = useId();
   const ref = useRef<HTMLInputElement>(null);

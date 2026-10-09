@@ -1,14 +1,14 @@
-# ListItem · Ejemplos
+# ListItem · Examples
 
-## Correcto
+## Do
 ```tsx
 import { ListItem } from '@alora/design-system';
 
 <ListItem type="definition" title="PLAN RENEWS" description="26 sept 2026" action={{ label: "Cancel your plan", tone: "danger", onPress: openCancel }} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <div className="row">…</div>
 ```
-Por qué: Mezclar tipos dentro de la misma lista.
+Why: Mixing types within the same list.

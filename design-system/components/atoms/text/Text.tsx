@@ -13,7 +13,7 @@ export interface TextProps {
   className?: string;
 }
 
-/** Atom · Texto de lectura y metadatos. Docs: ./Text.docs.md */
+/** Atom · Reading text and metadata. Docs: ./Text.docs.md */
 export function Text({ children, role = 'body-medium', tone = 'primary', as: Tag = 'p', id, className }: TextProps) {
   return <Tag id={id} className={cx('ds-text', `ds-text--${role}`, `ds-text--${tone}`, className)}>{children}</Tag>;
 }

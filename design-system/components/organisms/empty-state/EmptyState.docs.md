@@ -1,65 +1,65 @@
 # EmptyState
 
-**Categoría Atomic Design:** Organism · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [EmptyState](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-277)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `EmptyState` — Organism.
 
-## 2. Propósito
-Explica por qué una zona está vacía y ofrece la siguiente acción.
+## 2. Purpose
+Explains why an area is empty and offers the next action.
 
-## 3. Cuándo usarlo
-- Cola vacía, historial vacío, sin surfers.
+## 3. When to use
+- Empty queue, empty history, no surfers.
 
-## 4. Cuándo no usarlo
-- Errores: Notification danger.
+## 4. When not to use
+- Errors: danger Notification.
 
-## 5. Anatomía
-1. Icono decorativo
-2. Mensaje
-3. Acción opcional (Button)
+## 5. Anatomy
+1. Decorative icon
+2. Message
+3. Optional action (Button)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `message` | `string` | — | Sí | Estado actual en lenguaje del usuario. |
-| `icon` | `IconName` | `'info'` | No | Icono. |
-| `action` | `{ label: string; icon?: IconName; onPress: () => void }` | — | No | Siguiente paso. |
+| `message` | `string` | — | Yes | Current state in the user's language. |
+| `icon` | `IconName` | `'info'` | No | Icon. |
+| `action` | `{ label: string; icon?: IconName; onPress: () => void }` | — | No | Next step. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **action:** `false`, `true`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `card.background`
 - `card.radius`
 - `color.background.canvas`
 - `color.text.tertiary`
 - `size.space.xl`
 
-Los tokens propios del componente están en [`EmptyState.tokens.json`](./EmptyState.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`EmptyState.tokens.json`](./EmptyState.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Solo la acción es interactiva.
+## 9. Interaction
+- Only the action is interactive.
 
-## 10. Accesibilidad
-- Icono `aria-hidden`; el mensaje es texto real.
+## 10. Accessibility
+- Icon is `aria-hidden`; the message is real text.
 
-## 11. Reglas de composición
-- Ocupa el lugar de la lista vacía.
-- Depende de: `Icon`, `Text`, `Button`.
+## 11. Composition rules
+- Takes the place of the empty list.
+- Depends on: `Icon`, `Text`, `Button`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <EmptyState message="No submissions waiting for review." />
 ```
-Más ejemplos en [`EmptyState.examples.md`](./EmptyState.examples.md).
+More examples in [`EmptyState.examples.md`](./EmptyState.examples.md).
 
-## 13. Anti-patrones
-- Mensajes que culpan al usuario.
+## 13. Anti-patterns
+- Messages that blame the user.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

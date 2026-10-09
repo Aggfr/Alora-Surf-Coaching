@@ -89,85 +89,85 @@ def docs_md(s):
     lines = [
         f"# {s['name']}",
         "",
-        f"**Categoría Atomic Design:** {layer} · **Estado:** `{s['status']}` · **Versión:** {VERSION}",
+        f"**Atomic Design category:** {layer} · **Status:** `{s['status']}` · **Version:** {VERSION}",
         f"**Figma:** [{s['name']}]({FIGMA_FILE}?node-id={s['figma'].replace(':', '-')})",
         "",
-        "## 1. Nombre y categoría",
+        "## 1. Name and category",
         f"`{s['name']}` — {layer}.",
         "",
-        "## 2. Propósito",
+        "## 2. Purpose",
         s["purpose"],
         "",
-        "## 3. Cuándo usarlo",
+        "## 3. When to use",
         *[f"- {x}" for x in s["when"]],
         "",
-        "## 4. Cuándo no usarlo",
+        "## 4. When not to use",
         *[f"- {x}" for x in s["when_not"]],
         "",
-        "## 5. Anatomía",
+        "## 5. Anatomy",
         *[f"{i}. {x}" for i, x in enumerate(s["anatomy"], 1)],
         "",
         "## 6. Props",
-        md_table([(f"`{p['name']}`", f"`{p['type']}`", f"`{p['default']}`" if p["default"] != "—" else "—", "Sí" if p["required"] else "No", p["desc"]) for p in s["props"]],
-                 ["Prop", "Tipo", "Por defecto", "Obligatoria", "Descripción"]),
+        md_table([(f"`{p['name']}`", f"`{p['type']}`", f"`{p['default']}`" if p["default"] != "—" else "—", "Yes" if p["required"] else "No", p["desc"]) for p in s["props"]],
+                 ["Prop", "Type", "Default", "Required", "Description"]),
         "",
-        "## 7. Variantes y estados",
+        "## 7. Variants and states",
     ]
     if s["variants"]:
         lines += [f"- **{k}:** {', '.join(f'`{v}`' for v in vals)}" for k, vals in s["variants"].items()]
     else:
-        lines.append("- Sin variantes visuales: el comportamiento se controla con props.")
-    lines += [f"- **Estados:** {', '.join(f'`{x}`' for x in s['states'])}", "",
-              "## 8. Tokens utilizados",
+        lines.append("- No visual variants: behavior is controlled with props.")
+    lines += [f"- **States:** {', '.join(f'`{x}`' for x in s['states'])}", "",
+              "## 8. Tokens used",
               *[f"- `{t}`" for t in s["tokens"]],
               "",
-              f"Los tokens propios del componente están en [`{s['name']}.tokens.json`](./{s['name']}.tokens.json). Nunca se usan primitivos directamente.",
+              f"The component's own tokens live in [`{s['name']}.tokens.json`](./{s['name']}.tokens.json). Primitive tokens are never used directly.",
               "",
-              "## 9. Comportamiento interactivo",
+              "## 9. Interaction",
               *[f"- {x}" for x in s["interaction"]],
               "",
-              "## 10. Accesibilidad",
+              "## 10. Accessibility",
               *[f"- {x}" for x in s["a11y"]],
               "",
-              "## 11. Reglas de composición",
+              "## 11. Composition rules",
               *[f"- {x}" for x in s["composition"]],
               ]
     if s["deps"]:
-        lines.append(f"- Depende de: {', '.join(f'`{d}`' for d in s['deps'])}.")
+        lines.append(f"- Depends on: {', '.join(f'`{d}`' for d in s['deps'])}.")
     lines += ["",
-              "## 12. Ejemplos de código",
+              "## 12. Code examples",
               "```tsx",
               s["example"],
               "```",
-              f"Más ejemplos en [`{s['name']}.examples.md`](./{s['name']}.examples.md).",
+              f"More examples in [`{s['name']}.examples.md`](./{s['name']}.examples.md).",
               "",
-              "## 13. Anti-patrones",
+              "## 13. Anti-patterns",
               *[f"- {x}" for x in s["antipatterns"]],
               "",
-              "## 14. Versión, estado y changelog",
-              f"- Versión: `{VERSION}`",
-              f"- Estado: `{s['status']}`",
-              f"- {DATE} · {VERSION} · Primera versión, extraída de Coach Platform y Surfer Platform.",
+              "## 14. Version, status and changelog",
+              f"- Version: `{VERSION}`",
+              f"- Status: `{s['status']}`",
+              f"- {DATE} · {VERSION} · First version, extracted from Coach Platform and Surfer Platform.",
               ""]
     return "\n".join(lines)
 
 
 def examples_md(s):
     return "\n".join([
-        f"# {s['name']} · Ejemplos",
+        f"# {s['name']} · Examples",
         "",
-        "## Correcto",
+        "## Do",
         "```tsx",
         f"import {{ {s['name']} }} from '@alora/design-system';",
         "",
         s["example"],
         "```",
         "",
-        "## Incorrecto",
+        "## Don't",
         "```tsx",
         s["examples_bad"],
         "```",
-        "Por qué: " + s["antipatterns"][0],
+        "Why: " + s["antipatterns"][0],
         "",
     ])
 
@@ -182,7 +182,7 @@ for s in SPECS:
         f.write(examples_md(s))
     tokens = own_tokens(s)
     with open(os.path.join(ROOT, path, f"{s['name']}.tokens.json"), "w") as f:
-        json.dump({"$description": f"Tokens de {s['name']}. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: {', '.join(s['tokens'])}.", **tokens},
+        json.dump({"$description": f"{s['name']} tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: {', '.join(s['tokens'])}.", **tokens},
                   f, ensure_ascii=False, indent=2)
         f.write("\n")
     manifest_components.append({
@@ -197,34 +197,34 @@ for s in SPECS:
 
 templates = [
     {"name": "DashboardTemplate", "category": "template", "status": "stable", "version": VERSION,
-     "description": "Vista autenticada: Sidebar + columna central de 810px con slots header y content.",
+     "description": "Authenticated view: Sidebar + an 810px content column with header and content slots.",
      "path": "templates/dashboard", "files": {"component": "templates/dashboard/DashboardTemplate.tsx", "docs": "templates/dashboard/DashboardTemplate.docs.md"},
      "dependencies": ["Sidebar"], "slots": ["header", "content"], "figma": {"file": FIGMA_FILE, "nodeId": "14:511"}},
     {"name": "AuthTemplate", "category": "template", "status": "stable", "version": VERSION,
-     "description": "Autenticación y onboarding: canvas centrado con slot form de 400px.",
+     "description": "Authentication and onboarding: centered canvas with a 400px form slot.",
      "path": "templates/auth", "files": {"component": "templates/auth/AuthTemplate.tsx", "docs": "templates/auth/AuthTemplate.docs.md"},
      "dependencies": ["Heading", "Text"], "slots": ["form"], "figma": {"file": FIGMA_FILE, "nodeId": "14:550"}},
 ]
 pages = [
     {"name": "CoachQueuePage", "category": "page", "status": "example", "version": VERSION,
-     "description": "Cola del coach con contenido real: PageHeader, fila de Stat, búsqueda y filtros, SubmissionCard ×3 y EmptyState sin resultados.",
+     "description": "Coach queue with real content: PageHeader, Stat row, search and filters, SubmissionCard ×3 and an EmptyState for no results.",
      "path": "pages/coach-queue", "files": {"component": "pages/coach-queue/CoachQueuePage.tsx", "docs": "pages/coach-queue/CoachQueuePage.docs.md"},
      "dependencies": ["DashboardTemplate", "PageHeader", "Tag", "Avatar", "Stat", "SearchField", "TagChip", "SubmissionCard", "EmptyState"],
      "figma": {"file": FIGMA_FILE, "nodeId": "14:558", "lightModeNodeId": "14:719"}},
     {"name": "SurferLoginPage", "category": "page", "status": "example", "version": VERSION,
-     "description": "Log in del surfer: AuthTemplate + FormSection.",
+     "description": "Surfer log in: AuthTemplate + FormSection.",
      "path": "pages/surfer-login", "files": {"component": "pages/surfer-login/SurferLoginPage.tsx", "docs": "pages/surfer-login/SurferLoginPage.docs.md"},
      "dependencies": ["AuthTemplate", "FormSection", "FormField", "Input"],
      "figma": {"file": FIGMA_FILE, "nodeId": "14:880"}},
 ]
 planned = [{"name": n, "category": c, "status": "planned", "description": d} for n, c, d in [
-    ("NavigationBar", "organism", "Navegación inferior en móvil; sustituye a Sidebar por debajo de 1024px."),
-    ("DataTable", "organism", "Tabla de datos comparables con orden y paginación."),
-    ("CommandPalette", "organism", "Búsqueda global de acciones y surfers (⌘K)."),
-    ("Footer", "organism", "Pie de las vistas públicas (landing, legal)."),
-    ("Select", "atom", "Selección única entre más de 5 opciones."),
-    ("ProgressBar", "atom", "Progreso medible de subida de vídeo."),
-    ("ReviewCard", "organism", "Revisión entregada en History con vídeo y notas del coach."),
+    ("NavigationBar", "organism", "Bottom navigation on mobile; replaces Sidebar below 1024px."),
+    ("DataTable", "organism", "Table of comparable data with sorting and pagination."),
+    ("CommandPalette", "organism", "Global search for actions and surfers (⌘K)."),
+    ("Footer", "organism", "Footer for public views (landing, legal)."),
+    ("Select", "atom", "Single selection among more than 5 options."),
+    ("ProgressBar", "atom", "Measurable video upload progress."),
+    ("ReviewCard", "organism", "Delivered review in History with video and coach notes."),
 ]]
 
 

@@ -48,7 +48,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Dispara una acción en la vista actual.",
+      "description": "Triggers an action in the current view.",
       "path": "components/atoms/button",
       "files": {
         "component": "components/atoms/button/Button.tsx",
@@ -104,7 +104,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Muestra un pictograma de línea del set de Alora.",
+      "description": "Shows a line pictogram from the Alora icon set.",
       "path": "components/atoms/icon",
       "files": {
         "component": "components/atoms/icon/Icon.tsx",
@@ -147,7 +147,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Nombra un control de formulario.",
+      "description": "Names a form control.",
       "path": "components/atoms/label",
       "files": {
         "component": "components/atoms/label/Label.tsx",
@@ -177,7 +177,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Muestra texto de lectura y metadatos con un rol tipográfico y un tono semántico.",
+      "description": "Shows reading text and metadata with a type role and a semantic tone.",
       "path": "components/atoms/text",
       "files": {
         "component": "components/atoms/text/Text.tsx",
@@ -222,7 +222,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Titula una vista, sección o tarjeta respetando la jerarquía del documento.",
+      "description": "Titles a view, section or card while respecting the document hierarchy.",
       "path": "components/atoms/heading",
       "files": {
         "component": "components/atoms/heading/Heading.tsx",
@@ -259,7 +259,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Recoge una línea de texto.",
+      "description": "Collects one line of text.",
       "path": "components/atoms/input",
       "files": {
         "component": "components/atoms/input/Input.tsx",
@@ -303,7 +303,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Recoge texto de varias líneas.",
+      "description": "Collects multiple lines of text.",
       "path": "components/atoms/textarea",
       "files": {
         "component": "components/atoms/textarea/Textarea.tsx",
@@ -335,7 +335,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Permite marcar una o varias opciones independientes.",
+      "description": "Lets the user check one or more independent options.",
       "path": "components/atoms/checkbox",
       "files": {
         "component": "components/atoms/checkbox/Checkbox.tsx",
@@ -376,7 +376,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Permite elegir una sola opción dentro de un grupo.",
+      "description": "Lets the user pick one option within a group.",
       "path": "components/atoms/radio",
       "files": {
         "component": "components/atoms/radio/Radio.tsx",
@@ -414,7 +414,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Activa o desactiva un ajuste con efecto inmediato.",
+      "description": "Turns a setting on or off with immediate effect.",
       "path": "components/atoms/switch",
       "files": {
         "component": "components/atoms/switch/Switch.tsx",
@@ -452,7 +452,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Representa a una persona con sus iniciales.",
+      "description": "Represents a person with their initials.",
       "path": "components/atoms/avatar",
       "files": {
         "component": "components/atoms/avatar/Avatar.tsx",
@@ -494,7 +494,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Etiqueta no interactiva que muestra un estado o un plan.",
+      "description": "Non-interactive label that shows a status or a plan.",
       "path": "components/atoms/badge",
       "files": {
         "component": "components/atoms/badge/Badge.tsx",
@@ -537,7 +537,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Píldora informativa con icono opcional.",
+      "description": "Informational pill with an optional icon.",
       "path": "components/atoms/tag",
       "files": {
         "component": "components/atoms/tag/Tag.tsx",
@@ -580,7 +580,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Indica una espera de duración indeterminada.",
+      "description": "Indicates a wait of unknown duration.",
       "path": "components/atoms/spinner",
       "files": {
         "component": "components/atoms/spinner/Spinner.tsx",
@@ -593,7 +593,7 @@
         "spinner.track",
         "spinner.indicator",
         "size.border.focus",
-        "motion.duration.slow"
+        "motion.loop-duration"
       ],
       "variants": {
         "size": [
@@ -615,7 +615,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Separa grupos de contenido.",
+      "description": "Separates groups of content.",
       "path": "components/atoms/divider",
       "files": {
         "component": "components/atoms/divider/Divider.tsx",
@@ -647,7 +647,7 @@
       "category": "atom",
       "status": "beta",
       "version": "1.0.0",
-      "description": "Describe brevemente un control al hacer hover o focus.",
+      "description": "Briefly describes a control on hover or focus.",
       "path": "components/atoms/tooltip",
       "files": {
         "component": "components/atoms/tooltip/Tooltip.tsx",
@@ -661,7 +661,7 @@
         "tooltip.foreground",
         "tooltip.radius",
         "tooltip.padding",
-        "z-index.tooltip"
+        "layer.tooltip"
       ],
       "variants": {
         "placement": [
@@ -683,7 +683,7 @@
       "category": "molecule",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Agrupa Label, Input, texto de ayuda y mensaje de error de un campo.",
+      "description": "Groups a field's Label, Input, helper text and error message.",
       "path": "components/molecules/form-field",
       "files": {
         "component": "components/molecules/form-field/FormField.tsx",
@@ -720,7 +720,7 @@
       "category": "molecule",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Campo de búsqueda con icono y botón de limpiar.",
+      "description": "Search field with an icon and a clear button.",
       "path": "components/molecules/search-field",
       "files": {
         "component": "components/molecules/search-field/SearchField.tsx",
@@ -757,7 +757,7 @@
       "category": "molecule",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Fila de una lista con tres formatos: persona, definición o navegación.",
+      "description": "List row with three formats: person, definition or navigation.",
       "path": "components/molecules/list-item",
       "files": {
         "component": "components/molecules/list-item/ListItem.tsx",
@@ -802,7 +802,7 @@
       "category": "molecule",
       "status": "beta",
       "version": "1.0.0",
-      "description": "Chip seleccionable o eliminable.",
+      "description": "Selectable or removable chip.",
       "path": "components/molecules/tag-chip",
       "files": {
         "component": "components/molecules/tag-chip/TagChip.tsx",
@@ -838,7 +838,7 @@
       "category": "molecule",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Muestra una métrica con su etiqueta y una tendencia opcional.",
+      "description": "Shows a metric with its label and an optional trend.",
       "path": "components/molecules/stat",
       "files": {
         "component": "components/molecules/stat/Stat.tsx",
@@ -878,7 +878,7 @@
       "category": "molecule",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Comunica un mensaje del sistema con tono, acción y cierre.",
+      "description": "Communicates a system message with a tone, an action and a dismiss button.",
       "path": "components/molecules/notification",
       "files": {
         "component": "components/molecules/notification/Notification.tsx",
@@ -922,7 +922,7 @@
       "category": "molecule",
       "status": "beta",
       "version": "1.0.0",
-      "description": "Muestra la posición del usuario dentro de una jerarquía.",
+      "description": "Shows where the user is within a hierarchy.",
       "path": "components/molecules/breadcrumb",
       "files": {
         "component": "components/molecules/breadcrumb/Breadcrumb.tsx",
@@ -955,7 +955,7 @@
       "category": "molecule",
       "status": "beta",
       "version": "1.0.0",
-      "description": "Navega entre páginas de una lista larga.",
+      "description": "Moves between pages of a long list.",
       "path": "components/molecules/pagination",
       "files": {
         "component": "components/molecules/pagination/Pagination.tsx",
@@ -987,7 +987,7 @@
       "category": "molecule",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Entrada de navegación principal con icono y etiqueta.",
+      "description": "Main navigation entry with an icon and a label.",
       "path": "components/molecules/navigation-item",
       "files": {
         "component": "components/molecules/navigation-item/NavigationItem.tsx",
@@ -1020,7 +1020,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Navegación principal fija en escritorio.",
+      "description": "Fixed main navigation on desktop.",
       "path": "components/organisms/sidebar",
       "files": {
         "component": "components/organisms/sidebar/Sidebar.tsx",
@@ -1055,7 +1055,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Cabecera de cada vista con título, subtítulo y acciones.",
+      "description": "Header of each view with a title, subtitle and actions.",
       "path": "components/organisms/page-header",
       "files": {
         "component": "components/organisms/page-header/PageHeader.tsx",
@@ -1095,7 +1095,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Resume un clip enviado para revisión y su acción principal.",
+      "description": "Summarizes a clip submitted for review and its main action.",
       "path": "components/organisms/submission-card",
       "files": {
         "component": "components/organisms/submission-card/SubmissionCard.tsx",
@@ -1140,7 +1140,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Sección de datos de solo lectura con título y filas de definición.",
+      "description": "Read-only data section with a title and definition rows.",
       "path": "components/organisms/data-list",
       "files": {
         "component": "components/organisms/data-list/DataList.tsx",
@@ -1174,7 +1174,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Explica por qué una zona está vacía y ofrece la siguiente acción.",
+      "description": "Explains why an area is empty and offers the next action.",
       "path": "components/organisms/empty-state",
       "files": {
         "component": "components/organisms/empty-state/EmptyState.tsx",
@@ -1213,7 +1213,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Diálogo para una decisión o tarea corta que interrumpe el flujo.",
+      "description": "Dialog for a decision or short task that interrupts the flow.",
       "path": "components/organisms/modal",
       "files": {
         "component": "components/organisms/modal/Modal.tsx",
@@ -1234,7 +1234,7 @@
         "modal.radius",
         "modal.padding",
         "modal.shadow",
-        "z-index.modal",
+        "layer.modal",
         "motion.transition-enter"
       ],
       "variants": {
@@ -1257,7 +1257,7 @@
       "category": "organism",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Formulario completo con campos y acciones.",
+      "description": "Complete form with fields and actions.",
       "path": "components/organisms/form-section",
       "files": {
         "component": "components/organisms/form-section/FormSection.tsx",
@@ -1292,7 +1292,7 @@
       "category": "template",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Vista autenticada: Sidebar + columna central de 810px con slots header y content.",
+      "description": "Authenticated view: Sidebar + an 810px content column with header and content slots.",
       "path": "templates/dashboard",
       "files": {
         "component": "templates/dashboard/DashboardTemplate.tsx",
@@ -1315,7 +1315,7 @@
       "category": "template",
       "status": "stable",
       "version": "1.0.0",
-      "description": "Autenticación y onboarding: canvas centrado con slot form de 400px.",
+      "description": "Authentication and onboarding: centered canvas with a 400px form slot.",
       "path": "templates/auth",
       "files": {
         "component": "templates/auth/AuthTemplate.tsx",
@@ -1338,7 +1338,7 @@
       "category": "page",
       "status": "example",
       "version": "1.0.0",
-      "description": "Cola del coach con contenido real: PageHeader, fila de Stat, búsqueda y filtros, SubmissionCard ×3 y EmptyState sin resultados.",
+      "description": "Coach queue with real content: PageHeader, Stat row, search and filters, SubmissionCard ×3 and an EmptyState for no results.",
       "path": "pages/coach-queue",
       "files": {
         "component": "pages/coach-queue/CoachQueuePage.tsx",
@@ -1366,7 +1366,7 @@
       "category": "page",
       "status": "example",
       "version": "1.0.0",
-      "description": "Log in del surfer: AuthTemplate + FormSection.",
+      "description": "Surfer log in: AuthTemplate + FormSection.",
       "path": "pages/surfer-login",
       "files": {
         "component": "pages/surfer-login/SurferLoginPage.tsx",
@@ -1389,43 +1389,43 @@
       "name": "NavigationBar",
       "category": "organism",
       "status": "planned",
-      "description": "Navegación inferior en móvil; sustituye a Sidebar por debajo de 1024px."
+      "description": "Bottom navigation on mobile; replaces Sidebar below 1024px."
     },
     {
       "name": "DataTable",
       "category": "organism",
       "status": "planned",
-      "description": "Tabla de datos comparables con orden y paginación."
+      "description": "Table of comparable data with sorting and pagination."
     },
     {
       "name": "CommandPalette",
       "category": "organism",
       "status": "planned",
-      "description": "Búsqueda global de acciones y surfers (⌘K)."
+      "description": "Global search for actions and surfers (⌘K)."
     },
     {
       "name": "Footer",
       "category": "organism",
       "status": "planned",
-      "description": "Pie de las vistas públicas (landing, legal)."
+      "description": "Footer for public views (landing, legal)."
     },
     {
       "name": "Select",
       "category": "atom",
       "status": "planned",
-      "description": "Selección única entre más de 5 opciones."
+      "description": "Single selection among more than 5 options."
     },
     {
       "name": "ProgressBar",
       "category": "atom",
       "status": "planned",
-      "description": "Progreso medible de subida de vídeo."
+      "description": "Measurable video upload progress."
     },
     {
       "name": "ReviewCard",
       "category": "organism",
       "status": "planned",
-      "description": "Revisión entregada en History con vídeo y notas del coach."
+      "description": "Delivered review in History with video and coach notes."
     }
   ],
   "tokens": [
@@ -2445,7 +2445,7 @@
       "cssVariable": "--ds-typography-family-display",
       "figmaVariable": "typography/family/display",
       "status": "stable",
-      "description": "Familia para títulos, botones, etiquetas y números. Presente en ambos archivos."
+      "description": "Family for headings, buttons, labels and numbers. Used in both source files."
     },
     {
       "name": "typography.family.body",
@@ -2455,7 +2455,7 @@
       "cssVariable": "--ds-typography-family-body",
       "figmaVariable": "typography/family/body",
       "status": "stable",
-      "description": "Familia para texto de lectura. Sustituye a Apple SD Gothic Neo (fuente de sistema de macOS, no portable) manteniéndola como fallback."
+      "description": "Family for reading text. Replaces Apple SD Gothic Neo (a macOS system font, not portable) and keeps it as a fallback."
     },
     {
       "name": "typography.size.2xs",
@@ -2627,7 +2627,7 @@
       "cssVariable": "--ds-typography-letter-spacing-wide",
       "figmaVariable": "typography/letter-spacing/wide",
       "status": "stable",
-      "description": "Botones y labels en negrita."
+      "description": "Bold buttons and labels."
     },
     {
       "name": "typography.letter-spacing.wider",
@@ -2637,7 +2637,7 @@
       "cssVariable": "--ds-typography-letter-spacing-wider",
       "figmaVariable": "typography/letter-spacing/wider",
       "status": "stable",
-      "description": "Overlines en mayúsculas (EMAIL, PLAN RENEWS)."
+      "description": "Uppercase overlines (EMAIL, PLAN RENEWS)."
     },
     {
       "name": "size.space.0",
@@ -2980,7 +2980,7 @@
       "cssVariable": "--ds-shadow-glow-small",
       "figmaVariable": "shadow/glow-small",
       "status": "stable",
-      "description": "Brillo teal sutil (badges, avatares)."
+      "description": "Subtle teal glow (badges, avatars)."
     },
     {
       "name": "shadow.glow-medium",
@@ -2990,7 +2990,7 @@
       "cssVariable": "--ds-shadow-glow-medium",
       "figmaVariable": "shadow/glow-medium",
       "status": "stable",
-      "description": "Brillo teal de los botones primarios."
+      "description": "Teal glow of primary buttons."
     },
     {
       "name": "shadow.glow-sun",
@@ -3009,7 +3009,7 @@
       "cssVariable": "--ds-shadow-elevation-high",
       "figmaVariable": "shadow/elevation-high",
       "status": "stable",
-      "description": "Modales y popovers."
+      "description": "Modals and popovers."
     },
     {
       "name": "shadow.elevation-low-light",
@@ -3019,7 +3019,7 @@
       "cssVariable": "--ds-shadow-elevation-low-light",
       "figmaVariable": "shadow/elevation-low-light",
       "status": "stable",
-      "description": "Elevación de tarjetas en tema claro."
+      "description": "Card elevation in the light theme."
     },
     {
       "name": "shadow.ring",
@@ -3029,7 +3029,7 @@
       "cssVariable": "--ds-shadow-ring",
       "figmaVariable": "shadow/ring",
       "status": "stable",
-      "description": "Anillo de foco."
+      "description": "Focus ring."
     },
     {
       "name": "motion.duration.instant",
@@ -3219,7 +3219,7 @@
       "cssVariable": "--ds-breakpoint-2xl",
       "figmaVariable": "breakpoint/2xl",
       "status": "stable",
-      "description": "Ancho de diseño de los archivos Coach y Surfer."
+      "description": "Design width of the Coach and Surfer files."
     },
     {
       "name": "color.background.canvas",
@@ -3230,7 +3230,7 @@
       "figmaVariable": "color/background/canvas",
       "status": "stable",
       "references": "color.navy.950",
-      "description": "Fondo de la página. Capa más baja.",
+      "description": "Page background. Lowest layer.",
       "themes": {
         "dark": "{color.navy.950}",
         "light": "{color.navy.50}"
@@ -3245,7 +3245,7 @@
       "figmaVariable": "color/background/surface",
       "status": "stable",
       "references": "color.navy.900",
-      "description": "Superficies estructurales: sidebar, paneles.",
+      "description": "Structural surfaces: sidebar, panels.",
       "themes": {
         "dark": "{color.navy.900}",
         "light": "{color.white}"
@@ -3260,7 +3260,7 @@
       "figmaVariable": "color/background/surface-raised",
       "status": "stable",
       "references": "color.navy.800",
-      "description": "Tarjetas, stats, listas y campos sobre el canvas.",
+      "description": "Cards, stats, lists and fields on the canvas.",
       "themes": {
         "dark": "{color.navy.800}",
         "light": "{color.white}"
@@ -3275,7 +3275,7 @@
       "figmaVariable": "color/background/surface-sunken",
       "status": "stable",
       "references": "color.alpha.navy.18",
-      "description": "Zonas hundidas dentro de una tarjeta (cita del surfer, bloque de notas).",
+      "description": "Sunken areas inside a card (surfer quote, notes block).",
       "themes": {
         "dark": "{color.alpha.navy.18}",
         "light": "{color.navy.50}"
@@ -3290,7 +3290,7 @@
       "figmaVariable": "color/background/brand-subtle",
       "status": "stable",
       "references": "color.alpha.ocean.12",
-      "description": "Fondo de elementos seleccionados o destacados con la marca.",
+      "description": "Background of selected or brand-highlighted elements.",
       "themes": {
         "dark": "{color.alpha.ocean.12}",
         "light": "{color.ocean.50}"
@@ -3305,7 +3305,7 @@
       "figmaVariable": "color/background/highlight-subtle",
       "status": "stable",
       "references": "color.alpha.sun.12",
-      "description": "Fondo de badges de plan y destacados cálidos.",
+      "description": "Background of plan badges and warm highlights.",
       "themes": {
         "dark": "{color.alpha.sun.12}",
         "light": "{color.sun.50}"
@@ -3320,7 +3320,7 @@
       "figmaVariable": "color/background/overlay",
       "status": "stable",
       "references": "color.alpha.black.55",
-      "description": "Velo detrás de modales.",
+      "description": "Scrim behind modals.",
       "themes": {
         "dark": "{color.alpha.black.55}",
         "light": "{color.alpha.black.40}"
@@ -3335,7 +3335,7 @@
       "figmaVariable": "color/background/inverse",
       "status": "stable",
       "references": "color.navy.50",
-      "description": "Fondo de tooltips.",
+      "description": "Tooltip background.",
       "themes": {
         "dark": "{color.navy.50}",
         "light": "{color.navy.900}"
@@ -3350,7 +3350,7 @@
       "figmaVariable": "color/text/primary",
       "status": "stable",
       "references": "color.white",
-      "description": "Texto principal: títulos, valores, contenido.",
+      "description": "Primary text: headings, values, content.",
       "themes": {
         "dark": "{color.white}",
         "light": "{color.navy.950}"
@@ -3365,7 +3365,7 @@
       "figmaVariable": "color/text/secondary",
       "status": "stable",
       "references": "color.navy.300",
-      "description": "Texto de apoyo: subtítulos, metadatos, labels de stats.",
+      "description": "Supporting text: subtitles, metadata, stat labels.",
       "themes": {
         "dark": "{color.navy.300}",
         "light": "{color.navy.600}"
@@ -3380,7 +3380,7 @@
       "figmaVariable": "color/text/tertiary",
       "status": "stable",
       "references": "color.navy.400",
-      "description": "Texto de baja prioridad: placeholders, fechas, metadatos. Contraste mínimo 4.5:1 sobre surface-raised.",
+      "description": "Low-priority text: placeholders, dates, metadata. Minimum contrast 4.5:1 on surface-raised.",
       "themes": {
         "dark": "{color.navy.400}",
         "light": "{color.navy.500}"
@@ -3395,7 +3395,7 @@
       "figmaVariable": "color/text/brand",
       "status": "stable",
       "references": "color.ocean.400",
-      "description": "Enlaces y texto con la marca.",
+      "description": "Links and brand-colored text.",
       "themes": {
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.700}"
@@ -3410,7 +3410,7 @@
       "figmaVariable": "color/text/highlight",
       "status": "stable",
       "references": "color.sun.400",
-      "description": "Texto destacado cálido (plan del surfer).",
+      "description": "Warm highlighted text (surfer plan).",
       "themes": {
         "dark": "{color.sun.400}",
         "light": "{color.sun.700}"
@@ -3425,7 +3425,7 @@
       "figmaVariable": "color/text/inverse",
       "status": "stable",
       "references": "color.navy.950",
-      "description": "Texto sobre fondos inversos (tooltips).",
+      "description": "Text on inverse backgrounds (tooltips).",
       "themes": {
         "dark": "{color.navy.950}",
         "light": "{color.white}"
@@ -3440,7 +3440,7 @@
       "figmaVariable": "color/text/on-action",
       "status": "stable",
       "references": "color.white",
-      "description": "Texto sobre acción primaria o destructiva.",
+      "description": "Text on primary or destructive actions.",
       "themes": {
         "dark": "{color.white}",
         "light": "{color.white}"
@@ -3455,7 +3455,7 @@
       "figmaVariable": "color/text/disabled",
       "status": "stable",
       "references": "color.navy.500",
-      "description": "Texto de elementos deshabilitados.",
+      "description": "Text of disabled elements.",
       "themes": {
         "dark": "{color.navy.500}",
         "light": "{color.navy.300}"
@@ -3470,7 +3470,7 @@
       "figmaVariable": "color/text/muted",
       "status": "deprecated",
       "references": "color.text.tertiary",
-      "description": "Alias de migración.",
+      "description": "Migration alias.",
       "themes": {
         "dark": "{color.text.tertiary}",
         "light": "{color.text.tertiary}"
@@ -3485,7 +3485,7 @@
       "figmaVariable": "color/border/subtle",
       "status": "stable",
       "references": "color.alpha.ocean.18",
-      "description": "Borde por defecto de tarjetas, campos y divisores.",
+      "description": "Default border for cards, fields and dividers.",
       "themes": {
         "dark": "{color.alpha.ocean.18}",
         "light": "{color.alpha.navy.12}"
@@ -3500,7 +3500,7 @@
       "figmaVariable": "color/border/default",
       "status": "stable",
       "references": "color.navy.500",
-      "description": "Borde con más presencia: checkbox, radio sin marcar.",
+      "description": "Stronger border: unchecked checkbox and radio.",
       "themes": {
         "dark": "{color.navy.500}",
         "light": "{color.navy.200}"
@@ -3515,7 +3515,7 @@
       "figmaVariable": "color/border/strong",
       "status": "stable",
       "references": "color.alpha.white.40",
-      "description": "Borde de alto contraste: botón secundario en hover.",
+      "description": "High-contrast border: secondary button on hover.",
       "themes": {
         "dark": "{color.alpha.white.40}",
         "light": "{color.navy.400}"
@@ -3530,7 +3530,7 @@
       "figmaVariable": "color/border/brand",
       "status": "stable",
       "references": "color.ocean.400",
-      "description": "Borde de elementos activos o seleccionados.",
+      "description": "Border of active or selected elements.",
       "themes": {
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.600}"
@@ -3545,7 +3545,7 @@
       "figmaVariable": "color/border/focus",
       "status": "stable",
       "references": "color.ocean.400",
-      "description": "Borde y anillo de foco visible.",
+      "description": "Visible focus border and ring.",
       "themes": {
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.600}"
@@ -3560,7 +3560,7 @@
       "figmaVariable": "color/border/danger",
       "status": "stable",
       "references": "color.coral.400",
-      "description": "Borde de campos con error.",
+      "description": "Border of fields with an error.",
       "themes": {
         "dark": "{color.coral.400}",
         "light": "{color.coral.500}"
@@ -3575,7 +3575,7 @@
       "figmaVariable": "color/action/primary/background",
       "status": "stable",
       "references": "color.ocean.700",
-      "description": "Acción principal de la vista. Una por vista. Más oscuro que el diseño original para que el texto blanco cumpla 4.5:1.",
+      "description": "Main action of the view. One per view. Darker than the original design so white text meets 4.5:1.",
       "themes": {
         "dark": "{color.ocean.700}",
         "light": "{color.ocean.700}"
@@ -3590,7 +3590,7 @@
       "figmaVariable": "color/action/primary/background-start",
       "status": "stable",
       "references": "color.ocean.800",
-      "description": "Inicio del degradado del botón primario. El original (#3b8eaa → #5aaec8) daba 2.5–3.7:1 con texto blanco; ocean.800 → ocean.700 garantiza ≥ 5.4:1 en todo el degradado.",
+      "description": "Start of the primary button gradient. The original (#3b8eaa → #5aaec8) gave 2.5–3.7:1 with white text; ocean.800 → ocean.700 guarantees ≥ 5.4:1 across the whole gradient.",
       "themes": {
         "dark": "{color.ocean.800}",
         "light": "{color.ocean.800}"
@@ -3605,7 +3605,7 @@
       "figmaVariable": "color/action/primary/background-end",
       "status": "stable",
       "references": "color.ocean.700",
-      "description": "Fin del degradado del botón primario.",
+      "description": "End of the primary button gradient.",
       "themes": {
         "dark": "{color.ocean.700}",
         "light": "{color.ocean.700}"
@@ -3620,7 +3620,7 @@
       "figmaVariable": "color/action/primary/background-hover",
       "status": "stable",
       "references": "color.ocean.800",
-      "description": "Acción principal en hover.",
+      "description": "Main action on hover.",
       "themes": {
         "dark": "{color.ocean.800}",
         "light": "{color.ocean.800}"
@@ -3635,7 +3635,7 @@
       "figmaVariable": "color/action/primary/background-pressed",
       "status": "stable",
       "references": "color.ocean.900",
-      "description": "Acción principal presionada.",
+      "description": "Main action when pressed.",
       "themes": {
         "dark": "{color.ocean.900}",
         "light": "{color.ocean.900}"
@@ -3650,7 +3650,7 @@
       "figmaVariable": "color/action/primary/foreground",
       "status": "stable",
       "references": "color.white",
-      "description": "Texto e icono sobre la acción principal.",
+      "description": "Text and icon on the main action.",
       "themes": {
         "dark": "{color.white}",
         "light": "{color.white}"
@@ -3665,7 +3665,7 @@
       "figmaVariable": "color/action/secondary/background",
       "status": "stable",
       "references": "color.navy.800",
-      "description": "Acción secundaria.",
+      "description": "Secondary action.",
       "themes": {
         "dark": "{color.navy.800}",
         "light": "{color.white}"
@@ -3680,7 +3680,7 @@
       "figmaVariable": "color/action/secondary/background-hover",
       "status": "stable",
       "references": "color.navy.700",
-      "description": "Acción secundaria en hover.",
+      "description": "Secondary action on hover.",
       "themes": {
         "dark": "{color.navy.700}",
         "light": "{color.navy.50}"
@@ -3695,7 +3695,7 @@
       "figmaVariable": "color/action/secondary/foreground",
       "status": "stable",
       "references": "color.navy.300",
-      "description": "Texto de la acción secundaria.",
+      "description": "Secondary action text.",
       "themes": {
         "dark": "{color.navy.300}",
         "light": "{color.navy.700}"
@@ -3710,7 +3710,7 @@
       "figmaVariable": "color/action/secondary/border",
       "status": "stable",
       "references": "color.alpha.ocean.18",
-      "description": "Borde de la acción secundaria.",
+      "description": "Secondary action border.",
       "themes": {
         "dark": "{color.alpha.ocean.18}",
         "light": "{color.navy.200}"
@@ -3725,7 +3725,7 @@
       "figmaVariable": "color/action/ghost/background-hover",
       "status": "stable",
       "references": "color.alpha.ocean.8",
-      "description": "Fondo en hover de acciones sin contenedor.",
+      "description": "Hover background of actions without a container.",
       "themes": {
         "dark": "{color.alpha.ocean.8}",
         "light": "{color.ocean.50}"
@@ -3740,7 +3740,7 @@
       "figmaVariable": "color/action/ghost/foreground",
       "status": "stable",
       "references": "color.ocean.400",
-      "description": "Texto de acciones tipo enlace.",
+      "description": "Text of link-style actions.",
       "themes": {
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.700}"
@@ -3755,7 +3755,7 @@
       "figmaVariable": "color/action/danger/background",
       "status": "stable",
       "references": "color.coral.600",
-      "description": "Acción destructiva (cancelar plan). Tono oscuro para que el texto blanco cumpla 4.5:1.",
+      "description": "Destructive action (cancel plan). Dark tone so white text meets 4.5:1.",
       "themes": {
         "dark": "{color.coral.600}",
         "light": "{color.coral.600}"
@@ -3770,7 +3770,7 @@
       "figmaVariable": "color/action/danger/background-hover",
       "status": "stable",
       "references": "color.coral.700",
-      "description": "Acción destructiva en hover.",
+      "description": "Destructive action on hover.",
       "themes": {
         "dark": "{color.coral.700}",
         "light": "{color.coral.700}"
@@ -3785,7 +3785,7 @@
       "figmaVariable": "color/action/danger/foreground",
       "status": "stable",
       "references": "color.coral.300",
-      "description": "Texto de acción destructiva sin contenedor (Sign out).",
+      "description": "Destructive action text without a container (Sign out).",
       "themes": {
         "dark": "{color.coral.300}",
         "light": "{color.coral.600}"
@@ -4097,7 +4097,7 @@
       "figmaVariable": "color/status/pending/foreground",
       "status": "stable",
       "references": "color.sun.400",
-      "description": "Envío pendiente de revisión.",
+      "description": "Submission waiting for review.",
       "themes": {
         "dark": "{color.sun.400}",
         "light": "{color.sun.700}"
@@ -4126,7 +4126,7 @@
       "figmaVariable": "color/status/in-review/foreground",
       "status": "stable",
       "references": "color.ocean.400",
-      "description": "Envío en revisión por el coach.",
+      "description": "Submission being reviewed by the coach.",
       "themes": {
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.700}"
@@ -4155,7 +4155,7 @@
       "figmaVariable": "color/status/review-ready/foreground",
       "status": "stable",
       "references": "color.green.400",
-      "description": "Revisión lista para ver.",
+      "description": "Review ready to watch.",
       "themes": {
         "dark": "{color.green.400}",
         "light": "{color.green.700}"
@@ -4184,7 +4184,7 @@
       "figmaVariable": "color/status/overdue/foreground",
       "status": "stable",
       "references": "color.coral.300",
-      "description": "Revisión fuera de plazo.",
+      "description": "Review past its deadline.",
       "themes": {
         "dark": "{color.coral.300}",
         "light": "{color.coral.600}"
@@ -4213,7 +4213,7 @@
       "figmaVariable": "color/disabled/background",
       "status": "stable",
       "references": "color.alpha.navy.18",
-      "description": "Fondo de controles deshabilitados.",
+      "description": "Background of disabled controls.",
       "themes": {
         "dark": "{color.alpha.navy.18}",
         "light": "{color.gray.100}"
@@ -4228,7 +4228,7 @@
       "figmaVariable": "color/disabled/foreground",
       "status": "stable",
       "references": "color.navy.500",
-      "description": "Texto e icono de controles deshabilitados.",
+      "description": "Text and icon of disabled controls.",
       "themes": {
         "dark": "{color.navy.500}",
         "light": "{color.gray.400}"
@@ -4243,7 +4243,7 @@
       "figmaVariable": "color/icon/primary",
       "status": "stable",
       "references": "color.white",
-      "description": "Iconos por defecto.",
+      "description": "Default icons.",
       "themes": {
         "dark": "{color.white}",
         "light": "{color.navy.900}"
@@ -4258,7 +4258,7 @@
       "figmaVariable": "color/icon/secondary",
       "status": "stable",
       "references": "color.navy.500",
-      "description": "Iconos secundarios (navegación inactiva, chevrons).",
+      "description": "Secondary icons (inactive navigation, chevrons).",
       "themes": {
         "dark": "{color.navy.500}",
         "light": "{color.navy.500}"
@@ -4273,7 +4273,7 @@
       "figmaVariable": "color/icon/brand",
       "status": "stable",
       "references": "color.ocean.400",
-      "description": "Iconos activos o de marca.",
+      "description": "Active or brand icons.",
       "themes": {
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.600}"
@@ -4298,7 +4298,7 @@
       "figmaVariable": "size/space/3xs",
       "status": "stable",
       "references": "size.space.50",
-      "description": "Separación mínima entre label y valor."
+      "description": "Minimum gap between a label and its value."
     },
     {
       "name": "size.space.2xs",
@@ -4309,7 +4309,7 @@
       "figmaVariable": "size/space/2xs",
       "status": "stable",
       "references": "size.space.100",
-      "description": "Separación interna de badges y chips."
+      "description": "Inner spacing of badges and chips."
     },
     {
       "name": "size.space.xs",
@@ -4320,7 +4320,7 @@
       "figmaVariable": "size/space/xs",
       "status": "stable",
       "references": "size.space.150",
-      "description": "Espacio entre icono y texto en controles pequeños."
+      "description": "Gap between icon and text in small controls."
     },
     {
       "name": "size.space.small",
@@ -4331,7 +4331,7 @@
       "figmaVariable": "size/space/small",
       "status": "stable",
       "references": "size.space.200",
-      "description": "Espacio entre icono y texto; entre elementos muy relacionados."
+      "description": "Gap between icon and text; between closely related elements."
     },
     {
       "name": "size.space.medium",
@@ -4342,7 +4342,7 @@
       "figmaVariable": "size/space/medium",
       "status": "stable",
       "references": "size.space.300",
-      "description": "Padding interno de tarjetas compactas y campos."
+      "description": "Inner padding of compact cards and fields."
     },
     {
       "name": "size.space.large",
@@ -4353,7 +4353,7 @@
       "figmaVariable": "size/space/large",
       "status": "stable",
       "references": "size.space.400",
-      "description": "Padding de tarjetas; separación entre elementos de una lista."
+      "description": "Card padding; gap between list items."
     },
     {
       "name": "size.space.xl",
@@ -4364,7 +4364,7 @@
       "figmaVariable": "size/space/xl",
       "status": "stable",
       "references": "size.space.600",
-      "description": "Separación entre secciones dentro de una vista."
+      "description": "Gap between sections within a view."
     },
     {
       "name": "size.space.2xl",
@@ -4375,7 +4375,7 @@
       "figmaVariable": "size/space/2xl",
       "status": "stable",
       "references": "size.space.1000",
-      "description": "Separación entre bloques grandes de la página."
+      "description": "Gap between large page blocks."
     },
     {
       "name": "size.space.page-gutter",
@@ -4386,7 +4386,7 @@
       "figmaVariable": "size/space/page-gutter",
       "status": "stable",
       "references": "size.space.3000",
-      "description": "Margen lateral del contenido en escritorio (1440px)."
+      "description": "Side margin of the content on desktop (1440px)."
     },
     {
       "name": "size.radius.none",
@@ -4418,7 +4418,7 @@
       "figmaVariable": "size/radius/medium",
       "status": "stable",
       "references": "size.radius.200",
-      "description": "Tooltips, items de menú."
+      "description": "Tooltips, menu items."
     },
     {
       "name": "size.radius.large",
@@ -4429,7 +4429,7 @@
       "figmaVariable": "size/radius/large",
       "status": "stable",
       "references": "size.radius.300",
-      "description": "Campos, botones, bloques internos."
+      "description": "Fields, buttons, inner blocks."
     },
     {
       "name": "size.radius.xl",
@@ -4440,7 +4440,7 @@
       "figmaVariable": "size/radius/xl",
       "status": "stable",
       "references": "size.radius.400",
-      "description": "Tarjetas, stats, modales."
+      "description": "Cards, stats, modals."
     },
     {
       "name": "size.radius.pill",
@@ -4451,7 +4451,7 @@
       "figmaVariable": "size/radius/pill",
       "status": "stable",
       "references": "size.radius.full",
-      "description": "Píldoras, avatares, switch."
+      "description": "Pills, avatars, switch."
     },
     {
       "name": "size.layout.sidebar-width",
@@ -4462,7 +4462,7 @@
       "figmaVariable": "size/layout/sidebar-width",
       "status": "stable",
       "references": "size.container.sidebar",
-      "description": "Ancho del sidebar de navegación en escritorio."
+      "description": "Navigation sidebar width on desktop."
     },
     {
       "name": "size.layout.form-width",
@@ -4473,7 +4473,7 @@
       "figmaVariable": "size/layout/form-width",
       "status": "stable",
       "references": "size.container.form",
-      "description": "Ancho máximo de formularios de autenticación."
+      "description": "Maximum width of authentication forms."
     },
     {
       "name": "size.layout.content-width",
@@ -4484,7 +4484,7 @@
       "figmaVariable": "size/layout/content-width",
       "status": "stable",
       "references": "size.container.content",
-      "description": "Ancho máximo de la columna de contenido."
+      "description": "Maximum width of the content column."
     },
     {
       "name": "size.layout.control-height",
@@ -4495,7 +4495,7 @@
       "figmaVariable": "size/layout/control-height",
       "status": "stable",
       "references": "size.control.md",
-      "description": "Altura por defecto de botones y campos (área táctil 44px)."
+      "description": "Default height of buttons and fields (44px touch target)."
     },
     {
       "name": "size.layout.control-height-small",
@@ -4526,7 +4526,7 @@
       "figmaVariable": "size/layout/stat-min-width",
       "status": "stable",
       "references": "size.container.stat",
-      "description": "Ancho mínimo de una Stat antes de saltar de línea."
+      "description": "Minimum width of a Stat before it wraps to a new row."
     },
     {
       "name": "size.icon.extra-small",
@@ -4537,7 +4537,7 @@
       "figmaVariable": "size/icon/extra-small",
       "status": "stable",
       "references": "size.icon.xs",
-      "description": "Iconos dentro de badges, tags y checkbox."
+      "description": "Icons inside badges, tags and checkbox."
     },
     {
       "name": "size.icon.small",
@@ -4548,7 +4548,7 @@
       "figmaVariable": "size/icon/small",
       "status": "stable",
       "references": "size.icon.sm",
-      "description": "Iconos dentro de campos y botones pequeños."
+      "description": "Icons inside fields and small buttons."
     },
     {
       "name": "size.icon.medium",
@@ -4559,7 +4559,7 @@
       "figmaVariable": "size/icon/medium",
       "status": "stable",
       "references": "size.icon.md",
-      "description": "Iconos de botones y cabeceras de sección."
+      "description": "Icons in buttons and section headers."
     },
     {
       "name": "size.icon.large",
@@ -4570,7 +4570,7 @@
       "figmaVariable": "size/icon/large",
       "status": "stable",
       "references": "size.icon.lg",
-      "description": "Iconos de navegación (tamaño por defecto)."
+      "description": "Navigation icons (default size)."
     },
     {
       "name": "size.icon.extra-large",
@@ -4581,7 +4581,7 @@
       "figmaVariable": "size/icon/extra-large",
       "status": "stable",
       "references": "size.icon.xl",
-      "description": "Iconos ilustrativos de EmptyState."
+      "description": "Illustrative EmptyState icons."
     },
     {
       "name": "size.border.default",
@@ -4602,7 +4602,7 @@
       "figmaVariable": "size/border/emphasis",
       "status": "stable",
       "references": "size.border.150",
-      "description": "Iconos de línea y checkbox."
+      "description": "Line icons and checkbox."
     },
     {
       "name": "size.border.focus",
@@ -4622,7 +4622,7 @@
       "cssVariable": "--ds-typography-display",
       "figmaVariable": "typography/display",
       "status": "stable",
-      "description": "Saludo principal de la vista ('Welcome, Alejandro')."
+      "description": "Main greeting of the view ('Welcome, Alejandro')."
     },
     {
       "name": "typography.heading-large",
@@ -4632,7 +4632,7 @@
       "cssVariable": "--ds-typography-heading-large",
       "figmaVariable": "typography/heading-large",
       "status": "stable",
-      "description": "Título de página o modal."
+      "description": "Page or modal title."
     },
     {
       "name": "typography.heading-medium",
@@ -4642,7 +4642,7 @@
       "cssVariable": "--ds-typography-heading-medium",
       "figmaVariable": "typography/heading-medium",
       "status": "stable",
-      "description": "Título de sección."
+      "description": "Section title."
     },
     {
       "name": "typography.heading-small",
@@ -4652,7 +4652,7 @@
       "cssVariable": "--ds-typography-heading-small",
       "figmaVariable": "typography/heading-small",
       "status": "stable",
-      "description": "Título de tarjeta ('Frontside snap')."
+      "description": "Card title ('Frontside snap')."
     },
     {
       "name": "typography.body-large",
@@ -4662,7 +4662,7 @@
       "cssVariable": "--ds-typography-body-large",
       "figmaVariable": "typography/body-large",
       "status": "stable",
-      "description": "Texto de lectura destacado."
+      "description": "Emphasized reading text."
     },
     {
       "name": "typography.body-medium",
@@ -4672,7 +4672,7 @@
       "cssVariable": "--ds-typography-body-medium",
       "figmaVariable": "typography/body-medium",
       "status": "stable",
-      "description": "Texto de lectura por defecto."
+      "description": "Default reading text."
     },
     {
       "name": "typography.body-small",
@@ -4682,7 +4682,7 @@
       "cssVariable": "--ds-typography-body-small",
       "figmaVariable": "typography/body-small",
       "status": "stable",
-      "description": "Metadatos y texto de ayuda."
+      "description": "Metadata and helper text."
     },
     {
       "name": "typography.caption",
@@ -4692,7 +4692,7 @@
       "cssVariable": "--ds-typography-caption",
       "figmaVariable": "typography/caption",
       "status": "stable",
-      "description": "Fechas y notas mínimas."
+      "description": "Dates and minimal notes."
     },
     {
       "name": "typography.label",
@@ -4702,7 +4702,7 @@
       "cssVariable": "--ds-typography-label",
       "figmaVariable": "typography/label",
       "status": "stable",
-      "description": "Labels de formulario."
+      "description": "Form labels."
     },
     {
       "name": "typography.button",
@@ -4712,7 +4712,7 @@
       "cssVariable": "--ds-typography-button",
       "figmaVariable": "typography/button",
       "status": "stable",
-      "description": "Texto de botones."
+      "description": "Button text."
     },
     {
       "name": "typography.overline",
@@ -4722,7 +4722,7 @@
       "cssVariable": "--ds-typography-overline",
       "figmaVariable": "typography/overline",
       "status": "stable",
-      "description": "Etiquetas en mayúsculas (EMAIL, FROM SURFER)."
+      "description": "Uppercase labels (EMAIL, FROM SURFER)."
     },
     {
       "name": "typography.metric",
@@ -4732,7 +4732,7 @@
       "cssVariable": "--ds-typography-metric",
       "figmaVariable": "typography/metric",
       "status": "stable",
-      "description": "Valores numéricos de stats."
+      "description": "Numeric stat values."
     },
     {
       "name": "elevation.action",
@@ -4743,7 +4743,7 @@
       "figmaVariable": "elevation/action",
       "status": "stable",
       "references": "shadow.glow-medium",
-      "description": "Brillo de la acción primaria."
+      "description": "Glow of the primary action."
     },
     {
       "name": "elevation.accent",
@@ -4754,7 +4754,7 @@
       "figmaVariable": "elevation/accent",
       "status": "stable",
       "references": "shadow.glow-small",
-      "description": "Brillo sutil de avatares y badges destacados."
+      "description": "Subtle glow of avatars and highlighted badges."
     },
     {
       "name": "elevation.overlay",
@@ -4765,7 +4765,7 @@
       "figmaVariable": "elevation/overlay",
       "status": "stable",
       "references": "shadow.elevation-high",
-      "description": "Modales, tooltips y menús."
+      "description": "Modals, tooltips and menus."
     },
     {
       "name": "elevation.focus",
@@ -4776,7 +4776,7 @@
       "figmaVariable": "elevation/focus",
       "status": "stable",
       "references": "shadow.ring",
-      "description": "Anillo de foco visible para teclado."
+      "description": "Visible keyboard focus ring."
     },
     {
       "name": "motion.transition-fast",
@@ -4786,7 +4786,7 @@
       "cssVariable": "--ds-motion-transition-fast",
       "figmaVariable": "motion/transition-fast",
       "status": "stable",
-      "description": "Hover y cambios de color."
+      "description": "Hover and color changes."
     },
     {
       "name": "motion.transition-base",
@@ -4796,7 +4796,7 @@
       "cssVariable": "--ds-motion-transition-base",
       "figmaVariable": "motion/transition-base",
       "status": "stable",
-      "description": "Expandir/colapsar, switches."
+      "description": "Expand/collapse, switches."
     },
     {
       "name": "motion.transition-enter",
@@ -4806,7 +4806,7 @@
       "cssVariable": "--ds-motion-transition-enter",
       "figmaVariable": "motion/transition-enter",
       "status": "stable",
-      "description": "Entrada de modales y toasts."
+      "description": "Modal and toast entrance."
     },
     {
       "name": "motion.reduced-duration",
@@ -4817,7 +4817,7 @@
       "figmaVariable": "motion/reduced-duration",
       "status": "stable",
       "references": "motion.duration.instant",
-      "description": "Duración cuando el usuario pide movimiento reducido (prefers-reduced-motion)."
+      "description": "Duration when the user asks for reduced motion (prefers-reduced-motion)."
     },
     {
       "name": "motion.loop-duration",
@@ -4828,7 +4828,7 @@
       "figmaVariable": "motion/loop-duration",
       "status": "stable",
       "references": "motion.duration.loop",
-      "description": "Vuelta completa de animaciones en bucle (Spinner)."
+      "description": "One full cycle of looping animations (Spinner)."
     },
     {
       "name": "layer.raised",
@@ -4839,7 +4839,7 @@
       "figmaVariable": "layer/raised",
       "status": "stable",
       "references": "z-index.raised",
-      "description": "Elementos sobre el contenido (cards en hover)."
+      "description": "Elements above the content (cards on hover)."
     },
     {
       "name": "layer.sticky",
@@ -4850,7 +4850,7 @@
       "figmaVariable": "layer/sticky",
       "status": "stable",
       "references": "z-index.sticky",
-      "description": "Cabeceras fijas."
+      "description": "Sticky headers."
     },
     {
       "name": "layer.dropdown",
@@ -4861,7 +4861,7 @@
       "figmaVariable": "layer/dropdown",
       "status": "stable",
       "references": "z-index.dropdown",
-      "description": "Menús desplegables."
+      "description": "Dropdown menus."
     },
     {
       "name": "layer.modal",
@@ -4872,7 +4872,7 @@
       "figmaVariable": "layer/modal",
       "status": "stable",
       "references": "z-index.modal",
-      "description": "Modales."
+      "description": "Modals."
     },
     {
       "name": "layer.toast",
@@ -4883,7 +4883,7 @@
       "figmaVariable": "layer/toast",
       "status": "stable",
       "references": "z-index.toast",
-      "description": "Notificaciones flotantes."
+      "description": "Floating notifications."
     },
     {
       "name": "layer.tooltip",
@@ -4894,7 +4894,7 @@
       "figmaVariable": "layer/tooltip",
       "status": "stable",
       "references": "z-index.tooltip",
-      "description": "Tooltips, siempre encima."
+      "description": "Tooltips, always on top."
     },
     {
       "name": "button.primary.background",
@@ -4905,7 +4905,7 @@
       "figmaVariable": "button/primary/background",
       "status": "stable",
       "references": "color.action.primary.background-start",
-      "description": "Inicio del degradado."
+      "description": "Gradient start."
     },
     {
       "name": "button.primary.background-end",
@@ -4916,7 +4916,7 @@
       "figmaVariable": "button/primary/background-end",
       "status": "stable",
       "references": "color.action.primary.background-end",
-      "description": "Fin del degradado."
+      "description": "Gradient end."
     },
     {
       "name": "button.primary.background-hover",

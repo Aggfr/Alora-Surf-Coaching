@@ -1,57 +1,57 @@
-# Convenciones de nombres
+# Naming conventions
 
-Una sola convención para todo el sistema. Si un nombre no encaja aquí, el nombre está mal.
+One convention for the whole system. If a name does not fit here, the name is wrong.
 
 ## Tokens
-**Formato:** `categoria.propiedad.elemento.estado` (se omiten los niveles que no aplican).
+**Format:** `category.property.element.state` (levels that do not apply are omitted).
 
-| Nivel | Valores | Ejemplo |
+| Level | Values | Example |
 |---|---|---|
-| categoría | `color`, `size`, `typography`, `elevation`, `motion`, `layer`, `shadow`, `z-index`, `breakpoint`, o el nombre de un componente en kebab-case | `button` |
-| propiedad | `background`, `text`, `border`, `icon`, `space`, `radius`, `layout`… | `background` |
-| elemento | rol o variante | `primary`, `surface-raised` |
-| estado | `hover`, `pressed`, `focus`, `checked`, `active`, `disabled`, `error` | `hover` |
+| category | `color`, `size`, `typography`, `elevation`, `motion`, `layer`, `shadow`, `z-index`, `breakpoint`, or a component name in kebab-case | `button` |
+| property | `background`, `text`, `border`, `icon`, `space`, `radius`, `layout`… | `background` |
+| element | role or variant | `primary`, `surface-raised` |
+| state | `hover`, `pressed`, `focus`, `checked`, `active`, `disabled`, `error` | `hover` |
 
-**Válidos:** `color.background.surface` · `color.text.primary` · `color.border.subtle` · `size.space.medium` · `size.radius.large` · `typography.weight.regular` · `button.primary.background-hover` · `input.border.focus`
+**Valid:** `color.background.surface` · `color.text.primary` · `color.border.subtle` · `size.space.medium` · `size.radius.large` · `typography.weight.regular` · `button.primary.background-hover` · `input.border.focus`
 
-**Prohibido:**
-| Mal | Por qué | Bien |
+**Not allowed:**
+| Wrong | Why | Right |
 |---|---|---|
-| `color.bg.primary` | abreviatura | `color.background.primary` |
-| `btn.txt` | abreviaturas | `button.primary.foreground` |
-| `color.blue-button` | mezcla primitivo y uso | `color.action.primary.background` |
-| `tailwind.spacing.4`, `figma.fill` | nombre de herramienta | `size.space.small` |
-| `size.space.1`, `.2`, `.3` | números sin escala | `size.space.100` (escala ×4px) |
-| `color.text.gray` en la capa semántica | describe el valor, no la intención | `color.text.secondary` |
+| `color.bg.primary` | abbreviation | `color.background.primary` |
+| `btn.txt` | abbreviations | `button.primary.foreground` |
+| `color.blue-button` | mixes primitive and usage | `color.action.primary.background` |
+| `tailwind.spacing.4`, `figma.fill` | tool name | `size.space.small` |
+| `size.space.1`, `.2`, `.3` | numbers without a scale | `size.space.100` (×4px scale) |
+| `color.text.gray` in the semantic layer | describes the value, not the intent | `color.text.secondary` |
 
-**Escalas numéricas** (solo capa primitiva): colores 50–950; espacio y radio en centenas donde `100` = 4px; `typography.size` en tallas 2xs–4xl.
-**Escalas con palabras** (capa semántica): `3xs · 2xs · xs · small · medium · large · xl · 2xl`. Nunca duplicar una ruta primitiva (por eso el radio semántico máximo se llama `pill` y no `full`).
+**Numeric scales** (primitive layer only): colors 50–950; space and radius in hundreds where `100` = 4px; `typography.size` in sizes 2xs–4xl.
+**Word scales** (semantic layer): `3xs · 2xs · xs · small · medium · large · xl · 2xl`. Never duplicate a primitive path (that is why the largest semantic radius is called `pill`, not `full`).
 
-### Traducción por plataforma
-| Fuente (DTCG) | Figma variable | CSS |
+### Translation per platform
+| Source (DTCG) | Figma variable | CSS |
 |---|---|---|
 | `color.text.primary` | `color/text/primary` | `--ds-color-text-primary` |
 | `button.primary.background-hover` | `button/primary/background-hover` | `--ds-button-primary-background-hover` |
 
-## Componentes
-| Elemento | Convención | Ejemplo |
+## Components
+| Item | Convention | Example |
 |---|---|---|
-| Componente | PascalCase, sustantivo concreto | `Button`, `SearchField`, `SubmissionCard` |
-| Archivo | PascalCase = nombre del componente | `Button.tsx`, `Button.docs.md`, `Button.examples.md`, `Button.tokens.json` |
-| Carpeta | kebab-case dentro de su nivel | `components/molecules/search-field/` |
+| Component | PascalCase, concrete noun | `Button`, `SearchField`, `SubmissionCard` |
+| File | PascalCase = component name | `Button.tsx`, `Button.docs.md`, `Button.examples.md`, `Button.tokens.json` |
+| Folder | kebab-case inside its level | `components/molecules/search-field/` |
 | Props | camelCase | `variant`, `size`, `leadingIcon` |
-| Booleanos | prefijo `is` / `has` | `isDisabled`, `isLoading`, `hasError`, `hasDivider` |
-| Eventos | prefijo `on` + verbo | `onPress`, `onChange`, `onDismiss`, `onPageChange` |
-| Variantes | prop con unión de strings | `variant: 'primary' \| 'secondary' \| 'ghost' \| 'danger'` |
-| Tamaños | `small` · `medium` · `large` | `size="small"` |
-| Clase CSS | `ds-` + BEM en kebab-case | `.ds-button`, `.ds-button__label`, `.ds-button--primary` |
-| Variable CSS | `--ds-` + ruta del token | `--ds-color-action-primary-background` |
-| Figma | Component set = nombre; propiedades en minúscula | `Button` → `variant=primary, size=medium, state=hover` |
+| Booleans | `is` / `has` prefix | `isDisabled`, `isLoading`, `hasError`, `hasDivider` |
+| Events | `on` + verb | `onPress`, `onChange`, `onDismiss`, `onPageChange` |
+| Variants | prop with a string union | `variant: 'primary' \| 'secondary' \| 'ghost' \| 'danger'` |
+| Sizes | `small` · `medium` · `large` | `size="small"` |
+| CSS class | `ds-` + BEM in kebab-case | `.ds-button`, `.ds-button__label`, `.ds-button--primary` |
+| CSS variable | `--ds-` + token path | `--ds-color-action-primary-background` |
+| Figma | Component set = name; lowercase properties | `Button` → `variant=primary, size=medium, state=hover` |
 
-**Nombres prohibidos:** `Box`, `Wrapper`, `Container`, `Thing`, `Component1`, `NewButton`, `ButtonV2`, `CustomCard`. Un nombre describe qué es el componente, no su historia.
+**Banned names:** `Box`, `Wrapper`, `Container`, `Thing`, `Component1`, `NewButton`, `ButtonV2`, `CustomCard`. A name describes what the component is, not its history.
 
-**Estados y variantes** son props explícitos. `<Button variant="danger">`, nunca `<DangerButton>`.
+**States and variants** are explicit props. `<Button variant="danger">`, never `<DangerButton>`.
 
-## Templates y páginas
-- Templates: sufijo `Template` (`DashboardTemplate`, `AuthTemplate`), carpeta `templates/<kebab>/`.
-- Páginas de ejemplo: sufijo `Page` (`CoachQueuePage`), carpeta `pages/<kebab>/`.
+## Templates and pages
+- Templates: `Template` suffix (`DashboardTemplate`, `AuthTemplate`), folder `templates/<kebab>/`.
+- Example pages: `Page` suffix (`CoachQueuePage`), folder `pages/<kebab>/`.

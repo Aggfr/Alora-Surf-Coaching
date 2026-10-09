@@ -1,14 +1,14 @@
-# Icon · Ejemplos
+# Icon · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Icon } from '@alora/design-system';
 
 <Icon name="clock" size="sm" tone="inherit" />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <img src="clock.png" />
 ```
-Por qué: Iconos de otras librerías mezclados con el set.
+Why: Icons from other libraries mixed with the set.

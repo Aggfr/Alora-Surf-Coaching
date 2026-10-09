@@ -4,7 +4,7 @@ import { FormField } from '../../components/molecules/form-field/FormField';
 import { FormSection } from '../../components/organisms/form-section/FormSection';
 import { AuthTemplate } from '../../templates/auth/AuthTemplate';
 
-/** Page · Login del surfer. */
+/** Page · Surfer log in. */
 export function SurferLoginPage({ onLogIn, onSignUp }: { onLogIn: (email: string, password: string) => Promise<void>; onSignUp: () => void }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

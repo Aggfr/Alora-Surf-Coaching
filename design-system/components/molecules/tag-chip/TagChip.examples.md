@@ -1,14 +1,14 @@
-# TagChip · Ejemplos
+# TagChip · Examples
 
-## Correcto
+## Do
 ```tsx
 import { TagChip } from '@alora/design-system';
 
 <TagChip label="Advanced" isSelected onToggle={toggle} onRemove={remove} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Badge onClick={toggle}>Advanced</Badge>
 ```
-Por qué: Usar TagChip para estados del sistema.
+Why: Using TagChip for system states.

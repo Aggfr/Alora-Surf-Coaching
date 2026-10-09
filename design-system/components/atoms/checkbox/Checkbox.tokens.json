@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Checkbox. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: checkbox.border, checkbox.background-checked, checkbox.foreground-checked, checkbox.radius, color.border.focus.",
+  "$description": "Checkbox tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: checkbox.border, checkbox.background-checked, checkbox.foreground-checked, checkbox.radius, color.border.focus.",
   "checkbox": {
     "border": {
       "$type": "color",

@@ -12,7 +12,7 @@ export interface TagProps {
   className?: string;
 }
 
-/** Atom · Píldora informativa con icono opcional. Docs: ./Tag.docs.md */
+/** Atom · Informational pill with an optional icon. Docs: ./Tag.docs.md */
 export function Tag({ children, tone = 'brand', icon, className }: TagProps) {
   return (
     <span className={cx('ds-tag', `ds-tag--${tone}`, className)}>

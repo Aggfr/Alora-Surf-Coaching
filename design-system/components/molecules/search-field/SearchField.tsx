@@ -10,7 +10,7 @@ export interface SearchFieldProps {
   className?: string;
 }
 
-/** Molecule · Búsqueda con limpiar. Docs: ./SearchField.docs.md */
+/** Molecule · Search with a clear button. Docs: ./SearchField.docs.md */
 export function SearchField({ value, onChange, placeholder = 'Search', onClear, className }: SearchFieldProps) {
   const id = useId();
   const inputRef = useRef<HTMLInputElement>(null);

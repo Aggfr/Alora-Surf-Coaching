@@ -10,7 +10,7 @@ export interface NavigationItemProps {
   className?: string;
 }
 
-/** Molecule · Destino de la Sidebar (icono sobre label). Docs: ./NavigationItem.docs.md */
+/** Molecule · Sidebar destination (icon above label). Docs: ./NavigationItem.docs.md */
 export function NavigationItem({ label, icon, href, isActive = false, className }: NavigationItemProps) {
   return (
     <a href={href} aria-current={isActive ? 'page' : undefined} className={cx('ds-navigation-item', isActive && 'ds-navigation-item--active', className)}>

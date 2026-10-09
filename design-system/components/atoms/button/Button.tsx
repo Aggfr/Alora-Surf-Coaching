@@ -19,7 +19,7 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
   onPress?: () => void;
 }
 
-/** Atom · Dispara una acción. Docs: ./Button.docs.md */
+/** Atom · Triggers an action. Docs: ./Button.docs.md */
 export function Button({
   children, variant = 'primary', size = 'medium', leadingIcon, trailingIcon,
   isDisabled = false, isLoading = false, isFullWidth = false, type = 'button', onPress, className, ...rest

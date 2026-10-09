@@ -1,14 +1,14 @@
-# Avatar · Ejemplos
+# Avatar · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Avatar } from '@alora/design-system';
 
 <Avatar name="Khata Kraiwan" tone="elite" />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <div className="circle" style={{ background: "#d97706" }}>K</div>
 ```
-Por qué: Comunicar el plan solo con el color del avatar.
+Why: Communicating the plan only through the avatar color.

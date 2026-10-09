@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Badge. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: badge.radius, badge.padding-horizontal, badge.padding-vertical, badge.typography, color.status.*, color.plan.*, color.feedback.neutral.*.",
+  "$description": "Badge tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: badge.radius, badge.padding-horizontal, badge.padding-vertical, badge.typography, color.status.*, color.plan.*, color.feedback.neutral.*.",
   "badge": {
     "radius": {
       "$type": "dimension",

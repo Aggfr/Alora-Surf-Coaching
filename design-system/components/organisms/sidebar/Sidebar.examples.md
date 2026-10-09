@@ -1,14 +1,14 @@
-# Sidebar · Ejemplos
+# Sidebar · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Sidebar } from '@alora/design-system';
 
 <Sidebar product="coach" activeHref="/queue" />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Sidebar style={{ width: 200 }} />
 ```
-Por qué: Añadir acciones (botones) al Sidebar.
+Why: Adding actions (buttons) to the Sidebar.

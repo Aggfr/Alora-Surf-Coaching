@@ -13,7 +13,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
   onChange?: (value: string) => void;
 }
 
-/** Atom · Campo de texto de una línea. Usar dentro de FormField. Docs: ./Input.docs.md */
+/** Atom · Single-line text field. Use inside FormField. Docs: ./Input.docs.md */
 export function Input({ id, type = 'text', leadingIcon, trailingIcon, hasError = false, isDisabled = false, onChange, className, ...rest }: InputProps) {
   return (
     <div className={cx('ds-input', hasError && 'ds-input--error', isDisabled && 'ds-input--disabled', className)}>

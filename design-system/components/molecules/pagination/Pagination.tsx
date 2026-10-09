@@ -8,7 +8,7 @@ export interface PaginationProps {
   className?: string;
 }
 
-/** Molecule · Navegación entre páginas de resultados. Docs: ./Pagination.docs.md */
+/** Molecule · Navigation between result pages. Docs: ./Pagination.docs.md */
 export function Pagination({ page, pageCount, onPageChange, className }: PaginationProps) {
   return (
     <nav aria-label="Pagination" className={cx('ds-pagination', className)}>

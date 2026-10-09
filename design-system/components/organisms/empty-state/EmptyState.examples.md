@@ -1,14 +1,14 @@
-# EmptyState · Ejemplos
+# EmptyState · Examples
 
-## Correcto
+## Do
 ```tsx
 import { EmptyState } from '@alora/design-system';
 
 <EmptyState message="No submissions waiting for review." />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <p>Nothing here</p>
 ```
-Por qué: Mensajes que culpan al usuario.
+Why: Messages that blame the user.

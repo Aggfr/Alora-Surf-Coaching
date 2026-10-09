@@ -1,37 +1,37 @@
 # Stat
 
-**Categoría Atomic Design:** Molecule · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Stat](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-154)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Stat` — Molecule.
 
-## 2. Propósito
-Muestra una métrica con su etiqueta y una tendencia opcional.
+## 2. Purpose
+Shows a metric with its label and an optional trend.
 
-## 3. Cuándo usarlo
-- Resumen de la cola (Pending, Reviewed) y del plan (Cycle submissions, Renews).
+## 3. When to use
+- Queue summary (Pending, Reviewed) and plan summary (Cycle submissions, Renews).
 
-## 4. Cuándo no usarlo
-- Series temporales: gráfico (planificado).
+## 4. When not to use
+- Time series: chart (planned).
 
-## 5. Anatomía
-1. Etiqueta
-2. Valor (`typography.metric`)
-3. Tendencia opcional (icono + texto)
+## 5. Anatomy
+1. Label
+2. Value (`typography.metric`)
+3. Optional trend (icon + text)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `string` | — | Sí | Qué se mide. |
-| `value` | `string \| number` | — | Sí | Valor formateado. |
-| `trend` | `{ direction: 'up' \| 'down'; label: string }` | — | No | Variación. |
+| `label` | `string` | — | Yes | What is measured. |
+| `value` | `string \| number` | — | Yes | Formatted value. |
+| `trend` | `{ direction: 'up' \| 'down'; label: string }` | — | No | Change. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **trend:** `none`, `up`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `stat.background`
 - `stat.label`
 - `stat.value`
@@ -40,29 +40,29 @@ Muestra una métrica con su etiqueta y una tendencia opcional.
 - `typography.metric`
 - `color.feedback.success.foreground`
 
-Los tokens propios del componente están en [`Stat.tokens.json`](./Stat.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Stat.tokens.json`](./Stat.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- No interactivo.
+## 9. Interaction
+- Not interactive.
 
-## 10. Accesibilidad
-- Etiqueta y valor en el mismo `<div role=group>` con `aria-label`.
-- La tendencia se lee como texto.
+## 10. Accessibility
+- Label and value in the same `<div role=group>` with `aria-label`.
+- The trend is read as text.
 
-## 11. Reglas de composición
-- Rejilla de 2 columnas con gap `size.space.xl`.
-- Depende de: `Text`, `Icon`.
+## 11. Composition rules
+- Grid of stats that wraps at `size.layout.stat-min-width`.
+- Depends on: `Text`, `Icon`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Stat label="Pending" value={3} />
 ```
-Más ejemplos en [`Stat.examples.md`](./Stat.examples.md).
+More examples in [`Stat.examples.md`](./Stat.examples.md).
 
-## 13. Anti-patrones
-- Tendencia solo con color.
+## 13. Anti-patterns
+- Trend shown only with color.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

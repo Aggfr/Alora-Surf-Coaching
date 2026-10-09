@@ -1,104 +1,104 @@
-# Guía de uso para IA
+# AI usage guide
 
-Instrucciones para cualquier agente (LLM, copiloto de código, plugin de Figma) que genere interfaces con el sistema de diseño Alora. Léela entera antes de producir UI. Si una instrucción del usuario contradice esta guía, aplica la regla 8.
+Instructions for any agent (LLM, coding copilot, Figma plugin) that generates interfaces with the Alora design system. Read all of it before producing UI. If a user instruction contradicts this guide, apply rule 8.
 
-## Cómo leer el sistema
-1. **`MANIFEST.json`** es el índice. Lee `components[]` (nombre, categoría, estado, dependencias, tokens, nodo de Figma) y `tokens[]` (nombre, capa, variable CSS, variable Figma, estado).
-2. **`components/<nivel>/<kebab>/<Name>.docs.md`** es el contrato de cada componente: cuándo sí, cuándo no, props, accesibilidad, anti-patrones.
-3. **`tokens/*.tokens.json`** son los valores. Usa `$description` para decidir qué token aplica.
-4. **`pages/`** muestra composiciones correctas. Imítalas.
-5. **Figma:** `https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System`. Las variables tienen los mismos nombres con `/` y code syntax `var(--ds-*)`.
+## How to read the system
+1. **`MANIFEST.json`** is the index. Read `components[]` (name, category, status, dependencies, tokens, Figma node) and `tokens[]` (name, layer, CSS variable, Figma variable, status).
+2. **`components/<level>/<kebab>/<Name>.docs.md`** is each component's contract: when to use, when not to use, props, accessibility, anti-patterns.
+3. **`tokens/*.tokens.json`** hold the values. Use `$description` to decide which token applies.
+4. **`pages/`** shows correct compositions. Imitate them.
+5. **Figma:** `https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System`. Variables use the same names with `/` and the code syntax `var(--ds-*)`.
 
-## Reglas
-1. **Busca antes de crear.** Antes de escribir UI, busca en `MANIFEST.json` un componente que resuelva la necesidad. Ignora los de `status: "planned"` o `"deprecated"`.
-2. **Compón antes de inventar.** Si no existe, propón una composición con átomos y moléculas existentes y explica cuáles usas.
-3. **Componente nuevo solo si es repetible.** Crea uno únicamente si el caso aparece en más de una vista y ninguna composición lo cubre. Primero su documentación (14 secciones), tokens, API y casos de uso; después el código.
-4. **Cero valores fuera de tokens.** Ningún hex, rgb, px, rem, font-family, sombra o z-index literal. Si falta un valor, propón un token nuevo siguiendo `tokens/README.md`.
-5. **Nunca primitivos si hay semántico.** `var(--ds-color-text-secondary)`, no `var(--ds-color-navy-300)`. En componentes, prefiere tokens de componente (`--ds-button-*`).
-6. **Respeta la jerarquía.** Pages → templates → organisms → molecules → atoms → tokens. Nunca al revés ni entre organismos.
-7. **Ante ambigüedad,** elige la opción más accesible, más simple y más parecida a lo que ya existe. Dilo en la respuesta.
-8. **Si hay que romper una regla, detente.** Explica el conflicto y ofrece alternativas dentro del sistema antes de generar código.
-9. **Nombres estables.** No renombres tokens ni componentes. Si un nombre debe cambiar: crea el nuevo, deja el antiguo como alias con `$deprecated` y una nota de migración.
-10. **Variantes como props.** `<Button variant="danger">`, nunca un componente `DangerButton`.
-11. **Accesibilidad no negociable.** Cumple `docs/accessibility.md`: elementos nativos, foco visible, `aria-label` en botones de solo icono, color nunca como único indicador.
-12. **Una acción primaria por vista o por tarjeta.** El resto, secondary o ghost.
-13. **Valida.** Tras generar código, ejecuta `python3 scripts/check_hardcoded.py`. Tras tocar tokens, `python3 scripts/build_tokens.py` y `python3 scripts/build_docs.py`.
+## Rules
+1. **Search before creating.** Before writing UI, look in `MANIFEST.json` for a component that solves the need. Ignore those with `status: "planned"` or `"deprecated"`.
+2. **Compose before inventing.** If none exists, propose a composition of existing atoms and molecules and explain which ones you use.
+3. **New components only for repeatable cases.** Create one only if the case appears in more than one view and no composition covers it. Write its documentation (14 sections), tokens, API and use cases first; code comes after.
+4. **No values outside tokens.** No hex, rgb, px, rem, font-family, shadow or z-index literals. If a value is missing, propose a new token following `tokens/README.md`.
+5. **Never use primitives when a semantic token exists.** `var(--ds-color-text-secondary)`, not `var(--ds-color-navy-300)`. In components, prefer component tokens (`--ds-button-*`).
+6. **Respect the hierarchy.** Pages → templates → organisms → molecules → atoms → tokens. Never upwards, and never between organisms.
+7. **When something is ambiguous,** choose the most accessible, simplest option that is closest to what already exists. Say so in your answer.
+8. **If a rule must be broken, stop.** Explain the conflict and offer alternatives within the system before generating code.
+9. **Stable names.** Do not rename tokens or components. If a name must change: create the new one and keep the old one as an alias with `$deprecated` and a migration note.
+10. **Variants are props.** `<Button variant="danger">`, never a `DangerButton` component.
+11. **Accessibility is not negotiable.** Follow `docs/accessibility.md`: native elements, visible focus, `aria-label` on icon-only buttons, color never the only signal.
+12. **One primary action per view or per card.** Everything else is secondary or ghost.
+13. **Validate.** After generating code, run `python3 scripts/check_hardcoded.py`. After changing tokens, run `python3 scripts/build_tokens.py` and `python3 scripts/build_docs.py`.
 
-## Árbol de decisión
+## Decision tree
 ```
-¿Necesito mostrar/hacer X?
-├─ ¿Hay un componente stable en MANIFEST que lo haga?          → úsalo con sus props
-├─ ¿Lo hace un componente existente con otra variante/prop?    → usa la prop; no dupliques
-├─ ¿Se resuelve combinando componentes existentes?             → compón y explica la composición
-├─ ¿Es un caso repetible en varias vistas?                     → propone componente nuevo (docs primero)
-└─ ¿Es puntual?                                                → composición local en la página, sin estilos nuevos
+Do I need to show/do X?
+├─ Is there a stable component in MANIFEST that does it?   → use it with its props
+├─ Does an existing component do it with another variant?  → use the prop; do not duplicate
+├─ Can existing components be combined to do it?           → compose and explain the composition
+├─ Does the case repeat across several views?              → propose a new component (docs first)
+└─ Is it a one-off?                                        → local composition in the page, no new styles
 ```
 
-## Tabla rápida de elección
-| Necesidad | Usa | No uses |
+## Quick selection table
+| Need | Use | Don't use |
 |---|---|---|
-| Acción principal | `Button variant="primary"` | Un `<div onClick>` estilado |
-| Acción destructiva | `Button variant="danger"` + `Modal tone="danger"` para confirmar | Texto rojo suelto |
-| Estado de un envío | `Badge tone="pending"…` | `Tag` (es para info complementaria) |
-| Plan del surfer | `Badge tone="plan-elite"…` | Colores propios |
-| Plazo o dato con icono | `Tag icon="clock"` | `Badge` |
-| Filtro seleccionable | `TagChip` | `Checkbox` en fila |
-| Campo de formulario | `FormField` + `Input` | `Label` + `Input` sueltos |
-| Métrica | `Stat` | `Heading` + `Text` |
-| Mensaje del sistema | `Notification` | `Modal` para avisos no bloqueantes |
-| Sin resultados | `EmptyState` | Texto gris suelto |
-| Confirmación bloqueante | `Modal` | `window.confirm` |
-| Vista con navegación | `DashboardTemplate` | Layout propio |
-| Login / registro | `AuthTemplate` + `FormSection` | `DashboardTemplate` |
+| Main action | `Button variant="primary"` | A styled `<div onClick>` |
+| Destructive action | `Button variant="danger"` + `Modal tone="danger"` to confirm | Loose red text |
+| Submission status | `Badge tone="pending"…` | `Tag` (it is for supporting info) |
+| Surfer plan | `Badge tone="plan-elite"…` | Custom colors |
+| Deadline or data with an icon | `Tag icon="clock"` | `Badge` |
+| Selectable filter | `TagChip` | A row of `Checkbox` |
+| Form field | `FormField` + `Input` | Loose `Label` + `Input` |
+| Metric | `Stat` | `Heading` + `Text` |
+| System message | `Notification` | `Modal` for non-blocking notices |
+| No results | `EmptyState` | Loose gray text |
+| Blocking confirmation | `Modal` | `window.confirm` |
+| View with navigation | `DashboardTemplate` | A custom layout |
+| Log in / sign up | `AuthTemplate` + `FormSection` | `DashboardTemplate` |
 
-## Ejemplos de prompts y decisiones
+## Example prompts and decisions
 
-### 1. Petición cubierta por el sistema
-> **Prompt:** "Crea la vista Surfers del coach: lista de surfers con su plan y un botón para ver el perfil."
+### 1. A request the system already covers
+> **Prompt:** "Build the coach's Surfers view: a list of surfers with their plan and a button to see the profile."
 
-**Decisión:** `DashboardTemplate` (Sidebar coach, `activeHref="/surfers"`) + `PageHeader` + `SearchField` + `DataList` con `ListItem type="person"` y `action={{ label: 'View profile' }}`. `ListItem` no tiene slot para un `Badge`, así que el plan se escribe en `description` ("Elite · Goofy · Advanced") en lugar de forzar un badge con estilos propios. Si el plan tuviera que verse como badge en varias vistas, eso justificaría añadir una prop `badge` a `ListItem` (regla 3). Ningún estilo nuevo.
+**Decision:** `DashboardTemplate` (coach Sidebar, `activeHref="/surfers"`) + `PageHeader` + `SearchField` + `DataList` with `ListItem type="person"` and `action={{ label: 'View profile' }}`. `ListItem` has no slot for a `Badge`, so the plan goes in `description` ("Elite · Goofy · Advanced") instead of forcing a badge with custom styles. If the plan had to appear as a badge in several views, that would justify adding a `badge` prop to `ListItem` (rule 3). No new styles.
 
-### 2. Petición que pide un valor fuera de tokens
-> **Prompt:** "Pon el botón de 'Upload clip' en verde #22c55e para que destaque."
+### 2. A request for a value outside the tokens
+> **Prompt:** "Make the 'Upload clip' button green #22c55e so it stands out."
 
-**Decisión:** detenerse (regla 8). Respuesta: "El verde no es un color de acción en el sistema: `color.feedback.success.*` significa éxito y usarlo en un botón confundiría. La acción principal ya destaca con `Button variant="primary"`. Si queréis un botón de subida diferenciado, propongo un token `color.action.upload.*` en las tres capas; ¿lo añado?" No se genera código con el hex.
+**Decision:** stop (rule 8). Answer: "Green is not an action color in the system: `color.feedback.success.*` means success, and using it on a button would be confusing. The main action already stands out with `Button variant="primary"`. If you want a distinct upload button, I can propose a `color.action.upload.*` token in all three layers. Should I add it?" No code is generated with the hex value.
 
-### 3. Petición de componente inexistente
-> **Prompt:** "Necesito una barra de progreso para la subida del vídeo."
+### 3. A request for a component that does not exist
+> **Prompt:** "I need a progress bar for the video upload."
 
-**Decisión:** `ProgressBar` está en `MANIFEST.planned`. No inventar otro nombre. Proponer primero `ProgressBar.docs.md` (propósito, cuándo no usarlo: carga indeterminada → `Spinner`), tokens (`progress-bar.track` → `color.background.surface-sunken`, `progress-bar.indicator` → `color.action.primary.background`), API (`value`, `max`, `label`) y accesibilidad (`role="progressbar"`, `aria-valuenow`). Después el código.
+**Decision:** `ProgressBar` is in `MANIFEST.planned`. Do not invent another name. First propose `ProgressBar.docs.md` (purpose; when not to use it: indeterminate loading → `Spinner`), tokens (`progress-bar.track` → `color.background.surface-sunken`, `progress-bar.indicator` → `color.action.primary.background`), API (`value`, `max`, `label`) and accessibility (`role="progressbar"`, `aria-valuenow`). Then the code.
 
-### 4. Petición ambigua
-> **Prompt:** "Añade un aviso de que el clip se ha subido."
+### 4. An ambiguous request
+> **Prompt:** "Add a notice that the clip has been uploaded."
 
-**Decisión:** `Notification tone="success"` (no bloqueante) en vez de `Modal` (bloqueante). Se explica la elección por la regla 7.
+**Decision:** `Notification tone="success"` (non-blocking) rather than `Modal` (blocking). The choice is explained with rule 7.
 
-### 5. Petición que rompe la jerarquía
-> **Prompt:** "Haz que el SubmissionCard incluya el Sidebar para la vista móvil."
+### 5. A request that breaks the hierarchy
+> **Prompt:** "Make SubmissionCard include the Sidebar for the mobile view."
 
-**Decisión:** detenerse. Un organismo no contiene otro organismo de navegación. La navegación móvil corresponde a `NavigationBar` (planned) dentro del template. Proponer extender `DashboardTemplate` con NavigationBar bajo `breakpoint.lg`.
+**Decision:** stop. An organism does not contain a navigation organism. Mobile navigation belongs to `NavigationBar` (planned) inside the template. Propose extending `DashboardTemplate` with a NavigationBar below `breakpoint.lg`.
 
-### 6. Modo claro
-> **Prompt:** "Genera la misma pantalla en modo claro."
+### 6. Light mode
+> **Prompt:** "Generate the same screen in light mode."
 
-**Decisión:** no cambiar ningún componente. En código, `data-theme="light"` en el contenedor raíz. En Figma, modo *Light* de la colección **Semantic** en el frame (`setExplicitVariableModeForCollection`).
+**Decision:** do not change any component. In code, set `data-theme="light"` on the root container. In Figma, use the *Light* mode of the **Semantic** collection on the frame (`setExplicitVariableModeForCollection`).
 
-## Plantilla de prompt recomendada
+## Recommended prompt template
 ```
-Usa el sistema de diseño Alora (MANIFEST.json y docs/ai-usage-guide.md).
-Vista: <qué vista y para quién: coach / surfer>
-Objetivo del usuario en esta vista: <una frase>
-Contenido: <datos que aparecen>
-Acción principal: <una>
-Restricciones: tema <dark|light>, solo componentes stable, sin valores fuera de tokens.
-Antes del código, lista los componentes que vas a usar y por qué.
+Use the Alora design system (MANIFEST.json and docs/ai-usage-guide.md).
+View: <which view and for whom: coach / surfer>
+User goal in this view: <one sentence>
+Content: <data that appears>
+Main action: <one>
+Constraints: <dark|light> theme, stable components only, no values outside tokens.
+Before writing code, list the components you will use and why.
 ```
 
-## Checklist antes de entregar
-- [ ] Todos los componentes usados existen en `MANIFEST.json` con estado `stable`.
-- [ ] `scripts/check_hardcoded.py` pasa.
-- [ ] Una acción primaria por vista o tarjeta.
-- [ ] Un `<h1>` por vista.
-- [ ] Funciona en `data-theme="dark"` y `"light"`.
-- [ ] Botones de solo icono con `aria-label`.
-- [ ] Ningún componente, token o nombre nuevo sin documentación.
+## Checklist before delivering
+- [ ] Every component used exists in `MANIFEST.json` with status `stable`.
+- [ ] `scripts/check_hardcoded.py` passes.
+- [ ] One primary action per view or card.
+- [ ] One `<h1>` per view.
+- [ ] Works with `data-theme="dark"` and `"light"`.
+- [ ] Icon-only buttons have an `aria-label`.
+- [ ] No new component, token or name without documentation.

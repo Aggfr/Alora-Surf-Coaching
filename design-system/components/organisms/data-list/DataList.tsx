@@ -12,7 +12,7 @@ export interface DataListProps {
   className?: string;
 }
 
-/** Organism · Sección con título y filas de datos. Docs: ./DataList.docs.md */
+/** Organism · Section with a title and data rows. Docs: ./DataList.docs.md */
 export function DataList({ title, icon, items, className }: DataListProps) {
   const titleId = useId();
   return (

@@ -1,69 +1,69 @@
 # Tokens
 
-Fuente de verdad de todas las decisiones visuales de Alora. Formato [W3C Design Tokens (DTCG)](https://design-tokens.github.io/community-group/format/): cada token tiene `$type`, `$value` y `$description`; las referencias se escriben `{ruta.del.token}`.
+The single source of truth for every visual decision in Alora. Format: [W3C Design Tokens (DTCG)](https://design-tokens.github.io/community-group/format/). Every token has `$type`, `$value` and `$description`; references are written as `{path.to.token}`.
 
-## Jerarquía
+## Hierarchy
 
 ```
-primitives.tokens.json      Capa 1 · QUÉ valores existen          color.ocean.700 = #2f7189
-        ▲ referencia
-semantic.tokens.json        Capa 2 · PARA QUÉ sirven (tema oscuro) color.action.primary.background → {color.ocean.700}
-semantic.light.tokens.json            mismas rutas, tema claro     color.text.primary → {color.navy.950}
-        ▲ referencia
-component.tokens.json       Capa 3 · DÓNDE se aplican            button.primary.background → {color.action.primary.background}
+primitives.tokens.json      Layer 1 · WHAT values exist          color.ocean.700 = #2f7189
+        ▲ references
+semantic.tokens.json        Layer 2 · WHAT THEY ARE FOR (dark)   color.action.primary.background → {color.ocean.700}
+semantic.light.tokens.json            same paths, light theme    color.text.primary → {color.navy.950}
+        ▲ references
+component.tokens.json       Layer 3 · WHERE THEY APPLY          button.primary.background → {color.action.primary.background-start}
 ```
 
-| Capa | Archivo | Contiene | Quién la usa |
+| Layer | File | Contains | Used by |
 |---|---|---|---|
-| Primitiva | `primitives.tokens.json` | Escalas sin intención: colores 50–950, `size.space.100` (= 4px), `typography.size.md`, sombras, motion, z-index, breakpoints. | **Solo** la capa semántica. |
-| Semántica | `semantic.tokens.json` + `semantic.light.tokens.json` | Intención de uso: `color.background.surface`, `color.text.secondary`, `color.feedback.danger.*`, `size.space.medium`, roles tipográficos, `elevation.*`, `layer.*`. | Componentes y layouts. |
-| Componente | `component.tokens.json` | Decisiones de un componente concreto: `button.radius`, `input.border.focus`, `card.padding`. | Solo ese componente. |
+| Primitive | `primitives.tokens.json` | Scales with no intent: colors 50–950, `size.space.100` (= 4px), `typography.size.md`, shadows, motion, z-index, breakpoints. | **Only** the semantic layer. |
+| Semantic | `semantic.tokens.json` + `semantic.light.tokens.json` | Usage intent: `color.background.surface`, `color.text.secondary`, `color.feedback.danger.*`, `size.space.medium`, type roles, `elevation.*`, `layer.*`. | Components and layouts. |
+| Component | `component.tokens.json` | Decisions for one specific component: `button.radius`, `input.border.focus`, `card.padding`. | That component only. |
 
-### Cuándo usar cada capa
-- **Construyendo un componente nuevo:** consume tokens de componente si existen; si no, semánticos. Nunca primitivos.
-- **Componiendo una página o layout:** solo semánticos (`size.space.*`, `size.layout.*`, `color.background.*`).
-- **Cambiando la marca o el tema:** solo se tocan primitivas o el mapeo semántico. Los componentes no cambian.
-- **Excepción documentada:** ninguna en v1.0.0. `scripts/check_hardcoded.py` falla si el CSS lee un primitivo.
+### When to use each layer
+- **Building a new component:** use component tokens if they exist; otherwise semantic tokens. Never primitives.
+- **Composing a page or layout:** semantic tokens only (`size.space.*`, `size.layout.*`, `color.background.*`).
+- **Changing the brand or theme:** only primitives or the semantic mapping change. Components stay the same.
+- **Documented exceptions:** none in v1.0.0. `scripts/check_hardcoded.py` fails if the CSS reads a primitive.
 
-## Temas
-- **Oscuro** es el tema por defecto (los diseños de Coach y Surfer son oscuros): `:root` o `[data-theme="dark"]`.
-- **Claro** redefine únicamente las rutas `color.*` de la capa semántica: `[data-theme="light"]`.
-- Los tokens de componente no cambian por tema: apuntan a semánticos y heredan el tema automáticamente.
-- En Figma: colección **Semantic** con modos *Dark* y *Light*; colección **Component** con un único modo.
+## Themes
+- **Dark** is the default theme (the Coach and Surfer designs are dark): `:root` or `[data-theme="dark"]`.
+- **Light** only redefines the `color.*` paths of the semantic layer: `[data-theme="light"]`.
+- Component tokens do not change per theme: they point to semantic tokens and inherit the theme automatically.
+- In Figma: the **Semantic** collection has *Dark* and *Light* modes; the **Component** collection has a single mode.
 
-## Escalas
-| Escala | Regla | Ejemplo |
+## Scales
+| Scale | Rule | Example |
 |---|---|---|
-| `size.space.*` | Número = múltiplo de 4px × 100 | `size.space.400` = 16px |
-| `size.radius.*` | Igual que space; `full` = 9999px | `size.radius.300` = 12px |
-| `color.<tono>.*` | 50 (más claro) → 950 (más oscuro) | `color.navy.900` |
-| `color.alpha.<tono>.<pct>` | Opacidad en % | `color.alpha.ocean.18` |
-| `typography.size.*` | Talla de camiseta 2xs → 4xl | `typography.size.md` = 16px |
+| `size.space.*` | Key / 100 × 4px | `size.space.400` = 16px |
+| `size.radius.*` | Same as space; `full` = 9999px | `size.radius.300` = 12px |
+| `color.<hue>.*` | 50 (lightest) → 950 (darkest) | `color.navy.900` |
+| `color.alpha.<hue>.<pct>` | Opacity in % | `color.alpha.ocean.18` |
+| `typography.size.*` | T-shirt sizes 2xs–4xl | `typography.size.md` = 16px |
 
-Los nombres semánticos usan palabras (`small`, `medium`, `large`) para que la intención no dependa del valor.
+Semantic names use words (`small`, `medium`, `large`) so the intent does not depend on the value.
 
-## Cómo añadir un token sin romper nada
-1. **¿Existe ya?** Busca en `MANIFEST.json` (`tokens[].name`) y en las tres capas. Reutilizar siempre gana.
-2. **Primitiva solo si falta el valor.** Añádela en su escala (no inventes `size.space.350` si `300` o `400` sirven).
-3. **Semántico con intención.** Nombre `categoria.propiedad.elemento.estado`, sin abreviaturas (`background`, no `bg`). Escribe un `$description` que diga *cuándo* usarlo.
-4. **Si es de color, defínelo en ambos temas** (`semantic.tokens.json` y `semantic.light.tokens.json`) y verifica contraste AA (ver `docs/accessibility.md`).
-5. **Token de componente solo si el componente necesita desviarse del semántico** o si quieres un punto de ajuste estable para él. Debe referenciar un semántico.
-6. Ejecuta `python3 scripts/build_tokens.py` (valida referencias y capas, genera `dist/`) y `python3 scripts/build_docs.py` (actualiza `MANIFEST.json`).
-7. Añade la variable en Figma en la colección equivalente, con el mismo nombre usando `/` (`color/text/primary`) y code syntax `var(--ds-color-text-primary)`.
+## How to add a token without breaking anything
+1. **Does it already exist?** Search `MANIFEST.json` (`tokens[].name`) and the three layers. Reuse always wins.
+2. **Add a primitive only if the value is missing.** Put it in its scale (do not invent `size.space.350` when `300` or `400` works).
+3. **Give a semantic token an intent.** Name it `category.property.element.state`, with no abbreviations (`background`, not `bg`). Write a `$description` that says *when* to use it.
+4. **If it is a color, define it in both themes** (`semantic.tokens.json` and `semantic.light.tokens.json`) and check AA contrast (see `docs/accessibility.md`).
+5. **Add a component token only if the component needs to differ from the semantic token**, or you want a stable tuning point for it. It must reference a semantic token.
+6. Run `python3 scripts/build_tokens.py` (validates references and layers, writes `dist/`) and `python3 scripts/build_docs.py` (updates `MANIFEST.json`).
+7. Add the variable in Figma to the matching collection, with the same name using `/` (`color/text/primary`) and the code syntax `var(--ds-color-text-primary)`.
 
-## Renombrar o eliminar (deprecación)
-Nunca borres ni renombres un token publicado en una sola versión:
-1. Crea el token nuevo.
-2. Convierte el antiguo en alias del nuevo y añade `$deprecated` con la instrucción de migración:
+## Renaming or removing (deprecation)
+Never delete or rename a published token in a single release:
+1. Create the new token.
+2. Turn the old one into an alias of the new one and add `$deprecated` with migration instructions:
    ```json
    "muted": {
      "$type": "color",
      "$value": "{color.text.tertiary}",
-     "$deprecated": "Usar color.text.tertiary. 'muted' era el nombre en Coach Platform; se mantiene como alias hasta la v2.0.0."
+     "$deprecated": "Use color.text.tertiary. 'muted' was this color's name in Coach Platform; kept as an alias until v2.0.0."
    }
    ```
-3. `MANIFEST.json` lo marca `status: "deprecated"`. Elimínalo en la siguiente versión mayor.
+3. `MANIFEST.json` marks it `status: "deprecated"`. Remove it in the next major release.
 
-## Salidas generadas (`dist/`, no editar a mano)
-- `dist/tokens.css`: variables `--ds-*` para web, con bloques de tema.
-- `dist/tokens.resolved.json`: todos los tokens con su valor final por tema, para otras plataformas.
+## Generated output (`dist/`, do not edit by hand)
+- `dist/tokens.css`: `--ds-*` variables for the web, with theme blocks.
+- `dist/tokens.resolved.json`: every token with its final value per theme, for other platforms.

@@ -1,24 +1,24 @@
 # CoachQueuePage
 
-> **Nivel:** page (ejemplo de referencia) · **Figma:** [Dark 14:558](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-558) · [Light 14:719](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-719)
+> **Level:** page (reference example) · **Figma:** [Dark 14:558](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-558) · [Light 14:719](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-719)
 
-## Propósito
-Instancia real de **DashboardTemplate** con contenido de la cola de revisión del coach. Sirve como referencia de composición: si dudas de cómo combinar organismos, copia este patrón.
+## Purpose
+A real instance of **DashboardTemplate** with the coach's review queue content. It serves as the composition reference: if you are unsure how to combine organisms, copy this pattern.
 
-## Composición
-| Zona | Componente | Notas |
+## Composition
+| Area | Component | Notes |
 |---|---|---|
-| Navegación | `Sidebar product="coach"` | Item activo: Queue. |
-| Slot Header | `PageHeader` + `Tag tone="highlight"` + `Avatar` | Saludo con el nombre del coach. |
-| Métricas | `Stat` ×3 en `ds-stat-row` | Pending, In review, Reviewed this week (con trend). |
-| Herramientas | `SearchField` + `TagChip` ×4 en `ds-toolbar` | Filtran la lista en cliente. |
-| Lista | `SubmissionCard` ×n en `ds-stack` | Acción primaria por card: Start/Continue review. |
-| Vacío | `EmptyState` | Cuando los filtros no devuelven resultados, con "Clear filters". |
+| Navigation | `Sidebar product="coach"` | Active item: Queue. |
+| Header slot | `PageHeader` + `Tag tone="highlight"` + `Avatar` | Greeting with the coach's name. |
+| Metrics | `Stat` ×3 in `ds-stat-row` | Pending, In review, Reviewed this week (with trend). |
+| Tools | `SearchField` + `TagChip` ×4 in `ds-toolbar` | Filter the list on the client. |
+| List | `SubmissionCard` ×n in `ds-stack` | Primary action per card: Start/Continue review. |
+| Empty | `EmptyState` | When the filters return nothing, with "Clear filters". |
 
-## Decisiones
-- La acción de cada SubmissionCard es primary porque el PageHeader no tiene acción primaria: cada card es una tarea independiente.
-- El estado `overdue` usa Badge overdue **y** Tag danger: el color nunca es el único indicador (también el texto "Overdue 1 day").
-- Los datos son de ejemplo; en producción la página recibe `submissions` desde la API.
+## Decisions
+- Each SubmissionCard action is primary because the PageHeader has no primary action: each card is an independent task.
+- The `overdue` status uses an overdue Badge **and** a danger Tag: color is never the only signal (the text "Overdue 1 day" is there too).
+- The data is sample data; in production the page receives `submissions` from the API.
 
-## Variantes de tema
-El frame Light de Figma (14:719) es la misma página con el modo **Light** de la colección Semantic. En código: `<html data-theme="light">`.
+## Theme variants
+The Light frame in Figma (14:719) is the same page with the **Light** mode of the Semantic collection. In code: `<html data-theme="light">`.

@@ -15,7 +15,7 @@ export interface ListItemProps {
   className?: string;
 }
 
-/** Molecule · Fila de lista (persona, definición o navegación). Docs: ./ListItem.docs.md */
+/** Molecule · List row (person, definition or navigation). Docs: ./ListItem.docs.md */
 export function ListItem({ type = 'definition', title, description, avatarName, action, href, hasDivider = true, className }: ListItemProps) {
   const classes = cx('ds-list-item', `ds-list-item--${type}`, hasDivider && 'ds-list-item--divider', className);
 

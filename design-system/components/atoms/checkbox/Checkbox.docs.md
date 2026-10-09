@@ -1,71 +1,71 @@
 # Checkbox
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Checkbox](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-44)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Checkbox` — Atom.
 
-## 2. Propósito
-Permite marcar una o varias opciones independientes.
+## 2. Purpose
+Lets the user check one or more independent options.
 
-## 3. Cuándo usarlo
-- Aceptar términos, 'Remember me', seleccionar varios elementos.
+## 3. When to use
+- Accept terms, 'Remember me', select several items.
 
-## 4. Cuándo no usarlo
-- Opción única entre varias: Radio.
-- Ajuste con efecto inmediato: Switch.
+## 4. When not to use
+- One option among several: Radio.
+- Setting with immediate effect: Switch.
 
-## 5. Anatomía
-1. Caja 18×18 (`checkbox.radius`)
-2. Marca check o guion (indeterminate)
+## 5. Anatomy
+1. 18×18 box (`checkbox.radius`)
+2. Check mark or dash (indeterminate)
 3. Label
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `ReactNode` | — | Sí | Texto visible. |
-| `isChecked` | `boolean \| 'indeterminate'` | `false` | No | Estado. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilitado. |
-| `onChange` | `(checked: boolean) => void` | — | No | Cambio. |
+| `label` | `ReactNode` | — | Yes | Visible text. |
+| `isChecked` | `boolean \| 'indeterminate'` | `false` | No | State. |
+| `isDisabled` | `boolean` | `false` | No | Disabled. |
+| `onChange` | `(checked: boolean) => void` | — | No | Change. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **checked:** `false`, `true`, `indeterminate`
-- **Estados:** `default`, `focus`, `disabled`
+- **States:** `default`, `focus`, `disabled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `checkbox.border`
 - `checkbox.background-checked`
 - `checkbox.foreground-checked`
 - `checkbox.radius`
 - `color.border.focus`
 
-Los tokens propios del componente están en [`Checkbox.tokens.json`](./Checkbox.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Checkbox.tokens.json`](./Checkbox.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Clic en caja o label alterna.
-- Espacio alterna con foco.
+## 9. Interaction
+- Clicking the box or label toggles it.
+- Space toggles it when focused.
 
-## 10. Accesibilidad
-- `<input type=checkbox>` nativo.
-- Indeterminate con `aria-checked=mixed`.
-- Área clicable ≥ 24×24 incluyendo label.
+## 10. Accessibility
+- Native `<input type=checkbox>`.
+- Indeterminate uses `aria-checked=mixed`.
+- Clickable area ≥ 24×24 including the label.
 
-## 11. Reglas de composición
-- Grupos dentro de `<fieldset>` con `<legend>`.
-- Depende de: `Icon`, `Label`.
+## 11. Composition rules
+- Groups go inside a `<fieldset>` with a `<legend>`.
+- Depends on: `Icon`, `Label`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Checkbox label="Remember me" isChecked={remember} onChange={setRemember} />
 ```
-Más ejemplos en [`Checkbox.examples.md`](./Checkbox.examples.md).
+More examples in [`Checkbox.examples.md`](./Checkbox.examples.md).
 
-## 13. Anti-patrones
-- Checkbox que dispara una acción inmediata.
-- Sin label visible.
+## 13. Anti-patterns
+- A checkbox that triggers an immediate action.
+- No visible label.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

@@ -1,5 +1,5 @@
 {
-  "$description": "Capa 1: valores base sin intención de uso. No usar directamente en componentes salvo excepción documentada.",
+  "$description": "Layer 1: base values with no usage intent. Do not use directly in components except for a documented exception.",
   "color": {
     "navy": {
       "50": {
@@ -46,7 +46,7 @@
         "$type": "color",
         "$value": "#08101f"
       },
-      "$description": "Neutral oscuro de la marca. Extraído de los fondos y textos de Coach y Surfer (#08101f, #0f1e30, #162438, #4d6e87, #7fa3be, #e8f1f8)."
+      "$description": "Brand dark neutral. Taken from Coach and Surfer backgrounds and text (#08101f, #0f1e30, #162438, #4d6e87, #7fa3be, #e8f1f8)."
     },
     "ocean": {
       "50": {
@@ -89,7 +89,7 @@
         "$type": "color",
         "$value": "#183b48"
       },
-      "$description": "Color de marca (teal océano). Extraído de botones, iconos activos y bordes (#3b8eaa, #4497b3, #5aaec8)."
+      "$description": "Brand color (ocean teal). Taken from buttons, active icons and borders (#3b8eaa, #4497b3, #5aaec8)."
     },
     "sun": {
       "50": {
@@ -132,7 +132,7 @@
         "$type": "color",
         "$value": "#3a2c08"
       },
-      "$description": "Acento cálido de la marca (el sol del logo). Extraído de badges de plan y estados pendientes (#f5c53a)."
+      "$description": "Warm brand accent (the sun in the logo). Taken from plan badges and pending states (#f5c53a)."
     },
     "coral": {
       "50": {
@@ -175,7 +175,7 @@
         "$type": "color",
         "$value": "#3a1212"
       },
-      "$description": "Rojo de error y urgencia. Extraído de errores de formulario, 'Overdue' y 'Sign out' (#e05a5a)."
+      "$description": "Error and urgency red. Taken from form errors, 'Overdue' and 'Sign out' (#e05a5a)."
     },
     "amber": {
       "50": {
@@ -218,7 +218,7 @@
         "$type": "color",
         "$value": "#78350f"
       },
-      "$description": "Naranja de aviso. Extraído de contadores de tiempo y plan Elite (#f59e0b, #d97706)."
+      "$description": "Warning orange. Taken from time counters and the Elite plan (#f59e0b, #d97706)."
     },
     "violet": {
       "50": {
@@ -261,7 +261,7 @@
         "$type": "color",
         "$value": "#4c1d95"
       },
-      "$description": "Violeta del plan Progression en Coach (#8b5cf6, #7c3aed)."
+      "$description": "Progression plan violet in Coach (#8b5cf6, #7c3aed)."
     },
     "green": {
       "50": {
@@ -304,7 +304,7 @@
         "$type": "color",
         "$value": "#064e3b"
       },
-      "$description": "Verde de éxito. Normaliza el verde puntual de 'Review ready' (#056a13) a una escala completa."
+      "$description": "Success green. Normalizes the one-off 'Review ready' green (#056a13) into a full scale."
     },
     "gray": {
       "50": {
@@ -347,7 +347,7 @@
         "$type": "color",
         "$value": "#111827"
       },
-      "$description": "Gris neutro sin tinte. Extraído de etiquetas secundarias (#6b7280, #767779, #4b5563)."
+      "$description": "Untinted neutral gray. Taken from secondary labels (#6b7280, #767779, #4b5563)."
     },
     "white": {
       "$type": "color",
@@ -358,7 +358,7 @@
       "$value": "#000000"
     },
     "alpha": {
-      "$description": "Colores con transparencia. La clave numérica es la opacidad en porcentaje (escala: 3, 4, 8, 12, 18, 25, 30, 40, 55, 70).",
+      "$description": "Colors with transparency. The numeric key is the opacity percentage (scale: 3, 4, 8, 12, 18, 25, 30, 40, 55, 70).",
       "ocean": {
         "4": {
           "$type": "color",
@@ -506,7 +506,7 @@
           "system-ui",
           "sans-serif"
         ],
-        "$description": "Familia para títulos, botones, etiquetas y números. Presente en ambos archivos."
+        "$description": "Family for headings, buttons, labels and numbers. Used in both source files."
       },
       "body": {
         "$type": "fontFamily",
@@ -516,11 +516,11 @@
           "system-ui",
           "sans-serif"
         ],
-        "$description": "Familia para texto de lectura. Sustituye a Apple SD Gothic Neo (fuente de sistema de macOS, no portable) manteniéndola como fallback."
+        "$description": "Family for reading text. Replaces Apple SD Gothic Neo (a macOS system font, not portable) and keeps it as a fallback."
       }
     },
     "size": {
-      "$description": "Escala tipográfica en px. Nombres de talla: 2xs < xs < sm < md < lg < xl < 2xl < 3xl < 4xl.",
+      "$description": "Type scale in px. Size names: 2xs < xs < sm < md < lg < xl < 2xl < 3xl < 4xl.",
       "2xs": {
         "$type": "dimension",
         "$value": "10px"
@@ -577,7 +577,7 @@
       }
     },
     "line-height": {
-      "$description": "Interlineado como multiplicador del tamaño.",
+      "$description": "Line height as a multiplier of the font size.",
       "tight": {
         "$type": "number",
         "$value": 1.2
@@ -603,18 +603,18 @@
       "wide": {
         "$type": "dimension",
         "$value": "0.4px",
-        "$description": "Botones y labels en negrita."
+        "$description": "Bold buttons and labels."
       },
       "wider": {
         "$type": "dimension",
         "$value": "1.2px",
-        "$description": "Overlines en mayúsculas (EMAIL, PLAN RENEWS)."
+        "$description": "Uppercase overlines (EMAIL, PLAN RENEWS)."
       }
     }
   },
   "size": {
     "space": {
-      "$description": "Escala de espaciado base 4px. La clave es la centésima parte de 4px × clave (100 = 4px, 400 = 16px).",
+      "$description": "4px-based spacing scale. Value = key / 100 × 4px (100 = 4px, 400 = 16px).",
       "0": {
         "$type": "dimension",
         "$value": "0px"
@@ -673,7 +673,7 @@
       }
     },
     "radius": {
-      "$description": "Escala de radios. Extraída de los diseños: 4, 8, 12, 16, 24 y píldora.",
+      "$description": "Radius scale taken from the designs: 4, 8, 12, 16, 24 and pill.",
       "0": {
         "$type": "dimension",
         "$value": "0px"
@@ -744,7 +744,7 @@
       }
     },
     "container": {
-      "$description": "Anchos de contenedor medidos en los diseños a 1440px.",
+      "$description": "Container widths measured in the 1440px designs.",
       "sidebar": {
         "$type": "dimension",
         "$value": "116px"
@@ -763,7 +763,7 @@
       }
     },
     "control": {
-      "$description": "Alturas de controles interactivos. md (44px) cumple el área táctil mínima.",
+      "$description": "Interactive control heights. md (44px) meets the minimum touch target.",
       "sm": {
         "$type": "dimension",
         "$value": "32px"
@@ -788,7 +788,7 @@
         "blur": "10px",
         "spread": "0px"
       },
-      "$description": "Brillo teal sutil (badges, avatares)."
+      "$description": "Subtle teal glow (badges, avatars)."
     },
     "glow-medium": {
       "$type": "shadow",
@@ -799,7 +799,7 @@
         "blur": "32px",
         "spread": "0px"
       },
-      "$description": "Brillo teal de los botones primarios."
+      "$description": "Teal glow of primary buttons."
     },
     "glow-sun": {
       "$type": "shadow",
@@ -820,7 +820,7 @@
         "blur": "64px",
         "spread": "0px"
       },
-      "$description": "Modales y popovers."
+      "$description": "Modals and popovers."
     },
     "elevation-low-light": {
       "$type": "shadow",
@@ -831,7 +831,7 @@
         "blur": "16px",
         "spread": "0px"
       },
-      "$description": "Elevación de tarjetas en tema claro."
+      "$description": "Card elevation in the light theme."
     },
     "ring": {
       "$type": "shadow",
@@ -842,7 +842,7 @@
         "blur": "0px",
         "spread": "3px"
       },
-      "$description": "Anillo de foco."
+      "$description": "Focus ring."
     }
   },
   "motion": {
@@ -899,7 +899,7 @@
     }
   },
   "z-index": {
-    "$description": "Capas de apilamiento. Saltos de 100 para insertar capas intermedias sin renumerar.",
+    "$description": "Stacking layers. Steps of 100 so intermediate layers can be added without renumbering.",
     "base": {
       "$type": "number",
       "$value": 0
@@ -953,7 +953,7 @@
     "2xl": {
       "$type": "dimension",
       "$value": "1440px",
-      "$description": "Ancho de diseño de los archivos Coach y Surfer."
+      "$description": "Design width of the Coach and Surfer files."
     }
   }
 }

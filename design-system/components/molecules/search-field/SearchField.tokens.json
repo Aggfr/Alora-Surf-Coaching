@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de SearchField. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: input.*, color.icon.secondary.",
+  "$description": "SearchField tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: input.*, color.icon.secondary.",
   "input": {
     "background": {
       "$type": "color",

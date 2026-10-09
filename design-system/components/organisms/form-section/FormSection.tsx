@@ -13,7 +13,7 @@ export interface FormSectionProps {
   className?: string;
 }
 
-/** Organism · Formulario con campos apilados y acciones. Docs: ./FormSection.docs.md */
+/** Organism · Form with stacked fields and actions. Docs: ./FormSection.docs.md */
 export function FormSection({ onSubmit, children, primaryAction, secondaryAction, errorSummary, className }: FormSectionProps) {
   return (
     <form noValidate className={cx('ds-form-section', className)} onSubmit={(event) => { event.preventDefault(); onSubmit(event); }}>
