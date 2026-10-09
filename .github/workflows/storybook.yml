@@ -30,8 +30,8 @@ jobs:
       run:
         working-directory: storybook
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -43,7 +43,7 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Accessibility and visual tests (every story, both themes)
         run: npm run test:visual -- ${{ inputs.update-snapshots && '--update-snapshots' || '' }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: playwright-report
