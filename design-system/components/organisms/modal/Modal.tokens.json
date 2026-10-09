@@ -1,0 +1,25 @@
+{
+  "$description": "Tokens de Modal. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: modal.background, modal.overlay, modal.radius, modal.padding, modal.shadow, z-index.modal, motion.transition-enter.",
+  "modal": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "overlay": {
+      "$type": "color",
+      "$value": "{color.background.overlay}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.xl}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{size.space.xl}"
+    },
+    "shadow": {
+      "$type": "shadow",
+      "$value": "{elevation.overlay}"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$description": "Tokens de Input. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: input.background, input.foreground, input.placeholder, input.border.default, input.border.hover, input.border.focus, input.border.error, input.radius, input.padding-horizontal, input.typography, size.layout.control-height, size.border.focus.",
+  "input": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.text.primary}"
+    },
+    "placeholder": {
+      "$type": "color",
+      "$value": "{color.text.tertiary}"
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.border.subtle}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.border.strong}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.border.focus}"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "{color.border.danger}"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.large}"
+    },
+    "padding-horizontal": {
+      "$type": "dimension",
+      "$value": "{size.space.medium}"
+    },
+    "typography": {
+      "$type": "typography",
+      "$value": "{typography.body-medium}"
+    }
+  }
+}

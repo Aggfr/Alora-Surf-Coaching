@@ -1,0 +1,13 @@
+{
+  "$description": "Tokens de Sidebar. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: sidebar.background, sidebar.width, navigation-item.*.",
+  "sidebar": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface}"
+    },
+    "width": {
+      "$type": "dimension",
+      "$value": "{size.layout.sidebar-width}"
+    }
+  }
+}

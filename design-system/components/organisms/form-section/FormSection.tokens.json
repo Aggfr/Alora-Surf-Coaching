@@ -1,0 +1,25 @@
+{
+  "$description": "Tokens de FormSection. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: card.*, size.layout.form-width, size.space.large, size.space.medium.",
+  "card": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.xl}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{size.space.large}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{size.space.medium}"
+    }
+  }
+}

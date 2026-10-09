@@ -1,0 +1,17 @@
+{
+  "$description": "Tokens de Avatar. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: avatar.background, avatar.foreground, avatar.radius, color.plan.*.foreground, color.text.inverse.",
+  "avatar": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.text.on-action}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.pill}"
+    }
+  }
+}

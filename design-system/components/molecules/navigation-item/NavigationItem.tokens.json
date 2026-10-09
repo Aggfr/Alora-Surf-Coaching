@@ -1,0 +1,25 @@
+{
+  "$description": "Tokens de NavigationItem. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: navigation-item.*, color.action.ghost.background-hover, size.space.large.",
+  "navigation-item": {
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.text.primary}"
+    },
+    "foreground-active": {
+      "$type": "color",
+      "$value": "{color.text.brand}"
+    },
+    "icon": {
+      "$type": "color",
+      "$value": "{color.icon.primary}"
+    },
+    "icon-active": {
+      "$type": "color",
+      "$value": "{color.icon.brand}"
+    },
+    "divider": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    }
+  }
+}

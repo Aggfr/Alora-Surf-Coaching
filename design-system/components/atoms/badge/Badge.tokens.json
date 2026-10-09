@@ -1,0 +1,21 @@
+{
+  "$description": "Tokens de Badge. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: badge.radius, badge.padding-horizontal, badge.padding-vertical, badge.typography, color.status.*, color.plan.*, color.feedback.neutral.*.",
+  "badge": {
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.small}"
+    },
+    "padding-horizontal": {
+      "$type": "dimension",
+      "$value": "{size.space.small}"
+    },
+    "padding-vertical": {
+      "$type": "dimension",
+      "$value": "{size.space.3xs}"
+    },
+    "typography": {
+      "$type": "typography",
+      "$value": "{typography.overline}"
+    }
+  }
+}

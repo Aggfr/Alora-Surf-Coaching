@@ -1,0 +1,17 @@
+{
+  "$description": "Tokens de Notification. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: notification.background, notification.border, notification.radius, color.feedback.*, typography.heading-small, typography.body-small.",
+  "notification": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.large}"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "$description": "Tokens de Breadcrumb. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: color.text.brand, color.text.primary, color.icon.secondary, typography.body-small, size.space.small."
+}

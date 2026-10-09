@@ -1,0 +1,21 @@
+{
+  "$description": "Tokens de Checkbox. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: checkbox.border, checkbox.background-checked, checkbox.foreground-checked, checkbox.radius, color.border.focus.",
+  "checkbox": {
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.default}"
+    },
+    "background-checked": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "foreground-checked": {
+      "$type": "color",
+      "$value": "{color.action.primary.foreground}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.small}"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$description": "Tokens de Divider. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: divider.color, size.border.default.",
+  "divider": {
+    "color": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    }
+  }
+}

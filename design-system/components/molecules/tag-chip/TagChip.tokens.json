@@ -1,0 +1,25 @@
+{
+  "$description": "Tokens de TagChip. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: tag.radius, tag.padding-horizontal, color.action.secondary.*, color.background.brand-subtle, color.border.brand, color.text.brand.",
+  "tag": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.brand-subtle}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.text.brand}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.pill}"
+    },
+    "padding-horizontal": {
+      "$type": "dimension",
+      "$value": "{size.space.medium}"
+    }
+  }
+}

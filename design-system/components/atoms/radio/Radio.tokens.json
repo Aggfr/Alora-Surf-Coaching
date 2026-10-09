@@ -1,0 +1,17 @@
+{
+  "$description": "Tokens de Radio. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: radio.border, radio.border-checked, radio.dot, color.border.focus.",
+  "radio": {
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.default}"
+    },
+    "border-checked": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    },
+    "dot": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    }
+  }
+}

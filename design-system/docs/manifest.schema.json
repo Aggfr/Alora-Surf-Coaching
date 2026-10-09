@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "alora-design-system/manifest.schema.json",
+  "title": "Alora Design System manifest",
+  "type": "object",
+  "required": ["name", "version", "themes", "defaultTheme", "hierarchy", "docs", "components", "planned", "tokens"],
+  "properties": {
+    "name": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "updated": { "type": "string", "format": "date" },
+    "figmaFile": { "type": "string", "format": "uri" },
+    "themes": { "type": "array", "items": { "enum": ["dark", "light"] } },
+    "defaultTheme": { "enum": ["dark", "light"] },
+    "hierarchy": { "type": "array", "items": { "type": "string" } },
+    "summary": { "type": "object" },
+    "docs": { "type": "object", "additionalProperties": { "type": "string" } },
+    "components": { "type": "array", "items": { "$ref": "#/$defs/component" } },
+    "planned": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category", "status", "description"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[A-Z][A-Za-z0-9]+$" },
+          "category": { "$ref": "#/$defs/category" },
+          "status": { "const": "planned" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "tokens": { "type": "array", "items": { "$ref": "#/$defs/token" } }
+  },
+  "$defs": {
+    "category": { "enum": ["atom", "molecule", "organism", "template", "page"] },
+    "component": {
+      "type": "object",
+      "required": ["name", "category", "status", "version", "description", "path", "files", "dependencies"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[A-Z][A-Za-z0-9]+$" },
+        "category": { "$ref": "#/$defs/category" },
+        "status": { "enum": ["stable", "beta", "deprecated", "example"] },
+        "version": { "type": "string" },
+        "description": { "type": "string" },
+        "path": { "type": "string" },
+        "files": {
+          "type": "object",
+          "required": ["component"],
+          "properties": {
+            "component": { "type": "string" },
+            "docs": { "type": "string" },
+            "examples": { "type": "string" },
+            "tokens": { "type": "string" }
+          }
+        },
+        "dependencies": { "type": "array", "items": { "type": "string" } },
+        "tokens": { "type": "array", "items": { "type": "string" } },
+        "variants": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string" } } },
+        "states": { "type": "array", "items": { "type": "string" } },
+        "slots": { "type": "array", "items": { "type": "string" } },
+        "figma": {
+          "type": "object",
+          "properties": {
+            "file": { "type": "string", "format": "uri" },
+            "nodeId": { "type": "string", "pattern": "^\\d+:\\d+$" },
+            "lightModeNodeId": { "type": "string", "pattern": "^\\d+:\\d+$" }
+          }
+        }
+      }
+    },
+    "token": {
+      "type": "object",
+      "required": ["name", "layer", "type", "file", "cssVariable", "figmaVariable", "status"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)*$" },
+        "layer": { "enum": ["primitive", "semantic", "component"] },
+        "type": { "type": "string" },
+        "file": { "type": "string" },
+        "cssVariable": { "type": "string", "pattern": "^--ds-[a-z0-9-]+$" },
+        "figmaVariable": { "type": "string" },
+        "status": { "enum": ["stable", "deprecated"] },
+        "deprecated": { "type": "string" }
+      }
+    }
+  }
+}

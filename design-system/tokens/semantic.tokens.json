@@ -1,0 +1,784 @@
+{
+  "$description": "Capa 2: intención de uso. Tema oscuro (por defecto, es el tema de los diseños actuales).",
+  "color": {
+    "background": {
+      "canvas": {
+        "$type": "color",
+        "$value": "{color.navy.950}",
+        "$description": "Fondo de la página. Capa más baja."
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{color.navy.900}",
+        "$description": "Superficies estructurales: sidebar, paneles."
+      },
+      "surface-raised": {
+        "$type": "color",
+        "$value": "{color.navy.800}",
+        "$description": "Tarjetas, stats, listas y campos sobre el canvas."
+      },
+      "surface-sunken": {
+        "$type": "color",
+        "$value": "{color.alpha.navy.18}",
+        "$description": "Zonas hundidas dentro de una tarjeta (cita del surfer, bloque de notas)."
+      },
+      "brand-subtle": {
+        "$type": "color",
+        "$value": "{color.alpha.ocean.12}",
+        "$description": "Fondo de elementos seleccionados o destacados con la marca."
+      },
+      "highlight-subtle": {
+        "$type": "color",
+        "$value": "{color.alpha.sun.12}",
+        "$description": "Fondo de badges de plan y destacados cálidos."
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{color.alpha.black.55}",
+        "$description": "Velo detrás de modales."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.navy.50}",
+        "$description": "Fondo de tooltips."
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "Texto principal: títulos, valores, contenido."
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.navy.300}",
+        "$description": "Texto de apoyo: subtítulos, metadatos, labels de stats."
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.navy.400}",
+        "$description": "Texto de baja prioridad: placeholders, fechas, metadatos. Contraste mínimo 4.5:1 sobre surface-raised."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.ocean.400}",
+        "$description": "Enlaces y texto con la marca."
+      },
+      "highlight": {
+        "$type": "color",
+        "$value": "{color.sun.400}",
+        "$description": "Texto destacado cálido (plan del surfer)."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.navy.950}",
+        "$description": "Texto sobre fondos inversos (tooltips)."
+      },
+      "on-action": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "Texto sobre acción primaria o destructiva."
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$description": "Texto de elementos deshabilitados."
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.text.tertiary}",
+        "$description": "Alias de migración.",
+        "$deprecated": "Usar color.text.tertiary. 'muted' era el nombre de este color en Coach Platform; se mantiene como alias hasta la v2.0.0."
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.alpha.ocean.18}",
+        "$description": "Borde por defecto de tarjetas, campos y divisores."
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$description": "Borde con más presencia: checkbox, radio sin marcar."
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.alpha.white.40}",
+        "$description": "Borde de alto contraste: botón secundario en hover."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.ocean.400}",
+        "$description": "Borde de elementos activos o seleccionados."
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.ocean.400}",
+        "$description": "Borde y anillo de foco visible."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{color.coral.400}",
+        "$description": "Borde de campos con error."
+      }
+    },
+    "action": {
+      "primary": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.ocean.700}",
+          "$description": "Acción principal de la vista. Una por vista. Más oscuro que el diseño original para que el texto blanco cumpla 4.5:1."
+        },
+        "background-start": {
+          "$type": "color",
+          "$value": "{color.ocean.800}",
+          "$description": "Inicio del degradado del botón primario. El original (#3b8eaa → #5aaec8) daba 2.5–3.7:1 con texto blanco; ocean.800 → ocean.700 garantiza ≥ 5.4:1 en todo el degradado."
+        },
+        "background-end": {
+          "$type": "color",
+          "$value": "{color.ocean.700}",
+          "$description": "Fin del degradado del botón primario."
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.ocean.800}",
+          "$description": "Acción principal en hover."
+        },
+        "background-pressed": {
+          "$type": "color",
+          "$value": "{color.ocean.900}",
+          "$description": "Acción principal presionada."
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.white}",
+          "$description": "Texto e icono sobre la acción principal."
+        }
+      },
+      "secondary": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.navy.800}",
+          "$description": "Acción secundaria."
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.navy.700}",
+          "$description": "Acción secundaria en hover."
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.navy.300}",
+          "$description": "Texto de la acción secundaria."
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.ocean.18}",
+          "$description": "Borde de la acción secundaria."
+        }
+      },
+      "ghost": {
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.alpha.ocean.8}",
+          "$description": "Fondo en hover de acciones sin contenedor."
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.ocean.400}",
+          "$description": "Texto de acciones tipo enlace."
+        }
+      },
+      "danger": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.coral.600}",
+          "$description": "Acción destructiva (cancelar plan). Tono oscuro para que el texto blanco cumpla 4.5:1."
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.coral.700}",
+          "$description": "Acción destructiva en hover."
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.coral.300}",
+          "$description": "Texto de acción destructiva sin contenedor (Sign out)."
+        }
+      }
+    },
+    "feedback": {
+      "success": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.green.400}"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.green.12}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.green.18}"
+        }
+      },
+      "warning": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.amber.500}"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.amber.12}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.amber.18}"
+        }
+      },
+      "danger": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.coral.300}"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.coral.12}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.coral.18}"
+        }
+      },
+      "info": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.ocean.400}"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.ocean.12}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.ocean.18}"
+        }
+      },
+      "neutral": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.navy.300}"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.gray.18}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.gray.18}"
+        }
+      }
+    },
+    "plan": {
+      "pay-as-you-go": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.navy.300}",
+          "$description": "Plan Pay as you go."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.gray.18}"
+        }
+      },
+      "elite": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.amber.500}",
+          "$description": "Plan Elite."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.amber.18}"
+        }
+      },
+      "progression": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.violet.400}",
+          "$description": "Plan Progression."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.violet.18}"
+        }
+      }
+    },
+    "status": {
+      "pending": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.sun.400}",
+          "$description": "Envío pendiente de revisión."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.sun.12}"
+        }
+      },
+      "in-review": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.ocean.400}",
+          "$description": "Envío en revisión por el coach."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.ocean.12}"
+        }
+      },
+      "review-ready": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.green.400}",
+          "$description": "Revisión lista para ver."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.green.12}"
+        }
+      },
+      "overdue": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.coral.300}",
+          "$description": "Revisión fuera de plazo."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.coral.12}"
+        }
+      }
+    },
+    "disabled": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.alpha.navy.18}",
+        "$description": "Fondo de controles deshabilitados."
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$description": "Texto e icono de controles deshabilitados."
+      }
+    },
+    "icon": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "Iconos por defecto."
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$description": "Iconos secundarios (navegación inactiva, chevrons)."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.ocean.400}",
+        "$description": "Iconos activos o de marca."
+      }
+    }
+  },
+  "size": {
+    "space": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{size.space.0}"
+      },
+      "3xs": {
+        "$type": "dimension",
+        "$value": "{size.space.50}",
+        "$description": "Separación mínima entre label y valor."
+      },
+      "2xs": {
+        "$type": "dimension",
+        "$value": "{size.space.100}",
+        "$description": "Separación interna de badges y chips."
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "{size.space.150}",
+        "$description": "Espacio entre icono y texto en controles pequeños."
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "{size.space.200}",
+        "$description": "Espacio entre icono y texto; entre elementos muy relacionados."
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "{size.space.300}",
+        "$description": "Padding interno de tarjetas compactas y campos."
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "{size.space.400}",
+        "$description": "Padding de tarjetas; separación entre elementos de una lista."
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{size.space.600}",
+        "$description": "Separación entre secciones dentro de una vista."
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "{size.space.1000}",
+        "$description": "Separación entre bloques grandes de la página."
+      },
+      "page-gutter": {
+        "$type": "dimension",
+        "$value": "{size.space.3000}",
+        "$description": "Margen lateral del contenido en escritorio (1440px)."
+      }
+    },
+    "radius": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{size.radius.0}"
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "{size.radius.100}",
+        "$description": "Badges, tags, checkbox."
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "{size.radius.200}",
+        "$description": "Tooltips, items de menú."
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "{size.radius.300}",
+        "$description": "Campos, botones, bloques internos."
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{size.radius.400}",
+        "$description": "Tarjetas, stats, modales."
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "{size.radius.full}",
+        "$description": "Píldoras, avatares, switch."
+      }
+    },
+    "layout": {
+      "sidebar-width": {
+        "$type": "dimension",
+        "$value": "{size.container.sidebar}",
+        "$description": "Ancho del sidebar de navegación en escritorio."
+      },
+      "form-width": {
+        "$type": "dimension",
+        "$value": "{size.container.form}",
+        "$description": "Ancho máximo de formularios de autenticación."
+      },
+      "content-width": {
+        "$type": "dimension",
+        "$value": "{size.container.content}",
+        "$description": "Ancho máximo de la columna de contenido."
+      },
+      "control-height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}",
+        "$description": "Altura por defecto de botones y campos (área táctil 44px)."
+      },
+      "control-height-small": {
+        "$type": "dimension",
+        "$value": "{size.control.sm}"
+      },
+      "control-height-large": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "stat-min-width": {
+        "$type": "dimension",
+        "$value": "{size.container.stat}",
+        "$description": "Ancho mínimo de una Stat antes de saltar de línea."
+      }
+    },
+    "icon": {
+      "extra-small": {
+        "$type": "dimension",
+        "$value": "{size.icon.xs}",
+        "$description": "Iconos dentro de badges, tags y checkbox."
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "{size.icon.sm}",
+        "$description": "Iconos dentro de campos y botones pequeños."
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "{size.icon.md}",
+        "$description": "Iconos de botones y cabeceras de sección."
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "{size.icon.lg}",
+        "$description": "Iconos de navegación (tamaño por defecto)."
+      },
+      "extra-large": {
+        "$type": "dimension",
+        "$value": "{size.icon.xl}",
+        "$description": "Iconos ilustrativos de EmptyState."
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "dimension",
+        "$value": "{size.border.100}"
+      },
+      "emphasis": {
+        "$type": "dimension",
+        "$value": "{size.border.150}",
+        "$description": "Iconos de línea y checkbox."
+      },
+      "focus": {
+        "$type": "dimension",
+        "$value": "{size.border.200}"
+      }
+    }
+  },
+  "typography": {
+    "$description": "Roles tipográficos compuestos. Usar siempre un rol, nunca combinar tamaño y peso sueltos.",
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.4xl}",
+        "fontWeight": "{typography.weight.regular}",
+        "lineHeight": "{typography.line-height.tight}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Saludo principal de la vista ('Welcome, Alejandro')."
+    },
+    "heading-large": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.2xl}",
+        "fontWeight": "{typography.weight.bold}",
+        "lineHeight": "{typography.line-height.tight}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Título de página o modal."
+    },
+    "heading-medium": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.xl}",
+        "fontWeight": "{typography.weight.semibold}",
+        "lineHeight": "{typography.line-height.snug}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Título de sección."
+    },
+    "heading-small": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.md}",
+        "fontWeight": "{typography.weight.semibold}",
+        "lineHeight": "{typography.line-height.snug}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Título de tarjeta ('Frontside snap')."
+    },
+    "body-large": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.body}",
+        "fontSize": "{typography.size.md}",
+        "fontWeight": "{typography.weight.regular}",
+        "lineHeight": "{typography.line-height.normal}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Texto de lectura destacado."
+    },
+    "body-medium": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.body}",
+        "fontSize": "{typography.size.sm}",
+        "fontWeight": "{typography.weight.regular}",
+        "lineHeight": "{typography.line-height.normal}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Texto de lectura por defecto."
+    },
+    "body-small": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.body}",
+        "fontSize": "{typography.size.xs}",
+        "fontWeight": "{typography.weight.regular}",
+        "lineHeight": "{typography.line-height.normal}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Metadatos y texto de ayuda."
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.body}",
+        "fontSize": "{typography.size.2xs}",
+        "fontWeight": "{typography.weight.regular}",
+        "lineHeight": "{typography.line-height.normal}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Fechas y notas mínimas."
+    },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.sm}",
+        "fontWeight": "{typography.weight.medium}",
+        "lineHeight": "{typography.line-height.snug}",
+        "letterSpacing": "{typography.letter-spacing.wide}"
+      },
+      "$description": "Labels de formulario."
+    },
+    "button": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.sm}",
+        "fontWeight": "{typography.weight.semibold}",
+        "lineHeight": "{typography.line-height.snug}",
+        "letterSpacing": "{typography.letter-spacing.wide}"
+      },
+      "$description": "Texto de botones."
+    },
+    "overline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.2xs}",
+        "fontWeight": "{typography.weight.semibold}",
+        "lineHeight": "{typography.line-height.normal}",
+        "letterSpacing": "{typography.letter-spacing.wider}"
+      },
+      "$description": "Etiquetas en mayúsculas (EMAIL, FROM SURFER)."
+    },
+    "metric": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{typography.family.display}",
+        "fontSize": "{typography.size.2xl}",
+        "fontWeight": "{typography.weight.regular}",
+        "lineHeight": "{typography.line-height.tight}",
+        "letterSpacing": "{typography.letter-spacing.none}"
+      },
+      "$description": "Valores numéricos de stats."
+    }
+  },
+  "elevation": {
+    "action": {
+      "$type": "shadow",
+      "$value": "{shadow.glow-medium}",
+      "$description": "Brillo de la acción primaria."
+    },
+    "accent": {
+      "$type": "shadow",
+      "$value": "{shadow.glow-small}",
+      "$description": "Brillo sutil de avatares y badges destacados."
+    },
+    "overlay": {
+      "$type": "shadow",
+      "$value": "{shadow.elevation-high}",
+      "$description": "Modales, tooltips y menús."
+    },
+    "focus": {
+      "$type": "shadow",
+      "$value": "{shadow.ring}",
+      "$description": "Anillo de foco visible para teclado."
+    }
+  },
+  "motion": {
+    "transition-fast": {
+      "$type": "transition",
+      "$value": {
+        "duration": "{motion.duration.fast}",
+        "delay": "0ms",
+        "timingFunction": "{motion.easing.standard}"
+      },
+      "$description": "Hover y cambios de color."
+    },
+    "transition-base": {
+      "$type": "transition",
+      "$value": {
+        "duration": "{motion.duration.base}",
+        "delay": "0ms",
+        "timingFunction": "{motion.easing.standard}"
+      },
+      "$description": "Expandir/colapsar, switches."
+    },
+    "transition-enter": {
+      "$type": "transition",
+      "$value": {
+        "duration": "{motion.duration.slow}",
+        "delay": "0ms",
+        "timingFunction": "{motion.easing.enter}"
+      },
+      "$description": "Entrada de modales y toasts."
+    },
+    "reduced-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.instant}",
+      "$description": "Duración cuando el usuario pide movimiento reducido (prefers-reduced-motion)."
+    },
+    "loop-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.loop}",
+      "$description": "Vuelta completa de animaciones en bucle (Spinner)."
+    }
+  },
+  "layer": {
+    "$description": "Orden de apilado por intención. Usar estos, nunca z-index numéricos.",
+    "raised": {
+      "$type": "number",
+      "$value": "{z-index.raised}",
+      "$description": "Elementos sobre el contenido (cards en hover)."
+    },
+    "sticky": {
+      "$type": "number",
+      "$value": "{z-index.sticky}",
+      "$description": "Cabeceras fijas."
+    },
+    "dropdown": {
+      "$type": "number",
+      "$value": "{z-index.dropdown}",
+      "$description": "Menús desplegables."
+    },
+    "modal": {
+      "$type": "number",
+      "$value": "{z-index.modal}",
+      "$description": "Modales."
+    },
+    "toast": {
+      "$type": "number",
+      "$value": "{z-index.toast}",
+      "$description": "Notificaciones flotantes."
+    },
+    "tooltip": {
+      "$type": "number",
+      "$value": "{z-index.tooltip}",
+      "$description": "Tooltips, siempre encima."
+    }
+  }
+}

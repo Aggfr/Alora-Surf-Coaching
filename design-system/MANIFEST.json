@@ -1,0 +1,5762 @@
+{
+  "$schema": "./docs/manifest.schema.json",
+  "name": "Alora Design System",
+  "version": "1.0.0",
+  "updated": "2026-10-09",
+  "figmaFile": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "defaultTheme": "dark",
+  "hierarchy": [
+    "tokens",
+    "atom",
+    "molecule",
+    "organism",
+    "template",
+    "page"
+  ],
+  "summary": {
+    "tokens": {
+      "primitive": 198,
+      "semantic": 130,
+      "semanticLightOverrides": 72,
+      "component": 86
+    },
+    "components": {
+      "atom": 16,
+      "molecule": 9,
+      "organism": 7
+    },
+    "templates": 2,
+    "pages": 2,
+    "planned": 7
+  },
+  "docs": {
+    "readme": "README.md",
+    "tokens": "tokens/README.md",
+    "principles": "docs/principles.md",
+    "naming": "docs/naming-conventions.md",
+    "atomicDesign": "docs/atomic-design.md",
+    "aiUsageGuide": "docs/ai-usage-guide.md",
+    "accessibility": "docs/accessibility.md"
+  },
+  "components": [
+    {
+      "name": "Button",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Dispara una acción en la vista actual.",
+      "path": "components/atoms/button",
+      "files": {
+        "component": "components/atoms/button/Button.tsx",
+        "docs": "components/atoms/button/Button.docs.md",
+        "examples": "components/atoms/button/Button.examples.md",
+        "tokens": "components/atoms/button/Button.tokens.json"
+      },
+      "dependencies": [
+        "Icon",
+        "Spinner"
+      ],
+      "tokens": [
+        "button.primary.*",
+        "button.secondary.*",
+        "button.ghost.*",
+        "button.danger.*",
+        "button.disabled.*",
+        "button.radius",
+        "button.gap",
+        "button.padding-horizontal.*",
+        "button.typography",
+        "elevation.focus",
+        "size.layout.control-height*"
+      ],
+      "variants": {
+        "variant": [
+          "primary",
+          "secondary",
+          "ghost",
+          "danger"
+        ],
+        "size": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "pressed",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "8:425"
+      }
+    },
+    {
+      "name": "Icon",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Muestra un pictograma de línea del set de Alora.",
+      "path": "components/atoms/icon",
+      "files": {
+        "component": "components/atoms/icon/Icon.tsx",
+        "docs": "components/atoms/icon/Icon.docs.md",
+        "examples": "components/atoms/icon/Icon.examples.md",
+        "tokens": "components/atoms/icon/Icon.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "color.icon.primary",
+        "color.icon.secondary",
+        "color.icon.brand",
+        "size.icon.*"
+      ],
+      "variants": {
+        "size": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "tone": [
+          "primary",
+          "secondary",
+          "brand",
+          "inherit"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "7:6"
+      }
+    },
+    {
+      "name": "Label",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Nombra un control de formulario.",
+      "path": "components/atoms/label",
+      "files": {
+        "component": "components/atoms/label/Label.tsx",
+        "docs": "components/atoms/label/Label.docs.md",
+        "examples": "components/atoms/label/Label.examples.md",
+        "tokens": "components/atoms/label/Label.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "typography.label",
+        "color.text.primary",
+        "color.text.disabled",
+        "color.feedback.danger.foreground"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "9:11"
+      }
+    },
+    {
+      "name": "Text",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Muestra texto de lectura y metadatos con un rol tipográfico y un tono semántico.",
+      "path": "components/atoms/text",
+      "files": {
+        "component": "components/atoms/text/Text.tsx",
+        "docs": "components/atoms/text/Text.docs.md",
+        "examples": "components/atoms/text/Text.examples.md",
+        "tokens": "components/atoms/text/Text.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "typography.body-*",
+        "typography.caption",
+        "typography.overline",
+        "color.text.*",
+        "color.feedback.danger.foreground"
+      ],
+      "variants": {
+        "role": [
+          "body-large",
+          "body-medium",
+          "body-small",
+          "caption",
+          "overline"
+        ],
+        "tone": [
+          "primary",
+          "secondary",
+          "tertiary",
+          "brand",
+          "danger"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "9:65"
+      }
+    },
+    {
+      "name": "Heading",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Titula una vista, sección o tarjeta respetando la jerarquía del documento.",
+      "path": "components/atoms/heading",
+      "files": {
+        "component": "components/atoms/heading/Heading.tsx",
+        "docs": "components/atoms/heading/Heading.docs.md",
+        "examples": "components/atoms/heading/Heading.examples.md",
+        "tokens": "components/atoms/heading/Heading.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "typography.display",
+        "typography.heading-large",
+        "typography.heading-medium",
+        "typography.heading-small",
+        "color.text.primary"
+      ],
+      "variants": {
+        "level": [
+          "display",
+          "large",
+          "medium",
+          "small"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "9:77"
+      }
+    },
+    {
+      "name": "Input",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Recoge una línea de texto.",
+      "path": "components/atoms/input",
+      "files": {
+        "component": "components/atoms/input/Input.tsx",
+        "docs": "components/atoms/input/Input.docs.md",
+        "examples": "components/atoms/input/Input.examples.md",
+        "tokens": "components/atoms/input/Input.tokens.json"
+      },
+      "dependencies": [
+        "Icon"
+      ],
+      "tokens": [
+        "input.background",
+        "input.foreground",
+        "input.placeholder",
+        "input.border.default",
+        "input.border.hover",
+        "input.border.focus",
+        "input.border.error",
+        "input.radius",
+        "input.padding-horizontal",
+        "input.typography",
+        "size.layout.control-height",
+        "size.border.focus"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "error",
+        "disabled",
+        "filled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "9:161"
+      }
+    },
+    {
+      "name": "Textarea",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Recoge texto de varias líneas.",
+      "path": "components/atoms/textarea",
+      "files": {
+        "component": "components/atoms/textarea/Textarea.tsx",
+        "docs": "components/atoms/textarea/Textarea.docs.md",
+        "examples": "components/atoms/textarea/Textarea.examples.md",
+        "tokens": "components/atoms/textarea/Textarea.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "input.*",
+        "typography.body-medium",
+        "typography.caption",
+        "color.text.tertiary"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "focus",
+        "error",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "9:177"
+      }
+    },
+    {
+      "name": "Checkbox",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Permite marcar una o varias opciones independientes.",
+      "path": "components/atoms/checkbox",
+      "files": {
+        "component": "components/atoms/checkbox/Checkbox.tsx",
+        "docs": "components/atoms/checkbox/Checkbox.docs.md",
+        "examples": "components/atoms/checkbox/Checkbox.examples.md",
+        "tokens": "components/atoms/checkbox/Checkbox.tokens.json"
+      },
+      "dependencies": [
+        "Icon",
+        "Label"
+      ],
+      "tokens": [
+        "checkbox.border",
+        "checkbox.background-checked",
+        "checkbox.foreground-checked",
+        "checkbox.radius",
+        "color.border.focus"
+      ],
+      "variants": {
+        "checked": [
+          "false",
+          "true",
+          "indeterminate"
+        ]
+      },
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:44"
+      }
+    },
+    {
+      "name": "Radio",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Permite elegir una sola opción dentro de un grupo.",
+      "path": "components/atoms/radio",
+      "files": {
+        "component": "components/atoms/radio/Radio.tsx",
+        "docs": "components/atoms/radio/Radio.docs.md",
+        "examples": "components/atoms/radio/Radio.examples.md",
+        "tokens": "components/atoms/radio/Radio.tokens.json"
+      },
+      "dependencies": [
+        "Label"
+      ],
+      "tokens": [
+        "radio.border",
+        "radio.border-checked",
+        "radio.dot",
+        "color.border.focus"
+      ],
+      "variants": {
+        "selected": [
+          "false",
+          "true"
+        ]
+      },
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:71"
+      }
+    },
+    {
+      "name": "Switch",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Activa o desactiva un ajuste con efecto inmediato.",
+      "path": "components/atoms/switch",
+      "files": {
+        "component": "components/atoms/switch/Switch.tsx",
+        "docs": "components/atoms/switch/Switch.docs.md",
+        "examples": "components/atoms/switch/Switch.examples.md",
+        "tokens": "components/atoms/switch/Switch.tokens.json"
+      },
+      "dependencies": [
+        "Label"
+      ],
+      "tokens": [
+        "switch.track-off",
+        "switch.track-on",
+        "switch.thumb",
+        "switch.radius",
+        "color.border.default"
+      ],
+      "variants": {
+        "on": [
+          "false",
+          "true"
+        ]
+      },
+      "states": [
+        "default",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:91"
+      }
+    },
+    {
+      "name": "Avatar",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Representa a una persona con sus iniciales.",
+      "path": "components/atoms/avatar",
+      "files": {
+        "component": "components/atoms/avatar/Avatar.tsx",
+        "docs": "components/atoms/avatar/Avatar.docs.md",
+        "examples": "components/atoms/avatar/Avatar.examples.md",
+        "tokens": "components/atoms/avatar/Avatar.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "avatar.background",
+        "avatar.foreground",
+        "avatar.radius",
+        "color.plan.*.foreground",
+        "color.text.inverse"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "medium",
+          "large"
+        ],
+        "tone": [
+          "brand",
+          "elite",
+          "progression",
+          "neutral"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:119"
+      }
+    },
+    {
+      "name": "Badge",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Etiqueta no interactiva que muestra un estado o un plan.",
+      "path": "components/atoms/badge",
+      "files": {
+        "component": "components/atoms/badge/Badge.tsx",
+        "docs": "components/atoms/badge/Badge.docs.md",
+        "examples": "components/atoms/badge/Badge.examples.md",
+        "tokens": "components/atoms/badge/Badge.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "badge.radius",
+        "badge.padding-horizontal",
+        "badge.padding-vertical",
+        "badge.typography",
+        "color.status.*",
+        "color.plan.*",
+        "color.feedback.neutral.*"
+      ],
+      "variants": {
+        "tone": [
+          "pending",
+          "in-review",
+          "review-ready",
+          "overdue",
+          "neutral",
+          "plan-pay-as-you-go",
+          "plan-elite",
+          "plan-progression"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:139"
+      }
+    },
+    {
+      "name": "Tag",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Píldora informativa con icono opcional.",
+      "path": "components/atoms/tag",
+      "files": {
+        "component": "components/atoms/tag/Tag.tsx",
+        "docs": "components/atoms/tag/Tag.docs.md",
+        "examples": "components/atoms/tag/Tag.examples.md",
+        "tokens": "components/atoms/tag/Tag.tokens.json"
+      },
+      "dependencies": [
+        "Icon"
+      ],
+      "tokens": [
+        "tag.background",
+        "tag.foreground",
+        "tag.border",
+        "tag.radius",
+        "tag.padding-horizontal",
+        "color.background.highlight-subtle",
+        "color.text.highlight",
+        "color.feedback.*"
+      ],
+      "variants": {
+        "tone": [
+          "brand",
+          "highlight",
+          "warning",
+          "danger",
+          "neutral"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:167"
+      }
+    },
+    {
+      "name": "Spinner",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Indica una espera de duración indeterminada.",
+      "path": "components/atoms/spinner",
+      "files": {
+        "component": "components/atoms/spinner/Spinner.tsx",
+        "docs": "components/atoms/spinner/Spinner.docs.md",
+        "examples": "components/atoms/spinner/Spinner.examples.md",
+        "tokens": "components/atoms/spinner/Spinner.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "spinner.track",
+        "spinner.indicator",
+        "size.border.focus",
+        "motion.duration.slow"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:180"
+      }
+    },
+    {
+      "name": "Divider",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Separa grupos de contenido.",
+      "path": "components/atoms/divider",
+      "files": {
+        "component": "components/atoms/divider/Divider.tsx",
+        "docs": "components/atoms/divider/Divider.docs.md",
+        "examples": "components/atoms/divider/Divider.examples.md",
+        "tokens": "components/atoms/divider/Divider.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "divider.color",
+        "size.border.default"
+      ],
+      "variants": {
+        "orientation": [
+          "horizontal",
+          "vertical"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:186"
+      }
+    },
+    {
+      "name": "Tooltip",
+      "category": "atom",
+      "status": "beta",
+      "version": "1.0.0",
+      "description": "Describe brevemente un control al hacer hover o focus.",
+      "path": "components/atoms/tooltip",
+      "files": {
+        "component": "components/atoms/tooltip/Tooltip.tsx",
+        "docs": "components/atoms/tooltip/Tooltip.docs.md",
+        "examples": "components/atoms/tooltip/Tooltip.examples.md",
+        "tokens": "components/atoms/tooltip/Tooltip.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "tooltip.background",
+        "tooltip.foreground",
+        "tooltip.radius",
+        "tooltip.padding",
+        "z-index.tooltip"
+      ],
+      "variants": {
+        "placement": [
+          "top",
+          "bottom"
+        ]
+      },
+      "states": [
+        "hidden",
+        "visible"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "12:200"
+      }
+    },
+    {
+      "name": "FormField",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Agrupa Label, Input, texto de ayuda y mensaje de error de un campo.",
+      "path": "components/molecules/form-field",
+      "files": {
+        "component": "components/molecules/form-field/FormField.tsx",
+        "docs": "components/molecules/form-field/FormField.docs.md",
+        "examples": "components/molecules/form-field/FormField.examples.md",
+        "tokens": "components/molecules/form-field/FormField.tokens.json"
+      },
+      "dependencies": [
+        "Label",
+        "Input",
+        "Textarea",
+        "Text",
+        "Icon"
+      ],
+      "tokens": [
+        "size.space.small",
+        "typography.body-small",
+        "color.text.tertiary",
+        "color.feedback.danger.foreground"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "error",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:54"
+      }
+    },
+    {
+      "name": "SearchField",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Campo de búsqueda con icono y botón de limpiar.",
+      "path": "components/molecules/search-field",
+      "files": {
+        "component": "components/molecules/search-field/SearchField.tsx",
+        "docs": "components/molecules/search-field/SearchField.docs.md",
+        "examples": "components/molecules/search-field/SearchField.examples.md",
+        "tokens": "components/molecules/search-field/SearchField.tokens.json"
+      },
+      "dependencies": [
+        "Input",
+        "Icon",
+        "Button"
+      ],
+      "tokens": [
+        "input.*",
+        "color.icon.secondary"
+      ],
+      "variants": {
+        "filled": [
+          "false",
+          "true"
+        ]
+      },
+      "states": [
+        "default",
+        "focus"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:92"
+      }
+    },
+    {
+      "name": "ListItem",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Fila de una lista con tres formatos: persona, definición o navegación.",
+      "path": "components/molecules/list-item",
+      "files": {
+        "component": "components/molecules/list-item/ListItem.tsx",
+        "docs": "components/molecules/list-item/ListItem.docs.md",
+        "examples": "components/molecules/list-item/ListItem.examples.md",
+        "tokens": "components/molecules/list-item/ListItem.tokens.json"
+      },
+      "dependencies": [
+        "Avatar",
+        "Heading",
+        "Text",
+        "Button",
+        "Icon",
+        "Divider"
+      ],
+      "tokens": [
+        "size.space.large",
+        "size.space.medium",
+        "divider.color",
+        "typography.overline",
+        "typography.body-small",
+        "typography.heading-small"
+      ],
+      "variants": {
+        "type": [
+          "person",
+          "definition",
+          "navigation"
+        ]
+      },
+      "states": [
+        "default",
+        "hover (navigation)"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:120"
+      }
+    },
+    {
+      "name": "TagChip",
+      "category": "molecule",
+      "status": "beta",
+      "version": "1.0.0",
+      "description": "Chip seleccionable o eliminable.",
+      "path": "components/molecules/tag-chip",
+      "files": {
+        "component": "components/molecules/tag-chip/TagChip.tsx",
+        "docs": "components/molecules/tag-chip/TagChip.docs.md",
+        "examples": "components/molecules/tag-chip/TagChip.examples.md",
+        "tokens": "components/molecules/tag-chip/TagChip.tokens.json"
+      },
+      "dependencies": [
+        "Text",
+        "Icon"
+      ],
+      "tokens": [
+        "tag.radius",
+        "tag.padding-horizontal",
+        "color.action.secondary.*",
+        "color.background.brand-subtle",
+        "color.border.brand",
+        "color.text.brand"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "hover",
+        "selected"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:139"
+      }
+    },
+    {
+      "name": "Stat",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Muestra una métrica con su etiqueta y una tendencia opcional.",
+      "path": "components/molecules/stat",
+      "files": {
+        "component": "components/molecules/stat/Stat.tsx",
+        "docs": "components/molecules/stat/Stat.docs.md",
+        "examples": "components/molecules/stat/Stat.examples.md",
+        "tokens": "components/molecules/stat/Stat.tokens.json"
+      },
+      "dependencies": [
+        "Text",
+        "Icon"
+      ],
+      "tokens": [
+        "stat.background",
+        "stat.label",
+        "stat.value",
+        "card.radius",
+        "size.space.xl",
+        "typography.metric",
+        "color.feedback.success.foreground"
+      ],
+      "variants": {
+        "trend": [
+          "none",
+          "up"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:154"
+      }
+    },
+    {
+      "name": "Notification",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Comunica un mensaje del sistema con tono, acción y cierre.",
+      "path": "components/molecules/notification",
+      "files": {
+        "component": "components/molecules/notification/Notification.tsx",
+        "docs": "components/molecules/notification/Notification.docs.md",
+        "examples": "components/molecules/notification/Notification.examples.md",
+        "tokens": "components/molecules/notification/Notification.tokens.json"
+      },
+      "dependencies": [
+        "Icon",
+        "Heading",
+        "Text",
+        "Button"
+      ],
+      "tokens": [
+        "notification.background",
+        "notification.border",
+        "notification.radius",
+        "color.feedback.*",
+        "typography.heading-small",
+        "typography.body-small"
+      ],
+      "variants": {
+        "tone": [
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ]
+      },
+      "states": [
+        "visible",
+        "dismissed"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:209"
+      }
+    },
+    {
+      "name": "Breadcrumb",
+      "category": "molecule",
+      "status": "beta",
+      "version": "1.0.0",
+      "description": "Muestra la posición del usuario dentro de una jerarquía.",
+      "path": "components/molecules/breadcrumb",
+      "files": {
+        "component": "components/molecules/breadcrumb/Breadcrumb.tsx",
+        "docs": "components/molecules/breadcrumb/Breadcrumb.docs.md",
+        "examples": "components/molecules/breadcrumb/Breadcrumb.examples.md",
+        "tokens": "components/molecules/breadcrumb/Breadcrumb.tokens.json"
+      },
+      "dependencies": [
+        "Text",
+        "Icon"
+      ],
+      "tokens": [
+        "color.text.brand",
+        "color.text.primary",
+        "color.icon.secondary",
+        "typography.body-small",
+        "size.space.small"
+      ],
+      "variants": {},
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:210"
+      }
+    },
+    {
+      "name": "Pagination",
+      "category": "molecule",
+      "status": "beta",
+      "version": "1.0.0",
+      "description": "Navega entre páginas de una lista larga.",
+      "path": "components/molecules/pagination",
+      "files": {
+        "component": "components/molecules/pagination/Pagination.tsx",
+        "docs": "components/molecules/pagination/Pagination.docs.md",
+        "examples": "components/molecules/pagination/Pagination.examples.md",
+        "tokens": "components/molecules/pagination/Pagination.tokens.json"
+      },
+      "dependencies": [
+        "Button",
+        "Text"
+      ],
+      "tokens": [
+        "button.*",
+        "size.space.xs"
+      ],
+      "variants": {},
+      "states": [
+        "first",
+        "middle",
+        "last"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:221"
+      }
+    },
+    {
+      "name": "NavigationItem",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Entrada de navegación principal con icono y etiqueta.",
+      "path": "components/molecules/navigation-item",
+      "files": {
+        "component": "components/molecules/navigation-item/NavigationItem.tsx",
+        "docs": "components/molecules/navigation-item/NavigationItem.docs.md",
+        "examples": "components/molecules/navigation-item/NavigationItem.examples.md",
+        "tokens": "components/molecules/navigation-item/NavigationItem.tokens.json"
+      },
+      "dependencies": [
+        "Icon",
+        "Text"
+      ],
+      "tokens": [
+        "navigation-item.*",
+        "color.action.ghost.background-hover",
+        "size.space.large"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "hover",
+        "active"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "13:293"
+      }
+    },
+    {
+      "name": "Sidebar",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Navegación principal fija en escritorio.",
+      "path": "components/organisms/sidebar",
+      "files": {
+        "component": "components/organisms/sidebar/Sidebar.tsx",
+        "docs": "components/organisms/sidebar/Sidebar.docs.md",
+        "examples": "components/organisms/sidebar/Sidebar.examples.md",
+        "tokens": "components/organisms/sidebar/Sidebar.tokens.json"
+      },
+      "dependencies": [
+        "NavigationItem"
+      ],
+      "tokens": [
+        "sidebar.background",
+        "sidebar.width",
+        "navigation-item.*"
+      ],
+      "variants": {
+        "product": [
+          "coach",
+          "surfer"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:84"
+      }
+    },
+    {
+      "name": "PageHeader",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Cabecera de cada vista con título, subtítulo y acciones.",
+      "path": "components/organisms/page-header",
+      "files": {
+        "component": "components/organisms/page-header/PageHeader.tsx",
+        "docs": "components/organisms/page-header/PageHeader.docs.md",
+        "examples": "components/organisms/page-header/PageHeader.examples.md",
+        "tokens": "components/organisms/page-header/PageHeader.tokens.json"
+      },
+      "dependencies": [
+        "Heading",
+        "Text",
+        "Tag",
+        "Avatar"
+      ],
+      "tokens": [
+        "typography.display",
+        "color.text.brand",
+        "size.space.small",
+        "size.space.medium",
+        "size.layout.content-width"
+      ],
+      "variants": {
+        "context": [
+          "coach",
+          "surfer"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:116"
+      }
+    },
+    {
+      "name": "SubmissionCard",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Resume un clip enviado para revisión y su acción principal.",
+      "path": "components/organisms/submission-card",
+      "files": {
+        "component": "components/organisms/submission-card/SubmissionCard.tsx",
+        "docs": "components/organisms/submission-card/SubmissionCard.docs.md",
+        "examples": "components/organisms/submission-card/SubmissionCard.examples.md",
+        "tokens": "components/organisms/submission-card/SubmissionCard.tokens.json"
+      },
+      "dependencies": [
+        "Avatar",
+        "Heading",
+        "Text",
+        "Badge",
+        "Tag",
+        "Button"
+      ],
+      "tokens": [
+        "card.background",
+        "card.border",
+        "card.radius",
+        "card.padding",
+        "card.gap",
+        "color.background.surface-sunken",
+        "size.layout.content-width"
+      ],
+      "variants": {
+        "deadline": [
+          "on-track",
+          "due-soon",
+          "overdue"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:223"
+      }
+    },
+    {
+      "name": "DataList",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Sección de datos de solo lectura con título y filas de definición.",
+      "path": "components/organisms/data-list",
+      "files": {
+        "component": "components/organisms/data-list/DataList.tsx",
+        "docs": "components/organisms/data-list/DataList.docs.md",
+        "examples": "components/organisms/data-list/DataList.examples.md",
+        "tokens": "components/organisms/data-list/DataList.tokens.json"
+      },
+      "dependencies": [
+        "ListItem",
+        "Heading",
+        "Icon"
+      ],
+      "tokens": [
+        "card.background",
+        "card.border",
+        "card.radius",
+        "color.background.brand-subtle",
+        "size.space.medium"
+      ],
+      "variants": {},
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:224"
+      }
+    },
+    {
+      "name": "EmptyState",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Explica por qué una zona está vacía y ofrece la siguiente acción.",
+      "path": "components/organisms/empty-state",
+      "files": {
+        "component": "components/organisms/empty-state/EmptyState.tsx",
+        "docs": "components/organisms/empty-state/EmptyState.docs.md",
+        "examples": "components/organisms/empty-state/EmptyState.examples.md",
+        "tokens": "components/organisms/empty-state/EmptyState.tokens.json"
+      },
+      "dependencies": [
+        "Icon",
+        "Text",
+        "Button"
+      ],
+      "tokens": [
+        "card.background",
+        "card.radius",
+        "color.background.canvas",
+        "color.text.tertiary",
+        "size.space.xl"
+      ],
+      "variants": {
+        "action": [
+          "false",
+          "true"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:277"
+      }
+    },
+    {
+      "name": "Modal",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Diálogo para una decisión o tarea corta que interrumpe el flujo.",
+      "path": "components/organisms/modal",
+      "files": {
+        "component": "components/organisms/modal/Modal.tsx",
+        "docs": "components/organisms/modal/Modal.docs.md",
+        "examples": "components/organisms/modal/Modal.examples.md",
+        "tokens": "components/organisms/modal/Modal.tokens.json"
+      },
+      "dependencies": [
+        "Heading",
+        "Text",
+        "Button",
+        "Icon",
+        "FormField"
+      ],
+      "tokens": [
+        "modal.background",
+        "modal.overlay",
+        "modal.radius",
+        "modal.padding",
+        "modal.shadow",
+        "z-index.modal",
+        "motion.transition-enter"
+      ],
+      "variants": {
+        "tone": [
+          "default",
+          "danger"
+        ]
+      },
+      "states": [
+        "open",
+        "closed"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:348"
+      }
+    },
+    {
+      "name": "FormSection",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Formulario completo con campos y acciones.",
+      "path": "components/organisms/form-section",
+      "files": {
+        "component": "components/organisms/form-section/FormSection.tsx",
+        "docs": "components/organisms/form-section/FormSection.docs.md",
+        "examples": "components/organisms/form-section/FormSection.examples.md",
+        "tokens": "components/organisms/form-section/FormSection.tokens.json"
+      },
+      "dependencies": [
+        "FormField",
+        "Button",
+        "Notification"
+      ],
+      "tokens": [
+        "card.*",
+        "size.layout.form-width",
+        "size.space.large",
+        "size.space.medium"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "submitting",
+        "error"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:349"
+      }
+    },
+    {
+      "name": "DashboardTemplate",
+      "category": "template",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Vista autenticada: Sidebar + columna central de 810px con slots header y content.",
+      "path": "templates/dashboard",
+      "files": {
+        "component": "templates/dashboard/DashboardTemplate.tsx",
+        "docs": "templates/dashboard/DashboardTemplate.docs.md"
+      },
+      "dependencies": [
+        "Sidebar"
+      ],
+      "slots": [
+        "header",
+        "content"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:511"
+      }
+    },
+    {
+      "name": "AuthTemplate",
+      "category": "template",
+      "status": "stable",
+      "version": "1.0.0",
+      "description": "Autenticación y onboarding: canvas centrado con slot form de 400px.",
+      "path": "templates/auth",
+      "files": {
+        "component": "templates/auth/AuthTemplate.tsx",
+        "docs": "templates/auth/AuthTemplate.docs.md"
+      },
+      "dependencies": [
+        "Heading",
+        "Text"
+      ],
+      "slots": [
+        "form"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:550"
+      }
+    },
+    {
+      "name": "CoachQueuePage",
+      "category": "page",
+      "status": "example",
+      "version": "1.0.0",
+      "description": "Cola del coach con contenido real: PageHeader, fila de Stat, búsqueda y filtros, SubmissionCard ×3 y EmptyState sin resultados.",
+      "path": "pages/coach-queue",
+      "files": {
+        "component": "pages/coach-queue/CoachQueuePage.tsx",
+        "docs": "pages/coach-queue/CoachQueuePage.docs.md"
+      },
+      "dependencies": [
+        "DashboardTemplate",
+        "PageHeader",
+        "Tag",
+        "Avatar",
+        "Stat",
+        "SearchField",
+        "TagChip",
+        "SubmissionCard",
+        "EmptyState"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:558",
+        "lightModeNodeId": "14:719"
+      }
+    },
+    {
+      "name": "SurferLoginPage",
+      "category": "page",
+      "status": "example",
+      "version": "1.0.0",
+      "description": "Log in del surfer: AuthTemplate + FormSection.",
+      "path": "pages/surfer-login",
+      "files": {
+        "component": "pages/surfer-login/SurferLoginPage.tsx",
+        "docs": "pages/surfer-login/SurferLoginPage.docs.md"
+      },
+      "dependencies": [
+        "AuthTemplate",
+        "FormSection",
+        "FormField",
+        "Input"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "14:880"
+      }
+    }
+  ],
+  "planned": [
+    {
+      "name": "NavigationBar",
+      "category": "organism",
+      "status": "planned",
+      "description": "Navegación inferior en móvil; sustituye a Sidebar por debajo de 1024px."
+    },
+    {
+      "name": "DataTable",
+      "category": "organism",
+      "status": "planned",
+      "description": "Tabla de datos comparables con orden y paginación."
+    },
+    {
+      "name": "CommandPalette",
+      "category": "organism",
+      "status": "planned",
+      "description": "Búsqueda global de acciones y surfers (⌘K)."
+    },
+    {
+      "name": "Footer",
+      "category": "organism",
+      "status": "planned",
+      "description": "Pie de las vistas públicas (landing, legal)."
+    },
+    {
+      "name": "Select",
+      "category": "atom",
+      "status": "planned",
+      "description": "Selección única entre más de 5 opciones."
+    },
+    {
+      "name": "ProgressBar",
+      "category": "atom",
+      "status": "planned",
+      "description": "Progreso medible de subida de vídeo."
+    },
+    {
+      "name": "ReviewCard",
+      "category": "organism",
+      "status": "planned",
+      "description": "Revisión entregada en History con vídeo y notas del coach."
+    }
+  ],
+  "tokens": [
+    {
+      "name": "color.navy.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-50",
+      "figmaVariable": "color/navy/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-100",
+      "figmaVariable": "color/navy/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-200",
+      "figmaVariable": "color/navy/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-300",
+      "figmaVariable": "color/navy/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-400",
+      "figmaVariable": "color/navy/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-500",
+      "figmaVariable": "color/navy/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-600",
+      "figmaVariable": "color/navy/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-700",
+      "figmaVariable": "color/navy/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-800",
+      "figmaVariable": "color/navy/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-900",
+      "figmaVariable": "color/navy/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.navy.950",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-navy-950",
+      "figmaVariable": "color/navy/950",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-50",
+      "figmaVariable": "color/ocean/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-100",
+      "figmaVariable": "color/ocean/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-200",
+      "figmaVariable": "color/ocean/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-300",
+      "figmaVariable": "color/ocean/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-400",
+      "figmaVariable": "color/ocean/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-500",
+      "figmaVariable": "color/ocean/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-600",
+      "figmaVariable": "color/ocean/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-700",
+      "figmaVariable": "color/ocean/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-800",
+      "figmaVariable": "color/ocean/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.ocean.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-ocean-900",
+      "figmaVariable": "color/ocean/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-50",
+      "figmaVariable": "color/sun/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-100",
+      "figmaVariable": "color/sun/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-200",
+      "figmaVariable": "color/sun/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-300",
+      "figmaVariable": "color/sun/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-400",
+      "figmaVariable": "color/sun/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-500",
+      "figmaVariable": "color/sun/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-600",
+      "figmaVariable": "color/sun/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-700",
+      "figmaVariable": "color/sun/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-800",
+      "figmaVariable": "color/sun/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.sun.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-sun-900",
+      "figmaVariable": "color/sun/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-50",
+      "figmaVariable": "color/coral/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-100",
+      "figmaVariable": "color/coral/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-200",
+      "figmaVariable": "color/coral/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-300",
+      "figmaVariable": "color/coral/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-400",
+      "figmaVariable": "color/coral/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-500",
+      "figmaVariable": "color/coral/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-600",
+      "figmaVariable": "color/coral/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-700",
+      "figmaVariable": "color/coral/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-800",
+      "figmaVariable": "color/coral/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.coral.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-coral-900",
+      "figmaVariable": "color/coral/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-50",
+      "figmaVariable": "color/amber/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-100",
+      "figmaVariable": "color/amber/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-200",
+      "figmaVariable": "color/amber/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-300",
+      "figmaVariable": "color/amber/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-400",
+      "figmaVariable": "color/amber/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-500",
+      "figmaVariable": "color/amber/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-600",
+      "figmaVariable": "color/amber/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-700",
+      "figmaVariable": "color/amber/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-800",
+      "figmaVariable": "color/amber/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.amber.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-amber-900",
+      "figmaVariable": "color/amber/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-50",
+      "figmaVariable": "color/violet/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-100",
+      "figmaVariable": "color/violet/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-200",
+      "figmaVariable": "color/violet/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-300",
+      "figmaVariable": "color/violet/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-400",
+      "figmaVariable": "color/violet/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-500",
+      "figmaVariable": "color/violet/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-600",
+      "figmaVariable": "color/violet/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-700",
+      "figmaVariable": "color/violet/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-800",
+      "figmaVariable": "color/violet/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.violet.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-violet-900",
+      "figmaVariable": "color/violet/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-50",
+      "figmaVariable": "color/green/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-100",
+      "figmaVariable": "color/green/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-200",
+      "figmaVariable": "color/green/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-300",
+      "figmaVariable": "color/green/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-400",
+      "figmaVariable": "color/green/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-500",
+      "figmaVariable": "color/green/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-600",
+      "figmaVariable": "color/green/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-700",
+      "figmaVariable": "color/green/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-800",
+      "figmaVariable": "color/green/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.green.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-green-900",
+      "figmaVariable": "color/green/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-50",
+      "figmaVariable": "color/gray/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-100",
+      "figmaVariable": "color/gray/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.200",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-200",
+      "figmaVariable": "color/gray/200",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-300",
+      "figmaVariable": "color/gray/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-400",
+      "figmaVariable": "color/gray/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-500",
+      "figmaVariable": "color/gray/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-600",
+      "figmaVariable": "color/gray/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-700",
+      "figmaVariable": "color/gray/700",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.800",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-800",
+      "figmaVariable": "color/gray/800",
+      "status": "stable"
+    },
+    {
+      "name": "color.gray.900",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-gray-900",
+      "figmaVariable": "color/gray/900",
+      "status": "stable"
+    },
+    {
+      "name": "color.white",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-white",
+      "figmaVariable": "color/white",
+      "status": "stable"
+    },
+    {
+      "name": "color.black",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-black",
+      "figmaVariable": "color/black",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.ocean.4",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-ocean-4",
+      "figmaVariable": "color/alpha/ocean/4",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.ocean.8",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-ocean-8",
+      "figmaVariable": "color/alpha/ocean/8",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.ocean.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-ocean-12",
+      "figmaVariable": "color/alpha/ocean/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.ocean.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-ocean-18",
+      "figmaVariable": "color/alpha/ocean/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.ocean.25",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-ocean-25",
+      "figmaVariable": "color/alpha/ocean/25",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.ocean.40",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-ocean-40",
+      "figmaVariable": "color/alpha/ocean/40",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.white.8",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-white-8",
+      "figmaVariable": "color/alpha/white/8",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.white.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-white-12",
+      "figmaVariable": "color/alpha/white/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.white.40",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-white-40",
+      "figmaVariable": "color/alpha/white/40",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.white.70",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-white-70",
+      "figmaVariable": "color/alpha/white/70",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.sun.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-sun-12",
+      "figmaVariable": "color/alpha/sun/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.sun.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-sun-18",
+      "figmaVariable": "color/alpha/sun/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.sun.30",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-sun-30",
+      "figmaVariable": "color/alpha/sun/30",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.coral.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-coral-12",
+      "figmaVariable": "color/alpha/coral/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.coral.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-coral-18",
+      "figmaVariable": "color/alpha/coral/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.coral.30",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-coral-30",
+      "figmaVariable": "color/alpha/coral/30",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.amber.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-amber-12",
+      "figmaVariable": "color/alpha/amber/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.amber.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-amber-18",
+      "figmaVariable": "color/alpha/amber/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.violet.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-violet-12",
+      "figmaVariable": "color/alpha/violet/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.violet.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-violet-18",
+      "figmaVariable": "color/alpha/violet/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.green.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-green-12",
+      "figmaVariable": "color/alpha/green/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.green.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-green-18",
+      "figmaVariable": "color/alpha/green/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.gray.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-gray-12",
+      "figmaVariable": "color/alpha/gray/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.gray.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-gray-18",
+      "figmaVariable": "color/alpha/gray/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.navy.8",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-navy-8",
+      "figmaVariable": "color/alpha/navy/8",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.navy.12",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-navy-12",
+      "figmaVariable": "color/alpha/navy/12",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.navy.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-navy-18",
+      "figmaVariable": "color/alpha/navy/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.black.40",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-black-40",
+      "figmaVariable": "color/alpha/black/40",
+      "status": "stable"
+    },
+    {
+      "name": "color.alpha.black.55",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-black-55",
+      "figmaVariable": "color/alpha/black/55",
+      "status": "stable"
+    },
+    {
+      "name": "typography.family.display",
+      "layer": "primitive",
+      "type": "fontFamily",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-family-display",
+      "figmaVariable": "typography/family/display",
+      "status": "stable",
+      "description": "Familia para títulos, botones, etiquetas y números. Presente en ambos archivos."
+    },
+    {
+      "name": "typography.family.body",
+      "layer": "primitive",
+      "type": "fontFamily",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-family-body",
+      "figmaVariable": "typography/family/body",
+      "status": "stable",
+      "description": "Familia para texto de lectura. Sustituye a Apple SD Gothic Neo (fuente de sistema de macOS, no portable) manteniéndola como fallback."
+    },
+    {
+      "name": "typography.size.2xs",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-2xs",
+      "figmaVariable": "typography/size/2xs",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.xs",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-xs",
+      "figmaVariable": "typography/size/xs",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.sm",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-sm",
+      "figmaVariable": "typography/size/sm",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.md",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-md",
+      "figmaVariable": "typography/size/md",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.lg",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-lg",
+      "figmaVariable": "typography/size/lg",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-xl",
+      "figmaVariable": "typography/size/xl",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.2xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-2xl",
+      "figmaVariable": "typography/size/2xl",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.3xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-3xl",
+      "figmaVariable": "typography/size/3xl",
+      "status": "stable"
+    },
+    {
+      "name": "typography.size.4xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-size-4xl",
+      "figmaVariable": "typography/size/4xl",
+      "status": "stable"
+    },
+    {
+      "name": "typography.weight.regular",
+      "layer": "primitive",
+      "type": "fontWeight",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-weight-regular",
+      "figmaVariable": "typography/weight/regular",
+      "status": "stable"
+    },
+    {
+      "name": "typography.weight.medium",
+      "layer": "primitive",
+      "type": "fontWeight",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-weight-medium",
+      "figmaVariable": "typography/weight/medium",
+      "status": "stable"
+    },
+    {
+      "name": "typography.weight.semibold",
+      "layer": "primitive",
+      "type": "fontWeight",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-weight-semibold",
+      "figmaVariable": "typography/weight/semibold",
+      "status": "stable"
+    },
+    {
+      "name": "typography.weight.bold",
+      "layer": "primitive",
+      "type": "fontWeight",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-weight-bold",
+      "figmaVariable": "typography/weight/bold",
+      "status": "stable"
+    },
+    {
+      "name": "typography.line-height.tight",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-line-height-tight",
+      "figmaVariable": "typography/line-height/tight",
+      "status": "stable"
+    },
+    {
+      "name": "typography.line-height.snug",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-line-height-snug",
+      "figmaVariable": "typography/line-height/snug",
+      "status": "stable"
+    },
+    {
+      "name": "typography.line-height.normal",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-line-height-normal",
+      "figmaVariable": "typography/line-height/normal",
+      "status": "stable"
+    },
+    {
+      "name": "typography.line-height.relaxed",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-line-height-relaxed",
+      "figmaVariable": "typography/line-height/relaxed",
+      "status": "stable"
+    },
+    {
+      "name": "typography.letter-spacing.none",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-letter-spacing-none",
+      "figmaVariable": "typography/letter-spacing/none",
+      "status": "stable"
+    },
+    {
+      "name": "typography.letter-spacing.wide",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-letter-spacing-wide",
+      "figmaVariable": "typography/letter-spacing/wide",
+      "status": "stable",
+      "description": "Botones y labels en negrita."
+    },
+    {
+      "name": "typography.letter-spacing.wider",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-typography-letter-spacing-wider",
+      "figmaVariable": "typography/letter-spacing/wider",
+      "status": "stable",
+      "description": "Overlines en mayúsculas (EMAIL, PLAN RENEWS)."
+    },
+    {
+      "name": "size.space.0",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-0",
+      "figmaVariable": "size/space/0",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.50",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-50",
+      "figmaVariable": "size/space/50",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.100",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-100",
+      "figmaVariable": "size/space/100",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.150",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-150",
+      "figmaVariable": "size/space/150",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.200",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-200",
+      "figmaVariable": "size/space/200",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.300",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-300",
+      "figmaVariable": "size/space/300",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.400",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-400",
+      "figmaVariable": "size/space/400",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.500",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-500",
+      "figmaVariable": "size/space/500",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.600",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-600",
+      "figmaVariable": "size/space/600",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.800",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-800",
+      "figmaVariable": "size/space/800",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.1000",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-1000",
+      "figmaVariable": "size/space/1000",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.1200",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-1200",
+      "figmaVariable": "size/space/1200",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.1600",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-1600",
+      "figmaVariable": "size/space/1600",
+      "status": "stable"
+    },
+    {
+      "name": "size.space.3000",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-space-3000",
+      "figmaVariable": "size/space/3000",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.0",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-0",
+      "figmaVariable": "size/radius/0",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.100",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-100",
+      "figmaVariable": "size/radius/100",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.200",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-200",
+      "figmaVariable": "size/radius/200",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.300",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-300",
+      "figmaVariable": "size/radius/300",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.400",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-400",
+      "figmaVariable": "size/radius/400",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.600",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-600",
+      "figmaVariable": "size/radius/600",
+      "status": "stable"
+    },
+    {
+      "name": "size.radius.full",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-radius-full",
+      "figmaVariable": "size/radius/full",
+      "status": "stable"
+    },
+    {
+      "name": "size.border.0",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-border-0",
+      "figmaVariable": "size/border/0",
+      "status": "stable"
+    },
+    {
+      "name": "size.border.100",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-border-100",
+      "figmaVariable": "size/border/100",
+      "status": "stable"
+    },
+    {
+      "name": "size.border.150",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-border-150",
+      "figmaVariable": "size/border/150",
+      "status": "stable"
+    },
+    {
+      "name": "size.border.200",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-border-200",
+      "figmaVariable": "size/border/200",
+      "status": "stable"
+    },
+    {
+      "name": "size.icon.xs",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-icon-xs",
+      "figmaVariable": "size/icon/xs",
+      "status": "stable"
+    },
+    {
+      "name": "size.icon.sm",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-icon-sm",
+      "figmaVariable": "size/icon/sm",
+      "status": "stable"
+    },
+    {
+      "name": "size.icon.md",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-icon-md",
+      "figmaVariable": "size/icon/md",
+      "status": "stable"
+    },
+    {
+      "name": "size.icon.lg",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-icon-lg",
+      "figmaVariable": "size/icon/lg",
+      "status": "stable"
+    },
+    {
+      "name": "size.icon.xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-icon-xl",
+      "figmaVariable": "size/icon/xl",
+      "status": "stable"
+    },
+    {
+      "name": "size.container.sidebar",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-container-sidebar",
+      "figmaVariable": "size/container/sidebar",
+      "status": "stable"
+    },
+    {
+      "name": "size.container.form",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-container-form",
+      "figmaVariable": "size/container/form",
+      "status": "stable"
+    },
+    {
+      "name": "size.container.content",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-container-content",
+      "figmaVariable": "size/container/content",
+      "status": "stable"
+    },
+    {
+      "name": "size.container.stat",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-container-stat",
+      "figmaVariable": "size/container/stat",
+      "status": "stable"
+    },
+    {
+      "name": "size.control.sm",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-control-sm",
+      "figmaVariable": "size/control/sm",
+      "status": "stable"
+    },
+    {
+      "name": "size.control.md",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-control-md",
+      "figmaVariable": "size/control/md",
+      "status": "stable"
+    },
+    {
+      "name": "size.control.lg",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-control-lg",
+      "figmaVariable": "size/control/lg",
+      "status": "stable"
+    },
+    {
+      "name": "shadow.glow-small",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-glow-small",
+      "figmaVariable": "shadow/glow-small",
+      "status": "stable",
+      "description": "Brillo teal sutil (badges, avatares)."
+    },
+    {
+      "name": "shadow.glow-medium",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-glow-medium",
+      "figmaVariable": "shadow/glow-medium",
+      "status": "stable",
+      "description": "Brillo teal de los botones primarios."
+    },
+    {
+      "name": "shadow.glow-sun",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-glow-sun",
+      "figmaVariable": "shadow/glow-sun",
+      "status": "stable"
+    },
+    {
+      "name": "shadow.elevation-high",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-elevation-high",
+      "figmaVariable": "shadow/elevation-high",
+      "status": "stable",
+      "description": "Modales y popovers."
+    },
+    {
+      "name": "shadow.elevation-low-light",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-elevation-low-light",
+      "figmaVariable": "shadow/elevation-low-light",
+      "status": "stable",
+      "description": "Elevación de tarjetas en tema claro."
+    },
+    {
+      "name": "shadow.ring",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-ring",
+      "figmaVariable": "shadow/ring",
+      "status": "stable",
+      "description": "Anillo de foco."
+    },
+    {
+      "name": "motion.duration.instant",
+      "layer": "primitive",
+      "type": "duration",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-duration-instant",
+      "figmaVariable": "motion/duration/instant",
+      "status": "stable"
+    },
+    {
+      "name": "motion.duration.fast",
+      "layer": "primitive",
+      "type": "duration",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-duration-fast",
+      "figmaVariable": "motion/duration/fast",
+      "status": "stable"
+    },
+    {
+      "name": "motion.duration.base",
+      "layer": "primitive",
+      "type": "duration",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-duration-base",
+      "figmaVariable": "motion/duration/base",
+      "status": "stable"
+    },
+    {
+      "name": "motion.duration.slow",
+      "layer": "primitive",
+      "type": "duration",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-duration-slow",
+      "figmaVariable": "motion/duration/slow",
+      "status": "stable"
+    },
+    {
+      "name": "motion.duration.loop",
+      "layer": "primitive",
+      "type": "duration",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-duration-loop",
+      "figmaVariable": "motion/duration/loop",
+      "status": "stable"
+    },
+    {
+      "name": "motion.easing.standard",
+      "layer": "primitive",
+      "type": "cubicBezier",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-easing-standard",
+      "figmaVariable": "motion/easing/standard",
+      "status": "stable"
+    },
+    {
+      "name": "motion.easing.enter",
+      "layer": "primitive",
+      "type": "cubicBezier",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-easing-enter",
+      "figmaVariable": "motion/easing/enter",
+      "status": "stable"
+    },
+    {
+      "name": "motion.easing.exit",
+      "layer": "primitive",
+      "type": "cubicBezier",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-motion-easing-exit",
+      "figmaVariable": "motion/easing/exit",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.base",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-base",
+      "figmaVariable": "z-index/base",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.raised",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-raised",
+      "figmaVariable": "z-index/raised",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.sticky",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-sticky",
+      "figmaVariable": "z-index/sticky",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.dropdown",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-dropdown",
+      "figmaVariable": "z-index/dropdown",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.overlay",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-overlay",
+      "figmaVariable": "z-index/overlay",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.modal",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-modal",
+      "figmaVariable": "z-index/modal",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.toast",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-toast",
+      "figmaVariable": "z-index/toast",
+      "status": "stable"
+    },
+    {
+      "name": "z-index.tooltip",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-z-index-tooltip",
+      "figmaVariable": "z-index/tooltip",
+      "status": "stable"
+    },
+    {
+      "name": "breakpoint.sm",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-breakpoint-sm",
+      "figmaVariable": "breakpoint/sm",
+      "status": "stable"
+    },
+    {
+      "name": "breakpoint.md",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-breakpoint-md",
+      "figmaVariable": "breakpoint/md",
+      "status": "stable"
+    },
+    {
+      "name": "breakpoint.lg",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-breakpoint-lg",
+      "figmaVariable": "breakpoint/lg",
+      "status": "stable"
+    },
+    {
+      "name": "breakpoint.xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-breakpoint-xl",
+      "figmaVariable": "breakpoint/xl",
+      "status": "stable"
+    },
+    {
+      "name": "breakpoint.2xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-breakpoint-2xl",
+      "figmaVariable": "breakpoint/2xl",
+      "status": "stable",
+      "description": "Ancho de diseño de los archivos Coach y Surfer."
+    },
+    {
+      "name": "color.background.canvas",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-canvas",
+      "figmaVariable": "color/background/canvas",
+      "status": "stable",
+      "references": "color.navy.950",
+      "description": "Fondo de la página. Capa más baja.",
+      "themes": {
+        "dark": "{color.navy.950}",
+        "light": "{color.navy.50}"
+      }
+    },
+    {
+      "name": "color.background.surface",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-surface",
+      "figmaVariable": "color/background/surface",
+      "status": "stable",
+      "references": "color.navy.900",
+      "description": "Superficies estructurales: sidebar, paneles.",
+      "themes": {
+        "dark": "{color.navy.900}",
+        "light": "{color.white}"
+      }
+    },
+    {
+      "name": "color.background.surface-raised",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-surface-raised",
+      "figmaVariable": "color/background/surface-raised",
+      "status": "stable",
+      "references": "color.navy.800",
+      "description": "Tarjetas, stats, listas y campos sobre el canvas.",
+      "themes": {
+        "dark": "{color.navy.800}",
+        "light": "{color.white}"
+      }
+    },
+    {
+      "name": "color.background.surface-sunken",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-surface-sunken",
+      "figmaVariable": "color/background/surface-sunken",
+      "status": "stable",
+      "references": "color.alpha.navy.18",
+      "description": "Zonas hundidas dentro de una tarjeta (cita del surfer, bloque de notas).",
+      "themes": {
+        "dark": "{color.alpha.navy.18}",
+        "light": "{color.navy.50}"
+      }
+    },
+    {
+      "name": "color.background.brand-subtle",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-brand-subtle",
+      "figmaVariable": "color/background/brand-subtle",
+      "status": "stable",
+      "references": "color.alpha.ocean.12",
+      "description": "Fondo de elementos seleccionados o destacados con la marca.",
+      "themes": {
+        "dark": "{color.alpha.ocean.12}",
+        "light": "{color.ocean.50}"
+      }
+    },
+    {
+      "name": "color.background.highlight-subtle",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-highlight-subtle",
+      "figmaVariable": "color/background/highlight-subtle",
+      "status": "stable",
+      "references": "color.alpha.sun.12",
+      "description": "Fondo de badges de plan y destacados cálidos.",
+      "themes": {
+        "dark": "{color.alpha.sun.12}",
+        "light": "{color.sun.50}"
+      }
+    },
+    {
+      "name": "color.background.overlay",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-overlay",
+      "figmaVariable": "color/background/overlay",
+      "status": "stable",
+      "references": "color.alpha.black.55",
+      "description": "Velo detrás de modales.",
+      "themes": {
+        "dark": "{color.alpha.black.55}",
+        "light": "{color.alpha.black.40}"
+      }
+    },
+    {
+      "name": "color.background.inverse",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-background-inverse",
+      "figmaVariable": "color/background/inverse",
+      "status": "stable",
+      "references": "color.navy.50",
+      "description": "Fondo de tooltips.",
+      "themes": {
+        "dark": "{color.navy.50}",
+        "light": "{color.navy.900}"
+      }
+    },
+    {
+      "name": "color.text.primary",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-primary",
+      "figmaVariable": "color/text/primary",
+      "status": "stable",
+      "references": "color.white",
+      "description": "Texto principal: títulos, valores, contenido.",
+      "themes": {
+        "dark": "{color.white}",
+        "light": "{color.navy.950}"
+      }
+    },
+    {
+      "name": "color.text.secondary",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-secondary",
+      "figmaVariable": "color/text/secondary",
+      "status": "stable",
+      "references": "color.navy.300",
+      "description": "Texto de apoyo: subtítulos, metadatos, labels de stats.",
+      "themes": {
+        "dark": "{color.navy.300}",
+        "light": "{color.navy.600}"
+      }
+    },
+    {
+      "name": "color.text.tertiary",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-tertiary",
+      "figmaVariable": "color/text/tertiary",
+      "status": "stable",
+      "references": "color.navy.400",
+      "description": "Texto de baja prioridad: placeholders, fechas, metadatos. Contraste mínimo 4.5:1 sobre surface-raised.",
+      "themes": {
+        "dark": "{color.navy.400}",
+        "light": "{color.navy.500}"
+      }
+    },
+    {
+      "name": "color.text.brand",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-brand",
+      "figmaVariable": "color/text/brand",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "description": "Enlaces y texto con la marca.",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.700}"
+      }
+    },
+    {
+      "name": "color.text.highlight",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-highlight",
+      "figmaVariable": "color/text/highlight",
+      "status": "stable",
+      "references": "color.sun.400",
+      "description": "Texto destacado cálido (plan del surfer).",
+      "themes": {
+        "dark": "{color.sun.400}",
+        "light": "{color.sun.700}"
+      }
+    },
+    {
+      "name": "color.text.inverse",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-inverse",
+      "figmaVariable": "color/text/inverse",
+      "status": "stable",
+      "references": "color.navy.950",
+      "description": "Texto sobre fondos inversos (tooltips).",
+      "themes": {
+        "dark": "{color.navy.950}",
+        "light": "{color.white}"
+      }
+    },
+    {
+      "name": "color.text.on-action",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-on-action",
+      "figmaVariable": "color/text/on-action",
+      "status": "stable",
+      "references": "color.white",
+      "description": "Texto sobre acción primaria o destructiva.",
+      "themes": {
+        "dark": "{color.white}",
+        "light": "{color.white}"
+      }
+    },
+    {
+      "name": "color.text.disabled",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-disabled",
+      "figmaVariable": "color/text/disabled",
+      "status": "stable",
+      "references": "color.navy.500",
+      "description": "Texto de elementos deshabilitados.",
+      "themes": {
+        "dark": "{color.navy.500}",
+        "light": "{color.navy.300}"
+      }
+    },
+    {
+      "name": "color.text.muted",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-text-muted",
+      "figmaVariable": "color/text/muted",
+      "status": "deprecated",
+      "references": "color.text.tertiary",
+      "description": "Alias de migración.",
+      "themes": {
+        "dark": "{color.text.tertiary}",
+        "light": "{color.text.tertiary}"
+      }
+    },
+    {
+      "name": "color.border.subtle",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-border-subtle",
+      "figmaVariable": "color/border/subtle",
+      "status": "stable",
+      "references": "color.alpha.ocean.18",
+      "description": "Borde por defecto de tarjetas, campos y divisores.",
+      "themes": {
+        "dark": "{color.alpha.ocean.18}",
+        "light": "{color.alpha.navy.12}"
+      }
+    },
+    {
+      "name": "color.border.default",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-border-default",
+      "figmaVariable": "color/border/default",
+      "status": "stable",
+      "references": "color.navy.500",
+      "description": "Borde con más presencia: checkbox, radio sin marcar.",
+      "themes": {
+        "dark": "{color.navy.500}",
+        "light": "{color.navy.200}"
+      }
+    },
+    {
+      "name": "color.border.strong",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-border-strong",
+      "figmaVariable": "color/border/strong",
+      "status": "stable",
+      "references": "color.alpha.white.40",
+      "description": "Borde de alto contraste: botón secundario en hover.",
+      "themes": {
+        "dark": "{color.alpha.white.40}",
+        "light": "{color.navy.400}"
+      }
+    },
+    {
+      "name": "color.border.brand",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-border-brand",
+      "figmaVariable": "color/border/brand",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "description": "Borde de elementos activos o seleccionados.",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.600}"
+      }
+    },
+    {
+      "name": "color.border.focus",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-border-focus",
+      "figmaVariable": "color/border/focus",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "description": "Borde y anillo de foco visible.",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.600}"
+      }
+    },
+    {
+      "name": "color.border.danger",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-border-danger",
+      "figmaVariable": "color/border/danger",
+      "status": "stable",
+      "references": "color.coral.400",
+      "description": "Borde de campos con error.",
+      "themes": {
+        "dark": "{color.coral.400}",
+        "light": "{color.coral.500}"
+      }
+    },
+    {
+      "name": "color.action.primary.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-primary-background",
+      "figmaVariable": "color/action/primary/background",
+      "status": "stable",
+      "references": "color.ocean.700",
+      "description": "Acción principal de la vista. Una por vista. Más oscuro que el diseño original para que el texto blanco cumpla 4.5:1.",
+      "themes": {
+        "dark": "{color.ocean.700}",
+        "light": "{color.ocean.700}"
+      }
+    },
+    {
+      "name": "color.action.primary.background-start",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-primary-background-start",
+      "figmaVariable": "color/action/primary/background-start",
+      "status": "stable",
+      "references": "color.ocean.800",
+      "description": "Inicio del degradado del botón primario. El original (#3b8eaa → #5aaec8) daba 2.5–3.7:1 con texto blanco; ocean.800 → ocean.700 garantiza ≥ 5.4:1 en todo el degradado.",
+      "themes": {
+        "dark": "{color.ocean.800}",
+        "light": "{color.ocean.800}"
+      }
+    },
+    {
+      "name": "color.action.primary.background-end",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-primary-background-end",
+      "figmaVariable": "color/action/primary/background-end",
+      "status": "stable",
+      "references": "color.ocean.700",
+      "description": "Fin del degradado del botón primario.",
+      "themes": {
+        "dark": "{color.ocean.700}",
+        "light": "{color.ocean.700}"
+      }
+    },
+    {
+      "name": "color.action.primary.background-hover",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-primary-background-hover",
+      "figmaVariable": "color/action/primary/background-hover",
+      "status": "stable",
+      "references": "color.ocean.800",
+      "description": "Acción principal en hover.",
+      "themes": {
+        "dark": "{color.ocean.800}",
+        "light": "{color.ocean.800}"
+      }
+    },
+    {
+      "name": "color.action.primary.background-pressed",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-primary-background-pressed",
+      "figmaVariable": "color/action/primary/background-pressed",
+      "status": "stable",
+      "references": "color.ocean.900",
+      "description": "Acción principal presionada.",
+      "themes": {
+        "dark": "{color.ocean.900}",
+        "light": "{color.ocean.900}"
+      }
+    },
+    {
+      "name": "color.action.primary.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-primary-foreground",
+      "figmaVariable": "color/action/primary/foreground",
+      "status": "stable",
+      "references": "color.white",
+      "description": "Texto e icono sobre la acción principal.",
+      "themes": {
+        "dark": "{color.white}",
+        "light": "{color.white}"
+      }
+    },
+    {
+      "name": "color.action.secondary.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-secondary-background",
+      "figmaVariable": "color/action/secondary/background",
+      "status": "stable",
+      "references": "color.navy.800",
+      "description": "Acción secundaria.",
+      "themes": {
+        "dark": "{color.navy.800}",
+        "light": "{color.white}"
+      }
+    },
+    {
+      "name": "color.action.secondary.background-hover",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-secondary-background-hover",
+      "figmaVariable": "color/action/secondary/background-hover",
+      "status": "stable",
+      "references": "color.navy.700",
+      "description": "Acción secundaria en hover.",
+      "themes": {
+        "dark": "{color.navy.700}",
+        "light": "{color.navy.50}"
+      }
+    },
+    {
+      "name": "color.action.secondary.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-secondary-foreground",
+      "figmaVariable": "color/action/secondary/foreground",
+      "status": "stable",
+      "references": "color.navy.300",
+      "description": "Texto de la acción secundaria.",
+      "themes": {
+        "dark": "{color.navy.300}",
+        "light": "{color.navy.700}"
+      }
+    },
+    {
+      "name": "color.action.secondary.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-secondary-border",
+      "figmaVariable": "color/action/secondary/border",
+      "status": "stable",
+      "references": "color.alpha.ocean.18",
+      "description": "Borde de la acción secundaria.",
+      "themes": {
+        "dark": "{color.alpha.ocean.18}",
+        "light": "{color.navy.200}"
+      }
+    },
+    {
+      "name": "color.action.ghost.background-hover",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-ghost-background-hover",
+      "figmaVariable": "color/action/ghost/background-hover",
+      "status": "stable",
+      "references": "color.alpha.ocean.8",
+      "description": "Fondo en hover de acciones sin contenedor.",
+      "themes": {
+        "dark": "{color.alpha.ocean.8}",
+        "light": "{color.ocean.50}"
+      }
+    },
+    {
+      "name": "color.action.ghost.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-ghost-foreground",
+      "figmaVariable": "color/action/ghost/foreground",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "description": "Texto de acciones tipo enlace.",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.700}"
+      }
+    },
+    {
+      "name": "color.action.danger.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-danger-background",
+      "figmaVariable": "color/action/danger/background",
+      "status": "stable",
+      "references": "color.coral.600",
+      "description": "Acción destructiva (cancelar plan). Tono oscuro para que el texto blanco cumpla 4.5:1.",
+      "themes": {
+        "dark": "{color.coral.600}",
+        "light": "{color.coral.600}"
+      }
+    },
+    {
+      "name": "color.action.danger.background-hover",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-danger-background-hover",
+      "figmaVariable": "color/action/danger/background-hover",
+      "status": "stable",
+      "references": "color.coral.700",
+      "description": "Acción destructiva en hover.",
+      "themes": {
+        "dark": "{color.coral.700}",
+        "light": "{color.coral.700}"
+      }
+    },
+    {
+      "name": "color.action.danger.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-danger-foreground",
+      "figmaVariable": "color/action/danger/foreground",
+      "status": "stable",
+      "references": "color.coral.300",
+      "description": "Texto de acción destructiva sin contenedor (Sign out).",
+      "themes": {
+        "dark": "{color.coral.300}",
+        "light": "{color.coral.600}"
+      }
+    },
+    {
+      "name": "color.feedback.success.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-success-foreground",
+      "figmaVariable": "color/feedback/success/foreground",
+      "status": "stable",
+      "references": "color.green.400",
+      "themes": {
+        "dark": "{color.green.400}",
+        "light": "{color.green.700}"
+      }
+    },
+    {
+      "name": "color.feedback.success.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-success-background",
+      "figmaVariable": "color/feedback/success/background",
+      "status": "stable",
+      "references": "color.alpha.green.12",
+      "themes": {
+        "dark": "{color.alpha.green.12}",
+        "light": "{color.green.50}"
+      }
+    },
+    {
+      "name": "color.feedback.success.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-success-border",
+      "figmaVariable": "color/feedback/success/border",
+      "status": "stable",
+      "references": "color.alpha.green.18",
+      "themes": {
+        "dark": "{color.alpha.green.18}",
+        "light": "{color.green.200}"
+      }
+    },
+    {
+      "name": "color.feedback.warning.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-warning-foreground",
+      "figmaVariable": "color/feedback/warning/foreground",
+      "status": "stable",
+      "references": "color.amber.500",
+      "themes": {
+        "dark": "{color.amber.500}",
+        "light": "{color.amber.700}"
+      }
+    },
+    {
+      "name": "color.feedback.warning.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-warning-background",
+      "figmaVariable": "color/feedback/warning/background",
+      "status": "stable",
+      "references": "color.alpha.amber.12",
+      "themes": {
+        "dark": "{color.alpha.amber.12}",
+        "light": "{color.amber.50}"
+      }
+    },
+    {
+      "name": "color.feedback.warning.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-warning-border",
+      "figmaVariable": "color/feedback/warning/border",
+      "status": "stable",
+      "references": "color.alpha.amber.18",
+      "themes": {
+        "dark": "{color.alpha.amber.18}",
+        "light": "{color.amber.200}"
+      }
+    },
+    {
+      "name": "color.feedback.danger.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-danger-foreground",
+      "figmaVariable": "color/feedback/danger/foreground",
+      "status": "stable",
+      "references": "color.coral.300",
+      "themes": {
+        "dark": "{color.coral.300}",
+        "light": "{color.coral.600}"
+      }
+    },
+    {
+      "name": "color.feedback.danger.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-danger-background",
+      "figmaVariable": "color/feedback/danger/background",
+      "status": "stable",
+      "references": "color.alpha.coral.12",
+      "themes": {
+        "dark": "{color.alpha.coral.12}",
+        "light": "{color.coral.50}"
+      }
+    },
+    {
+      "name": "color.feedback.danger.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-danger-border",
+      "figmaVariable": "color/feedback/danger/border",
+      "status": "stable",
+      "references": "color.alpha.coral.18",
+      "themes": {
+        "dark": "{color.alpha.coral.18}",
+        "light": "{color.coral.200}"
+      }
+    },
+    {
+      "name": "color.feedback.info.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-info-foreground",
+      "figmaVariable": "color/feedback/info/foreground",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.700}"
+      }
+    },
+    {
+      "name": "color.feedback.info.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-info-background",
+      "figmaVariable": "color/feedback/info/background",
+      "status": "stable",
+      "references": "color.alpha.ocean.12",
+      "themes": {
+        "dark": "{color.alpha.ocean.12}",
+        "light": "{color.ocean.50}"
+      }
+    },
+    {
+      "name": "color.feedback.info.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-info-border",
+      "figmaVariable": "color/feedback/info/border",
+      "status": "stable",
+      "references": "color.alpha.ocean.18",
+      "themes": {
+        "dark": "{color.alpha.ocean.18}",
+        "light": "{color.ocean.200}"
+      }
+    },
+    {
+      "name": "color.feedback.neutral.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-neutral-foreground",
+      "figmaVariable": "color/feedback/neutral/foreground",
+      "status": "stable",
+      "references": "color.navy.300",
+      "themes": {
+        "dark": "{color.navy.300}",
+        "light": "{color.navy.600}"
+      }
+    },
+    {
+      "name": "color.feedback.neutral.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-neutral-background",
+      "figmaVariable": "color/feedback/neutral/background",
+      "status": "stable",
+      "references": "color.alpha.gray.18",
+      "themes": {
+        "dark": "{color.alpha.gray.18}",
+        "light": "{color.gray.100}"
+      }
+    },
+    {
+      "name": "color.feedback.neutral.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-feedback-neutral-border",
+      "figmaVariable": "color/feedback/neutral/border",
+      "status": "stable",
+      "references": "color.alpha.gray.18",
+      "themes": {
+        "dark": "{color.alpha.gray.18}",
+        "light": "{color.gray.200}"
+      }
+    },
+    {
+      "name": "color.plan.pay-as-you-go.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-pay-as-you-go-foreground",
+      "figmaVariable": "color/plan/pay-as-you-go/foreground",
+      "status": "stable",
+      "references": "color.navy.300",
+      "description": "Plan Pay as you go.",
+      "themes": {
+        "dark": "{color.navy.300}",
+        "light": "{color.gray.600}"
+      }
+    },
+    {
+      "name": "color.plan.pay-as-you-go.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-pay-as-you-go-background",
+      "figmaVariable": "color/plan/pay-as-you-go/background",
+      "status": "stable",
+      "references": "color.alpha.gray.18",
+      "themes": {
+        "dark": "{color.alpha.gray.18}",
+        "light": "{color.gray.100}"
+      }
+    },
+    {
+      "name": "color.plan.elite.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-elite-foreground",
+      "figmaVariable": "color/plan/elite/foreground",
+      "status": "stable",
+      "references": "color.amber.500",
+      "description": "Plan Elite.",
+      "themes": {
+        "dark": "{color.amber.500}",
+        "light": "{color.amber.700}"
+      }
+    },
+    {
+      "name": "color.plan.elite.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-elite-background",
+      "figmaVariable": "color/plan/elite/background",
+      "status": "stable",
+      "references": "color.alpha.amber.18",
+      "themes": {
+        "dark": "{color.alpha.amber.18}",
+        "light": "{color.amber.50}"
+      }
+    },
+    {
+      "name": "color.plan.progression.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-progression-foreground",
+      "figmaVariable": "color/plan/progression/foreground",
+      "status": "stable",
+      "references": "color.violet.400",
+      "description": "Plan Progression.",
+      "themes": {
+        "dark": "{color.violet.400}",
+        "light": "{color.violet.700}"
+      }
+    },
+    {
+      "name": "color.plan.progression.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-progression-background",
+      "figmaVariable": "color/plan/progression/background",
+      "status": "stable",
+      "references": "color.alpha.violet.18",
+      "themes": {
+        "dark": "{color.alpha.violet.18}",
+        "light": "{color.violet.50}"
+      }
+    },
+    {
+      "name": "color.status.pending.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-pending-foreground",
+      "figmaVariable": "color/status/pending/foreground",
+      "status": "stable",
+      "references": "color.sun.400",
+      "description": "Envío pendiente de revisión.",
+      "themes": {
+        "dark": "{color.sun.400}",
+        "light": "{color.sun.700}"
+      }
+    },
+    {
+      "name": "color.status.pending.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-pending-background",
+      "figmaVariable": "color/status/pending/background",
+      "status": "stable",
+      "references": "color.alpha.sun.12",
+      "themes": {
+        "dark": "{color.alpha.sun.12}",
+        "light": "{color.sun.50}"
+      }
+    },
+    {
+      "name": "color.status.in-review.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-in-review-foreground",
+      "figmaVariable": "color/status/in-review/foreground",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "description": "Envío en revisión por el coach.",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.700}"
+      }
+    },
+    {
+      "name": "color.status.in-review.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-in-review-background",
+      "figmaVariable": "color/status/in-review/background",
+      "status": "stable",
+      "references": "color.alpha.ocean.12",
+      "themes": {
+        "dark": "{color.alpha.ocean.12}",
+        "light": "{color.ocean.50}"
+      }
+    },
+    {
+      "name": "color.status.review-ready.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-review-ready-foreground",
+      "figmaVariable": "color/status/review-ready/foreground",
+      "status": "stable",
+      "references": "color.green.400",
+      "description": "Revisión lista para ver.",
+      "themes": {
+        "dark": "{color.green.400}",
+        "light": "{color.green.700}"
+      }
+    },
+    {
+      "name": "color.status.review-ready.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-review-ready-background",
+      "figmaVariable": "color/status/review-ready/background",
+      "status": "stable",
+      "references": "color.alpha.green.12",
+      "themes": {
+        "dark": "{color.alpha.green.12}",
+        "light": "{color.green.50}"
+      }
+    },
+    {
+      "name": "color.status.overdue.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-overdue-foreground",
+      "figmaVariable": "color/status/overdue/foreground",
+      "status": "stable",
+      "references": "color.coral.300",
+      "description": "Revisión fuera de plazo.",
+      "themes": {
+        "dark": "{color.coral.300}",
+        "light": "{color.coral.600}"
+      }
+    },
+    {
+      "name": "color.status.overdue.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-overdue-background",
+      "figmaVariable": "color/status/overdue/background",
+      "status": "stable",
+      "references": "color.alpha.coral.12",
+      "themes": {
+        "dark": "{color.alpha.coral.12}",
+        "light": "{color.coral.50}"
+      }
+    },
+    {
+      "name": "color.disabled.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-disabled-background",
+      "figmaVariable": "color/disabled/background",
+      "status": "stable",
+      "references": "color.alpha.navy.18",
+      "description": "Fondo de controles deshabilitados.",
+      "themes": {
+        "dark": "{color.alpha.navy.18}",
+        "light": "{color.gray.100}"
+      }
+    },
+    {
+      "name": "color.disabled.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-disabled-foreground",
+      "figmaVariable": "color/disabled/foreground",
+      "status": "stable",
+      "references": "color.navy.500",
+      "description": "Texto e icono de controles deshabilitados.",
+      "themes": {
+        "dark": "{color.navy.500}",
+        "light": "{color.gray.400}"
+      }
+    },
+    {
+      "name": "color.icon.primary",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-icon-primary",
+      "figmaVariable": "color/icon/primary",
+      "status": "stable",
+      "references": "color.white",
+      "description": "Iconos por defecto.",
+      "themes": {
+        "dark": "{color.white}",
+        "light": "{color.navy.900}"
+      }
+    },
+    {
+      "name": "color.icon.secondary",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-icon-secondary",
+      "figmaVariable": "color/icon/secondary",
+      "status": "stable",
+      "references": "color.navy.500",
+      "description": "Iconos secundarios (navegación inactiva, chevrons).",
+      "themes": {
+        "dark": "{color.navy.500}",
+        "light": "{color.navy.500}"
+      }
+    },
+    {
+      "name": "color.icon.brand",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-icon-brand",
+      "figmaVariable": "color/icon/brand",
+      "status": "stable",
+      "references": "color.ocean.400",
+      "description": "Iconos activos o de marca.",
+      "themes": {
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.600}"
+      }
+    },
+    {
+      "name": "size.space.none",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-none",
+      "figmaVariable": "size/space/none",
+      "status": "stable",
+      "references": "size.space.0"
+    },
+    {
+      "name": "size.space.3xs",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-3xs",
+      "figmaVariable": "size/space/3xs",
+      "status": "stable",
+      "references": "size.space.50",
+      "description": "Separación mínima entre label y valor."
+    },
+    {
+      "name": "size.space.2xs",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-2xs",
+      "figmaVariable": "size/space/2xs",
+      "status": "stable",
+      "references": "size.space.100",
+      "description": "Separación interna de badges y chips."
+    },
+    {
+      "name": "size.space.xs",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-xs",
+      "figmaVariable": "size/space/xs",
+      "status": "stable",
+      "references": "size.space.150",
+      "description": "Espacio entre icono y texto en controles pequeños."
+    },
+    {
+      "name": "size.space.small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-small",
+      "figmaVariable": "size/space/small",
+      "status": "stable",
+      "references": "size.space.200",
+      "description": "Espacio entre icono y texto; entre elementos muy relacionados."
+    },
+    {
+      "name": "size.space.medium",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-medium",
+      "figmaVariable": "size/space/medium",
+      "status": "stable",
+      "references": "size.space.300",
+      "description": "Padding interno de tarjetas compactas y campos."
+    },
+    {
+      "name": "size.space.large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-large",
+      "figmaVariable": "size/space/large",
+      "status": "stable",
+      "references": "size.space.400",
+      "description": "Padding de tarjetas; separación entre elementos de una lista."
+    },
+    {
+      "name": "size.space.xl",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-xl",
+      "figmaVariable": "size/space/xl",
+      "status": "stable",
+      "references": "size.space.600",
+      "description": "Separación entre secciones dentro de una vista."
+    },
+    {
+      "name": "size.space.2xl",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-2xl",
+      "figmaVariable": "size/space/2xl",
+      "status": "stable",
+      "references": "size.space.1000",
+      "description": "Separación entre bloques grandes de la página."
+    },
+    {
+      "name": "size.space.page-gutter",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-space-page-gutter",
+      "figmaVariable": "size/space/page-gutter",
+      "status": "stable",
+      "references": "size.space.3000",
+      "description": "Margen lateral del contenido en escritorio (1440px)."
+    },
+    {
+      "name": "size.radius.none",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-radius-none",
+      "figmaVariable": "size/radius/none",
+      "status": "stable",
+      "references": "size.radius.0"
+    },
+    {
+      "name": "size.radius.small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-radius-small",
+      "figmaVariable": "size/radius/small",
+      "status": "stable",
+      "references": "size.radius.100",
+      "description": "Badges, tags, checkbox."
+    },
+    {
+      "name": "size.radius.medium",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-radius-medium",
+      "figmaVariable": "size/radius/medium",
+      "status": "stable",
+      "references": "size.radius.200",
+      "description": "Tooltips, items de menú."
+    },
+    {
+      "name": "size.radius.large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-radius-large",
+      "figmaVariable": "size/radius/large",
+      "status": "stable",
+      "references": "size.radius.300",
+      "description": "Campos, botones, bloques internos."
+    },
+    {
+      "name": "size.radius.xl",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-radius-xl",
+      "figmaVariable": "size/radius/xl",
+      "status": "stable",
+      "references": "size.radius.400",
+      "description": "Tarjetas, stats, modales."
+    },
+    {
+      "name": "size.radius.pill",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-radius-pill",
+      "figmaVariable": "size/radius/pill",
+      "status": "stable",
+      "references": "size.radius.full",
+      "description": "Píldoras, avatares, switch."
+    },
+    {
+      "name": "size.layout.sidebar-width",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-sidebar-width",
+      "figmaVariable": "size/layout/sidebar-width",
+      "status": "stable",
+      "references": "size.container.sidebar",
+      "description": "Ancho del sidebar de navegación en escritorio."
+    },
+    {
+      "name": "size.layout.form-width",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-form-width",
+      "figmaVariable": "size/layout/form-width",
+      "status": "stable",
+      "references": "size.container.form",
+      "description": "Ancho máximo de formularios de autenticación."
+    },
+    {
+      "name": "size.layout.content-width",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-content-width",
+      "figmaVariable": "size/layout/content-width",
+      "status": "stable",
+      "references": "size.container.content",
+      "description": "Ancho máximo de la columna de contenido."
+    },
+    {
+      "name": "size.layout.control-height",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-control-height",
+      "figmaVariable": "size/layout/control-height",
+      "status": "stable",
+      "references": "size.control.md",
+      "description": "Altura por defecto de botones y campos (área táctil 44px)."
+    },
+    {
+      "name": "size.layout.control-height-small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-control-height-small",
+      "figmaVariable": "size/layout/control-height-small",
+      "status": "stable",
+      "references": "size.control.sm"
+    },
+    {
+      "name": "size.layout.control-height-large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-control-height-large",
+      "figmaVariable": "size/layout/control-height-large",
+      "status": "stable",
+      "references": "size.control.lg"
+    },
+    {
+      "name": "size.layout.stat-min-width",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-stat-min-width",
+      "figmaVariable": "size/layout/stat-min-width",
+      "status": "stable",
+      "references": "size.container.stat",
+      "description": "Ancho mínimo de una Stat antes de saltar de línea."
+    },
+    {
+      "name": "size.icon.extra-small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-icon-extra-small",
+      "figmaVariable": "size/icon/extra-small",
+      "status": "stable",
+      "references": "size.icon.xs",
+      "description": "Iconos dentro de badges, tags y checkbox."
+    },
+    {
+      "name": "size.icon.small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-icon-small",
+      "figmaVariable": "size/icon/small",
+      "status": "stable",
+      "references": "size.icon.sm",
+      "description": "Iconos dentro de campos y botones pequeños."
+    },
+    {
+      "name": "size.icon.medium",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-icon-medium",
+      "figmaVariable": "size/icon/medium",
+      "status": "stable",
+      "references": "size.icon.md",
+      "description": "Iconos de botones y cabeceras de sección."
+    },
+    {
+      "name": "size.icon.large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-icon-large",
+      "figmaVariable": "size/icon/large",
+      "status": "stable",
+      "references": "size.icon.lg",
+      "description": "Iconos de navegación (tamaño por defecto)."
+    },
+    {
+      "name": "size.icon.extra-large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-icon-extra-large",
+      "figmaVariable": "size/icon/extra-large",
+      "status": "stable",
+      "references": "size.icon.xl",
+      "description": "Iconos ilustrativos de EmptyState."
+    },
+    {
+      "name": "size.border.default",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-border-default",
+      "figmaVariable": "size/border/default",
+      "status": "stable",
+      "references": "size.border.100"
+    },
+    {
+      "name": "size.border.emphasis",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-border-emphasis",
+      "figmaVariable": "size/border/emphasis",
+      "status": "stable",
+      "references": "size.border.150",
+      "description": "Iconos de línea y checkbox."
+    },
+    {
+      "name": "size.border.focus",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-border-focus",
+      "figmaVariable": "size/border/focus",
+      "status": "stable",
+      "references": "size.border.200"
+    },
+    {
+      "name": "typography.display",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-display",
+      "figmaVariable": "typography/display",
+      "status": "stable",
+      "description": "Saludo principal de la vista ('Welcome, Alejandro')."
+    },
+    {
+      "name": "typography.heading-large",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-heading-large",
+      "figmaVariable": "typography/heading-large",
+      "status": "stable",
+      "description": "Título de página o modal."
+    },
+    {
+      "name": "typography.heading-medium",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-heading-medium",
+      "figmaVariable": "typography/heading-medium",
+      "status": "stable",
+      "description": "Título de sección."
+    },
+    {
+      "name": "typography.heading-small",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-heading-small",
+      "figmaVariable": "typography/heading-small",
+      "status": "stable",
+      "description": "Título de tarjeta ('Frontside snap')."
+    },
+    {
+      "name": "typography.body-large",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-body-large",
+      "figmaVariable": "typography/body-large",
+      "status": "stable",
+      "description": "Texto de lectura destacado."
+    },
+    {
+      "name": "typography.body-medium",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-body-medium",
+      "figmaVariable": "typography/body-medium",
+      "status": "stable",
+      "description": "Texto de lectura por defecto."
+    },
+    {
+      "name": "typography.body-small",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-body-small",
+      "figmaVariable": "typography/body-small",
+      "status": "stable",
+      "description": "Metadatos y texto de ayuda."
+    },
+    {
+      "name": "typography.caption",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-caption",
+      "figmaVariable": "typography/caption",
+      "status": "stable",
+      "description": "Fechas y notas mínimas."
+    },
+    {
+      "name": "typography.label",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-label",
+      "figmaVariable": "typography/label",
+      "status": "stable",
+      "description": "Labels de formulario."
+    },
+    {
+      "name": "typography.button",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-button",
+      "figmaVariable": "typography/button",
+      "status": "stable",
+      "description": "Texto de botones."
+    },
+    {
+      "name": "typography.overline",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-overline",
+      "figmaVariable": "typography/overline",
+      "status": "stable",
+      "description": "Etiquetas en mayúsculas (EMAIL, FROM SURFER)."
+    },
+    {
+      "name": "typography.metric",
+      "layer": "semantic",
+      "type": "typography",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-typography-metric",
+      "figmaVariable": "typography/metric",
+      "status": "stable",
+      "description": "Valores numéricos de stats."
+    },
+    {
+      "name": "elevation.action",
+      "layer": "semantic",
+      "type": "shadow",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-elevation-action",
+      "figmaVariable": "elevation/action",
+      "status": "stable",
+      "references": "shadow.glow-medium",
+      "description": "Brillo de la acción primaria."
+    },
+    {
+      "name": "elevation.accent",
+      "layer": "semantic",
+      "type": "shadow",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-elevation-accent",
+      "figmaVariable": "elevation/accent",
+      "status": "stable",
+      "references": "shadow.glow-small",
+      "description": "Brillo sutil de avatares y badges destacados."
+    },
+    {
+      "name": "elevation.overlay",
+      "layer": "semantic",
+      "type": "shadow",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-elevation-overlay",
+      "figmaVariable": "elevation/overlay",
+      "status": "stable",
+      "references": "shadow.elevation-high",
+      "description": "Modales, tooltips y menús."
+    },
+    {
+      "name": "elevation.focus",
+      "layer": "semantic",
+      "type": "shadow",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-elevation-focus",
+      "figmaVariable": "elevation/focus",
+      "status": "stable",
+      "references": "shadow.ring",
+      "description": "Anillo de foco visible para teclado."
+    },
+    {
+      "name": "motion.transition-fast",
+      "layer": "semantic",
+      "type": "transition",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-motion-transition-fast",
+      "figmaVariable": "motion/transition-fast",
+      "status": "stable",
+      "description": "Hover y cambios de color."
+    },
+    {
+      "name": "motion.transition-base",
+      "layer": "semantic",
+      "type": "transition",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-motion-transition-base",
+      "figmaVariable": "motion/transition-base",
+      "status": "stable",
+      "description": "Expandir/colapsar, switches."
+    },
+    {
+      "name": "motion.transition-enter",
+      "layer": "semantic",
+      "type": "transition",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-motion-transition-enter",
+      "figmaVariable": "motion/transition-enter",
+      "status": "stable",
+      "description": "Entrada de modales y toasts."
+    },
+    {
+      "name": "motion.reduced-duration",
+      "layer": "semantic",
+      "type": "duration",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-motion-reduced-duration",
+      "figmaVariable": "motion/reduced-duration",
+      "status": "stable",
+      "references": "motion.duration.instant",
+      "description": "Duración cuando el usuario pide movimiento reducido (prefers-reduced-motion)."
+    },
+    {
+      "name": "motion.loop-duration",
+      "layer": "semantic",
+      "type": "duration",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-motion-loop-duration",
+      "figmaVariable": "motion/loop-duration",
+      "status": "stable",
+      "references": "motion.duration.loop",
+      "description": "Vuelta completa de animaciones en bucle (Spinner)."
+    },
+    {
+      "name": "layer.raised",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-layer-raised",
+      "figmaVariable": "layer/raised",
+      "status": "stable",
+      "references": "z-index.raised",
+      "description": "Elementos sobre el contenido (cards en hover)."
+    },
+    {
+      "name": "layer.sticky",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-layer-sticky",
+      "figmaVariable": "layer/sticky",
+      "status": "stable",
+      "references": "z-index.sticky",
+      "description": "Cabeceras fijas."
+    },
+    {
+      "name": "layer.dropdown",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-layer-dropdown",
+      "figmaVariable": "layer/dropdown",
+      "status": "stable",
+      "references": "z-index.dropdown",
+      "description": "Menús desplegables."
+    },
+    {
+      "name": "layer.modal",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-layer-modal",
+      "figmaVariable": "layer/modal",
+      "status": "stable",
+      "references": "z-index.modal",
+      "description": "Modales."
+    },
+    {
+      "name": "layer.toast",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-layer-toast",
+      "figmaVariable": "layer/toast",
+      "status": "stable",
+      "references": "z-index.toast",
+      "description": "Notificaciones flotantes."
+    },
+    {
+      "name": "layer.tooltip",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-layer-tooltip",
+      "figmaVariable": "layer/tooltip",
+      "status": "stable",
+      "references": "z-index.tooltip",
+      "description": "Tooltips, siempre encima."
+    },
+    {
+      "name": "button.primary.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-background",
+      "figmaVariable": "button/primary/background",
+      "status": "stable",
+      "references": "color.action.primary.background-start",
+      "description": "Inicio del degradado."
+    },
+    {
+      "name": "button.primary.background-end",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-background-end",
+      "figmaVariable": "button/primary/background-end",
+      "status": "stable",
+      "references": "color.action.primary.background-end",
+      "description": "Fin del degradado."
+    },
+    {
+      "name": "button.primary.background-hover",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-background-hover",
+      "figmaVariable": "button/primary/background-hover",
+      "status": "stable",
+      "references": "color.action.primary.background-hover"
+    },
+    {
+      "name": "button.primary.background-pressed",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-background-pressed",
+      "figmaVariable": "button/primary/background-pressed",
+      "status": "stable",
+      "references": "color.action.primary.background-pressed"
+    },
+    {
+      "name": "button.primary.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-foreground",
+      "figmaVariable": "button/primary/foreground",
+      "status": "stable",
+      "references": "color.action.primary.foreground"
+    },
+    {
+      "name": "button.primary.shadow",
+      "layer": "component",
+      "type": "shadow",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-shadow",
+      "figmaVariable": "button/primary/shadow",
+      "status": "stable",
+      "references": "elevation.action"
+    },
+    {
+      "name": "button.secondary.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-secondary-background",
+      "figmaVariable": "button/secondary/background",
+      "status": "stable",
+      "references": "color.action.secondary.background"
+    },
+    {
+      "name": "button.secondary.background-hover",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-secondary-background-hover",
+      "figmaVariable": "button/secondary/background-hover",
+      "status": "stable",
+      "references": "color.action.secondary.background-hover"
+    },
+    {
+      "name": "button.secondary.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-secondary-foreground",
+      "figmaVariable": "button/secondary/foreground",
+      "status": "stable",
+      "references": "color.action.secondary.foreground"
+    },
+    {
+      "name": "button.secondary.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-secondary-border",
+      "figmaVariable": "button/secondary/border",
+      "status": "stable",
+      "references": "color.action.secondary.border"
+    },
+    {
+      "name": "button.ghost.background-hover",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-ghost-background-hover",
+      "figmaVariable": "button/ghost/background-hover",
+      "status": "stable",
+      "references": "color.action.ghost.background-hover"
+    },
+    {
+      "name": "button.ghost.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-ghost-foreground",
+      "figmaVariable": "button/ghost/foreground",
+      "status": "stable",
+      "references": "color.action.ghost.foreground"
+    },
+    {
+      "name": "button.danger.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-danger-background",
+      "figmaVariable": "button/danger/background",
+      "status": "stable",
+      "references": "color.action.danger.background"
+    },
+    {
+      "name": "button.danger.background-hover",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-danger-background-hover",
+      "figmaVariable": "button/danger/background-hover",
+      "status": "stable",
+      "references": "color.action.danger.background-hover"
+    },
+    {
+      "name": "button.danger.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-danger-foreground",
+      "figmaVariable": "button/danger/foreground",
+      "status": "stable",
+      "references": "color.text.on-action"
+    },
+    {
+      "name": "button.disabled.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-disabled-background",
+      "figmaVariable": "button/disabled/background",
+      "status": "stable",
+      "references": "color.disabled.background"
+    },
+    {
+      "name": "button.disabled.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-disabled-foreground",
+      "figmaVariable": "button/disabled/foreground",
+      "status": "stable",
+      "references": "color.disabled.foreground"
+    },
+    {
+      "name": "button.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-radius",
+      "figmaVariable": "button/radius",
+      "status": "stable",
+      "references": "size.radius.large"
+    },
+    {
+      "name": "button.gap",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-gap",
+      "figmaVariable": "button/gap",
+      "status": "stable",
+      "references": "size.space.small"
+    },
+    {
+      "name": "button.padding-horizontal.small",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-padding-horizontal-small",
+      "figmaVariable": "button/padding-horizontal/small",
+      "status": "stable",
+      "references": "size.space.medium"
+    },
+    {
+      "name": "button.padding-horizontal.medium",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-padding-horizontal-medium",
+      "figmaVariable": "button/padding-horizontal/medium",
+      "status": "stable",
+      "references": "size.space.large"
+    },
+    {
+      "name": "button.padding-horizontal.large",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-padding-horizontal-large",
+      "figmaVariable": "button/padding-horizontal/large",
+      "status": "stable",
+      "references": "size.space.xl"
+    },
+    {
+      "name": "button.typography",
+      "layer": "component",
+      "type": "typography",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-typography",
+      "figmaVariable": "button/typography",
+      "status": "stable",
+      "references": "typography.button"
+    },
+    {
+      "name": "input.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-background",
+      "figmaVariable": "input/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "input.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-foreground",
+      "figmaVariable": "input/foreground",
+      "status": "stable",
+      "references": "color.text.primary"
+    },
+    {
+      "name": "input.placeholder",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-placeholder",
+      "figmaVariable": "input/placeholder",
+      "status": "stable",
+      "references": "color.text.tertiary"
+    },
+    {
+      "name": "input.border.default",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-border-default",
+      "figmaVariable": "input/border/default",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "input.border.hover",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-border-hover",
+      "figmaVariable": "input/border/hover",
+      "status": "stable",
+      "references": "color.border.strong"
+    },
+    {
+      "name": "input.border.focus",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-border-focus",
+      "figmaVariable": "input/border/focus",
+      "status": "stable",
+      "references": "color.border.focus"
+    },
+    {
+      "name": "input.border.error",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-border-error",
+      "figmaVariable": "input/border/error",
+      "status": "stable",
+      "references": "color.border.danger"
+    },
+    {
+      "name": "input.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-radius",
+      "figmaVariable": "input/radius",
+      "status": "stable",
+      "references": "size.radius.large"
+    },
+    {
+      "name": "input.padding-horizontal",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-padding-horizontal",
+      "figmaVariable": "input/padding-horizontal",
+      "status": "stable",
+      "references": "size.space.medium"
+    },
+    {
+      "name": "input.typography",
+      "layer": "component",
+      "type": "typography",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-input-typography",
+      "figmaVariable": "input/typography",
+      "status": "stable",
+      "references": "typography.body-medium"
+    },
+    {
+      "name": "card.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-card-background",
+      "figmaVariable": "card/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "card.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-card-border",
+      "figmaVariable": "card/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "card.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-card-radius",
+      "figmaVariable": "card/radius",
+      "status": "stable",
+      "references": "size.radius.xl"
+    },
+    {
+      "name": "card.padding",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-card-padding",
+      "figmaVariable": "card/padding",
+      "status": "stable",
+      "references": "size.space.large"
+    },
+    {
+      "name": "card.gap",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-card-gap",
+      "figmaVariable": "card/gap",
+      "status": "stable",
+      "references": "size.space.medium"
+    },
+    {
+      "name": "badge.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-badge-radius",
+      "figmaVariable": "badge/radius",
+      "status": "stable",
+      "references": "size.radius.small"
+    },
+    {
+      "name": "badge.padding-horizontal",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-badge-padding-horizontal",
+      "figmaVariable": "badge/padding-horizontal",
+      "status": "stable",
+      "references": "size.space.small"
+    },
+    {
+      "name": "badge.padding-vertical",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-badge-padding-vertical",
+      "figmaVariable": "badge/padding-vertical",
+      "status": "stable",
+      "references": "size.space.3xs"
+    },
+    {
+      "name": "badge.typography",
+      "layer": "component",
+      "type": "typography",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-badge-typography",
+      "figmaVariable": "badge/typography",
+      "status": "stable",
+      "references": "typography.overline"
+    },
+    {
+      "name": "tag.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tag-background",
+      "figmaVariable": "tag/background",
+      "status": "stable",
+      "references": "color.background.brand-subtle"
+    },
+    {
+      "name": "tag.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tag-foreground",
+      "figmaVariable": "tag/foreground",
+      "status": "stable",
+      "references": "color.text.brand"
+    },
+    {
+      "name": "tag.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tag-border",
+      "figmaVariable": "tag/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "tag.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tag-radius",
+      "figmaVariable": "tag/radius",
+      "status": "stable",
+      "references": "size.radius.pill"
+    },
+    {
+      "name": "tag.padding-horizontal",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tag-padding-horizontal",
+      "figmaVariable": "tag/padding-horizontal",
+      "status": "stable",
+      "references": "size.space.medium"
+    },
+    {
+      "name": "avatar.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-avatar-background",
+      "figmaVariable": "avatar/background",
+      "status": "stable",
+      "references": "color.action.primary.background"
+    },
+    {
+      "name": "avatar.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-avatar-foreground",
+      "figmaVariable": "avatar/foreground",
+      "status": "stable",
+      "references": "color.text.on-action"
+    },
+    {
+      "name": "avatar.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-avatar-radius",
+      "figmaVariable": "avatar/radius",
+      "status": "stable",
+      "references": "size.radius.pill"
+    },
+    {
+      "name": "checkbox.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-checkbox-border",
+      "figmaVariable": "checkbox/border",
+      "status": "stable",
+      "references": "color.border.default"
+    },
+    {
+      "name": "checkbox.background-checked",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-checkbox-background-checked",
+      "figmaVariable": "checkbox/background-checked",
+      "status": "stable",
+      "references": "color.action.primary.background"
+    },
+    {
+      "name": "checkbox.foreground-checked",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-checkbox-foreground-checked",
+      "figmaVariable": "checkbox/foreground-checked",
+      "status": "stable",
+      "references": "color.action.primary.foreground"
+    },
+    {
+      "name": "checkbox.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-checkbox-radius",
+      "figmaVariable": "checkbox/radius",
+      "status": "stable",
+      "references": "size.radius.small"
+    },
+    {
+      "name": "radio.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-radio-border",
+      "figmaVariable": "radio/border",
+      "status": "stable",
+      "references": "color.border.default"
+    },
+    {
+      "name": "radio.border-checked",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-radio-border-checked",
+      "figmaVariable": "radio/border-checked",
+      "status": "stable",
+      "references": "color.border.brand"
+    },
+    {
+      "name": "radio.dot",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-radio-dot",
+      "figmaVariable": "radio/dot",
+      "status": "stable",
+      "references": "color.border.brand"
+    },
+    {
+      "name": "switch.track-off",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-switch-track-off",
+      "figmaVariable": "switch/track-off",
+      "status": "stable",
+      "references": "color.background.surface-sunken"
+    },
+    {
+      "name": "switch.track-on",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-switch-track-on",
+      "figmaVariable": "switch/track-on",
+      "status": "stable",
+      "references": "color.action.primary.background"
+    },
+    {
+      "name": "switch.thumb",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-switch-thumb",
+      "figmaVariable": "switch/thumb",
+      "status": "stable",
+      "references": "color.text.on-action"
+    },
+    {
+      "name": "switch.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-switch-radius",
+      "figmaVariable": "switch/radius",
+      "status": "stable",
+      "references": "size.radius.pill"
+    },
+    {
+      "name": "tooltip.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tooltip-background",
+      "figmaVariable": "tooltip/background",
+      "status": "stable",
+      "references": "color.background.inverse"
+    },
+    {
+      "name": "tooltip.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tooltip-foreground",
+      "figmaVariable": "tooltip/foreground",
+      "status": "stable",
+      "references": "color.text.inverse"
+    },
+    {
+      "name": "tooltip.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tooltip-radius",
+      "figmaVariable": "tooltip/radius",
+      "status": "stable",
+      "references": "size.radius.medium"
+    },
+    {
+      "name": "tooltip.padding",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-tooltip-padding",
+      "figmaVariable": "tooltip/padding",
+      "status": "stable",
+      "references": "size.space.small"
+    },
+    {
+      "name": "divider.color",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-divider-color",
+      "figmaVariable": "divider/color",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "spinner.track",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-spinner-track",
+      "figmaVariable": "spinner/track",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "spinner.indicator",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-spinner-indicator",
+      "figmaVariable": "spinner/indicator",
+      "status": "stable",
+      "references": "color.icon.brand"
+    },
+    {
+      "name": "navigation-item.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-navigation-item-foreground",
+      "figmaVariable": "navigation-item/foreground",
+      "status": "stable",
+      "references": "color.text.primary"
+    },
+    {
+      "name": "navigation-item.foreground-active",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-navigation-item-foreground-active",
+      "figmaVariable": "navigation-item/foreground-active",
+      "status": "stable",
+      "references": "color.text.brand"
+    },
+    {
+      "name": "navigation-item.icon",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-navigation-item-icon",
+      "figmaVariable": "navigation-item/icon",
+      "status": "stable",
+      "references": "color.icon.primary"
+    },
+    {
+      "name": "navigation-item.icon-active",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-navigation-item-icon-active",
+      "figmaVariable": "navigation-item/icon-active",
+      "status": "stable",
+      "references": "color.icon.brand"
+    },
+    {
+      "name": "navigation-item.divider",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-navigation-item-divider",
+      "figmaVariable": "navigation-item/divider",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "sidebar.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-sidebar-background",
+      "figmaVariable": "sidebar/background",
+      "status": "stable",
+      "references": "color.background.surface"
+    },
+    {
+      "name": "sidebar.width",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-sidebar-width",
+      "figmaVariable": "sidebar/width",
+      "status": "stable",
+      "references": "size.layout.sidebar-width"
+    },
+    {
+      "name": "stat.label",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stat-label",
+      "figmaVariable": "stat/label",
+      "status": "stable",
+      "references": "color.text.secondary"
+    },
+    {
+      "name": "stat.value",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stat-value",
+      "figmaVariable": "stat/value",
+      "status": "stable",
+      "references": "color.text.primary"
+    },
+    {
+      "name": "stat.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stat-background",
+      "figmaVariable": "stat/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "modal.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-modal-background",
+      "figmaVariable": "modal/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "modal.overlay",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-modal-overlay",
+      "figmaVariable": "modal/overlay",
+      "status": "stable",
+      "references": "color.background.overlay"
+    },
+    {
+      "name": "modal.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-modal-radius",
+      "figmaVariable": "modal/radius",
+      "status": "stable",
+      "references": "size.radius.xl"
+    },
+    {
+      "name": "modal.padding",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-modal-padding",
+      "figmaVariable": "modal/padding",
+      "status": "stable",
+      "references": "size.space.xl"
+    },
+    {
+      "name": "modal.shadow",
+      "layer": "component",
+      "type": "shadow",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-modal-shadow",
+      "figmaVariable": "modal/shadow",
+      "status": "stable",
+      "references": "elevation.overlay"
+    },
+    {
+      "name": "notification.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-notification-background",
+      "figmaVariable": "notification/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "notification.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-notification-border",
+      "figmaVariable": "notification/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "notification.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-notification-radius",
+      "figmaVariable": "notification/radius",
+      "status": "stable",
+      "references": "size.radius.large"
+    }
+  ]
+}

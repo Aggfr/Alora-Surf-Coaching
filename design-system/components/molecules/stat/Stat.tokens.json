@@ -1,0 +1,17 @@
+{
+  "$description": "Tokens de Stat. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: stat.background, stat.label, stat.value, card.radius, size.space.xl, typography.metric, color.feedback.success.foreground.",
+  "stat": {
+    "label": {
+      "$type": "color",
+      "$value": "{color.text.secondary}"
+    },
+    "value": {
+      "$type": "color",
+      "$value": "{color.text.primary}"
+    },
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    }
+  }
+}

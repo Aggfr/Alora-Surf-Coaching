@@ -1,0 +1,111 @@
+{
+  "$description": "Tokens de Button. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: button.primary.*, button.secondary.*, button.ghost.*, button.danger.*, button.disabled.*, button.radius, button.gap, button.padding-horizontal.*, button.typography, elevation.focus, size.layout.control-height*.",
+  "button": {
+    "primary": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.primary.background-start}",
+        "$description": "Inicio del degradado."
+      },
+      "background-end": {
+        "$type": "color",
+        "$value": "{color.action.primary.background-end}",
+        "$description": "Fin del degradado."
+      },
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.primary.background-hover}"
+      },
+      "background-pressed": {
+        "$type": "color",
+        "$value": "{color.action.primary.background-pressed}"
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.action.primary.foreground}"
+      },
+      "shadow": {
+        "$type": "shadow",
+        "$value": "{elevation.action}"
+      }
+    },
+    "secondary": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.secondary.background}"
+      },
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.secondary.background-hover}"
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.action.secondary.foreground}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.action.secondary.border}"
+      }
+    },
+    "ghost": {
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.ghost.background-hover}"
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.action.ghost.foreground}"
+      }
+    },
+    "danger": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.danger.background}"
+      },
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.danger.background-hover}"
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.text.on-action}"
+      }
+    },
+    "disabled": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.disabled.background}"
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.disabled.foreground}"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.large}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{size.space.small}"
+    },
+    "padding-horizontal": {
+      "small": {
+        "$type": "dimension",
+        "$value": "{size.space.medium}"
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "{size.space.large}"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "{size.space.xl}"
+      }
+    },
+    "typography": {
+      "$type": "typography",
+      "$value": "{typography.button}"
+    }
+  }
+}

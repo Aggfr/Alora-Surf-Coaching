@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Validates the token layers and builds platform outputs.
+
+Usage: python3 scripts/build_tokens.py
+Outputs:
+  dist/tokens.css              CSS custom properties (dark by default, light under [data-theme="light"])
+  dist/tokens.resolved.json    Flat map of every token path to its final value, per theme
+
+Checks:
+  - every {reference} resolves
+  - component tokens reference only semantic tokens (never primitives or raw values)
+  - semantic.light only redefines paths that exist in semantic
+"""
+import json, os, re, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TOKENS = os.path.join(ROOT, "tokens")
+DIST = os.path.join(ROOT, "dist")
+REF = re.compile(r"^\{([^}]+)\}$")
+
+
+def load(name):
+    with open(os.path.join(TOKENS, name)) as f:
+        return json.load(f)
+
+
+def flatten(node, prefix=""):
+    out = {}
+    for key, value in node.items():
+        if key.startswith("$"):
+            continue
+        path = f"{prefix}.{key}" if prefix else key
+        if isinstance(value, dict) and "$value" in value:
+            out[path] = value
+        elif isinstance(value, dict):
+            out.update(flatten(value, path))
+    return out
+
+
+primitives = flatten(load("primitives.tokens.json"))
+semantic = flatten(load("semantic.tokens.json"))
+semantic_light = flatten(load("semantic.light.tokens.json"))
+component = flatten(load("component.tokens.json"))
+
+errors = []
+
+for path in semantic_light:
+    if path not in semantic:
+        errors.append(f"semantic.light redefines unknown path: {path}")
+
+for path, token in component.items():
+    value = token["$value"]
+    m = REF.match(value) if isinstance(value, str) else None
+    if not m:
+        errors.append(f"component token {path} must be a reference, got raw value {value!r}")
+    elif m.group(1) not in semantic:
+        errors.append(f"component token {path} references {m.group(1)}, which is not a semantic token")
+
+
+def resolve(value, table, trail=()):
+    if isinstance(value, str):
+        m = REF.match(value)
+        if m:
+            target = m.group(1)
+            if target in trail:
+                raise ValueError("circular reference: " + " -> ".join(trail + (target,)))
+            if target not in table:
+                raise KeyError(target)
+            return resolve(table[target]["$value"], table, trail + (target,))
+        return value
+    if isinstance(value, dict):
+        return {k: resolve(v, table, trail) for k, v in value.items()}
+    if isinstance(value, list):
+        return [resolve(v, table, trail) for v in value]
+    return value
+
+
+themes = {
+    "dark": {**primitives, **semantic, **component},
+    "light": {**primitives, **semantic, **semantic_light, **component},
+}
+resolved = {}
+for theme, table in themes.items():
+    resolved[theme] = {}
+    for path, token in table.items():
+        try:
+            resolved[theme][path] = {"type": token["$type"], "value": resolve(token["$value"], table)}
+        except KeyError as missing:
+            errors.append(f"[{theme}] {path} references missing token {missing}")
+        except ValueError as circular:
+            errors.append(f"[{theme}] {circular}")
+
+if errors:
+    print("Token validation failed:")
+    for e in errors:
+        print("  -", e)
+    sys.exit(1)
+
+
+def css_name(path):
+    return "--ds-" + path.replace(".", "-")
+
+
+def css_value(token_type, value):
+    if token_type == "fontFamily":
+        return ", ".join(f'"{v}"' if " " in v else v for v in value)
+    if token_type == "cubicBezier":
+        return "cubic-bezier(" + ", ".join(str(v) for v in value) + ")"
+    if token_type == "shadow":
+        return f"{value['offsetX']} {value['offsetY']} {value['blur']} {value['spread']} {value['color']}"
+    if token_type == "transition":
+        return f"{value['duration']} {value['timingFunction'] if isinstance(value['timingFunction'], str) else 'cubic-bezier(' + ', '.join(map(str, value['timingFunction'])) + ')'} {value['delay']}"
+    if token_type == "typography":
+        return None  # emitted as separate longhand properties below
+    return str(value)
+
+
+def css_block(table_paths, theme):
+    lines = []
+    for path in table_paths:
+        token = resolved[theme][path]
+        if token["type"] == "typography":
+            for prop, v in token["value"].items():
+                sub = {"fontFamily": "fontFamily", "fontSize": "dimension", "fontWeight": "fontWeight", "lineHeight": "number", "letterSpacing": "dimension"}[prop]
+                kebab = re.sub(r"([A-Z])", lambda m: "-" + m.group(1).lower(), prop)
+                lines.append(f"  {css_name(path)}-{kebab}: {css_value(sub, v)};")
+            continue
+        lines.append(f"  {css_name(path)}: {css_value(token['type'], token['value'])};")
+    return "\n".join(lines)
+
+
+os.makedirs(DIST, exist_ok=True)
+all_paths = list(primitives) + list(semantic) + list(component)
+light_paths = [p for p in semantic_light] + [p for p in component]
+css = [
+    "/* Generated by scripts/build_tokens.py. Do not edit by hand. */",
+    ":root, [data-theme=\"dark\"] {",
+    css_block(all_paths, "dark"),
+    "}",
+    "",
+    "[data-theme=\"light\"] {",
+    css_block(light_paths, "light"),
+    "}",
+    "",
+]
+with open(os.path.join(DIST, "tokens.css"), "w") as f:
+    f.write("\n".join(css))
+with open(os.path.join(DIST, "tokens.resolved.json"), "w") as f:
+    json.dump(resolved, f, ensure_ascii=False, indent=2)
+
+print(f"OK: {len(primitives)} primitive, {len(semantic)} semantic ({len(semantic_light)} light overrides), {len(component)} component tokens")

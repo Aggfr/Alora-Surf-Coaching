@@ -1,0 +1,21 @@
+{
+  "$description": "Tokens de Tooltip. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: tooltip.background, tooltip.foreground, tooltip.radius, tooltip.padding, z-index.tooltip.",
+  "tooltip": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.inverse}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.text.inverse}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.medium}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{size.space.small}"
+    }
+  }
+}

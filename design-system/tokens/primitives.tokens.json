@@ -1,0 +1,959 @@
+{
+  "$description": "Capa 1: valores base sin intención de uso. No usar directamente en componentes salvo excepción documentada.",
+  "color": {
+    "navy": {
+      "50": {
+        "$type": "color",
+        "$value": "#e8f1f8"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#cddde9"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#a8c2d5"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#7fa3be"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#6b8fa9"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#4d6e87"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#36536c"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#243a52"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#162438"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#0f1e30"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#08101f"
+      },
+      "$description": "Neutral oscuro de la marca. Extraído de los fondos y textos de Coach y Surfer (#08101f, #0f1e30, #162438, #4d6e87, #7fa3be, #e8f1f8)."
+    },
+    "ocean": {
+      "50": {
+        "$type": "color",
+        "$value": "#eaf6fa"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#cbe8f1"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#a3d5e5"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#7dc2d8"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#5aaec8"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#4497b3"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#3b8eaa"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#2f7189"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#245668"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#183b48"
+      },
+      "$description": "Color de marca (teal océano). Extraído de botones, iconos activos y bordes (#3b8eaa, #4497b3, #5aaec8)."
+    },
+    "sun": {
+      "50": {
+        "$type": "color",
+        "$value": "#fef9e7"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#fdefc0"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#fbe08a"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#f8d25e"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#f5c53a"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#dba91f"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#b48916"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#8a6912"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#5f490d"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#3a2c08"
+      },
+      "$description": "Acento cálido de la marca (el sol del logo). Extraído de badges de plan y estados pendientes (#f5c53a)."
+    },
+    "coral": {
+      "50": {
+        "$type": "color",
+        "$value": "#fdeeee"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#f9d2d2"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#f2a9a9"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#ea8282"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#e05a5a"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#c94444"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#a83535"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#822929"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#5c1d1d"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#3a1212"
+      },
+      "$description": "Rojo de error y urgencia. Extraído de errores de formulario, 'Overdue' y 'Sign out' (#e05a5a)."
+    },
+    "amber": {
+      "50": {
+        "$type": "color",
+        "$value": "#fffbeb"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#fef3c7"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#fde68a"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#fcd34d"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#fbbf24"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#f59e0b"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#d97706"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#b45309"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#92400e"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#78350f"
+      },
+      "$description": "Naranja de aviso. Extraído de contadores de tiempo y plan Elite (#f59e0b, #d97706)."
+    },
+    "violet": {
+      "50": {
+        "$type": "color",
+        "$value": "#f5f3ff"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#ede9fe"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#ddd6fe"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#c4b5fd"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#a78bfa"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#8b5cf6"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#7c3aed"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#6d28d9"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#5b21b6"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#4c1d95"
+      },
+      "$description": "Violeta del plan Progression en Coach (#8b5cf6, #7c3aed)."
+    },
+    "green": {
+      "50": {
+        "$type": "color",
+        "$value": "#ecfdf5"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#d1fae5"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#a7f3d0"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#6ee7b7"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#34d399"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#10b981"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#059669"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#047857"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#065f46"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#064e3b"
+      },
+      "$description": "Verde de éxito. Normaliza el verde puntual de 'Review ready' (#056a13) a una escala completa."
+    },
+    "gray": {
+      "50": {
+        "$type": "color",
+        "$value": "#f9fafb"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#f3f4f6"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#e5e7eb"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#d1d5db"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#9ca3af"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#6b7280"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#4b5563"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#374151"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#1f2937"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#111827"
+      },
+      "$description": "Gris neutro sin tinte. Extraído de etiquetas secundarias (#6b7280, #767779, #4b5563)."
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "black": {
+      "$type": "color",
+      "$value": "#000000"
+    },
+    "alpha": {
+      "$description": "Colores con transparencia. La clave numérica es la opacidad en porcentaje (escala: 3, 4, 8, 12, 18, 25, 30, 40, 55, 70).",
+      "ocean": {
+        "4": {
+          "$type": "color",
+          "$value": "#3b8eaa0a"
+        },
+        "8": {
+          "$type": "color",
+          "$value": "#3b8eaa14"
+        },
+        "12": {
+          "$type": "color",
+          "$value": "#3b8eaa1f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#3b8eaa2e"
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#3b8eaa40"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#3b8eaa66"
+        }
+      },
+      "white": {
+        "8": {
+          "$type": "color",
+          "$value": "#ffffff14"
+        },
+        "12": {
+          "$type": "color",
+          "$value": "#ffffff1f"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#ffffff66"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#ffffffb2"
+        }
+      },
+      "sun": {
+        "12": {
+          "$type": "color",
+          "$value": "#f5c53a1f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#f5c53a2e"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#f5c53a4c"
+        }
+      },
+      "coral": {
+        "12": {
+          "$type": "color",
+          "$value": "#e05a5a1f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#e05a5a2e"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#e05a5a4c"
+        }
+      },
+      "amber": {
+        "12": {
+          "$type": "color",
+          "$value": "#f59e0b1f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#f59e0b2e"
+        }
+      },
+      "violet": {
+        "12": {
+          "$type": "color",
+          "$value": "#8b5cf61f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#8b5cf62e"
+        }
+      },
+      "green": {
+        "12": {
+          "$type": "color",
+          "$value": "#10b9811f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#10b9812e"
+        }
+      },
+      "gray": {
+        "12": {
+          "$type": "color",
+          "$value": "#6b72801f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#6b72802e"
+        }
+      },
+      "navy": {
+        "8": {
+          "$type": "color",
+          "$value": "#16243814"
+        },
+        "12": {
+          "$type": "color",
+          "$value": "#1624381f"
+        },
+        "18": {
+          "$type": "color",
+          "$value": "#1624382e"
+        }
+      },
+      "black": {
+        "40": {
+          "$type": "color",
+          "$value": "#00000066"
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#0000008c"
+        }
+      }
+    }
+  },
+  "typography": {
+    "family": {
+      "display": {
+        "$type": "fontFamily",
+        "$value": [
+          "Outfit",
+          "system-ui",
+          "sans-serif"
+        ],
+        "$description": "Familia para títulos, botones, etiquetas y números. Presente en ambos archivos."
+      },
+      "body": {
+        "$type": "fontFamily",
+        "$value": [
+          "Inter",
+          "Apple SD Gothic Neo",
+          "system-ui",
+          "sans-serif"
+        ],
+        "$description": "Familia para texto de lectura. Sustituye a Apple SD Gothic Neo (fuente de sistema de macOS, no portable) manteniéndola como fallback."
+      }
+    },
+    "size": {
+      "$description": "Escala tipográfica en px. Nombres de talla: 2xs < xs < sm < md < lg < xl < 2xl < 3xl < 4xl.",
+      "2xs": {
+        "$type": "dimension",
+        "$value": "10px"
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "14px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "18px"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "30px"
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": "40px"
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": 500
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": 600
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": 700
+      }
+    },
+    "line-height": {
+      "$description": "Interlineado como multiplicador del tamaño.",
+      "tight": {
+        "$type": "number",
+        "$value": 1.2
+      },
+      "snug": {
+        "$type": "number",
+        "$value": 1.35
+      },
+      "normal": {
+        "$type": "number",
+        "$value": 1.5
+      },
+      "relaxed": {
+        "$type": "number",
+        "$value": 1.65
+      }
+    },
+    "letter-spacing": {
+      "none": {
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "wide": {
+        "$type": "dimension",
+        "$value": "0.4px",
+        "$description": "Botones y labels en negrita."
+      },
+      "wider": {
+        "$type": "dimension",
+        "$value": "1.2px",
+        "$description": "Overlines en mayúsculas (EMAIL, PLAN RENEWS)."
+      }
+    }
+  },
+  "size": {
+    "space": {
+      "$description": "Escala de espaciado base 4px. La clave es la centésima parte de 4px × clave (100 = 4px, 400 = 16px).",
+      "0": {
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "50": {
+        "$type": "dimension",
+        "$value": "2px"
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "150": {
+        "$type": "dimension",
+        "$value": "6px"
+      },
+      "200": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "300": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "400": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "500": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "600": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "800": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "1000": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "1200": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "1600": {
+        "$type": "dimension",
+        "$value": "64px"
+      },
+      "3000": {
+        "$type": "dimension",
+        "$value": "120px"
+      }
+    },
+    "radius": {
+      "$description": "Escala de radios. Extraída de los diseños: 4, 8, 12, 16, 24 y píldora.",
+      "0": {
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "200": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "300": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "400": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "600": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "full": {
+        "$type": "dimension",
+        "$value": "9999px"
+      }
+    },
+    "border": {
+      "0": {
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "1px"
+      },
+      "150": {
+        "$type": "dimension",
+        "$value": "1.5px"
+      },
+      "200": {
+        "$type": "dimension",
+        "$value": "2px"
+      }
+    },
+    "icon": {
+      "xs": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "32px"
+      }
+    },
+    "container": {
+      "$description": "Anchos de contenedor medidos en los diseños a 1440px.",
+      "sidebar": {
+        "$type": "dimension",
+        "$value": "116px"
+      },
+      "form": {
+        "$type": "dimension",
+        "$value": "400px"
+      },
+      "content": {
+        "$type": "dimension",
+        "$value": "810px"
+      },
+      "stat": {
+        "$type": "dimension",
+        "$value": "160px"
+      }
+    },
+    "control": {
+      "$description": "Alturas de controles interactivos. md (44px) cumple el área táctil mínima.",
+      "sm": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "44px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "52px"
+      }
+    }
+  },
+  "shadow": {
+    "glow-small": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.ocean.25}",
+        "offsetX": "0px",
+        "offsetY": "2px",
+        "blur": "10px",
+        "spread": "0px"
+      },
+      "$description": "Brillo teal sutil (badges, avatares)."
+    },
+    "glow-medium": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.ocean.25}",
+        "offsetX": "0px",
+        "offsetY": "8px",
+        "blur": "32px",
+        "spread": "0px"
+      },
+      "$description": "Brillo teal de los botones primarios."
+    },
+    "glow-sun": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.sun.30}",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "16px",
+        "spread": "0px"
+      }
+    },
+    "elevation-high": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.black.40}",
+        "offsetX": "0px",
+        "offsetY": "24px",
+        "blur": "64px",
+        "spread": "0px"
+      },
+      "$description": "Modales y popovers."
+    },
+    "elevation-low-light": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.navy.12}",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "16px",
+        "spread": "0px"
+      },
+      "$description": "Elevación de tarjetas en tema claro."
+    },
+    "ring": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.ocean.400}",
+        "offsetX": "0px",
+        "offsetY": "0px",
+        "blur": "0px",
+        "spread": "3px"
+      },
+      "$description": "Anillo de foco."
+    }
+  },
+  "motion": {
+    "duration": {
+      "instant": {
+        "$type": "duration",
+        "$value": "0ms"
+      },
+      "fast": {
+        "$type": "duration",
+        "$value": "120ms"
+      },
+      "base": {
+        "$type": "duration",
+        "$value": "200ms"
+      },
+      "slow": {
+        "$type": "duration",
+        "$value": "320ms"
+      },
+      "loop": {
+        "$type": "duration",
+        "$value": "800ms"
+      }
+    },
+    "easing": {
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.2,
+          0,
+          0,
+          1
+        ]
+      },
+      "enter": {
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          0.2,
+          1
+        ]
+      },
+      "exit": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.4,
+          0,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "z-index": {
+    "$description": "Capas de apilamiento. Saltos de 100 para insertar capas intermedias sin renumerar.",
+    "base": {
+      "$type": "number",
+      "$value": 0
+    },
+    "raised": {
+      "$type": "number",
+      "$value": 100
+    },
+    "sticky": {
+      "$type": "number",
+      "$value": 200
+    },
+    "dropdown": {
+      "$type": "number",
+      "$value": 300
+    },
+    "overlay": {
+      "$type": "number",
+      "$value": 400
+    },
+    "modal": {
+      "$type": "number",
+      "$value": 500
+    },
+    "toast": {
+      "$type": "number",
+      "$value": 600
+    },
+    "tooltip": {
+      "$type": "number",
+      "$value": 700
+    }
+  },
+  "breakpoint": {
+    "sm": {
+      "$type": "dimension",
+      "$value": "640px"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "768px"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "1024px"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "1280px"
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "$description": "Ancho de diseño de los archivos Coach y Surfer."
+    }
+  }
+}

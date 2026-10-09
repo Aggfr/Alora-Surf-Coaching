@@ -1,0 +1,21 @@
+{
+  "$description": "Tokens de Switch. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: switch.track-off, switch.track-on, switch.thumb, switch.radius, color.border.default.",
+  "switch": {
+    "track-off": {
+      "$type": "color",
+      "$value": "{color.background.surface-sunken}"
+    },
+    "track-on": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "thumb": {
+      "$type": "color",
+      "$value": "{color.text.on-action}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.pill}"
+    }
+  }
+}

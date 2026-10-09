@@ -1,0 +1,3 @@
+{
+  "$description": "Tokens de Heading. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: typography.display, typography.heading-large, typography.heading-medium, typography.heading-small, color.text.primary."
+}

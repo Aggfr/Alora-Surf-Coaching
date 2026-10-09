@@ -1,0 +1,3 @@
+{
+  "$description": "Tokens de Text. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: typography.body-*, typography.caption, typography.overline, color.text.*, color.feedback.danger.foreground."
+}
