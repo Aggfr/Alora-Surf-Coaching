@@ -1,7 +1,7 @@
 # DataList
 
 **Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [DataList](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-224)
+**Figma:** [DataList](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=70-63)
 
 ## 1. Name and category
 `DataList` — Organism.

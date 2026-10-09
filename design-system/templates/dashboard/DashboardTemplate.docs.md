@@ -1,6 +1,6 @@
 # DashboardTemplate
 
-> **Level:** template · **Status:** stable · **Figma:** [14:511](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-511)
+> **Level:** template · **Status:** stable · **Figma:** [70:1113](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=70-1113)
 
 ## Purpose
 Structure of every authenticated Coach and Surfer view: fixed navigation on the left and a single content column. It defines where things go, not what content they hold.

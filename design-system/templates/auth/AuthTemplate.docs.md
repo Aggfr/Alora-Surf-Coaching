@@ -1,6 +1,6 @@
 # AuthTemplate
 
-> **Level:** template · **Status:** stable · **Figma:** [14:550](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-550)
+> **Level:** template · **Status:** stable · **Figma:** [70:1073](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=70-1073)
 
 ## Purpose
 Centered panel for signed-out flows: log in, sign up, password recovery and onboarding steps.

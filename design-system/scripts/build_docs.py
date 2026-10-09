@@ -209,11 +209,11 @@ templates = [
     {"name": "DashboardTemplate", "category": "template", "status": "stable", "version": VERSION,
      "description": "Authenticated view: Sidebar + a content column (810px narrow, or full width with width=wide) with header and content slots.",
      "path": "templates/dashboard", "files": {"component": "templates/dashboard/DashboardTemplate.tsx", "docs": "templates/dashboard/DashboardTemplate.docs.md"},
-     "dependencies": ["Sidebar"], "slots": ["header", "content"], "figma": {"file": FIGMA_FILE, "nodeId": "14:511"}},
+     "dependencies": ["Sidebar"], "slots": ["header", "content"], "figma": {"file": FIGMA_FILE, "nodeId": "70:1113"}},
     {"name": "AuthTemplate", "category": "template", "status": "stable", "version": VERSION,
      "description": "Authentication and onboarding: centered canvas with a 400px form slot, optional Logo and illustrated background.",
      "path": "templates/auth", "files": {"component": "templates/auth/AuthTemplate.tsx", "docs": "templates/auth/AuthTemplate.docs.md"},
-     "dependencies": ["Heading", "Text", "Logo", "Illustration"], "slots": ["form"], "figma": {"file": FIGMA_FILE, "nodeId": "14:550"}},
+     "dependencies": ["Heading", "Text", "Logo", "Illustration"], "slots": ["form"], "figma": {"file": FIGMA_FILE, "nodeId": "70:1073"}},
 ]
 pages = [
     {"name": "CoachQueuePage", "category": "page", "status": "example", "version": VERSION,
