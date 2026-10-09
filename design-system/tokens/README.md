@@ -5,9 +5,9 @@ The single source of truth for every visual decision in Alora. Format: [W3C Desi
 ## Hierarchy
 
 ```
-primitives.tokens.json      Layer 1 · WHAT values exist          color.ocean.700 = #2f7189
+primitives.tokens.json      Layer 1 · WHAT values exist          color.ocean.600 = #3b8eaa
         ▲ references
-semantic.tokens.json        Layer 2 · WHAT THEY ARE FOR (dark)   color.action.primary.background → {color.ocean.700}
+semantic.tokens.json        Layer 2 · WHAT THEY ARE FOR (dark)   color.action.primary.background → {color.ocean.600}
 semantic.light.tokens.json            same paths, light theme    color.text.primary → {color.navy.950}
         ▲ references
 component.tokens.json       Layer 3 · WHERE THEY APPLY          button.primary.background → {color.action.primary.background-start}
