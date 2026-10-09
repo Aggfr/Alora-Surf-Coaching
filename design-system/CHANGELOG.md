@@ -7,6 +7,7 @@ All notable changes to `@aggfr/alora-design-system`. The package follows [Semant
 - **Patch:** a bug fix, a docs fix, or a visual fix that brings code back in line with Figma.
 
 ## Unreleased
+- Primary action matches the Coach Platform CTA exactly: `#3b8eaa → #5aaec8` (`ocean.600 → ocean.400`), diagonal. Hover and pressed are `ocean.700` and `ocean.800`. White text on it is 3.7–2.5:1, a documented accessibility exception.
 - Installable npm package (`@aggfr/alora-design-system`) published to GitHub Packages, with CSS and token entry points.
 - CI checks that tokens, docs and MANIFEST are regenerated, that no value bypasses the tokens, and runs the type check and the component tests.
 - Component tests for behavior, keyboard use and axe rules; Storybook suite that audits accessibility (including contrast) and compares screenshots for every story in both themes.
