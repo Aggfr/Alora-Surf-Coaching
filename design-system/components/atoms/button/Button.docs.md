@@ -68,7 +68,7 @@ The component's own tokens live in [`Button.tokens.json`](./Button.tokens.json).
 - Native `<button>` element; if it navigates, an `<a>` with the same style.
 - Visible focus: 2px `color.border.focus` outline outside the button.
 - Icon-only buttons need an `aria-label` and a `Tooltip`.
-- Text contrast ≥ 4.5:1 in every variant (that is why primary uses ocean 800→700).
+- Primary keeps the Coach Platform CTA gradient (ocean 600→400, #3b8eaa → #5aaec8). White text on it is 3.7–2.5:1, below WCAG AA 4.5:1: a known exception chosen by product design. Secondary, ghost and danger meet 4.5:1.
 - Disabled uses `aria-disabled` so screen readers can still find it.
 
 ## 11. Composition rules

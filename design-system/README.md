@@ -83,7 +83,7 @@ python3 scripts/check_hardcoded.py  # before every commit
 Component `.docs.md`, `.examples.md` and `.tokens.json` files are generated from `scripts/component_specs.py`: edit the spec, not the generated files.
 
 ## Design decisions
-1. **Primary button gradient** darkened to `ocean.800 → ocean.700` for contrast (the original gave 2.5–3.7:1). Approved on 2026-10-09.
+1. **Primary button gradient** matches the Coach Platform CTA exactly: `ocean.600 → ocean.400` (`#3b8eaa → #5aaec8`). White text on it is 3.7–2.5:1, below WCAG AA; this is a known exception chosen on 2026-10-09 (see `docs/accessibility.md`).
 2. **Reading typeface:** Inter replaces Apple SD Gothic Neo (a macOS system font that is not available on the web or Windows); it is kept as a fallback.
 3. **Progression plan color:** Coach uses violet and Surfer uses sun yellow. The system uses violet for the plan Badge and keeps yellow for the surfer's `highlight` Tag.
 4. **Light theme:** proposed by the system; the original designs are dark only.
