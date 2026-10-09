@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Alora Design System
+
+The live reference for the **Coach** and **Surfer** platforms of Alora Surf Coaching. Every component on this site is the real React code from [`design-system/`](https://github.com/Aggfr/Alora-Surf-Coaching/tree/main/design-system), styled only with its tokens. The site rebuilds and republishes on every change merged to `main`.
+
+## How to use this site
+
+- **Theme:** switch between **Dark** (default) and **Light** with the paintbrush button in the toolbar. Every example and every token value follows it.
+- **Controls:** open a component and change its props in the Controls panel to see each variant and state.
+- **Docs:** each component page shows its examples first, then the full guidelines from its `.docs.md` file: purpose, when to use it, anatomy, tokens, accessibility and anti-patterns.
+- **Accessibility:** the Accessibility panel runs axe checks on the story you are viewing.
+
+## What is inside
+
+| Section | Contents |
+|---|---|
+| Foundations | Colors, typography, spacing, radius, shadows, motion and icons, generated from the tokens |
+| Atoms (16) | Button, Icon, Label, Text, Heading, Input, Textarea, Checkbox, Radio, Switch, Avatar, Badge, Tag, Spinner, Divider, Tooltip |
+| Molecules (9) | FormField, SearchField, ListItem, TagChip, Stat, Notification, Breadcrumb, Pagination, NavigationItem |
+| Organisms (7) | Sidebar, PageHeader, SubmissionCard, DataList, FormSection, Modal, EmptyState |
+| Templates | DashboardTemplate, AuthTemplate |
+| Pages | CoachQueuePage, SurferLoginPage (reference compositions) |
+
+## Links
+
+- [Figma library](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System)
+- [Repository](https://github.com/Aggfr/Alora-Surf-Coaching)
+- [Principles](https://github.com/Aggfr/Alora-Surf-Coaching/blob/main/design-system/docs/principles.md) · [Accessibility](https://github.com/Aggfr/Alora-Surf-Coaching/blob/main/design-system/docs/accessibility.md) · [Naming conventions](https://github.com/Aggfr/Alora-Surf-Coaching/blob/main/design-system/docs/naming-conventions.md)
+
+## Using the components in code
+
+```tsx
+import './design-system/dist/tokens.css';
+import './design-system/styles/components.css';
+import { Button } from './design-system';
+
+<html data-theme="dark">
+  <Button variant="primary" leadingIcon="upload" onPress={upload}>Upload clip</Button>
+</html>
+```

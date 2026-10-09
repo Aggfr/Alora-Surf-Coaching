@@ -4,6 +4,9 @@ import { Label } from '../../atoms/label/Label';
 import { Text } from '../../atoms/text/Text';
 import { Icon } from '../../atoms/icon/Icon';
 
+/** Props FormField passes to its control (Input or Textarea). */
+type FormControlProps = { id?: string; hasError?: boolean; isDisabled?: boolean; 'aria-required'?: boolean; 'aria-describedby'?: string };
+
 export interface FormFieldProps {
   label: string;
   id: string;
@@ -11,7 +14,7 @@ export interface FormFieldProps {
   errorMessage?: string;
   isRequired?: boolean;
   isDisabled?: boolean;
-  children: ReactElement;
+  children: ReactElement<FormControlProps>;
   className?: string;
 }
 

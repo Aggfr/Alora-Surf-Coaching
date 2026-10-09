@@ -4,7 +4,7 @@ import { cx } from '../../../lib/cx';
 export interface TooltipProps {
   content: string;
   placement?: 'top' | 'bottom';
-  children: ReactElement;
+  children: ReactElement<{ 'aria-describedby'?: string }>;
 }
 
 /** Atom · Short description on hover/focus. Docs: ./Tooltip.docs.md */
