@@ -13,7 +13,8 @@ const themes = ['Dark', 'Light'] as const;
 for (const story of stories) {
   for (const theme of themes) {
     test(`${story.id} · ${theme}`, async ({ page }) => {
-      await page.goto(`/iframe.html?id=${story.id}&viewMode=story&globals=theme:${theme}`);
+      // a11y.manual stops the Storybook a11y addon from running its own axe pass, which would collide with this one.
+      await page.goto(`/iframe.html?id=${story.id}&viewMode=story&globals=theme:${theme};a11y.manual:!true`);
       await page.locator('#storybook-root > *').first().waitFor();
       await page.evaluate(() => document.fonts.ready);
 
