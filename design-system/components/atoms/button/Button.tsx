@@ -4,7 +4,7 @@ import { Icon } from '../icon/Icon';
 import type { IconName } from '../icon/icons';
 import { Spinner } from '../spinner/Spinner';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
+export type ButtonVariant = 'primary' | 'secondary' | 'highlight' | 'ghost' | 'danger';
 export type ButtonSize = 'small' | 'medium' | 'large';
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick' | 'disabled'> {

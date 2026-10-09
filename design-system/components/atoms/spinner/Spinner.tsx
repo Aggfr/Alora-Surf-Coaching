@@ -1,7 +1,7 @@
 import { cx } from '../../../lib/cx';
 
 export interface SpinnerProps {
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'xlarge';
   label?: string;
   className?: string;
 }

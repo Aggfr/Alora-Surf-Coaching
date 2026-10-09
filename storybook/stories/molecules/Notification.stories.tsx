@@ -27,3 +27,12 @@ export const Tones: Story = {
     </div>
   ),
 };
+
+export const Compact: Story = {
+  render: () => (
+    <div className="sb-column sb-stretch sb-narrow">
+      <Notification density="compact" tone="danger" title="Incorrect email or password" />
+      <Notification density="compact" tone="warning" title="You have 1 submission left this month" />
+    </div>
+  ),
+};

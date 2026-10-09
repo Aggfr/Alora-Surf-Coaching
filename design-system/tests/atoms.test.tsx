@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
-import { Avatar, Button, Checkbox, Icon, Input, Radio, Spinner, Switch, Tooltip } from '../index';
+import { Avatar, Badge, Button, Checkbox, Divider, Icon, IconButton, IconTile, Illustration, Input, Link, Logo, ProgressBar, Radio, Spinner, Switch, Tooltip } from '../index';
 import { axeViolations } from './axe';
 
 describe('Button', () => {
@@ -131,5 +131,83 @@ describe('Tooltip', () => {
     expect(trigger).toHaveAccessibleDescription('Delete clip');
     await userEvent.keyboard('{Escape}');
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+  });
+});
+
+describe('Logo', () => {
+  it('is one image named Alora', async () => {
+    const { container } = render(<Logo size="large" />);
+    expect(screen.getByRole('img', { name: 'Alora' })).toBeInTheDocument();
+    expect(screen.getAllByRole('img')).toHaveLength(1);
+    expect(await axeViolations(container)).toEqual([]);
+  });
+});
+
+describe('Link', () => {
+  it('renders an anchor with href and a button without it', async () => {
+    const onPress = vi.fn();
+    const { container } = render(<><Link href="/terms">Terms</Link><Link tone="danger" onPress={onPress}>Delete clip</Link></>);
+    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute('href', '/terms');
+    const button = screen.getByRole('button', { name: 'Delete clip' });
+    button.focus();
+    await userEvent.keyboard('{Enter}');
+    expect(onPress).toHaveBeenCalledTimes(1);
+    expect(await axeViolations(container)).toEqual([]);
+  });
+});
+
+describe('IconButton', () => {
+  it('is named by its label and ignores presses when disabled', async () => {
+    const onPress = vi.fn();
+    const { container, rerender } = render(<IconButton icon="chevron-left" label="Back" onPress={onPress} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Back' }));
+    expect(onPress).toHaveBeenCalledTimes(1);
+    rerender(<IconButton icon="chevron-left" label="Back" onPress={onPress} isDisabled />);
+    await userEvent.click(screen.getByRole('button', { name: 'Back' }));
+    expect(onPress).toHaveBeenCalledTimes(1);
+    expect(screen.getByRole('button', { name: 'Back' })).toHaveAttribute('aria-disabled', 'true');
+    expect(await axeViolations(container)).toEqual([]);
+  });
+});
+
+describe('IconTile', () => {
+  it('is decorative unless it has a label', () => {
+    const { rerender } = render(<IconTile icon="check" />);
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+    rerender(<IconTile icon="check" label="Sent" tone="solid" shape="circle" size="xlarge" hasHalo />);
+    expect(screen.getByRole('img', { name: 'Sent' })).toBeInTheDocument();
+  });
+});
+
+describe('ProgressBar', () => {
+  it('exposes its value and readable text', async () => {
+    const { container } = render(<ProgressBar value={11} max={150} label="Clip time used" valueText="0:11 of 2:30" />);
+    const bar = screen.getByRole('progressbar', { name: 'Clip time used' });
+    expect(bar).toHaveAttribute('aria-valuetext', '0:11 of 2:30');
+    expect(bar).toHaveAttribute('value', '11');
+    expect(await axeViolations(container)).toEqual([]);
+  });
+});
+
+describe('Illustration', () => {
+  it('is hidden by default and named when labelled', () => {
+    const { container, rerender } = render(<Illustration name="surfers" />);
+    expect(container.querySelector('svg')).toHaveAttribute('aria-hidden', 'true');
+    rerender(<Illustration name="nothing-reviewed" label="No reviews yet" />);
+    expect(screen.getByRole('img', { name: 'No reviews yet' })).toBeInTheDocument();
+  });
+});
+
+describe('Badge', () => {
+  it('renders the solid appearance with its text', () => {
+    render(<Badge tone="review-ready" appearance="solid" icon="check">Reviewed</Badge>);
+    expect(screen.getByText('Reviewed').closest('.ds-badge')).toHaveClass('ds-badge--solid', 'ds-badge--review-ready');
+  });
+});
+
+describe('Divider', () => {
+  it('becomes a named separator when it has a label', () => {
+    render(<Divider label="OR" />);
+    expect(screen.getByRole('separator', { name: 'OR' })).toBeInTheDocument();
   });
 });

@@ -1,6 +1,6 @@
 # Spinner
 
-**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Spinner](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-180)
 
 ## 1. Name and category
@@ -13,7 +13,7 @@ Indicates a wait of unknown duration.
 - Video upload, review submission, loading the queue.
 
 ## 4. When not to use
-- Measurable progress: progress bar (planned).
+- Measurable progress: ProgressBar.
 - Loading a whole view: skeletons (planned).
 
 ## 5. Anatomy
@@ -23,17 +23,19 @@ Indicates a wait of unknown duration.
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | 16 / 24 / 32 px. |
+| `size` | `'small' \| 'medium' \| 'large' \| 'xlarge'` | `'medium'` | No | 16 / 24 / 32 / 80 px. xlarge is the full-screen wait (Sending your submission). |
 | `label` | `string` | `'Loading'` | No | Text for screen readers. |
 
 ## 7. Variants and states
-- **size:** `small`, `medium`, `large`
+- **size:** `small`, `medium`, `large`, `xlarge`
 - **States:** `—`
 
 ## 8. Tokens used
 - `spinner.track`
 - `spinner.indicator`
 - `size.border.focus`
+- `size.border.heavy`
+- `size.layout.avatar-xlarge`
 - `motion.loop-duration`
 
 The component's own tokens live in [`Spinner.tokens.json`](./Spinner.tokens.json). Primitive tokens are never used directly.
@@ -58,6 +60,7 @@ More examples in [`Spinner.examples.md`](./Spinner.examples.md).
 - Several spinners at once in one view.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added the xlarge size.

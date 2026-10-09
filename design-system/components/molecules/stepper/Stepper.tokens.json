@@ -1,0 +1,21 @@
+{
+  "$description": "Stepper tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: stepper.step-background, stepper.step-foreground, stepper.step-current, stepper.step-on-current, progress-bar.*, size.layout.icon-tile-small.",
+  "stepper": {
+    "step-background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "step-foreground": {
+      "$type": "color",
+      "$value": "{color.text.secondary}"
+    },
+    "step-current": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "step-on-current": {
+      "$type": "color",
+      "$value": "{color.text.on-action}"
+    }
+  }
+}

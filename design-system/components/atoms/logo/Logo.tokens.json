@@ -1,0 +1,3 @@
+{
+  "$description": "Logo tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: color.text.brand, color.text.highlight, color.text.primary, typography.overline, size.space.2xs."
+}

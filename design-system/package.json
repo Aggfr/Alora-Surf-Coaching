@@ -1,6 +1,6 @@
 {
   "name": "@aggfr/alora-design-system",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Alora Surf Coaching design system: DTCG tokens, React components and styles for the Coach and Surfer platforms.",
   "license": "UNLICENSED",
   "type": "module",

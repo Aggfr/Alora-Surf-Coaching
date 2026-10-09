@@ -1,0 +1,25 @@
+{
+  "$description": "OptionCard tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: option-card.background, option-card.border, option-card.background-selected, option-card.border-selected, option-card.radius, radio.*, size.space.large.",
+  "option-card": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "background-selected": {
+      "$type": "color",
+      "$value": "{color.background.brand-subtle}"
+    },
+    "border-selected": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.large}"
+    }
+  }
+}

@@ -36,3 +36,12 @@ export const Vertical: Story = {
     </div>
   ),
 };
+
+export const Labelled: Story = {
+  args: { label: 'OR' },
+  render: (args) => (
+    <div className="sb-column sb-stretch sb-narrow">
+      <Divider {...args} />
+    </div>
+  ),
+};

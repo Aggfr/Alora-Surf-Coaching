@@ -4,7 +4,7 @@
 ```tsx
 import { Sidebar } from '@alora/design-system';
 
-<Sidebar product="coach" activeHref="/queue" />
+<Sidebar product="coach" activeHref="/" />
 ```
 
 ## Don't

@@ -1,0 +1,3 @@
+{
+  "$description": "IconButton tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: button.secondary.*, button.ghost.*, button.disabled.*, button.radius, size.layout.control-height, size.layout.control-height-small."
+}

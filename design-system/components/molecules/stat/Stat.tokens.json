@@ -1,5 +1,5 @@
 {
-  "$description": "Stat tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: stat.background, stat.label, stat.value, card.radius, size.space.xl, typography.metric, color.feedback.success.foreground.",
+  "$description": "Stat tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: stat.background, stat.label, stat.value, card.radius, size.space.xl, typography.metric, color.feedback.success.foreground, color.background.brand-subtle, typography.display.",
   "stat": {
     "label": {
       "$type": "color",

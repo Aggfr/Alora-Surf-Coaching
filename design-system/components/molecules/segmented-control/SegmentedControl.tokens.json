@@ -1,0 +1,29 @@
+{
+  "$description": "SegmentedControl tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: segmented-control.background, segmented-control.border, segmented-control.selected-brand, segmented-control.on-selected-brand, segmented-control.selected-highlight, segmented-control.on-selected-highlight, size.radius.pill, typography.label.",
+  "segmented-control": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "selected-brand": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "on-selected-brand": {
+      "$type": "color",
+      "$value": "{color.action.primary.foreground}"
+    },
+    "selected-highlight": {
+      "$type": "color",
+      "$value": "{color.action.highlight.solid}"
+    },
+    "on-selected-highlight": {
+      "$type": "color",
+      "$value": "{color.action.highlight.on-solid}"
+    }
+  }
+}

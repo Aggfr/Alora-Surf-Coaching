@@ -54,3 +54,22 @@ export const Overdue: Story = {
 export const ReviewReady: Story = {
   args: { status: 'review-ready', deadline: { label: 'Sent today', tone: 'on-track' }, action: { label: 'View & Download', icon: 'eye', onPress: fn() } },
 };
+
+export const SurferSide: Story = {
+  args: {
+    surfer: undefined,
+    status: 'pending',
+    statusText: 'Waiting for review',
+    clipTitle: 'Frontside snap',
+    submittedAt: 'Submitted Sep 2',
+    meta: undefined,
+    note: 'I keep losing speed after the bottom turn.',
+    noteLabel: 'Your note',
+    deadline: undefined,
+    footnote: '2 clips · 1:46',
+    action: { label: 'View', icon: 'eye', onPress: fn() },
+    secondaryAction: { label: 'Edit', icon: 'edit', onPress: fn() },
+  },
+};
+
+export const SessionPlan: Story = { args: { surfer: { name: 'Lucía Marín', plan: 'session' } } };

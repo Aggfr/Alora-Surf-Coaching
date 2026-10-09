@@ -28,8 +28,9 @@ Structure of every authenticated Coach and Surfer view: fixed navigation on the 
 | Prop | Type | Required | Description |
 |---|---|---|---|
 | `navigation` | `SidebarProps` | yes | `product` ('coach' \| 'surfer') and `activeHref`. |
-| `header` | `ReactNode` | yes | **Header** slot. Always a `PageHeader`. |
+| `header` | `ReactNode` | yes | **Header** slot: a `PageHeader`, a `TopBar` (detail screens) or a `SectionHeader` (simple pages). |
 | `children` | `ReactNode` | yes | **Content** slot. Organisms stacked in one column. |
+| `width` | `'narrow' \| 'wide'` | no | `narrow` keeps the 810px column (default). `wide` uses the full width (Schedule, Surfers). |
 
 ## Tokens
 `color.background.canvas`, `size.space.page-gutter`, `size.space.xl`, `size.space.large`, `size.layout.content-width`, `size.layout.sidebar-width` (through Sidebar).
@@ -50,7 +51,7 @@ Below `breakpoint.lg` (1024px) the Sidebar will be replaced by **NavigationBar**
 ## Example
 ```tsx
 <DashboardTemplate
-  navigation={{ product: 'coach', activeHref: '/queue' }}
+  navigation={{ product: 'coach', activeHref: '/' }}
   header={<PageHeader title="Welcome, Alejandro" subtitle="3 clips are waiting." />}
 >
   <div className="ds-stat-row">…</div>

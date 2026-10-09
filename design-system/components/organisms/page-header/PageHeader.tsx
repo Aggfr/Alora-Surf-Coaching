@@ -7,15 +7,17 @@ export interface PageHeaderProps {
   title: string;
   subtitle?: string;
   actions?: ReactNode;
+  /** display: dashboard greeting ("Welcome, Alejandro"). large: other pages. */
+  size?: 'display' | 'large';
   className?: string;
 }
 
 /** Organism · Page header with greeting and actions. Docs: ./PageHeader.docs.md */
-export function PageHeader({ title, subtitle, actions, className }: PageHeaderProps) {
+export function PageHeader({ title, subtitle, actions, size = 'large', className }: PageHeaderProps) {
   return (
     <header className={cx('ds-page-header', className)}>
       <div className="ds-page-header__titles">
-        <Heading level="large" as="h1">{title}</Heading>
+        <Heading level={size} as="h1">{title}</Heading>
         {subtitle && <Text role="body-medium" tone="secondary">{subtitle}</Text>}
       </div>
       {actions && <div className="ds-page-header__actions">{actions}</div>}

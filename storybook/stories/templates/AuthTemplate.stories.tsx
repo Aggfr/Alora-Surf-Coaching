@@ -29,3 +29,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const PasswordRecovery: Story = {};
+
+export const IllustratedWithLogo: Story = {
+  args: {
+    title: 'Welcome back',
+    subtitle: 'Log in to keep improving your surfing.',
+    hasLogo: true,
+    background: 'illustrated',
+    children: (
+      <FormSection onSubmit={fn()} primaryAction={{ label: 'Log in', icon: 'log-in' }} secondaryAction={{ label: 'Create new account', onPress: fn() }}>
+        <FormField label="Email" id="login-email" isRequired>
+          <Input id="login-email" type="email" leadingIcon="mail" placeholder="name@example.com" />
+        </FormField>
+      </FormSection>
+    ),
+  },
+};

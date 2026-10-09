@@ -55,3 +55,14 @@ export const Danger: Story = {
     primaryAction: { label: 'Delete clip', onPress: fn() },
   },
 };
+
+export const WithIcon: Story = {
+  args: {
+    tone: 'danger',
+    icon: 'alert-circle',
+    title: 'Cancel your plan?',
+    description: 'You keep your plan until Sep 26. After that, your coach stops reviewing new clips.',
+    primaryAction: { label: 'Cancel plan', onPress: fn() },
+    secondaryAction: { label: 'Keep my plan', onPress: fn() },
+  },
+};

@@ -1,6 +1,6 @@
 # DataList
 
-**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [DataList](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-224)
 
 ## 1. Name and category
@@ -22,12 +22,15 @@ Read-only data section with a title and definition rows.
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `title` | `string` | — | Yes | Section title. |
+| `title` | `string` | — | No | Section title. Leave it out when a SectionHeader already titles the section. |
 | `icon` | `IconName` | — | No | Title icon. |
 | `items` | `Array<ListItemProps>` | — | Yes | Rows. |
+| `layout` | `'stacked' \| 'inline'` | `'stacked'` | No | inline puts label and value on one row. |
+| `isStriped` | `boolean` | `false` | No | Alternating row backgrounds, no dividers (Surf profile). |
 
 ## 7. Variants and states
-- No visual variants: behavior is controlled with props.
+- **layout:** `stacked`, `inline`
+- **isStriped:** `false`, `true`
 - **States:** `—`
 
 ## 8. Tokens used
@@ -35,6 +38,7 @@ Read-only data section with a title and definition rows.
 - `card.border`
 - `card.radius`
 - `color.background.brand-subtle`
+- `color.background.surface`
 - `size.space.medium`
 
 The component's own tokens live in [`DataList.tokens.json`](./DataList.tokens.json). Primitive tokens are never used directly.
@@ -59,6 +63,7 @@ More examples in [`DataList.examples.md`](./DataList.examples.md).
 - Mixing in editable fields: use FormSection.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Title is optional; added the inline layout and striped rows.

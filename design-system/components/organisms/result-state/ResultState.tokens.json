@@ -1,0 +1,13 @@
+{
+  "$description": "ResultState tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: icon-tile.*, result-state.halo-success, result-state.halo-danger, typography.display, typography.heading-large, size.layout.form-width, size.space.xl.",
+  "result-state": {
+    "halo-success": {
+      "$type": "shadow",
+      "$value": "{elevation.halo-brand}"
+    },
+    "halo-danger": {
+      "$type": "shadow",
+      "$value": "{elevation.halo-danger}"
+    }
+  }
+}

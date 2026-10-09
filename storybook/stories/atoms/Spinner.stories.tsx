@@ -21,6 +21,7 @@ export const Sizes: Story = {
       <Spinner {...args} size="small" />
       <Spinner {...args} size="medium" />
       <Spinner {...args} size="large" />
+      <Spinner {...args} size="xlarge" />
     </div>
   ),
 };

@@ -1,6 +1,6 @@
 # Icon
 
-**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Icon](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=7-6)
 
 ## 1. Name and category
@@ -24,7 +24,7 @@ Shows a line pictogram from the Alora icon set.
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `name` | `IconName` | — | Yes | home, list, user, users, calendar, play-circle, bell, eye, clock, check, close, chevron-right, chevron-left, search, info, plus, upload, log-in, log-out, edit, repeat, warning, check-circle, star, trending-up, mail, lock, trash, video. |
+| `name` | `IconName` | — | Yes | home, list, user, users, calendar, play-circle, bell, eye, clock, check, close, chevron-right, chevron-left, search, info, plus, upload, log-in, log-out, edit, repeat, warning, check-circle, star, trending-up, mail, lock, trash, video, trending-down, download, play, pause, volume, maximize, shield, alert-circle, file-text, plus-circle, x-circle. |
 | `size` | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl'` | `'lg'` | No | 12 / 16 / 20 / 24 / 32 px (`size.icon.*`). |
 | `tone` | `'primary' \| 'secondary' \| 'brand' \| 'inherit'` | `'inherit'` | No | Color `color.icon.*`; inherit uses currentColor. |
 | `label` | `string` | — | No | When set, the icon is meaningful (`role=img` + `aria-label`). Otherwise `aria-hidden`. |
@@ -66,6 +66,7 @@ More examples in [`Icon.examples.md`](./Icon.examples.md).
 - An icon with no text or aria-label on a control.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added download, play, pause, volume, maximize, shield, alert-circle, file-text, plus-circle and x-circle.

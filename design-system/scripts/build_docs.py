@@ -13,8 +13,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from component_specs import SPECS, FIGMA_FILE  # noqa: E402
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 DATE = "2026-10-09"
+RELEASES = {"1.0.0": "2026-10-09", "1.1.0": DATE}
 LAYER_DIR = {"atom": "atoms", "molecule": "molecules", "organism": "organisms"}
 LAYER_NAME = {"atom": "Atom", "molecule": "Molecule", "organism": "Organism"}
 ALLOWED_DEPS = {"atom": {"atom"}, "molecule": {"atom"}, "organism": {"atom", "molecule"}}
@@ -147,9 +148,18 @@ def docs_md(s):
               "## 14. Version, status and changelog",
               f"- Version: `{VERSION}`",
               f"- Status: `{s['status']}`",
-              f"- {DATE} · {VERSION} · First version, extracted from Coach Platform and Surfer Platform.",
+              *changelog(s),
               ""]
     return "\n".join(lines)
+
+
+def changelog(s):
+    since = s.get("since", "1.0.0")
+    first = ("First version, extracted from Coach Platform and Surfer Platform." if since == "1.0.0"
+             else "First version, added for the Coach and Surfer redesign screens.")
+    lines = [f"- {RELEASES[since]} · {since} · {first}"]
+    lines += [f"- {DATE} · {VERSION} · {change}" for change in s.get("changes", [])]
+    return lines
 
 
 def examples_md(s):
@@ -197,13 +207,13 @@ for s in SPECS:
 
 templates = [
     {"name": "DashboardTemplate", "category": "template", "status": "stable", "version": VERSION,
-     "description": "Authenticated view: Sidebar + an 810px content column with header and content slots.",
+     "description": "Authenticated view: Sidebar + a content column (810px narrow, or full width with width=wide) with header and content slots.",
      "path": "templates/dashboard", "files": {"component": "templates/dashboard/DashboardTemplate.tsx", "docs": "templates/dashboard/DashboardTemplate.docs.md"},
      "dependencies": ["Sidebar"], "slots": ["header", "content"], "figma": {"file": FIGMA_FILE, "nodeId": "14:511"}},
     {"name": "AuthTemplate", "category": "template", "status": "stable", "version": VERSION,
-     "description": "Authentication and onboarding: centered canvas with a 400px form slot.",
+     "description": "Authentication and onboarding: centered canvas with a 400px form slot, optional Logo and illustrated background.",
      "path": "templates/auth", "files": {"component": "templates/auth/AuthTemplate.tsx", "docs": "templates/auth/AuthTemplate.docs.md"},
-     "dependencies": ["Heading", "Text"], "slots": ["form"], "figma": {"file": FIGMA_FILE, "nodeId": "14:550"}},
+     "dependencies": ["Heading", "Text", "Logo", "Illustration"], "slots": ["form"], "figma": {"file": FIGMA_FILE, "nodeId": "14:550"}},
 ]
 pages = [
     {"name": "CoachQueuePage", "category": "page", "status": "example", "version": VERSION,
@@ -223,8 +233,6 @@ planned = [{"name": n, "category": c, "status": "planned", "description": d} for
     ("CommandPalette", "organism", "Global search for actions and surfers (⌘K)."),
     ("Footer", "organism", "Footer for public views (landing, legal)."),
     ("Select", "atom", "Single selection among more than 5 options."),
-    ("ProgressBar", "atom", "Measurable video upload progress."),
-    ("ReviewCard", "organism", "Delivered review in History with video and coach notes."),
 ]]
 
 

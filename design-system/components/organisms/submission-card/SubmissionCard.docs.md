@@ -1,6 +1,6 @@
 # SubmissionCard
 
-**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [SubmissionCard](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-223)
 
 ## 1. Name and category
@@ -13,25 +13,29 @@ Summarizes a clip submitted for review and its main action.
 - Coach queue, surfer submission list.
 
 ## 4. When not to use
-- A review already delivered in History: ReviewCard (planned).
+- A review already delivered in History: ReviewCard.
 
 ## 5. Anatomy
-1. Header: Avatar + name + plan Badge + status Badge
-2. Clip title + date + metadata
-3. Surfer note (optional)
-4. Footer: deadline Tag + primary Button
+1. Header: Avatar + name + plan Badge + status Badge (+ optional status text)
+2. Clip title (h3) + date + metadata
+3. Optional note with its caption (From surfer)
+4. Footer: deadline Tag or footnote + secondary and primary small Buttons
 
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `surfer` | `{ name: string; plan: 'pay-as-you-go' \| 'elite' \| 'progression' }` | — | Yes | Who submitted it. |
+| `surfer` | `{ name: string; plan: 'pay-as-you-go' \| 'elite' \| 'progression' \| 'session' \| 'performance' }` | — | No | Who submitted it. Leave it out on the surfer side. |
 | `status` | `'pending' \| 'in-review' \| 'review-ready' \| 'overdue'` | — | Yes | State. |
+| `statusText` | `string` | — | No | Badge text when it differs from the default (“Waiting for review”). |
 | `clipTitle` | `string` | — | Yes | Maneuver. |
 | `submittedAt` | `string` | — | Yes | Formatted date. |
 | `meta` | `string` | — | No | Stance · level · spot. |
-| `note` | `string` | — | No | Message from the surfer. |
-| `deadline` | `{ label: string; tone: 'on-track' \| 'due-soon' \| 'overdue' }` | — | Yes | Deadline. |
+| `note` | `string` | — | No | Message from the surfer or the coach. |
+| `noteLabel` | `string` | `'From surfer'` | No | Caption of the note. |
+| `deadline` | `{ label: string; tone: 'on-track' \| 'due-soon' \| 'overdue' }` | — | No | Deadline. |
+| `footnote` | `string` | — | No | Small line with a video icon when there is no deadline (“2 clips · 1:46”). |
 | `action` | `{ label: string; icon?: IconName; onPress: () => void }` | — | Yes | Main action. |
+| `secondaryAction` | `{ label: string; icon?: IconName; onPress: () => void }` | — | No | Second action, secondary style. |
 
 ## 7. Variants and states
 - **deadline:** `on-track`, `due-soon`, `overdue`
@@ -44,6 +48,8 @@ Summarizes a clip submitted for review and its main action.
 - `card.padding`
 - `card.gap`
 - `color.background.surface-sunken`
+- `color.plan.*`
+- `typography.overline`
 - `size.layout.content-width`
 
 The component's own tokens live in [`SubmissionCard.tokens.json`](./SubmissionCard.tokens.json). Primitive tokens are never used directly.
@@ -70,6 +76,7 @@ More examples in [`SubmissionCard.examples.md`](./SubmissionCard.examples.md).
 - Hiding the status.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · The surfer and the deadline are optional; added statusText, noteLabel, footnote and secondaryAction; the note is a captioned quote; actions are small.

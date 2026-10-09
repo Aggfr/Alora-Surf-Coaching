@@ -48,3 +48,18 @@ export const Navigation: Story = {
     ],
   },
 };
+
+export const StripedInline: Story = {
+  args: {
+    title: undefined,
+    icon: undefined,
+    layout: 'inline',
+    isStriped: true,
+    items: [
+      { type: 'definition', title: 'Stance', description: 'Goofy' },
+      { type: 'definition', title: 'Level', description: 'Intermediate' },
+      { type: 'definition', title: 'Board', description: 'Shortboard' },
+      { type: 'definition', title: 'Home break', description: 'Zurriola' },
+    ],
+  },
+};

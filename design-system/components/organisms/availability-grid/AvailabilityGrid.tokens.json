@@ -1,0 +1,25 @@
+{
+  "$description": "AvailabilityGrid tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: availability-grid.cell, availability-grid.cell-alternate, availability-grid.cell-selected, availability-grid.line, availability-grid.header, typography.overline, typography.caption.",
+  "availability-grid": {
+    "cell": {
+      "$type": "color",
+      "$value": "{color.background.surface}"
+    },
+    "cell-alternate": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "cell-selected": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "line": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "header": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    }
+  }
+}

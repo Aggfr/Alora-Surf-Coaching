@@ -38,3 +38,12 @@ export const Coach: Story = {
     children: <EmptyState message="Slot Content: stats, lists and cards stacked in one column." icon="list" />,
   },
 };
+
+export const Wide: Story = {
+  args: {
+    width: 'wide',
+    navigation: { product: 'coach', activeHref: '/schedule' },
+    header: <PageHeader size="large" title="Schedule" subtitle="Set the hours you can review clips." />,
+    children: <EmptyState message="Slot Content at full width: the availability grid and the pay period." icon="calendar" />,
+  },
+};

@@ -1,0 +1,3 @@
+{
+  "$description": "StatGroup tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: stat.background, stat.label, stat.value, color.text.brand, color.text.highlight, divider.color, typography.metric."
+}

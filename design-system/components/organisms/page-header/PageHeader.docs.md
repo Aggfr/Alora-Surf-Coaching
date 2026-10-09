@@ -1,6 +1,6 @@
 # PageHeader
 
-**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [PageHeader](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-116)
 
 ## 1. Name and category
@@ -26,13 +26,16 @@ Header of each view with a title, subtitle and actions.
 | `title` | `string` | — | Yes | Greeting or title. |
 | `subtitle` | `string` | — | No | Supporting text. |
 | `actions` | `ReactNode` | — | No | Tag, Avatar or Button (max. 2). |
+| `size` | `'display' \| 'large'` | `'display'` | No | large for secondary dashboards (Schedule, Surfers). |
 
 ## 7. Variants and states
 - **context:** `coach`, `surfer`
+- **size:** `display`, `large`
 - **States:** `—`
 
 ## 8. Tokens used
 - `typography.display`
+- `typography.heading-large`
 - `color.text.brand`
 - `size.space.small`
 - `size.space.medium`
@@ -60,6 +63,7 @@ More examples in [`PageHeader.examples.md`](./PageHeader.examples.md).
 - More than two actions; use a menu.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added the large size.

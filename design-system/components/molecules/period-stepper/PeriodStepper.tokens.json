@@ -1,0 +1,3 @@
+{
+  "$description": "PeriodStepper tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: button.secondary.*, typography.overline, typography.heading-small, size.space.small."
+}
