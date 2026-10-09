@@ -347,7 +347,7 @@ SPECS = [
         examples_bad='<Tooltip content="Your plan renews on 26 sept and you will be charged…">',
     ),
     dict(
-        name="Logo", category="atom", status="stable", figma="FIGMA_Logo", since="1.1.0",
+        name="Logo", category="atom", status="stable", figma="54:37", since="1.1.0",
         purpose="Shows the Alora brand mark, with or without the ALORA wordmark.",
         when=["Top of the auth screens (log in, sign up, profile selector).", "Bottom of the Sidebar."],
         when_not=["As decoration inside content.", "As a home link with no text: wrap it in a link with an accessible name."],
@@ -365,7 +365,7 @@ SPECS = [
         examples_bad='<img src="logo.png" width="57" />',
     ),
     dict(
-        name="Link", category="atom", status="stable", figma="FIGMA_Link", since="1.1.0",
+        name="Link", category="atom", status="stable", figma="54:89", since="1.1.0",
         purpose="Text action that navigates or triggers a light, secondary action.",
         when=["Forgot your password?, Log in / Sign up switches, Terms and Privacy.", "Row actions in lists (Cancel your plan, Delete clip, Change coach).", "Talk to your coach next to a section title."],
         when_not=["The main action of a view or form: Button.", "An action that needs weight next to other buttons: Button secondary."],
@@ -388,7 +388,7 @@ SPECS = [
         examples_bad='<span className="red" onClick={cancel}>Cancel</span>',
     ),
     dict(
-        name="IconButton", category="atom", status="stable", figma="FIGMA_IconButton", since="1.1.0",
+        name="IconButton", category="atom", status="stable", figma="54:129", since="1.1.0",
         purpose="Square button that shows only an icon.",
         when=["Back in a TopBar, previous and next in PeriodStepper, video controls."],
         when_not=["When the action needs words to be understood: Button with a leading icon."],
@@ -410,7 +410,7 @@ SPECS = [
         examples_bad='<button><Icon name="chevron-left" /></button>',
     ),
     dict(
-        name="IconTile", category="atom", status="stable", figma="FIGMA_IconTile", since="1.1.0",
+        name="IconTile", category="atom", status="stable", figma="54:293", since="1.1.0",
         purpose="Tinted square or circle that frames an icon or a letter.",
         when=["Leading icon of summary rows, section headers and upload areas.", "Result screens (success check, error).", "Coach initial in a review."],
         when_not=["People with a name: Avatar.", "Plain inline icons: Icon."],
@@ -433,7 +433,7 @@ SPECS = [
         examples_bad='<div className="icon-bg"><Icon name="check" /></div>',
     ),
     dict(
-        name="ProgressBar", category="atom", status="stable", figma="FIGMA_ProgressBar", since="1.1.0",
+        name="ProgressBar", category="atom", status="stable", figma="54:303", since="1.1.0",
         purpose="Shows measurable progress or how much of a limit is used.",
         when=["Onboarding progress under the Stepper.", "Clip time used against the plan limit.", "Upload progress."],
         when_not=["Unknown duration: Spinner."],
@@ -453,7 +453,7 @@ SPECS = [
         examples_bad='<div className="bar"><div style={{ width: "7%" }} /></div>',
     ),
     dict(
-        name="Illustration", category="atom", status="stable", figma="FIGMA_Illustration", since="1.1.0",
+        name="Illustration", category="atom", status="stable", figma="54:353", since="1.1.0",
         purpose="Draws one of the Alora illustrations with theme colors.",
         when=["Auth background (auth-background).", "Empty states (surfers, nothing-reviewed)."],
         when_not=["Icons inside controls: Icon.", "Photos: an `<img>` with alt text."],
@@ -662,7 +662,7 @@ SPECS = [
         examples_bad='<div onClick={go}>Queue</div>',
     ),
     dict(
-        name="OptionCard", category="molecule", status="stable", figma="FIGMA_OptionCard", since="1.1.0",
+        name="OptionCard", category="molecule", status="stable", figma="62:124", since="1.1.0",
         purpose="Large selectable card for one choice among a few, with a title and an optional description.",
         when=["Onboarding answers: skill level, stance, goal, coaching approach.", "Choosing a plan or a profile (Coach or Surfer)."],
         when_not=["Many options or short labels: SegmentedControl or Radio.", "Several answers at once: Checkbox."],
@@ -686,7 +686,7 @@ SPECS = [
         examples_bad='<div className={selected ? "card active" : "card"} onClick={select}>Intermediate</div>',
     ),
     dict(
-        name="SegmentedControl", category="molecule", status="stable", figma="FIGMA_SegmentedControl", since="1.1.0",
+        name="SegmentedControl", category="molecule", status="stable", figma="62:184", since="1.1.0",
         purpose="Row of mutually exclusive options shown side by side.",
         when=["Short choices: gender, board type, frequency.", "Switching a list filter with 2–5 options."],
         when_not=["Options that need a description: OptionCard.", "Several answers at once: TagChip."],
@@ -709,7 +709,7 @@ SPECS = [
         examples_bad='<div>{options.map(o => <button className={o === v ? "on" : ""}>{o}</button>)}</div>',
     ),
     dict(
-        name="Stepper", category="molecule", status="stable", figma="FIGMA_Stepper", since="1.1.0",
+        name="Stepper", category="molecule", status="stable", figma="62:242", since="1.1.0",
         purpose="Shows where the user is in a multi-step flow.",
         when=["Surfer onboarding (5 steps).", "Any form split into ordered steps."],
         when_not=["Free navigation between sections: tabs or Sidebar.", "One-step forms."],
@@ -727,7 +727,7 @@ SPECS = [
         examples_bad='<p>Step 2/5</p>',
     ),
     dict(
-        name="Dropzone", category="molecule", status="stable", figma="FIGMA_Dropzone", since="1.1.0",
+        name="Dropzone", category="molecule", status="stable", figma="62:269", since="1.1.0",
         purpose="Area to pick or drop files for upload.",
         when=["New submission: add surf clips.", "Any upload of videos or images."],
         when_not=["One small file in a form: a file Input (planned)."],
@@ -750,7 +750,7 @@ SPECS = [
         examples_bad='<div onDrop={drop}>Drop here</div>',
     ),
     dict(
-        name="ClipItem", category="molecule", status="stable", figma="FIGMA_ClipItem", since="1.1.0",
+        name="ClipItem", category="molecule", status="stable", figma="62:320", since="1.1.0",
         purpose="Row for one video clip: thumbnail, title, facts and a light action.",
         when=["Clips added to a new submission.", "Clips inside a submission in History or the coach review."],
         when_not=["A whole submission with status and deadline: SubmissionCard.", "A delivered review: ReviewCard."],
@@ -775,7 +775,7 @@ SPECS = [
         examples_bad='<div className="clip"><img src={t} /><a className="red">Delete</a></div>',
     ),
     dict(
-        name="SummaryRow", category="molecule", status="stable", figma="FIGMA_SummaryRow", since="1.1.0",
+        name="SummaryRow", category="molecule", status="stable", figma="62:324", since="1.1.0",
         purpose="Labelled fact with a leading icon, used to summarize what happened.",
         when=["Submission sent: clips, coach, expected review.", "Short receipts and confirmations."],
         when_not=["Editable data or long lists: DataList."],
@@ -794,7 +794,7 @@ SPECS = [
         examples_bad='<p><Icon name="video" /> Clips: 2</p>',
     ),
     dict(
-        name="StatGroup", category="molecule", status="stable", figma="FIGMA_StatGroup", since="1.1.0",
+        name="StatGroup", category="molecule", status="stable", figma="62:371", since="1.1.0",
         purpose="Two to four small metrics side by side inside one card.",
         when=["Plan usage (Submissions left, Clip time), Surfer profile numbers, coach earnings summary."],
         when_not=["A single highlighted metric: Stat featured.", "Metrics with trends: Stat."],
@@ -812,7 +812,7 @@ SPECS = [
         examples_bad='<div className="stats"><b>3</b> left</div>',
     ),
     dict(
-        name="SectionHeader", category="molecule", status="stable", figma="FIGMA_SectionHeader", since="1.1.0",
+        name="SectionHeader", category="molecule", status="stable", figma="62:417", since="1.1.0",
         purpose="Title of a simple page or of a section inside it, with an optional icon, subtitle and action.",
         when=["Assigned surfers, Your history, Account & Billing, Weekly availability."],
         when_not=["A greeting header with avatar and plan: PageHeader.", "A detail screen with a back button: TopBar."],
@@ -835,7 +835,7 @@ SPECS = [
         examples_bad='<b>Assigned surfers</b>',
     ),
     dict(
-        name="PeriodStepper", category="molecule", status="stable", figma="FIGMA_PeriodStepper", since="1.1.0",
+        name="PeriodStepper", category="molecule", status="stable", figma="62:421", since="1.1.0",
         purpose="Moves backward and forward between periods (weeks, pay periods).",
         when=["Coach schedule week, earnings pay period."],
         when_not=["Picking an arbitrary date: date picker (planned).", "Pages of a list: Pagination."],
@@ -1021,7 +1021,7 @@ SPECS = [
         examples_bad='<form><input/><input/><button>Go</button></form>',
     ),
     dict(
-        name="TopBar", category="organism", status="stable", figma="FIGMA_TopBar", since="1.1.0",
+        name="TopBar", category="organism", status="stable", figma="63:229", since="1.1.0",
         purpose="Header of a detail or task screen with a back button and a title.",
         when=["New submission, Edit profile, Change coach, a surfer detail, a review."],
         when_not=["Top-level views reached from the Sidebar: PageHeader or SectionHeader."],
@@ -1041,7 +1041,7 @@ SPECS = [
         examples_bad='<div><a href="..">‹</a> New submission</div>',
     ),
     dict(
-        name="ResultState", category="organism", status="stable", figma="FIGMA_ResultState", since="1.1.0",
+        name="ResultState", category="organism", status="stable", figma="63:338", since="1.1.0",
         purpose="Full-screen outcome of a task: success with a summary, or failure with a way to retry.",
         when=["Submission sent, Review sent, Account created.", "Submission failed, Upload failed."],
         when_not=["Small confirmations that do not leave the screen: Notification.", "Empty lists: EmptyState."],
@@ -1064,7 +1064,7 @@ SPECS = [
         examples_bad='<div><h1>Done</h1></div>',
     ),
     dict(
-        name="ReviewCard", category="organism", status="stable", figma="FIGMA_ReviewCard", since="1.1.0",
+        name="ReviewCard", category="organism", status="stable", figma="63:400", since="1.1.0",
         purpose="Delivered review in History, collapsed to a summary and expanded to show the coach note.",
         when=["Surfer History: each reviewed submission."],
         when_not=["Submissions still waiting: SubmissionCard."],
@@ -1090,7 +1090,7 @@ SPECS = [
         examples_bad='<details><summary>Frontside snap</summary>…</details>',
     ),
     dict(
-        name="VideoPlayer", category="organism", status="stable", figma="FIGMA_VideoPlayer", since="1.1.0",
+        name="VideoPlayer", category="organism", status="stable", figma="63:446", since="1.1.0",
         purpose="Plays a surf clip with Alora controls.",
         when=["Coach review screen, surfer review detail, clip preview."],
         when_not=["Thumbnails in lists: ClipItem."],
@@ -1109,7 +1109,7 @@ SPECS = [
         examples_bad='<video src={url} autoPlay />',
     ),
     dict(
-        name="AvailabilityGrid", category="organism", status="stable", figma="FIGMA_AvailabilityGrid", since="1.1.0",
+        name="AvailabilityGrid", category="organism", status="stable", figma="63:450", since="1.1.0",
         purpose="Weekly grid where a coach marks the hours they are available.",
         when=["Coach Schedule: weekly availability."],
         when_not=["Picking one date or time: date or time picker (planned)."],

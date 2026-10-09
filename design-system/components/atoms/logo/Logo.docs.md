@@ -1,7 +1,7 @@
 # Logo
 
 **Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [Logo](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_Logo)
+**Figma:** [Logo](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=54-37)
 
 ## 1. Name and category
 `Logo` — Atom.

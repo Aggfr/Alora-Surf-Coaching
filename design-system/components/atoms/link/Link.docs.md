@@ -1,7 +1,7 @@
 # Link
 
 **Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [Link](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_Link)
+**Figma:** [Link](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=54-89)
 
 ## 1. Name and category
 `Link` — Atom.

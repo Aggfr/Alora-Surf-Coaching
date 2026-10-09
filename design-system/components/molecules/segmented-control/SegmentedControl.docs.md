@@ -1,7 +1,7 @@
 # SegmentedControl
 
 **Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [SegmentedControl](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_SegmentedControl)
+**Figma:** [SegmentedControl](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=62-184)
 
 ## 1. Name and category
 `SegmentedControl` — Molecule.

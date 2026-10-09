@@ -1,7 +1,7 @@
 # OptionCard
 
 **Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [OptionCard](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_OptionCard)
+**Figma:** [OptionCard](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=62-124)
 
 ## 1. Name and category
 `OptionCard` — Molecule.

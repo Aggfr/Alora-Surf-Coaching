@@ -1,7 +1,7 @@
 # IconButton
 
 **Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [IconButton](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_IconButton)
+**Figma:** [IconButton](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=54-129)
 
 ## 1. Name and category
 `IconButton` — Atom.

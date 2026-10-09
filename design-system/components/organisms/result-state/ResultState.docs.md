@@ -1,7 +1,7 @@
 # ResultState
 
 **Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [ResultState](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_ResultState)
+**Figma:** [ResultState](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=63-338)
 
 ## 1. Name and category
 `ResultState` — Organism.

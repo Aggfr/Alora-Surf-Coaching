@@ -1,7 +1,7 @@
 # PeriodStepper
 
 **Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [PeriodStepper](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_PeriodStepper)
+**Figma:** [PeriodStepper](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=62-421)
 
 ## 1. Name and category
 `PeriodStepper` — Molecule.

@@ -1,7 +1,7 @@
 # ProgressBar
 
 **Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [ProgressBar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_ProgressBar)
+**Figma:** [ProgressBar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=54-303)
 
 ## 1. Name and category
 `ProgressBar` — Atom.

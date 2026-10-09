@@ -1,7 +1,7 @@
 # ReviewCard
 
 **Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [ReviewCard](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_ReviewCard)
+**Figma:** [ReviewCard](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=63-400)
 
 ## 1. Name and category
 `ReviewCard` — Organism.

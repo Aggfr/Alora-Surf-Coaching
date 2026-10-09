@@ -1,7 +1,7 @@
 # TopBar
 
 **Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [TopBar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_TopBar)
+**Figma:** [TopBar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=63-229)
 
 ## 1. Name and category
 `TopBar` — Organism.

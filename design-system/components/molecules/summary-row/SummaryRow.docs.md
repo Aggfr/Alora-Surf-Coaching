@@ -1,7 +1,7 @@
 # SummaryRow
 
 **Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [SummaryRow](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_SummaryRow)
+**Figma:** [SummaryRow](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=62-324)
 
 ## 1. Name and category
 `SummaryRow` — Molecule.

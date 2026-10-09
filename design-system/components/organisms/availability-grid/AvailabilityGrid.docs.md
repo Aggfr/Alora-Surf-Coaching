@@ -1,7 +1,7 @@
 # AvailabilityGrid
 
 **Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
-**Figma:** [AvailabilityGrid](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=FIGMA_AvailabilityGrid)
+**Figma:** [AvailabilityGrid](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=63-450)
 
 ## 1. Name and category
 `AvailabilityGrid` — Organism.
