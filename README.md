@@ -2,7 +2,7 @@
 
 The design system for the **Coach** and **Surfer** platforms of Alora Surf Coaching. The single source of truth for designers, developers and AI agents: W3C/DTCG tokens, 32 documented React components, templates, example pages and the Figma library.
 
-**Figma:** [Design System](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System) · **Version:** 1.0.0 · **Themes:** dark (default) and light
+**Storybook:** [aggfr.github.io/Alora-Surf-Coaching](https://aggfr.github.io/Alora-Surf-Coaching/) · **Figma:** [Design System](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System) · **Version:** 1.0.0 · **Themes:** dark (default) and light
 
 ## Getting started
 | If you are… | Read |

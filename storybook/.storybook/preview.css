@@ -1,0 +1,143 @@
+/* Storybook-only framing. The design system itself is untouched. */
+.sb-canvas {
+  padding: var(--ds-size-space-xl);
+  border-radius: var(--ds-size-radius-large);
+}
+
+.sb-canvas--fullscreen {
+  padding: 0;
+  border-radius: 0;
+  min-height: 100vh;
+}
+
+.sb-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-size-space-large);
+}
+
+.sb-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--ds-size-space-large);
+}
+
+.sb-narrow {
+  max-width: 420px;
+}
+
+.sb-medium {
+  max-width: 640px;
+}
+
+.sb-tooltip-stage {
+  justify-content: center;
+  padding-block: var(--ds-size-space-2xl);
+}
+
+/* Foundations pages */
+.sb-foundations {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-space-2xl);
+}
+
+.sb-foundation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-space-large);
+}
+
+.sb-token-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: var(--ds-typography-body-small-font-size);
+}
+
+.sb-token-table th,
+.sb-token-table td {
+  text-align: left;
+  padding: var(--ds-size-space-small) var(--ds-size-space-medium);
+  border-bottom: var(--ds-size-border-default) solid var(--ds-color-border-subtle);
+  vertical-align: middle;
+}
+
+.sb-token-table th:first-child {
+  width: 30%;
+}
+
+.sb-token-table code {
+  overflow-wrap: anywhere;
+}
+
+.sb-token-table th {
+  color: var(--ds-color-text-secondary);
+  font-weight: var(--ds-typography-weight-semibold);
+}
+
+.sb-token-table code,
+.sb-palette code,
+.sb-icon-grid code {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: var(--ds-typography-size-xs);
+  color: var(--ds-color-text-secondary);
+}
+
+.sb-swatch {
+  display: block;
+  width: var(--ds-size-space-2xl);
+  height: var(--ds-size-space-2xl);
+  border-radius: var(--ds-size-radius-medium);
+  border: var(--ds-size-border-default) solid var(--ds-color-border-subtle);
+}
+
+.sb-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: var(--ds-size-space-medium);
+}
+
+.sb-palette__step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-space-2xs);
+}
+
+.sb-palette__step .sb-swatch {
+  width: 100%;
+  height: var(--ds-size-space-1200);
+}
+
+.sb-space {
+  display: block;
+  height: var(--ds-size-space-large);
+  background: var(--ds-color-action-primary-background);
+  border-radius: var(--ds-size-radius-small);
+}
+
+.sb-radius {
+  display: block;
+  width: var(--ds-size-space-1200);
+  height: var(--ds-size-space-1200);
+  background: var(--ds-color-background-surface-raised);
+  border: var(--ds-size-border-default) solid var(--ds-color-border-default);
+}
+
+.sb-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: var(--ds-size-space-medium);
+}
+
+.sb-icon-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-space-small);
+  padding: var(--ds-size-space-large);
+  border-radius: var(--ds-size-radius-large);
+  background: var(--ds-color-background-surface);
+}
