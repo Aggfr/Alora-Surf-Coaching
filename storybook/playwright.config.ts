@@ -18,6 +18,9 @@ export default defineConfig({
     ...devices['Desktop Chrome'],
     viewport: { width: 1280, height: 800 },
     deviceScaleFactor: 1,
+    // The theme decorator switches data-theme after the first render, and the components animate color
+    // changes. Reduced motion turns those transitions off so axe and screenshots see the final colors.
+    contextOptions: { reducedMotion: 'reduce' },
     // Lets the suite run with a Chromium that is already installed (set PW_CHROMIUM_PATH).
     launchOptions: process.env.PW_CHROMIUM_PATH ? { executablePath: process.env.PW_CHROMIUM_PATH } : {},
   },
