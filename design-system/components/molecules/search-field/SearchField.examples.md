@@ -1,14 +1,14 @@
-# SearchField · Ejemplos
+# SearchField · Examples
 
-## Correcto
+## Do
 ```tsx
 import { SearchField } from '@alora/design-system';
 
 <SearchField value={q} onChange={setQ} placeholder="Search surfers" />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Input placeholder="Search…" />
 ```
-Por qué: Búsqueda sin label accesible.
+Why: Search without an accessible label.

@@ -1,35 +1,35 @@
-# Principios
+# Principles
 
-Siete principios, en orden de prioridad. Cuando dos chocan, gana el que está más arriba.
+Seven principles, in priority order. When two conflict, the higher one wins.
 
-## 1. Accesible por defecto
-Todo componente cumple WCAG 2.2 AA sin configuración extra: contraste de texto ≥ 4.5:1 (≥ 3:1 en texto grande y bordes de control), foco visible, área táctil ≥ 44px y semántica HTML correcta.
-**Decisión derivada:** el degradado del botón primario y el gris terciario se oscurecieron respecto a los diseños originales porque no llegaban a 4.5:1 (ver `docs/accessibility.md`).
+## 1. Accessible by default
+Every component meets WCAG 2.2 AA with no extra setup: text contrast ≥ 4.5:1 (≥ 3:1 for large text and control borders), visible focus, touch targets ≥ 44px and correct HTML semantics.
+**Resulting decision:** the primary button gradient and the tertiary gray were darkened compared with the original designs because they did not reach 4.5:1 (see `docs/accessibility.md`).
 
-## 2. Una sola fuente de verdad
-Cada valor visual existe una vez, en `tokens/`. Figma (variables), CSS (`--ds-*`) y cualquier otra plataforma se generan o se sincronizan desde ahí. Si un valor no está en los tokens, no existe.
+## 2. A single source of truth
+Every visual value exists once, in `tokens/`. Figma (variables), CSS (`--ds-*`) and any other platform are generated or synced from there. If a value is not in the tokens, it does not exist.
 
-## 3. Capas que no se mezclan
-- **Primitivos** dicen *qué valores hay*.
-- **Semánticos** dicen *para qué sirven*.
-- **Tokens de componente** dicen *dónde se aplican*.
-Un componente nunca lee un primitivo; una página nunca define estilos propios. `scripts/check_hardcoded.py` lo verifica.
+## 3. Layers that do not mix
+- **Primitives** say *what values exist*.
+- **Semantic tokens** say *what they are for*.
+- **Component tokens** say *where they apply*.
+A component never reads a primitive; a page never defines its own styles. `scripts/check_hardcoded.py` enforces this.
 
-## 4. Reutilizar antes que crear
-Orden de búsqueda ante una necesidad nueva: componente existente → variante/prop de un componente existente → composición de existentes → componente nuevo (solo si el caso se repite y está documentado).
+## 4. Reuse before creating
+Search order for a new need: existing component → variant or prop of an existing component → composition of existing components → new component (only if the case repeats and is documented).
 
-## 5. Claridad sobre brevedad
-`color.background.surface-raised` antes que `bg2`. `isDisabled` antes que `dis`. Un nombre largo y obvio cuesta menos que una conversación para entenderlo.
+## 5. Clarity over brevity
+`color.background.surface-raised` rather than `bg2`. `isDisabled` rather than `dis`. A long, obvious name costs less than a conversation to understand it.
 
-## 6. Estados y variantes son props, no componentes
-`<Button variant="danger" isLoading />`, nunca `<DangerButton>` ni `<LoadingButton>`. En Figma lo mismo: un component set con propiedades de variante.
+## 6. States and variants are props, not components
+`<Button variant="danger" isLoading />`, never `<DangerButton>` or `<LoadingButton>`. The same in Figma: one component set with variant properties.
 
-## 7. Documentado para personas y para IA
-Cada componente tiene propósito, cuándo sí, cuándo no, anatomía, API, tokens, accesibilidad, composición, ejemplos, anti-patrones y changelog. `MANIFEST.json` indexa todo en un formato que una IA puede leer sin abrir cada carpeta.
+## 7. Documented for people and for AI
+Every component has a purpose, when to use, when not to use, anatomy, API, tokens, accessibility, composition, examples, anti-patterns and a changelog. `MANIFEST.json` indexes everything in a format an AI can read without opening every folder.
 
-## Origen de las decisiones
-El sistema se extrajo de dos archivos de producto:
-- **Coach Platform** (`9JVeHRxUaDyilE6aLVFpQp`): cola de revisión, perfiles de surfers, calendario.
-- **Surfer Platform** (`MfvlEJ8gZ4WPdNDXETjHRD`): login, subida de clips, sesiones e historial.
+## Where the decisions come from
+The system was extracted from two product files:
+- **Coach Platform** (`9JVeHRxUaDyilE6aLVFpQp`): review queue, surfer profiles, calendar.
+- **Surfer Platform** (`MfvlEJ8gZ4WPdNDXETjHRD`): log in, clip upload, sessions and history.
 
-Ambos comparten tema oscuro navy, acento ocean, Outfit para display y un lenguaje de tarjetas con radio 16px. Donde los dos archivos divergían se eligió el valor más repetido; donde ambos fallaban en accesibilidad se corrigió y se documentó en el `$description` del token.
+Both share a dark navy theme, an ocean accent, Outfit for display text and a card language with a 16px radius. Where the two files differed, the most frequent value was chosen; where both failed accessibility, the value was fixed and documented in the token's `$description`.

@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Textarea. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: input.*, typography.body-medium, typography.caption, color.text.tertiary.",
+  "$description": "Textarea tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: input.*, typography.body-medium, typography.caption, color.text.tertiary.",
   "input": {
     "background": {
       "$type": "color",

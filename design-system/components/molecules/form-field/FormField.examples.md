@@ -1,6 +1,6 @@
-# FormField · Ejemplos
+# FormField · Examples
 
-## Correcto
+## Do
 ```tsx
 import { FormField } from '@alora/design-system';
 
@@ -9,8 +9,8 @@ import { FormField } from '@alora/design-system';
 </FormField>
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Label>Email</Label><Input /><span className="red">Error</span>
 ```
-Por qué: Mostrar ayuda y error a la vez.
+Why: Showing helper text and an error at the same time.

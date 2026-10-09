@@ -1,16 +1,16 @@
 {
-  "$description": "Tokens de Button. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: button.primary.*, button.secondary.*, button.ghost.*, button.danger.*, button.disabled.*, button.radius, button.gap, button.padding-horizontal.*, button.typography, elevation.focus, size.layout.control-height*.",
+  "$description": "Button tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: button.primary.*, button.secondary.*, button.ghost.*, button.danger.*, button.disabled.*, button.radius, button.gap, button.padding-horizontal.*, button.typography, elevation.focus, size.layout.control-height*.",
   "button": {
     "primary": {
       "background": {
         "$type": "color",
         "$value": "{color.action.primary.background-start}",
-        "$description": "Inicio del degradado."
+        "$description": "Gradient start."
       },
       "background-end": {
         "$type": "color",
         "$value": "{color.action.primary.background-end}",
-        "$description": "Fin del degradado."
+        "$description": "Gradient end."
       },
       "background-hover": {
         "$type": "color",

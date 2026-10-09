@@ -1,43 +1,43 @@
 # SubmissionCard
 
-**Categoría Atomic Design:** Organism · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [SubmissionCard](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-223)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `SubmissionCard` — Organism.
 
-## 2. Propósito
-Resume un clip enviado para revisión y su acción principal.
+## 2. Purpose
+Summarizes a clip submitted for review and its main action.
 
-## 3. Cuándo usarlo
-- Cola del coach, lista de envíos del surfer.
+## 3. When to use
+- Coach queue, surfer submission list.
 
-## 4. Cuándo no usarlo
-- Revisión ya entregada en History: ReviewCard (planificado).
+## 4. When not to use
+- A review already delivered in History: ReviewCard (planned).
 
-## 5. Anatomía
-1. Cabecera: Avatar + nombre + Badge de plan + Badge de estado
-2. Título del clip + fecha + metadatos
-3. Nota del surfer (opcional)
-4. Pie: Tag de plazo + Button primary
+## 5. Anatomy
+1. Header: Avatar + name + plan Badge + status Badge
+2. Clip title + date + metadata
+3. Surfer note (optional)
+4. Footer: deadline Tag + primary Button
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `surfer` | `{ name: string; plan: 'pay-as-you-go' \| 'elite' \| 'progression' }` | — | Sí | Quién envía. |
-| `status` | `'pending' \| 'in-review' \| 'review-ready' \| 'overdue'` | — | Sí | Estado. |
-| `clipTitle` | `string` | — | Sí | Maniobra. |
-| `submittedAt` | `string` | — | Sí | Fecha formateada. |
-| `meta` | `string` | — | No | Stance · nivel · spot. |
-| `note` | `string` | — | No | Mensaje del surfer. |
-| `deadline` | `{ label: string; tone: 'on-track' \| 'due-soon' \| 'overdue' }` | — | Sí | Plazo. |
-| `action` | `{ label: string; icon?: IconName; onPress: () => void }` | — | Sí | Acción principal. |
+| `surfer` | `{ name: string; plan: 'pay-as-you-go' \| 'elite' \| 'progression' }` | — | Yes | Who submitted it. |
+| `status` | `'pending' \| 'in-review' \| 'review-ready' \| 'overdue'` | — | Yes | State. |
+| `clipTitle` | `string` | — | Yes | Maneuver. |
+| `submittedAt` | `string` | — | Yes | Formatted date. |
+| `meta` | `string` | — | No | Stance · level · spot. |
+| `note` | `string` | — | No | Message from the surfer. |
+| `deadline` | `{ label: string; tone: 'on-track' \| 'due-soon' \| 'overdue' }` | — | Yes | Deadline. |
+| `action` | `{ label: string; icon?: IconName; onPress: () => void }` | — | Yes | Main action. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **deadline:** `on-track`, `due-soon`, `overdue`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `card.background`
 - `card.border`
 - `card.radius`
@@ -46,30 +46,30 @@ Resume un clip enviado para revisión y su acción principal.
 - `color.background.surface-sunken`
 - `size.layout.content-width`
 
-Los tokens propios del componente están en [`SubmissionCard.tokens.json`](./SubmissionCard.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`SubmissionCard.tokens.json`](./SubmissionCard.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Solo el botón es interactivo; la tarjeta no es clicable entera.
+## 9. Interaction
+- Only the button is interactive; the whole card is not clickable.
 
-## 10. Accesibilidad
-- `<article>` con el título como h3 y `aria-labelledby`.
+## 10. Accessibility
+- `<article>` with the title as an h3 and `aria-labelledby`.
 
-## 11. Reglas de composición
-- En lista: columna con gap `size.space.large`.
-- Personalizable: textos, tonos y acción. No personalizable: orden de bloques.
-- Depende de: `Avatar`, `Heading`, `Text`, `Badge`, `Tag`, `Button`.
+## 11. Composition rules
+- In a list: a column with a `size.space.large` gap.
+- Customizable: text, tones and action. Not customizable: block order.
+- Depends on: `Avatar`, `Heading`, `Text`, `Badge`, `Tag`, `Button`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
-<SubmissionCard surfer={{ name: "Khata Kraiwan", plan: "elite" }} status="in-review" clipTitle="Frontside snap" submittedAt="31 ago 2026, 18:01" deadline={{ label: "1h 9m left", tone: "due-soon" }} action={{ label: "View & Download", icon: "eye", onPress }} />
+<SubmissionCard surfer={{ name: "Khata Kraiwan", plan: "elite" }} status="in-review" clipTitle="Frontside snap" submittedAt="Aug 31, 2026, 18:01" deadline={{ label: "1h 9m left", tone: "due-soon" }} action={{ label: "View & Download", icon: "eye", onPress }} />
 ```
-Más ejemplos en [`SubmissionCard.examples.md`](./SubmissionCard.examples.md).
+More examples in [`SubmissionCard.examples.md`](./SubmissionCard.examples.md).
 
-## 13. Anti-patrones
-- Dos botones primary en la tarjeta.
-- Ocultar el estado.
+## 13. Anti-patterns
+- Two primary buttons in the card.
+- Hiding the status.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

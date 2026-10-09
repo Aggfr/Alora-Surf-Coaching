@@ -12,7 +12,7 @@ export interface DashboardTemplateProps {
   className?: string;
 }
 
-/** Template · Sidebar + columna de contenido. Base de todas las vistas autenticadas. Docs: ./DashboardTemplate.docs.md */
+/** Template · Sidebar + content column. Base of every authenticated view. Docs: ./DashboardTemplate.docs.md */
 export function DashboardTemplate({ navigation, header, children, className }: DashboardTemplateProps) {
   return (
     <div className={cx('ds-dashboard-template', className)}>

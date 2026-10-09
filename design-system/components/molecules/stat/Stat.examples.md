@@ -1,14 +1,14 @@
-# Stat · Ejemplos
+# Stat · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Stat } from '@alora/design-system';
 
 <Stat label="Pending" value={3} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <div className="stat"><b>3</b></div>
 ```
-Por qué: Tendencia solo con color.
+Why: Trend shown only with color.

@@ -17,7 +17,7 @@ export interface ModalProps {
   className?: string;
 }
 
-/** Organism · Diálogo modal con foco atrapado. Docs: ./Modal.docs.md */
+/** Organism · Modal dialog with trapped focus. Docs: ./Modal.docs.md */
 export function Modal({ isOpen, title, description, tone = 'default', primaryAction, secondaryAction, onClose, children, className }: ModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();

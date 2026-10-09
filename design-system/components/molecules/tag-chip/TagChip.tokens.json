@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de TagChip. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: tag.radius, tag.padding-horizontal, color.action.secondary.*, color.background.brand-subtle, color.border.brand, color.text.brand.",
+  "$description": "TagChip tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: tag.radius, tag.padding-horizontal, color.action.secondary.*, color.background.brand-subtle, color.border.brand, color.text.brand.",
   "tag": {
     "background": {
       "$type": "color",

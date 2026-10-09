@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de EmptyState. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: card.background, card.radius, color.background.canvas, color.text.tertiary, size.space.xl.",
+  "$description": "EmptyState tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.background, card.radius, color.background.canvas, color.text.tertiary, size.space.xl.",
   "card": {
     "background": {
       "$type": "color",

@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de FormSection. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: card.*, size.layout.form-width, size.space.large, size.space.medium.",
+  "$description": "FormSection tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.*, size.layout.form-width, size.space.large, size.space.medium.",
   "card": {
     "background": {
       "$type": "color",

@@ -6,7 +6,7 @@ export interface DividerProps {
   className?: string;
 }
 
-/** Atom · Separador de contenido. Docs: ./Divider.docs.md */
+/** Atom · Content separator. Docs: ./Divider.docs.md */
 export function Divider({ orientation = 'horizontal', isDecorative = true, className }: DividerProps) {
   return (
     <div

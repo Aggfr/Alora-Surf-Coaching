@@ -1,50 +1,50 @@
 # Button
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Button](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=8-425)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Button` — Atom.
 
-## 2. Propósito
-Dispara una acción en la vista actual.
+## 2. Purpose
+Triggers an action in the current view.
 
-## 3. Cuándo usarlo
-- Enviar un formulario, confirmar o cancelar una decisión.
-- Abrir un flujo (Send new submission, View & Download).
-- Una sola variante primary por vista: la acción principal.
+## 3. When to use
+- Submit a form, confirm or cancel a decision.
+- Start a flow (Send new submission, View & Download).
+- Only one primary variant per view: the main action.
 
-## 4. Cuándo no usarlo
-- Para navegar a otra URL: usar un enlace (`as="a"`) o `ListItem` type=navigation.
-- Para alternar un ajuste: usar `Switch`.
-- Para filtros seleccionables: usar `TagChip`.
+## 4. When not to use
+- To navigate to another URL: use a link (`as="a"`) or `ListItem` type=navigation.
+- To toggle a setting: use `Switch`.
+- For selectable filters: use `TagChip`.
 
-## 5. Anatomía
-1. Contenedor (fondo, borde, radio `button.radius`)
-2. Icono inicial opcional (`Icon`)
-3. Label (estilo `typography.button`)
-4. Icono final opcional (`Icon`)
+## 5. Anatomy
+1. Container (background, border, radius `button.radius`)
+2. Optional leading icon (`Icon`)
+3. Label (`typography.button` style)
+4. Optional trailing icon (`Icon`)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `children` | `ReactNode` | — | Sí | Texto visible del botón. Verbo + objeto: 'Send request'. |
-| `variant` | `'primary' \| 'secondary' \| 'ghost' \| 'danger'` | `'primary'` | No | Jerarquía visual de la acción. |
-| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | Altura 32 / 44 / 52 px. |
-| `leadingIcon` | `IconName` | — | No | Icono antes del texto. |
-| `trailingIcon` | `IconName` | — | No | Icono después del texto. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilita el botón (aria-disabled). |
-| `isLoading` | `boolean` | `false` | No | Sustituye el icono inicial por Spinner y bloquea clics. |
-| `isFullWidth` | `boolean` | `false` | No | Ocupa el ancho del contenedor (formularios). |
-| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | No | Tipo HTML. |
-| `onPress` | `() => void` | — | No | Acción al pulsar (click, Enter, Espacio). |
+| `children` | `ReactNode` | — | Yes | Visible button text. Verb + object: 'Send request'. |
+| `variant` | `'primary' \| 'secondary' \| 'ghost' \| 'danger'` | `'primary'` | No | Visual hierarchy of the action. |
+| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | Height 32 / 44 / 52 px. |
+| `leadingIcon` | `IconName` | — | No | Icon before the text. |
+| `trailingIcon` | `IconName` | — | No | Icon after the text. |
+| `isDisabled` | `boolean` | `false` | No | Disables the button (aria-disabled). |
+| `isLoading` | `boolean` | `false` | No | Replaces the leading icon with a Spinner and blocks clicks. |
+| `isFullWidth` | `boolean` | `false` | No | Fills the container width (forms). |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | No | HTML type. |
+| `onPress` | `() => void` | — | No | Action on press (click, Enter, Space). |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **variant:** `primary`, `secondary`, `ghost`, `danger`
 - **size:** `small`, `medium`, `large`
-- **Estados:** `default`, `hover`, `pressed`, `focus`, `disabled`, `loading`
+- **States:** `default`, `hover`, `pressed`, `focus`, `disabled`, `loading`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `button.primary.*`
 - `button.secondary.*`
 - `button.ghost.*`
@@ -57,39 +57,39 @@ Dispara una acción en la vista actual.
 - `elevation.focus`
 - `size.layout.control-height*`
 
-Los tokens propios del componente están en [`Button.tokens.json`](./Button.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Button.tokens.json`](./Button.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Hover y pressed cambian el fondo con `motion.transition-fast`.
-- Enter y Espacio disparan `onPress`.
-- En loading el ancho no cambia y `aria-busy=true`.
+## 9. Interaction
+- Hover and pressed change the background with `motion.transition-fast`.
+- Enter and Space trigger `onPress`.
+- While loading the width does not change and `aria-busy=true`.
 
-## 10. Accesibilidad
-- Elemento `<button>` nativo; si navega, `<a>` con el mismo estilo.
-- Foco visible: borde 2px `color.border.focus` por fuera.
-- Botones solo con icono requieren `aria-label` y un `Tooltip`.
-- Contraste del texto ≥ 4.5:1 en todas las variantes (por eso primary usa ocean 700→600).
-- Disabled usa `aria-disabled` para seguir siendo descubrible por lector de pantalla.
+## 10. Accessibility
+- Native `<button>` element; if it navigates, an `<a>` with the same style.
+- Visible focus: 2px `color.border.focus` outline outside the button.
+- Icon-only buttons need an `aria-label` and a `Tooltip`.
+- Text contrast ≥ 4.5:1 in every variant (that is why primary uses ocean 800→700).
+- Disabled uses `aria-disabled` so screen readers can still find it.
 
-## 11. Reglas de composición
-- Máximo un primary por vista o por Modal.
-- En un grupo, la acción principal va a la derecha (Modal) o arriba y a ancho completo (FormSection).
-- No anidar elementos interactivos dentro.
-- Depende de: `Icon`, `Spinner`.
+## 11. Composition rules
+- At most one primary per view or per Modal.
+- In a group, the main action goes on the right (Modal) or on top at full width (FormSection).
+- Do not nest interactive elements inside.
+- Depends on: `Icon`, `Spinner`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Button variant="primary" leadingIcon="eye" onPress={openReview}>View & Download</Button>
 ```
-Más ejemplos en [`Button.examples.md`](./Button.examples.md).
+More examples in [`Button.examples.md`](./Button.examples.md).
 
-## 13. Anti-patrones
-- Dos botones primary en la misma vista.
-- Cambiar colores con estilos sueltos en lugar de `variant`.
-- Usar `ghost` para acciones destructivas.
-- Texto genérico ('Click here', 'OK').
+## 13. Anti-patterns
+- Two primary buttons in the same view.
+- Changing colors with ad-hoc styles instead of `variant`.
+- Using `ghost` for destructive actions.
+- Generic text ('Click here', 'OK').
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

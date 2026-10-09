@@ -1,14 +1,14 @@
-# Button · Ejemplos
+# Button · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Button } from '@alora/design-system';
 
 <Button variant="primary" leadingIcon="eye" onPress={openReview}>View & Download</Button>
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Button style={{ background: "#3b8eaa" }}>OK</Button>
 ```
-Por qué: Dos botones primary en la misma vista.
+Why: Two primary buttons in the same view.

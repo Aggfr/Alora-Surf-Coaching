@@ -1,63 +1,63 @@
 # Sidebar
 
-**Categoría Atomic Design:** Organism · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Sidebar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-84)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Sidebar` — Organism.
 
-## 2. Propósito
-Navegación principal fija en escritorio.
+## 2. Purpose
+Fixed main navigation on desktop.
 
-## 3. Cuándo usarlo
-- Todas las vistas autenticadas de Coach y Surfer en ≥ 1024px.
+## 3. When to use
+- Every authenticated Coach and Surfer view at ≥ 1024px.
 
-## 4. Cuándo no usarlo
-- Móvil: NavigationBar inferior (planificado).
+## 4. When not to use
+- Mobile: bottom NavigationBar (planned).
 
-## 5. Anatomía
-1. Lista de NavigationItem
-2. Logo al pie
+## 5. Anatomy
+1. List of NavigationItem
+2. Logo at the bottom
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `product` | `'coach' \| 'surfer'` | — | Sí | Define los items por defecto. |
-| `activeHref` | `string` | — | Sí | Item activo. |
-| `items` | `Array<NavigationItemProps>` | `según product` | No | Sobrescribe los items (máx. 5). |
+| `product` | `'coach' \| 'surfer'` | — | Yes | Sets the default items. |
+| `activeHref` | `string` | — | Yes | Active item. |
+| `items` | `Array<NavigationItemProps>` | `from product` | No | Overrides the items (max. 5). |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **product:** `coach`, `surfer`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `sidebar.background`
 - `sidebar.width`
 - `navigation-item.*`
 
-Los tokens propios del componente están en [`Sidebar.tokens.json`](./Sidebar.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Sidebar.tokens.json`](./Sidebar.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Fijo al hacer scroll (`z-index.sticky`).
+## 9. Interaction
+- Stays fixed while scrolling (`layer.sticky`).
 
-## 10. Accesibilidad
-- `<nav aria-label="Main">`; un solo `aria-current`.
+## 10. Accessibility
+- `<nav aria-label="Main">`; a single `aria-current`.
 
-## 11. Reglas de composición
-- Slot de items (máx. 5) + Logo.
-- No personalizable: ancho, fondo, posición del logo.
-- Depende de: `NavigationItem`.
+## 11. Composition rules
+- Items slot (max. 5) + Logo.
+- Not customizable: width, background, logo position.
+- Depends on: `NavigationItem`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Sidebar product="coach" activeHref="/queue" />
 ```
-Más ejemplos en [`Sidebar.examples.md`](./Sidebar.examples.md).
+More examples in [`Sidebar.examples.md`](./Sidebar.examples.md).
 
-## 13. Anti-patrones
-- Añadir acciones (botones) al Sidebar.
+## 13. Anti-patterns
+- Adding actions (buttons) to the Sidebar.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

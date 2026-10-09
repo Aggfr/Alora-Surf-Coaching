@@ -1,14 +1,14 @@
-# Checkbox · Ejemplos
+# Checkbox · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Checkbox } from '@alora/design-system';
 
 <Checkbox label="Remember me" isChecked={remember} onChange={setRemember} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <div onClick={toggle} className="box" />
 ```
-Por qué: Checkbox que dispara una acción inmediata.
+Why: A checkbox that triggers an immediate action.

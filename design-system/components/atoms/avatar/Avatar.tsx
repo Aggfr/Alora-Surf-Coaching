@@ -16,7 +16,7 @@ function initials(name: string, size: AvatarSize): string {
   return letters.map((part) => part[0]?.toUpperCase() ?? '').join('');
 }
 
-/** Atom · Iniciales de una persona. Docs: ./Avatar.docs.md */
+/** Atom · A person's initials. Docs: ./Avatar.docs.md */
 export function Avatar({ name, size = 'medium', tone = 'brand', className }: AvatarProps) {
   return (
     <span className={cx('ds-avatar', `ds-avatar--${size}`, `ds-avatar--${tone}`, className)} aria-hidden="true" title={name}>

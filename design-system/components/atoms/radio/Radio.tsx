@@ -11,7 +11,7 @@ export interface RadioProps {
   className?: string;
 }
 
-/** Atom · Selección única dentro de un grupo. Docs: ./Radio.docs.md */
+/** Atom · Single selection within a group. Docs: ./Radio.docs.md */
 export function Radio({ label, value, name, isSelected = false, isDisabled = false, onChange, className }: RadioProps) {
   const id = useId();
   return (

@@ -1,14 +1,14 @@
-# Label · Ejemplos
+# Label · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Label } from '@alora/design-system';
 
 <Label htmlFor="email" isRequired>Email</Label>
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <span style={{ fontWeight: 600 }}>Email</span>
 ```
-Por qué: Usar el placeholder como label.
+Why: Using the placeholder as the label.

@@ -1,68 +1,68 @@
 # FormSection
 
-**Categoría Atomic Design:** Organism · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [FormSection](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-349)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `FormSection` — Organism.
 
-## 2. Propósito
-Formulario completo con campos y acciones.
+## 2. Purpose
+Complete form with fields and actions.
 
-## 3. Cuándo usarlo
-- Log in, Create account, pasos de onboarding, editar perfil.
+## 3. When to use
+- Log in, Create account, onboarding steps, edit profile.
 
-## 4. Cuándo no usarlo
-- Un único campo en línea: FormField.
+## 4. When not to use
+- A single inline field: FormField.
 
-## 5. Anatomía
-1. Tarjeta con FormFields
-2. Enlaces auxiliares
-3. Acción primary a ancho completo
-4. Acción secondary opcional
+## 5. Anatomy
+1. Error summary (Notification) when there is more than one error
+2. Stacked FormFields
+3. Full-width primary action
+4. Optional ghost secondary action
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `onSubmit` | `(event: FormEvent) => void` | — | Sí | Envío. |
-| `children` | `ReactNode` | — | Sí | FormFields. |
-| `primaryAction` | `{ label: string; icon?: IconName; isLoading?: boolean }` | — | Sí | Envío. |
-| `secondaryAction` | `{ label: string; onPress: () => void }` | — | No | Alternativa. |
-| `errorSummary` | `string[]` | — | No | Resumen si hay más de un error. |
+| `onSubmit` | `(event: FormEvent) => void` | — | Yes | Submit. |
+| `children` | `ReactNode` | — | Yes | FormFields. |
+| `primaryAction` | `{ label: string; icon?: IconName; isLoading?: boolean }` | — | Yes | Submit. |
+| `secondaryAction` | `{ label: string; onPress: () => void }` | — | No | Alternative. |
+| `errorSummary` | `string[]` | — | No | Summary shown when there is more than one error. |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `submitting`, `error`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `submitting`, `error`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `card.*`
 - `size.layout.form-width`
 - `size.space.large`
 - `size.space.medium`
 
-Los tokens propios del componente están en [`FormSection.tokens.json`](./FormSection.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`FormSection.tokens.json`](./FormSection.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Enter envía; el botón entra en loading mientras se envía.
+## 9. Interaction
+- Enter submits; the button shows its loading state while submitting.
 
-## 10. Accesibilidad
-- `<form>` con `aria-describedby` al resumen de errores; el foco va al primer error.
+## 10. Accessibility
+- `<form noValidate>`; the error summary uses `role=alert` and focus goes to the first error.
 
-## 11. Reglas de composición
-- Slot Form de AuthTemplate o columna de contenido.
-- Depende de: `FormField`, `Button`, `Notification`.
+## 11. Composition rules
+- AuthTemplate Form slot or the content column.
+- Depends on: `FormField`, `Button`, `Notification`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <FormSection onSubmit={login} primaryAction={{ label: "Login", icon: "log-in" }} secondaryAction={{ label: "Create new account", onPress: goSignup }}>…</FormSection>
 ```
-Más ejemplos en [`FormSection.examples.md`](./FormSection.examples.md).
+More examples in [`FormSection.examples.md`](./FormSection.examples.md).
 
-## 13. Anti-patrones
-- Dos acciones primary.
-- Validar mientras se escribe.
+## 13. Anti-patterns
+- Two primary actions.
+- Validating while the user types.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

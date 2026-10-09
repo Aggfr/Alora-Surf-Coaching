@@ -1,14 +1,14 @@
-# Breadcrumb · Ejemplos
+# Breadcrumb · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Breadcrumb } from '@alora/design-system';
 
 <Breadcrumb items={[{ label: "Surfers", href: "/surfers" }, { label: "Alejandro García" }]} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <p>Surfers / Alejandro</p>
 ```
-Por qué: Breadcrumb como sustituto del Sidebar.
+Why: Breadcrumb as a replacement for the Sidebar.

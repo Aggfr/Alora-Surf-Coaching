@@ -1,43 +1,43 @@
 # ListItem
 
-**Categoría Atomic Design:** Molecule · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [ListItem](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-120)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `ListItem` — Molecule.
 
-## 2. Propósito
-Fila de una lista con tres formatos: persona, definición o navegación.
+## 2. Purpose
+List row with three formats: person, definition or navigation.
 
-## 3. Cuándo usarlo
-- Lista de surfers (person).
-- Datos de cuenta (definition).
-- Enlaces legales (navigation).
+## 3. When to use
+- List of surfers (person).
+- Account details (definition).
+- Legal links (navigation).
 
-## 4. Cuándo no usarlo
-- Contenido rico con acciones múltiples: SubmissionCard.
+## 4. When not to use
+- Rich content with several actions: SubmissionCard.
 
-## 5. Anatomía
-1. person: Avatar + título + descripción + acción
-2. definition: etiqueta + valor + acción opcional
-3. navigation: título + chevron
+## 5. Anatomy
+1. person: Avatar + title + description + action
+2. definition: label + value + optional action
+3. navigation: title + chevron
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `type` | `'person' \| 'definition' \| 'navigation'` | `'definition'` | No | Formato. |
-| `title` | `string` | — | Sí | Título o etiqueta. |
-| `description` | `string` | — | No | Descripción (person) o valor (definition). |
-| `avatarName` | `string` | — | No | Solo person. |
-| `action` | `{ label: string; onPress: () => void; tone?: 'default' \| 'danger' }` | — | No | Acción a la derecha. |
-| `href` | `string` | — | No | Solo navigation: destino. |
-| `hasDivider` | `boolean` | `true` | No | Línea inferior. |
+| `type` | `'person' \| 'definition' \| 'navigation'` | `'definition'` | No | Format. |
+| `title` | `string` | — | Yes | Title or label. |
+| `description` | `string` | — | No | Description (person) or value (definition). |
+| `avatarName` | `string` | — | No | person only. |
+| `action` | `{ label: string; onPress: () => void; tone?: 'default' \| 'danger' }` | — | No | Action on the right. |
+| `href` | `string` | — | No | navigation only: destination. |
+| `hasDivider` | `boolean` | `true` | No | Bottom divider. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **type:** `person`, `definition`, `navigation`
-- **Estados:** `default`, `hover (navigation)`
+- **States:** `default`, `hover (navigation)`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `size.space.large`
 - `size.space.medium`
 - `divider.color`
@@ -45,28 +45,28 @@ Fila de una lista con tres formatos: persona, definición o navegación.
 - `typography.body-small`
 - `typography.heading-small`
 
-Los tokens propios del componente están en [`ListItem.tokens.json`](./ListItem.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`ListItem.tokens.json`](./ListItem.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- navigation: toda la fila es clicable.
+## 9. Interaction
+- navigation: the whole row is clickable.
 
-## 10. Accesibilidad
-- Listas con `<ul>`; definition dentro de `<dl>` con `<dt>`/`<dd>`.
+## 10. Accessibility
+- Lists use `<ul>`; definition rows use `<dl>` with `<dt>`/`<dd>`.
 
-## 11. Reglas de composición
-- DataList, listas de surfers.
-- Depende de: `Avatar`, `Heading`, `Text`, `Button`, `Icon`, `Divider`.
+## 11. Composition rules
+- DataList, surfer lists.
+- Depends on: `Avatar`, `Heading`, `Text`, `Button`, `Icon`, `Divider`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <ListItem type="definition" title="PLAN RENEWS" description="26 sept 2026" action={{ label: "Cancel your plan", tone: "danger", onPress: openCancel }} />
 ```
-Más ejemplos en [`ListItem.examples.md`](./ListItem.examples.md).
+More examples in [`ListItem.examples.md`](./ListItem.examples.md).
 
-## 13. Anti-patrones
-- Mezclar tipos dentro de la misma lista.
+## 13. Anti-patterns
+- Mixing types within the same list.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

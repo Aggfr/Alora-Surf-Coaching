@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Tooltip. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: tooltip.background, tooltip.foreground, tooltip.radius, tooltip.padding, z-index.tooltip.",
+  "$description": "Tooltip tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: tooltip.background, tooltip.foreground, tooltip.radius, tooltip.padding, layer.tooltip.",
   "tooltip": {
     "background": {
       "$type": "color",

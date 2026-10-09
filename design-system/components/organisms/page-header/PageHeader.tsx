@@ -10,7 +10,7 @@ export interface PageHeaderProps {
   className?: string;
 }
 
-/** Organism · Cabecera de página con saludo y acciones. Docs: ./PageHeader.docs.md */
+/** Organism · Page header with greeting and actions. Docs: ./PageHeader.docs.md */
 export function PageHeader({ title, subtitle, actions, className }: PageHeaderProps) {
   return (
     <header className={cx('ds-page-header', className)}>

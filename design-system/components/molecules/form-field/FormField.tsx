@@ -15,7 +15,7 @@ export interface FormFieldProps {
   className?: string;
 }
 
-/** Molecule · Label + control + ayuda/error. Docs: ./FormField.docs.md */
+/** Molecule · Label + control + helper/error text. Docs: ./FormField.docs.md */
 export function FormField({ label, id, helperText, errorMessage, isRequired = false, isDisabled = false, children, className }: FormFieldProps) {
   const helperId = `${id}-helper`;
   const errorId = `${id}-error`;

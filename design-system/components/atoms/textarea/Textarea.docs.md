@@ -1,67 +1,67 @@
 # Textarea
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Textarea](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=9-177)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Textarea` — Atom.
 
-## 2. Propósito
-Recoge texto de varias líneas.
+## 2. Purpose
+Collects multiple lines of text.
 
-## 3. Cuándo usarlo
-- Nota del surfer al coach, motivo de cambio de coach.
+## 3. When to use
+- Surfer note to the coach, reason for changing coach.
 
-## 4. Cuándo no usarlo
-- Valores de una línea: usar Input.
+## 4. When not to use
+- Single-line values: use Input.
 
-## 5. Anatomía
-1. Contenedor (tokens `input.*`)
-2. Valor o placeholder
-3. Contador opcional
+## 5. Anatomy
+1. Container (`input.*` tokens)
+2. Value or placeholder
+3. Optional counter
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `id` | `string` | — | Sí | Para asociar Label. |
-| `value` | `string` | — | No | Valor controlado. |
-| `maxLength` | `number` | — | No | Muestra contador 'n / max'. |
-| `rows` | `number` | `4` | No | Altura inicial. |
-| `hasError` | `boolean` | `false` | No | Estado de error. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilitado. |
-| `onChange` | `(value: string) => void` | — | No | Cambio de valor. |
+| `id` | `string` | — | Yes | Links the Label. |
+| `value` | `string` | — | No | Controlled value. |
+| `maxLength` | `number` | — | No | Shows an 'n / max' counter. |
+| `rows` | `number` | `4` | No | Initial height. |
+| `hasError` | `boolean` | `false` | No | Error state. |
+| `isDisabled` | `boolean` | `false` | No | Disabled. |
+| `onChange` | `(value: string) => void` | — | No | Value change. |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `focus`, `error`, `disabled`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `focus`, `error`, `disabled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `input.*`
 - `typography.body-medium`
 - `typography.caption`
 - `color.text.tertiary`
 
-Los tokens propios del componente están en [`Textarea.tokens.json`](./Textarea.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Textarea.tokens.json`](./Textarea.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Crece con el contenido hasta 8 filas y luego hace scroll.
+## 9. Interaction
+- Grows with the content up to 8 rows, then scrolls.
 
-## 10. Accesibilidad
-- Contador enlazado con `aria-describedby` y anunciado al llegar al límite.
+## 10. Accessibility
+- Counter linked with `aria-describedby` and announced when the limit is reached.
 
-## 11. Reglas de composición
-- Dentro de FormField o del slot Content de Modal.
+## 11. Composition rules
+- Inside FormField or the Modal Content slot.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Textarea id="note" maxLength={280} value={note} onChange={setNote} />
 ```
-Más ejemplos en [`Textarea.examples.md`](./Textarea.examples.md).
+More examples in [`Textarea.examples.md`](./Textarea.examples.md).
 
-## 13. Anti-patrones
-- Usarlo para un único dato corto.
+## 13. Anti-patterns
+- Using it for a single short value.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

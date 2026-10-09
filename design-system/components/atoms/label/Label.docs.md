@@ -1,66 +1,66 @@
 # Label
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Label](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=9-11)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Label` — Atom.
 
-## 2. Propósito
-Nombra un control de formulario.
+## 2. Purpose
+Names a form control.
 
-## 3. Cuándo usarlo
-- Encima de Input, Textarea o a la derecha de Checkbox, Radio y Switch.
+## 3. When to use
+- Above Input or Textarea, or to the right of Checkbox, Radio and Switch.
 
-## 4. Cuándo no usarlo
-- Como título de sección: usar Heading.
-- Como texto de ayuda: usar Text dentro de FormField.
+## 4. When not to use
+- As a section title: use Heading.
+- As helper text: use Text inside FormField.
 
-## 5. Anatomía
-1. Texto (`typography.label`)
-2. Marca de requerido opcional (*)
+## 5. Anatomy
+1. Text (`typography.label`)
+2. Optional required mark (*)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `children` | `ReactNode` | — | Sí | Nombre del campo. |
-| `htmlFor` | `string` | — | Sí | id del control asociado. |
-| `isRequired` | `boolean` | `false` | No | Añade * y requiere aria-required en el control. |
-| `isDisabled` | `boolean` | `false` | No | Atenúa el label (`color.text.disabled`). |
+| `children` | `ReactNode` | — | Yes | Field name. |
+| `htmlFor` | `string` | — | Yes | id of the associated control. |
+| `isRequired` | `boolean` | `false` | No | Adds * and requires aria-required on the control. |
+| `isDisabled` | `boolean` | `false` | No | Dims the label (`color.text.disabled`). |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `disabled`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `disabled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `typography.label`
 - `color.text.primary`
 - `color.text.disabled`
 - `color.feedback.danger.foreground`
 
-Los tokens propios del componente están en [`Label.tokens.json`](./Label.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Label.tokens.json`](./Label.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Clic en el label enfoca o activa el control.
+## 9. Interaction
+- Clicking the label focuses or toggles the control.
 
-## 10. Accesibilidad
-- `<label for>` nativo.
-- El asterisco es decorativo (`aria-hidden`); la obligatoriedad se comunica con `aria-required`.
+## 10. Accessibility
+- Native `<label for>`.
+- The asterisk is decorative (`aria-hidden`); required state is conveyed with `aria-required`.
 
-## 11. Reglas de composición
-- Solo dentro de FormField o junto a Checkbox / Radio / Switch.
+## 11. Composition rules
+- Only inside FormField or next to Checkbox / Radio / Switch.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Label htmlFor="email" isRequired>Email</Label>
 ```
-Más ejemplos en [`Label.examples.md`](./Label.examples.md).
+More examples in [`Label.examples.md`](./Label.examples.md).
 
-## 13. Anti-patrones
-- Usar el placeholder como label.
-- Labels en mayúsculas: el estilo ya define la tipografía.
+## 13. Anti-patterns
+- Using the placeholder as the label.
+- Typing labels in uppercase: the style already defines the typography.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

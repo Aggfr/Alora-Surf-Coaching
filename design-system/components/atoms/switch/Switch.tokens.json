@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Switch. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: switch.track-off, switch.track-on, switch.thumb, switch.radius, color.border.default.",
+  "$description": "Switch tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: switch.track-off, switch.track-on, switch.thumb, switch.radius, color.border.default.",
   "switch": {
     "track-off": {
       "$type": "color",

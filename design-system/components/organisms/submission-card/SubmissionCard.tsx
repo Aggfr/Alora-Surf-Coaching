@@ -27,7 +27,7 @@ export interface SubmissionCardProps {
   className?: string;
 }
 
-/** Organism · Envío de un surfer en la cola del coach. Docs: ./SubmissionCard.docs.md */
+/** Organism · A surfer submission in the coach queue. Docs: ./SubmissionCard.docs.md */
 export function SubmissionCard({ surfer, status, clipTitle, submittedAt, meta, note, deadline, action, className }: SubmissionCardProps) {
   const titleId = useId();
   return (

@@ -1,73 +1,73 @@
 # FormField
 
-**Categoría Atomic Design:** Molecule · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [FormField](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-54)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `FormField` — Molecule.
 
-## 2. Propósito
-Agrupa Label, Input, texto de ayuda y mensaje de error de un campo.
+## 2. Purpose
+Groups a field's Label, Input, helper text and error message.
 
-## 3. Cuándo usarlo
-- Cualquier campo de formulario (log in, onboarding, perfil).
+## 3. When to use
+- Any form field (log in, onboarding, profile).
 
-## 4. Cuándo no usarlo
-- Búsqueda: SearchField.
+## 4. When not to use
+- Search: SearchField.
 
-## 5. Anatomía
+## 5. Anatomy
 1. Label
-2. Input o Textarea
-3. Texto de ayuda opcional
-4. Mensaje de error con icono
+2. Input or Textarea
+3. Optional helper text
+4. Error message with icon
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `string` | — | Sí | Texto del Label. |
-| `id` | `string` | — | Sí | id del control. |
-| `helperText` | `string` | — | No | Ayuda bajo el campo. |
-| `errorMessage` | `string` | — | No | Si existe, el campo pasa a error. |
-| `isRequired` | `boolean` | `false` | No | Obligatorio. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilitado. |
-| `children` | `ReactElement<Input \| Textarea>` | — | Sí | Control. |
+| `label` | `string` | — | Yes | Label text. |
+| `id` | `string` | — | Yes | Control id. |
+| `helperText` | `string` | — | No | Help below the field. |
+| `errorMessage` | `string` | — | No | When set, the field switches to the error state. |
+| `isRequired` | `boolean` | `false` | No | Required. |
+| `isDisabled` | `boolean` | `false` | No | Disabled. |
+| `children` | `ReactElement<Input \| Textarea>` | — | Yes | The control. |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `error`, `disabled`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `error`, `disabled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `size.space.small`
 - `typography.body-small`
 - `color.text.tertiary`
 - `color.feedback.danger.foreground`
 
-Los tokens propios del componente están en [`FormField.tokens.json`](./FormField.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`FormField.tokens.json`](./FormField.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- El error aparece al salir del campo o al enviar, no mientras se escribe.
+## 9. Interaction
+- The error appears on blur or on submit, not while typing.
 
-## 10. Accesibilidad
-- Conecta `aria-describedby` con ayuda y error.
-- El error se anuncia con `role=alert` la primera vez.
+## 10. Accessibility
+- Connects `aria-describedby` to the helper and error text.
+- The error is announced with `role=alert` the first time.
 
-## 11. Reglas de composición
-- Dentro de FormSection o del slot Content de Modal.
-- Depende de: `Label`, `Input`, `Textarea`, `Text`, `Icon`.
+## 11. Composition rules
+- Inside FormSection or the Modal Content slot.
+- Depends on: `Label`, `Input`, `Textarea`, `Text`, `Icon`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <FormField id="email" label="Email" errorMessage={error}>
   <Input id="email" type="email" />
 </FormField>
 ```
-Más ejemplos en [`FormField.examples.md`](./FormField.examples.md).
+More examples in [`FormField.examples.md`](./FormField.examples.md).
 
-## 13. Anti-patrones
-- Mostrar ayuda y error a la vez.
-- Mensajes de error que no dicen cómo corregir.
+## 13. Anti-patterns
+- Showing helper text and an error at the same time.
+- Error messages that do not say how to fix the problem.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

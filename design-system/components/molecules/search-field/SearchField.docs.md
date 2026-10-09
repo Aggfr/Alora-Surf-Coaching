@@ -1,64 +1,64 @@
 # SearchField
 
-**Categoría Atomic Design:** Molecule · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [SearchField](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-92)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `SearchField` — Molecule.
 
-## 2. Propósito
-Campo de búsqueda con icono y botón de limpiar.
+## 2. Purpose
+Search field with an icon and a clear button.
 
-## 3. Cuándo usarlo
-- Buscar surfers, clips o spots en listas largas.
+## 3. When to use
+- Search surfers, clips or spots in long lists.
 
-## 4. Cuándo no usarlo
-- Filtros de valores cerrados: TagChip.
+## 4. When not to use
+- Filters with a fixed set of values: TagChip.
 
-## 5. Anatomía
-1. Input con icono search
-2. Botón limpiar (visible con texto)
+## 5. Anatomy
+1. Input with a search icon
+2. Clear button (visible when there is text)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `value` | `string` | — | Sí | Texto de búsqueda. |
-| `onChange` | `(value: string) => void` | — | Sí | Cambio. |
-| `placeholder` | `string` | `'Search'` | No | Qué se busca: 'Search surfers'. |
-| `onClear` | `() => void` | — | No | Limpia y devuelve el foco. |
+| `value` | `string` | — | Yes | Search text. |
+| `onChange` | `(value: string) => void` | — | Yes | Change. |
+| `placeholder` | `string` | `'Search'` | No | What is being searched: 'Search surfers'. |
+| `onClear` | `() => void` | — | No | Clears and returns focus. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **filled:** `false`, `true`
-- **Estados:** `default`, `focus`
+- **States:** `default`, `focus`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `input.*`
 - `color.icon.secondary`
 
-Los tokens propios del componente están en [`SearchField.tokens.json`](./SearchField.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`SearchField.tokens.json`](./SearchField.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Escape limpia el texto.
-- Los resultados se filtran con debounce de 200ms.
+## 9. Interaction
+- Escape clears the text.
+- Results are filtered with a 200ms debounce.
 
-## 10. Accesibilidad
-- Contenedor `role=search`; Input `type=search` con label oculto.
-- El botón limpiar tiene `aria-label="Clear search"`.
+## 10. Accessibility
+- `role=search` container; `type=search` Input with a hidden label.
+- The clear button has `aria-label="Clear search"`.
 
-## 11. Reglas de composición
-- Encima de listas (Surfers).
-- Depende de: `Input`, `Icon`, `Button`.
+## 11. Composition rules
+- Above lists (Surfers).
+- Depends on: `Input`, `Icon`, `Button`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <SearchField value={q} onChange={setQ} placeholder="Search surfers" />
 ```
-Más ejemplos en [`SearchField.examples.md`](./SearchField.examples.md).
+More examples in [`SearchField.examples.md`](./SearchField.examples.md).
 
-## 13. Anti-patrones
-- Búsqueda sin label accesible.
+## 13. Anti-patterns
+- Search without an accessible label.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

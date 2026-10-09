@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Sidebar. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: sidebar.background, sidebar.width, navigation-item.*.",
+  "$description": "Sidebar tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: sidebar.background, sidebar.width, navigation-item.*.",
   "sidebar": {
     "background": {
       "$type": "color",

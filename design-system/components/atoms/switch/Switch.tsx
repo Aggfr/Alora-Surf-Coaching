@@ -9,7 +9,7 @@ export interface SwitchProps {
   className?: string;
 }
 
-/** Atom · Ajuste on/off con efecto inmediato. Docs: ./Switch.docs.md */
+/** Atom · On/off setting with immediate effect. Docs: ./Switch.docs.md */
 export function Switch({ label, isOn = false, isDisabled = false, onChange, className }: SwitchProps) {
   const id = useId();
   return (

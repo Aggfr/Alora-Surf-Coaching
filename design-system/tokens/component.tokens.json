@@ -1,16 +1,16 @@
 {
-  "$description": "Capa 3: tokens específicos de componente. Solo referencian tokens semánticos.",
+  "$description": "Layer 3: component-specific tokens. They only reference semantic tokens.",
   "button": {
     "primary": {
       "background": {
         "$type": "color",
         "$value": "{color.action.primary.background-start}",
-        "$description": "Inicio del degradado."
+        "$description": "Gradient start."
       },
       "background-end": {
         "$type": "color",
         "$value": "{color.action.primary.background-end}",
-        "$description": "Fin del degradado."
+        "$description": "Gradient end."
       },
       "background-hover": {
         "$type": "color",

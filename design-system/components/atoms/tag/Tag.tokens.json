@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de Tag. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: tag.background, tag.foreground, tag.border, tag.radius, tag.padding-horizontal, color.background.highlight-subtle, color.text.highlight, color.feedback.*.",
+  "$description": "Tag tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: tag.background, tag.foreground, tag.border, tag.radius, tag.padding-horizontal, color.background.highlight-subtle, color.text.highlight, color.feedback.*.",
   "tag": {
     "background": {
       "$type": "color",

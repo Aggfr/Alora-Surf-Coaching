@@ -13,7 +13,7 @@ export interface IconProps {
   className?: string;
 }
 
-/** Atom · Pictograma de línea del set de Alora. Docs: ./Icon.docs.md */
+/** Atom · Line pictogram from the Alora set. Docs: ./Icon.docs.md */
 export function Icon({ name, size = 'lg', tone = 'inherit', label, className }: IconProps) {
   return (
     <svg

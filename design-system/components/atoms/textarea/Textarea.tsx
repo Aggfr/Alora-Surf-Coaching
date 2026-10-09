@@ -10,7 +10,7 @@ export interface TextareaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaE
   onChange?: (value: string) => void;
 }
 
-/** Atom · Campo multilínea. Usar dentro de FormField. Docs: ./Textarea.docs.md */
+/** Atom · Multi-line field. Use inside FormField. Docs: ./Textarea.docs.md */
 export function Textarea({ id, value = '', maxLength, rows = 4, hasError = false, isDisabled = false, onChange, className, ...rest }: TextareaProps) {
   const counterId = `${id}-counter`;
   return (

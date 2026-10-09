@@ -10,7 +10,7 @@ export interface BadgeProps {
   className?: string;
 }
 
-/** Atom · Estado o plan, no interactivo. Docs: ./Badge.docs.md */
+/** Atom · Status or plan, not interactive. Docs: ./Badge.docs.md */
 export function Badge({ children, tone = 'neutral', className }: BadgeProps) {
   return <span className={cx('ds-badge', `ds-badge--${tone}`, className)}>{children}</span>;
 }

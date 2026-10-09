@@ -1,45 +1,45 @@
 # Input
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Input](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=9-161)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Input` — Atom.
 
-## 2. Propósito
-Recoge una línea de texto.
+## 2. Purpose
+Collects one line of text.
 
-## 3. Cuándo usarlo
-- Email, contraseña, nombre, búsqueda (a través de SearchField).
+## 3. When to use
+- Email, password, name, search (through SearchField).
 
-## 4. Cuándo no usarlo
-- Texto largo: usar Textarea.
-- Opciones cerradas: usar Radio o un Select (planificado).
+## 4. When not to use
+- Long text: use Textarea.
+- Fixed options: use Radio or a Select (planned).
 
-## 5. Anatomía
-1. Contenedor (fondo `input.background`, borde `input.border.*`, radio `input.radius`)
-2. Icono inicial opcional
-3. Valor o placeholder
-4. Icono final opcional (mostrar contraseña)
+## 5. Anatomy
+1. Container (background `input.background`, border `input.border.*`, radius `input.radius`)
+2. Optional leading icon
+3. Value or placeholder
+4. Optional trailing icon (show password)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `id` | `string` | — | Sí | Para asociar Label y mensajes. |
-| `value` | `string` | — | No | Valor controlado. |
-| `placeholder` | `string` | — | No | Ejemplo de formato, nunca sustituye al Label. |
-| `type` | `'text' \| 'email' \| 'password' \| 'search' \| 'tel'` | `'text'` | No | Tipo HTML. |
-| `leadingIcon` | `IconName` | — | No | Icono antes del valor. |
-| `trailingIcon` | `IconName` | — | No | Icono o acción después del valor. |
-| `hasError` | `boolean` | `false` | No | Borde de error y `aria-invalid`. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilitado. |
-| `onChange` | `(value: string) => void` | — | No | Cambio de valor. |
+| `id` | `string` | — | Yes | Links the Label and messages. |
+| `value` | `string` | — | No | Controlled value. |
+| `placeholder` | `string` | — | No | Format example; never replaces the Label. |
+| `type` | `'text' \| 'email' \| 'password' \| 'search' \| 'tel'` | `'text'` | No | HTML type. |
+| `leadingIcon` | `IconName` | — | No | Icon before the value. |
+| `trailingIcon` | `IconName` | — | No | Icon or action after the value. |
+| `hasError` | `boolean` | `false` | No | Error border and `aria-invalid`. |
+| `isDisabled` | `boolean` | `false` | No | Disabled. |
+| `onChange` | `(value: string) => void` | — | No | Value change. |
 
-## 7. Variantes y estados
-- Sin variantes visuales: el comportamiento se controla con props.
-- **Estados:** `default`, `hover`, `focus`, `error`, `disabled`, `filled`
+## 7. Variants and states
+- No visual variants: behavior is controlled with props.
+- **States:** `default`, `hover`, `focus`, `error`, `disabled`, `filled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `input.background`
 - `input.foreground`
 - `input.placeholder`
@@ -53,32 +53,32 @@ Recoge una línea de texto.
 - `size.layout.control-height`
 - `size.border.focus`
 
-Los tokens propios del componente están en [`Input.tokens.json`](./Input.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Input.tokens.json`](./Input.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Focus: borde 2px `input.border.focus`.
-- Error: borde 2px `input.border.error`; el mensaje lo pinta FormField.
+## 9. Interaction
+- Focus: 2px `input.border.focus` border.
+- Error: 2px `input.border.error` border; FormField renders the message.
 
-## 10. Accesibilidad
-- Siempre con Label asociado (lo garantiza FormField).
-- `aria-invalid` y `aria-describedby` hacia ayuda y error.
-- `autocomplete` correcto (email, current-password).
+## 10. Accessibility
+- Always with an associated Label (FormField guarantees it).
+- `aria-invalid` and `aria-describedby` pointing to helper and error text.
+- Correct `autocomplete` (email, current-password).
 
-## 11. Reglas de composición
-- Usar dentro de FormField. Fuera de un formulario, solo a través de SearchField.
-- Depende de: `Icon`.
+## 11. Composition rules
+- Use inside FormField. Outside a form, only through SearchField.
+- Depends on: `Icon`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Input id="email" type="email" value={email} onChange={setEmail} />
 ```
-Más ejemplos en [`Input.examples.md`](./Input.examples.md).
+More examples in [`Input.examples.md`](./Input.examples.md).
 
-## 13. Anti-patrones
-- Placeholder como única etiqueta.
-- Bordes rojos sin mensaje de error.
+## 13. Anti-patterns
+- Placeholder as the only label.
+- Red borders with no error message.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

@@ -9,7 +9,7 @@ export interface StatProps {
   className?: string;
 }
 
-/** Molecule · Métrica destacada. Docs: ./Stat.docs.md */
+/** Molecule · Highlighted metric. Docs: ./Stat.docs.md */
 export function Stat({ label, value, trend, className }: StatProps) {
   return (
     <div className={cx('ds-stat', className)}>

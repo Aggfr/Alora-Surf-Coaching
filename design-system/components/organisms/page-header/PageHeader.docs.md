@@ -1,65 +1,65 @@
 # PageHeader
 
-**Categoría Atomic Design:** Organism · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [PageHeader](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-116)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `PageHeader` — Organism.
 
-## 2. Propósito
-Cabecera de cada vista con título, subtítulo y acciones.
+## 2. Purpose
+Header of each view with a title, subtitle and actions.
 
-## 3. Cuándo usarlo
-- Primera sección de toda vista dentro de DashboardTemplate.
+## 3. When to use
+- First section of every view inside DashboardTemplate.
 
-## 4. Cuándo no usarlo
-- Títulos de sección internos: Heading medium.
+## 4. When not to use
+- Inner section titles: Heading medium.
 
-## 5. Anatomía
-1. Título (Heading display, h1)
-2. Subtítulo opcional
-3. Slot Actions (máx. 2)
+## 5. Anatomy
+1. Title (Heading, h1)
+2. Optional subtitle
+3. Actions slot (max. 2)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `title` | `string` | — | Sí | Saludo o título. |
-| `subtitle` | `string` | — | No | Texto de apoyo. |
-| `actions` | `ReactNode` | — | No | Tag, Avatar o Button (máx. 2). |
+| `title` | `string` | — | Yes | Greeting or title. |
+| `subtitle` | `string` | — | No | Supporting text. |
+| `actions` | `ReactNode` | — | No | Tag, Avatar or Button (max. 2). |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **context:** `coach`, `surfer`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `typography.display`
 - `color.text.brand`
 - `size.space.small`
 - `size.space.medium`
 - `size.layout.content-width`
 
-Los tokens propios del componente están en [`PageHeader.tokens.json`](./PageHeader.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`PageHeader.tokens.json`](./PageHeader.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- No interactivo; las acciones lo son.
+## 9. Interaction
+- Not interactive; its actions are.
 
-## 10. Accesibilidad
-- Único h1 de la vista.
+## 10. Accessibility
+- The only h1 in the view.
 
-## 11. Reglas de composición
-- Slot Header de DashboardTemplate.
-- Depende de: `Heading`, `Text`, `Tag`, `Avatar`.
+## 11. Composition rules
+- DashboardTemplate Header slot.
+- Depends on: `Heading`, `Text`, `Tag`, `Avatar`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <PageHeader title="Welcome, Alejandro" subtitle="Connect with your surfers" actions={<Avatar name="Coach" tone="elite" />} />
 ```
-Más ejemplos en [`PageHeader.examples.md`](./PageHeader.examples.md).
+More examples in [`PageHeader.examples.md`](./PageHeader.examples.md).
 
-## 13. Anti-patrones
-- Más de dos acciones; usar un menú.
+## 13. Anti-patterns
+- More than two actions; use a menu.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

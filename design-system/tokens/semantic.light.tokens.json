@@ -1,126 +1,126 @@
 {
-  "$description": "Capa 2: tema claro. Mismas rutas que semantic.tokens.json; solo redefine color. Se carga encima del tema oscuro.",
+  "$description": "Layer 2: light theme. Same paths as semantic.tokens.json; only redefines color. Loaded on top of the dark theme.",
   "color": {
     "background": {
       "canvas": {
         "$type": "color",
         "$value": "{color.navy.50}",
-        "$description": "Fondo de la página. Capa más baja."
+        "$description": "Page background. Lowest layer."
       },
       "surface": {
         "$type": "color",
         "$value": "{color.white}",
-        "$description": "Superficies estructurales: sidebar, paneles."
+        "$description": "Structural surfaces: sidebar, panels."
       },
       "surface-raised": {
         "$type": "color",
         "$value": "{color.white}",
-        "$description": "Tarjetas, stats, listas y campos sobre el canvas."
+        "$description": "Cards, stats, lists and fields on the canvas."
       },
       "surface-sunken": {
         "$type": "color",
         "$value": "{color.navy.50}",
-        "$description": "Zonas hundidas dentro de una tarjeta (cita del surfer, bloque de notas)."
+        "$description": "Sunken areas inside a card (surfer quote, notes block)."
       },
       "brand-subtle": {
         "$type": "color",
         "$value": "{color.ocean.50}",
-        "$description": "Fondo de elementos seleccionados o destacados con la marca."
+        "$description": "Background of selected or brand-highlighted elements."
       },
       "highlight-subtle": {
         "$type": "color",
         "$value": "{color.sun.50}",
-        "$description": "Fondo de badges de plan y destacados cálidos."
+        "$description": "Background of plan badges and warm highlights."
       },
       "overlay": {
         "$type": "color",
         "$value": "{color.alpha.black.40}",
-        "$description": "Velo detrás de modales."
+        "$description": "Scrim behind modals."
       },
       "inverse": {
         "$type": "color",
         "$value": "{color.navy.900}",
-        "$description": "Fondo de tooltips."
+        "$description": "Tooltip background."
       }
     },
     "text": {
       "primary": {
         "$type": "color",
         "$value": "{color.navy.950}",
-        "$description": "Texto principal: títulos, valores, contenido."
+        "$description": "Primary text: headings, values, content."
       },
       "secondary": {
         "$type": "color",
         "$value": "{color.navy.600}",
-        "$description": "Texto de apoyo: subtítulos, metadatos, labels de stats."
+        "$description": "Supporting text: subtitles, metadata, stat labels."
       },
       "tertiary": {
         "$type": "color",
         "$value": "{color.navy.500}",
-        "$description": "Texto de baja prioridad: placeholders, fechas, metadatos. Contraste mínimo 4.5:1 sobre surface-raised."
+        "$description": "Low-priority text: placeholders, dates, metadata. Minimum contrast 4.5:1 on surface-raised."
       },
       "brand": {
         "$type": "color",
         "$value": "{color.ocean.700}",
-        "$description": "Enlaces y texto con la marca."
+        "$description": "Links and brand-colored text."
       },
       "highlight": {
         "$type": "color",
         "$value": "{color.sun.700}",
-        "$description": "Texto destacado cálido (plan del surfer)."
+        "$description": "Warm highlighted text (surfer plan)."
       },
       "inverse": {
         "$type": "color",
         "$value": "{color.white}",
-        "$description": "Texto sobre fondos inversos (tooltips)."
+        "$description": "Text on inverse backgrounds (tooltips)."
       },
       "on-action": {
         "$type": "color",
         "$value": "{color.white}",
-        "$description": "Texto sobre acción primaria o destructiva."
+        "$description": "Text on primary or destructive actions."
       },
       "disabled": {
         "$type": "color",
         "$value": "{color.navy.300}",
-        "$description": "Texto de elementos deshabilitados."
+        "$description": "Text of disabled elements."
       },
       "muted": {
         "$type": "color",
         "$value": "{color.text.tertiary}",
-        "$description": "Alias de migración.",
-        "$deprecated": "Usar color.text.tertiary. 'muted' era el nombre de este color en Coach Platform; se mantiene como alias hasta la v2.0.0."
+        "$description": "Migration alias.",
+        "$deprecated": "Use color.text.tertiary. 'muted' was this color's name in Coach Platform; kept as an alias until v2.0.0."
       }
     },
     "border": {
       "subtle": {
         "$type": "color",
         "$value": "{color.alpha.navy.12}",
-        "$description": "Borde por defecto de tarjetas, campos y divisores."
+        "$description": "Default border for cards, fields and dividers."
       },
       "default": {
         "$type": "color",
         "$value": "{color.navy.200}",
-        "$description": "Borde con más presencia: checkbox, radio sin marcar."
+        "$description": "Stronger border: unchecked checkbox and radio."
       },
       "strong": {
         "$type": "color",
         "$value": "{color.navy.400}",
-        "$description": "Borde de alto contraste: botón secundario en hover."
+        "$description": "High-contrast border: secondary button on hover."
       },
       "brand": {
         "$type": "color",
         "$value": "{color.ocean.600}",
-        "$description": "Borde de elementos activos o seleccionados."
+        "$description": "Border of active or selected elements."
       },
       "focus": {
         "$type": "color",
         "$value": "{color.ocean.600}",
-        "$description": "Borde y anillo de foco visible."
+        "$description": "Visible focus border and ring."
       },
       "danger": {
         "$type": "color",
         "$value": "{color.coral.500}",
-        "$description": "Borde de campos con error."
+        "$description": "Border of fields with an error."
       }
     },
     "action": {
@@ -128,83 +128,83 @@
         "background": {
           "$type": "color",
           "$value": "{color.ocean.700}",
-          "$description": "Acción principal de la vista. Una por vista. Más oscuro que el diseño original para que el texto blanco cumpla 4.5:1."
+          "$description": "Main action of the view. One per view. Darker than the original design so white text meets 4.5:1."
         },
         "background-start": {
           "$type": "color",
           "$value": "{color.ocean.800}",
-          "$description": "Inicio del degradado del botón primario. El original (#3b8eaa → #5aaec8) daba 2.5–3.7:1 con texto blanco; ocean.800 → ocean.700 garantiza ≥ 5.4:1 en todo el degradado."
+          "$description": "Start of the primary button gradient. The original (#3b8eaa → #5aaec8) gave 2.5–3.7:1 with white text; ocean.800 → ocean.700 guarantees ≥ 5.4:1 across the whole gradient."
         },
         "background-end": {
           "$type": "color",
           "$value": "{color.ocean.700}",
-          "$description": "Fin del degradado del botón primario."
+          "$description": "End of the primary button gradient."
         },
         "background-hover": {
           "$type": "color",
           "$value": "{color.ocean.800}",
-          "$description": "Acción principal en hover."
+          "$description": "Main action on hover."
         },
         "background-pressed": {
           "$type": "color",
           "$value": "{color.ocean.900}",
-          "$description": "Acción principal presionada."
+          "$description": "Main action when pressed."
         },
         "foreground": {
           "$type": "color",
           "$value": "{color.white}",
-          "$description": "Texto e icono sobre la acción principal."
+          "$description": "Text and icon on the main action."
         }
       },
       "secondary": {
         "background": {
           "$type": "color",
           "$value": "{color.white}",
-          "$description": "Acción secundaria."
+          "$description": "Secondary action."
         },
         "background-hover": {
           "$type": "color",
           "$value": "{color.navy.50}",
-          "$description": "Acción secundaria en hover."
+          "$description": "Secondary action on hover."
         },
         "foreground": {
           "$type": "color",
           "$value": "{color.navy.700}",
-          "$description": "Texto de la acción secundaria."
+          "$description": "Secondary action text."
         },
         "border": {
           "$type": "color",
           "$value": "{color.navy.200}",
-          "$description": "Borde de la acción secundaria."
+          "$description": "Secondary action border."
         }
       },
       "ghost": {
         "background-hover": {
           "$type": "color",
           "$value": "{color.ocean.50}",
-          "$description": "Fondo en hover de acciones sin contenedor."
+          "$description": "Hover background of actions without a container."
         },
         "foreground": {
           "$type": "color",
           "$value": "{color.ocean.700}",
-          "$description": "Texto de acciones tipo enlace."
+          "$description": "Text of link-style actions."
         }
       },
       "danger": {
         "background": {
           "$type": "color",
           "$value": "{color.coral.600}",
-          "$description": "Acción destructiva (cancelar plan). Tono oscuro para que el texto blanco cumpla 4.5:1."
+          "$description": "Destructive action (cancel plan). Dark tone so white text meets 4.5:1."
         },
         "background-hover": {
           "$type": "color",
           "$value": "{color.coral.700}",
-          "$description": "Acción destructiva en hover."
+          "$description": "Destructive action on hover."
         },
         "foreground": {
           "$type": "color",
           "$value": "{color.coral.600}",
-          "$description": "Texto de acción destructiva sin contenedor (Sign out)."
+          "$description": "Destructive action text without a container (Sign out)."
         }
       }
     },
@@ -320,7 +320,7 @@
         "foreground": {
           "$type": "color",
           "$value": "{color.sun.700}",
-          "$description": "Envío pendiente de revisión."
+          "$description": "Submission waiting for review."
         },
         "background": {
           "$type": "color",
@@ -331,7 +331,7 @@
         "foreground": {
           "$type": "color",
           "$value": "{color.ocean.700}",
-          "$description": "Envío en revisión por el coach."
+          "$description": "Submission being reviewed by the coach."
         },
         "background": {
           "$type": "color",
@@ -342,7 +342,7 @@
         "foreground": {
           "$type": "color",
           "$value": "{color.green.700}",
-          "$description": "Revisión lista para ver."
+          "$description": "Review ready to watch."
         },
         "background": {
           "$type": "color",
@@ -353,7 +353,7 @@
         "foreground": {
           "$type": "color",
           "$value": "{color.coral.600}",
-          "$description": "Revisión fuera de plazo."
+          "$description": "Review past its deadline."
         },
         "background": {
           "$type": "color",
@@ -365,29 +365,29 @@
       "background": {
         "$type": "color",
         "$value": "{color.gray.100}",
-        "$description": "Fondo de controles deshabilitados."
+        "$description": "Background of disabled controls."
       },
       "foreground": {
         "$type": "color",
         "$value": "{color.gray.400}",
-        "$description": "Texto e icono de controles deshabilitados."
+        "$description": "Text and icon of disabled controls."
       }
     },
     "icon": {
       "primary": {
         "$type": "color",
         "$value": "{color.navy.900}",
-        "$description": "Iconos por defecto."
+        "$description": "Default icons."
       },
       "secondary": {
         "$type": "color",
         "$value": "{color.navy.500}",
-        "$description": "Iconos secundarios (navegación inactiva, chevrons)."
+        "$description": "Secondary icons (inactive navigation, chevrons)."
       },
       "brand": {
         "$type": "color",
         "$value": "{color.ocean.600}",
-        "$description": "Iconos activos o de marca."
+        "$description": "Active or brand icons."
       }
     }
   }

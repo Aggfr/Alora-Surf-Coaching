@@ -6,7 +6,7 @@ export interface BreadcrumbProps {
   className?: string;
 }
 
-/** Molecule · Ruta jerárquica. El último item es la página actual. Docs: ./Breadcrumb.docs.md */
+/** Molecule · Hierarchical path. The last item is the current page. Docs: ./Breadcrumb.docs.md */
 export function Breadcrumb({ items, className }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb" className={cx('ds-breadcrumb', className)}>

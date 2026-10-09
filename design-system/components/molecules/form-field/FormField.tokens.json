@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de FormField. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: size.space.small, typography.body-small, color.text.tertiary, color.feedback.danger.foreground.",
+  "$description": "FormField tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: size.space.small, typography.body-small, color.text.tertiary, color.feedback.danger.foreground.",
   "input": {
     "background": {
       "$type": "color",

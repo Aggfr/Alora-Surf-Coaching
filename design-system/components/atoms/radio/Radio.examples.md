@@ -1,14 +1,14 @@
-# Radio · Ejemplos
+# Radio · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Radio } from '@alora/design-system';
 
 <Radio name="stance" value="goofy" label="Goofy" isSelected={stance === "goofy"} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <Radio label="Accept terms" />
 ```
-Por qué: Un radio suelto.
+Why: A lone radio button.

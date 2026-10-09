@@ -9,7 +9,7 @@ export interface LabelProps {
   className?: string;
 }
 
-/** Atom · Nombra un control de formulario. Docs: ./Label.docs.md */
+/** Atom · Names a form control. Docs: ./Label.docs.md */
 export function Label({ children, htmlFor, isRequired = false, isDisabled = false, className }: LabelProps) {
   return (
     <label htmlFor={htmlFor} className={cx('ds-label', isDisabled && 'ds-label--disabled', className)}>

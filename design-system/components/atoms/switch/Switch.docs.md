@@ -1,67 +1,67 @@
 # Switch
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Switch](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-91)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Switch` — Atom.
 
-## 2. Propósito
-Activa o desactiva un ajuste con efecto inmediato.
+## 2. Purpose
+Turns a setting on or off with immediate effect.
 
-## 3. Cuándo usarlo
-- Preferencias que se guardan al instante (notificaciones).
+## 3. When to use
+- Preferences saved instantly (notifications).
 
-## 4. Cuándo no usarlo
-- Cuando el cambio requiere pulsar Guardar: Checkbox.
+## 4. When not to use
+- When the change needs a Save button: Checkbox.
 
-## 5. Anatomía
-1. Pista 36×20 (`switch.radius`)
-2. Thumb 16×16
+## 5. Anatomy
+1. 36×20 track (`switch.radius`)
+2. 16×16 thumb
 3. Label
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `ReactNode` | — | Sí | Texto visible. |
-| `isOn` | `boolean` | `false` | No | Estado. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilitado. |
-| `onChange` | `(on: boolean) => void` | — | No | Cambio. |
+| `label` | `ReactNode` | — | Yes | Visible text. |
+| `isOn` | `boolean` | `false` | No | State. |
+| `isDisabled` | `boolean` | `false` | No | Disabled. |
+| `onChange` | `(on: boolean) => void` | — | No | Change. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **on:** `false`, `true`
-- **Estados:** `default`, `disabled`
+- **States:** `default`, `disabled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `switch.track-off`
 - `switch.track-on`
 - `switch.thumb`
 - `switch.radius`
 - `color.border.default`
 
-Los tokens propios del componente están en [`Switch.tokens.json`](./Switch.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Switch.tokens.json`](./Switch.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- El thumb se desplaza con `motion.transition-base`.
+## 9. Interaction
+- The thumb slides with `motion.transition-base`.
 
-## 10. Accesibilidad
+## 10. Accessibility
 - `role=switch` + `aria-checked`.
-- El estado no depende solo del color: la posición del thumb cambia.
+- State does not rely on color alone: the thumb position changes.
 
-## 11. Reglas de composición
-- Listas de ajustes, una por fila.
-- Depende de: `Label`.
+## 11. Composition rules
+- Settings lists, one per row.
+- Depends on: `Label`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Switch label="Email notifications" isOn={notify} onChange={setNotify} />
 ```
-Más ejemplos en [`Switch.examples.md`](./Switch.examples.md).
+More examples in [`Switch.examples.md`](./Switch.examples.md).
 
-## 13. Anti-patrones
-- Switch dentro de un formulario con botón Guardar.
+## 13. Anti-patterns
+- A Switch inside a form with a Save button.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

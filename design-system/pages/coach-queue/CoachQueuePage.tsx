@@ -44,7 +44,7 @@ const submissions: Submission[] = [
 
 const filters = ['All', 'Pending', 'In review', 'Overdue'] as const;
 
-/** Page · Cola de revisión del coach. Docs: ./CoachQueuePage.docs.md */
+/** Page · Coach review queue. Docs: ./CoachQueuePage.docs.md */
 export function CoachQueuePage({ onOpenSubmission }: { onOpenSubmission: (id: string) => void }) {
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<(typeof filters)[number]>('All');

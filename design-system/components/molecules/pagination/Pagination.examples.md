@@ -1,14 +1,14 @@
-# Pagination · Ejemplos
+# Pagination · Examples
 
-## Correcto
+## Do
 ```tsx
 import { Pagination } from '@alora/design-system';
 
 <Pagination page={2} pageCount={8} onPageChange={setPage} />
 ```
 
-## Incorrecto
+## Don't
 ```tsx
 <a>Next</a>
 ```
-Por qué: Paginación con 1 página.
+Why: Pagination with a single page.

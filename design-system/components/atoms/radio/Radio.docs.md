@@ -1,68 +1,68 @@
 # Radio
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Radio](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-71)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Radio` — Atom.
 
-## 2. Propósito
-Permite elegir una sola opción dentro de un grupo.
+## 2. Purpose
+Lets the user pick one option within a group.
 
-## 3. Cuándo usarlo
-- 2–5 opciones excluyentes visibles (stance Regular/Goofy, nivel).
+## 3. When to use
+- 2–5 visible mutually exclusive options (Regular/Goofy stance, level).
 
-## 4. Cuándo no usarlo
-- Más de 5 opciones: Select (planificado).
-- Opciones múltiples: Checkbox.
+## 4. When not to use
+- More than 5 options: Select (planned).
+- Multiple choices: Checkbox.
 
-## 5. Anatomía
-1. Círculo 18×18
-2. Punto interior al seleccionar
+## 5. Anatomy
+1. 18×18 circle
+2. Inner dot when selected
 3. Label
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `label` | `ReactNode` | — | Sí | Texto visible. |
-| `value` | `string` | — | Sí | Valor de la opción. |
-| `name` | `string` | — | Sí | Nombre del grupo. |
-| `isSelected` | `boolean` | `false` | No | Seleccionado. |
-| `isDisabled` | `boolean` | `false` | No | Deshabilitado. |
+| `label` | `ReactNode` | — | Yes | Visible text. |
+| `value` | `string` | — | Yes | Option value. |
+| `name` | `string` | — | Yes | Group name. |
+| `isSelected` | `boolean` | `false` | No | Selected. |
+| `isDisabled` | `boolean` | `false` | No | Disabled. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **selected:** `false`, `true`
-- **Estados:** `default`, `focus`, `disabled`
+- **States:** `default`, `focus`, `disabled`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `radio.border`
 - `radio.border-checked`
 - `radio.dot`
 - `color.border.focus`
 
-Los tokens propios del componente están en [`Radio.tokens.json`](./Radio.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Radio.tokens.json`](./Radio.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- Flechas mueven la selección dentro del grupo.
+## 9. Interaction
+- Arrow keys move the selection within the group.
 
-## 10. Accesibilidad
-- `<input type=radio>` en `<fieldset>` con `<legend>` o `role=radiogroup` con nombre.
+## 10. Accessibility
+- `<input type=radio>` inside a `<fieldset>` with a `<legend>`, or a named `role=radiogroup`.
 
-## 11. Reglas de composición
-- Siempre en grupo de al menos 2.
-- Depende de: `Label`.
+## 11. Composition rules
+- Always in a group of at least 2.
+- Depends on: `Label`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Radio name="stance" value="goofy" label="Goofy" isSelected={stance === "goofy"} />
 ```
-Más ejemplos en [`Radio.examples.md`](./Radio.examples.md).
+More examples in [`Radio.examples.md`](./Radio.examples.md).
 
-## 13. Anti-patrones
-- Un radio suelto.
-- Grupo sin opción por defecto cuando el dato es obligatorio.
+## 13. Anti-patterns
+- A lone radio button.
+- A group with no default option when the value is required.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

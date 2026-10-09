@@ -1,71 +1,71 @@
 # Icon
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Icon](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=7-6)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Icon` — Atom.
 
-## 2. Propósito
-Muestra un pictograma de línea del set de Alora.
+## 2. Purpose
+Shows a line pictogram from the Alora icon set.
 
-## 3. Cuándo usarlo
-- Reforzar el significado de un texto (botones, tags, navegación).
-- Botones solo con icono cuando el espacio es mínimo y el significado universal (cerrar, buscar).
+## 3. When to use
+- Reinforce the meaning of a text (buttons, tags, navigation).
+- Icon-only buttons when space is tight and the meaning is universal (close, search).
 
-## 4. Cuándo no usarlo
-- Como única forma de comunicar un estado: añadir texto.
-- Para ilustraciones o logotipos: usar imágenes o el Logo del Sidebar.
+## 4. When not to use
+- As the only way to communicate a state: add text.
+- For illustrations or logos: use images or the Sidebar logo.
 
-## 5. Anatomía
-1. Caja 24×24
-2. Trazo 2px con remates redondeados (estilo Lucide)
+## 5. Anatomy
+1. 24×24 box
+2. 2px stroke with round caps (Lucide style)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `name` | `IconName` | — | Sí | home, list, user, users, calendar, play-circle, bell, eye, clock, check, close, chevron-right, chevron-left, search, info, plus, upload, log-in, log-out, edit, repeat, warning, check-circle, star, trending-up, mail, lock, trash, video. |
+| `name` | `IconName` | — | Yes | home, list, user, users, calendar, play-circle, bell, eye, clock, check, close, chevron-right, chevron-left, search, info, plus, upload, log-in, log-out, edit, repeat, warning, check-circle, star, trending-up, mail, lock, trash, video. |
 | `size` | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl'` | `'lg'` | No | 12 / 16 / 20 / 24 / 32 px (`size.icon.*`). |
-| `tone` | `'primary' \| 'secondary' \| 'brand' \| 'inherit'` | `'inherit'` | No | Color `color.icon.*`; inherit usa currentColor. |
-| `label` | `string` | — | No | Si se indica, el icono es significativo (`role=img` + `aria-label`). Si no, `aria-hidden`. |
+| `tone` | `'primary' \| 'secondary' \| 'brand' \| 'inherit'` | `'inherit'` | No | Color `color.icon.*`; inherit uses currentColor. |
+| `label` | `string` | — | No | When set, the icon is meaningful (`role=img` + `aria-label`). Otherwise `aria-hidden`. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **size:** `xs`, `sm`, `md`, `lg`, `xl`
 - **tone:** `primary`, `secondary`, `brand`, `inherit`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `color.icon.primary`
 - `color.icon.secondary`
 - `color.icon.brand`
 - `size.icon.*`
 
-Los tokens propios del componente están en [`Icon.tokens.json`](./Icon.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Icon.tokens.json`](./Icon.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- No es interactivo por sí mismo.
+## 9. Interaction
+- Not interactive on its own.
 
-## 10. Accesibilidad
-- Decorativo por defecto (`aria-hidden=true`).
-- Con `label` pasa a `role=img`.
-- Contraste ≥ 3:1 con el fondo cuando transmite información.
+## 10. Accessibility
+- Decorative by default (`aria-hidden=true`).
+- With `label` it becomes `role=img`.
+- Contrast ≥ 3:1 against the background when it carries information.
 
-## 11. Reglas de composición
-- Dentro de Button, Tag, NavigationItem, Notification, Input.
-- El color lo decide el componente padre (`tone=inherit`).
+## 11. Composition rules
+- Inside Button, Tag, NavigationItem, Notification, Input.
+- The parent component decides the color (`tone=inherit`).
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Icon name="clock" size="sm" tone="inherit" />
 ```
-Más ejemplos en [`Icon.examples.md`](./Icon.examples.md).
+More examples in [`Icon.examples.md`](./Icon.examples.md).
 
-## 13. Anti-patrones
-- Iconos de otras librerías mezclados con el set.
-- Cambiar el grosor del trazo.
-- Icono sin texto ni aria-label en un control.
+## 13. Anti-patterns
+- Icons from other libraries mixed with the set.
+- Changing the stroke width.
+- An icon with no text or aria-label on a control.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

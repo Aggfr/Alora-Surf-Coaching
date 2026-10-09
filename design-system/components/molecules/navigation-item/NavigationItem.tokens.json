@@ -1,5 +1,5 @@
 {
-  "$description": "Tokens de NavigationItem. Fuente: tokens/component.tokens.json. Referencias semánticas adicionales que consume: navigation-item.*, color.action.ghost.background-hover, size.space.large.",
+  "$description": "NavigationItem tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: navigation-item.*, color.action.ghost.background-hover, size.space.large.",
   "navigation-item": {
     "foreground": {
       "$type": "color",

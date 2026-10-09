@@ -7,7 +7,7 @@ export interface TooltipProps {
   children: ReactElement;
 }
 
-/** Atom · Descripción breve en hover/focus. Docs: ./Tooltip.docs.md */
+/** Atom · Short description on hover/focus. Docs: ./Tooltip.docs.md */
 export function Tooltip({ content, placement = 'top', children }: TooltipProps) {
   const id = useId();
   const [isVisible, setIsVisible] = useState(false);

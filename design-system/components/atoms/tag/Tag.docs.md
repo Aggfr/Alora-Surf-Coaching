@@ -1,38 +1,38 @@
 # Tag
 
-**Categoría Atomic Design:** Atom · **Estado:** `stable` · **Versión:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
 **Figma:** [Tag](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-167)
 
-## 1. Nombre y categoría
+## 1. Name and category
 `Tag` — Atom.
 
-## 2. Propósito
-Píldora informativa con icono opcional.
+## 2. Purpose
+Informational pill with an optional icon.
 
-## 3. Cuándo usarlo
-- Tiempo restante de una revisión, plan destacado, contexto (Surf park).
+## 3. When to use
+- Time left on a review, highlighted plan, context (Surf park).
 
-## 4. Cuándo no usarlo
-- Estados cortos sin icono: Badge.
-- Elementos seleccionables o eliminables: TagChip.
+## 4. When not to use
+- Short states without an icon: Badge.
+- Selectable or removable items: TagChip.
 
-## 5. Anatomía
-1. Contenedor píldora (`tag.radius`)
-2. Icono opcional
-3. Texto (`typography.body-small`)
+## 5. Anatomy
+1. Pill container (`tag.radius`)
+2. Optional icon
+3. Text (`typography.body-small`)
 
 ## 6. Props
-| Prop | Tipo | Por defecto | Obligatoria | Descripción |
+| Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `children` | `ReactNode` | — | Sí | Texto. |
-| `tone` | `'brand' \| 'highlight' \| 'warning' \| 'danger' \| 'neutral'` | `'brand'` | No | Tono semántico. |
-| `icon` | `IconName` | — | No | Icono inicial. |
+| `children` | `ReactNode` | — | Yes | Text. |
+| `tone` | `'brand' \| 'highlight' \| 'warning' \| 'danger' \| 'neutral'` | `'brand'` | No | Semantic tone. |
+| `icon` | `IconName` | — | No | Leading icon. |
 
-## 7. Variantes y estados
+## 7. Variants and states
 - **tone:** `brand`, `highlight`, `warning`, `danger`, `neutral`
-- **Estados:** `—`
+- **States:** `—`
 
-## 8. Tokens utilizados
+## 8. Tokens used
 - `tag.background`
 - `tag.foreground`
 - `tag.border`
@@ -42,28 +42,28 @@ Píldora informativa con icono opcional.
 - `color.text.highlight`
 - `color.feedback.*`
 
-Los tokens propios del componente están en [`Tag.tokens.json`](./Tag.tokens.json). Nunca se usan primitivos directamente.
+The component's own tokens live in [`Tag.tokens.json`](./Tag.tokens.json). Primitive tokens are never used directly.
 
-## 9. Comportamiento interactivo
-- No interactivo.
+## 9. Interaction
+- Not interactive.
 
-## 10. Accesibilidad
-- Si el Tag comunica urgencia (warning/danger), el texto lo dice ('1h 9m left', 'Overdue').
+## 10. Accessibility
+- If the Tag conveys urgency (warning/danger), the text says so ('1h 9m left', 'Overdue').
 
-## 11. Reglas de composición
-- SubmissionCard (plazo), PageHeader (plan, notificaciones).
-- Depende de: `Icon`.
+## 11. Composition rules
+- SubmissionCard (deadline), PageHeader (plan, notifications).
+- Depends on: `Icon`.
 
-## 12. Ejemplos de código
+## 12. Code examples
 ```tsx
 <Tag tone="warning" icon="clock">1h 9m left</Tag>
 ```
-Más ejemplos en [`Tag.examples.md`](./Tag.examples.md).
+More examples in [`Tag.examples.md`](./Tag.examples.md).
 
-## 13. Anti-patrones
-- Usar Tag como botón.
+## 13. Anti-patterns
+- Using Tag as a button.
 
-## 14. Versión, estado y changelog
-- Versión: `1.0.0`
-- Estado: `stable`
-- 2026-10-09 · 1.0.0 · Primera versión, extraída de Coach Platform y Surfer Platform.
+## 14. Version, status and changelog
+- Version: `1.0.0`
+- Status: `stable`
+- 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
