@@ -503,6 +503,11 @@
         "$type": "dimension",
         "$value": "{size.control.lg}"
       },
+      "target-minimum": {
+        "$type": "dimension",
+        "$value": "{size.space.600}",
+        "$description": "Smallest hit area for any pointer target, including icon-only buttons inside other components (WCAG 2.2 target size, 24px)."
+      },
       "stat-min-width": {
         "$type": "dimension",
         "$value": "{size.container.stat}",

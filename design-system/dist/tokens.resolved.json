@@ -1228,6 +1228,10 @@
       "type": "dimension",
       "value": "52px"
     },
+    "size.layout.target-minimum": {
+      "type": "dimension",
+      "value": "24px"
+    },
     "size.layout.stat-min-width": {
       "type": "dimension",
       "value": "160px"
@@ -3163,6 +3167,10 @@
     "size.layout.control-height-large": {
       "type": "dimension",
       "value": "52px"
+    },
+    "size.layout.target-minimum": {
+      "type": "dimension",
+      "value": "24px"
     },
     "size.layout.stat-min-width": {
       "type": "dimension",

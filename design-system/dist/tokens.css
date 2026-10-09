@@ -292,6 +292,7 @@
   --ds-size-layout-control-height: 44px;
   --ds-size-layout-control-height-small: 32px;
   --ds-size-layout-control-height-large: 52px;
+  --ds-size-layout-target-minimum: 24px;
   --ds-size-layout-stat-min-width: 160px;
   --ds-size-icon-extra-small: 12px;
   --ds-size-icon-small: 16px;
