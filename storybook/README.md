@@ -5,7 +5,7 @@ Live, interactive reference for every component in [`design-system/`](../design-
 ## What it shows
 - **Foundations:** colors, typography, spacing, radius, shadows, motion and icons, generated from `design-system/dist/tokens.resolved.json`.
 - **Atoms, Molecules, Organisms:** every component with Controls for its props, a story per variant and state, and its full `.docs.md` guidelines.
-- **Templates and Pages:** DashboardTemplate, AuthTemplate, CoachQueuePage and SurferLoginPage.
+- **Templates:** DashboardTemplate and AuthTemplate.
 - **Themes:** Dark (default) and Light from the toolbar. **Accessibility:** axe checks in the Accessibility panel.
 
 ## Run it locally

@@ -25,7 +25,7 @@ const preview: Preview = {
     controls: { expanded: true, sort: 'requiredFirst' },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', ['Colors', 'Typography', 'Spacing', 'Radius', 'Shadows', 'Icons'], 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages'],
+        order: ['Introduction', 'Foundations', ['Colors', 'Typography', 'Spacing', 'Radius', 'Shadows', 'Icons'], 'Atoms', 'Molecules', 'Organisms', 'Templates'],
       },
     },
     docs: {
