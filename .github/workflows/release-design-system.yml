@@ -1,0 +1,46 @@
+name: Release design system
+
+# Publishes @aggfr/alora-design-system to GitHub Packages.
+# Trigger: push a tag named design-system-v<version>, matching design-system/package.json.
+on:
+  push:
+    tags: ['design-system-v*']
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    uses: ./.github/workflows/design-system.yml
+
+  publish:
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    defaults:
+      run:
+        working-directory: design-system
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+          scope: '@aggfr'
+      - name: Tag matches package.json
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [ "${GITHUB_REF_NAME}" != "design-system-v${version}" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match package.json version ${version}"
+            exit 1
+          fi
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: GitHub release
+        run: gh release create "$GITHUB_REF_NAME" --title "Design system ${GITHUB_REF_NAME#design-system-v}" --notes "See design-system/CHANGELOG.md."
+        env:
+          GH_TOKEN: ${{ github.token }}

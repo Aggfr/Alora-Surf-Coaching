@@ -7,6 +7,11 @@ on:
   pull_request:
     paths: ['design-system/**', 'storybook/**', '.github/workflows/storybook.yml']
   workflow_dispatch:
+    inputs:
+      update-snapshots:
+        description: Regenerate the visual baselines and commit them to this branch
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -18,6 +23,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      # Only used to commit visual baselines when update-snapshots is requested.
+      contents: write
     defaults:
       run:
         working-directory: storybook
@@ -31,13 +39,32 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run build-storybook
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Accessibility and visual tests (every story, both themes)
+        run: npm run test:visual -- ${{ inputs.update-snapshots && '--update-snapshots' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: |
+            storybook/playwright-report
+            storybook/test-results
+          retention-days: 14
+      - name: Commit updated baselines
+        if: inputs.update-snapshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tests/__screenshots__
+          git diff --cached --quiet || git commit -m 'Update visual baselines' && git push
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           path: storybook/storybook-static
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:

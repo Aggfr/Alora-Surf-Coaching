@@ -20,7 +20,7 @@
   "summary": {
     "tokens": {
       "primitive": 198,
-      "semantic": 130,
+      "semantic": 131,
       "semanticLightOverrides": 72,
       "component": 86
     },
@@ -4516,6 +4516,17 @@
       "figmaVariable": "size/layout/control-height-large",
       "status": "stable",
       "references": "size.control.lg"
+    },
+    {
+      "name": "size.layout.target-minimum",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-target-minimum",
+      "figmaVariable": "size/layout/target-minimum",
+      "status": "stable",
+      "references": "size.space.600",
+      "description": "Smallest hit area for any pointer target, including icon-only buttons inside other components (WCAG 2.2 target size, 24px)."
     },
     {
       "name": "size.layout.stat-min-width",
