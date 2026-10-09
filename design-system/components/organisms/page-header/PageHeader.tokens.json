@@ -1,3 +1,3 @@
 {
-  "$description": "PageHeader tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: typography.display, color.text.brand, size.space.small, size.space.medium, size.layout.content-width."
+  "$description": "PageHeader tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: typography.display, typography.heading-large, color.text.brand, size.space.small, size.space.medium, size.layout.content-width."
 }

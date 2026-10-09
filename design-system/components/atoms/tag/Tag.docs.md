@@ -1,6 +1,6 @@
 # Tag
 
-**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Tag](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-167)
 
 ## 1. Name and category
@@ -64,6 +64,6 @@ More examples in [`Tag.examples.md`](./Tag.examples.md).
 - Using Tag as a button.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

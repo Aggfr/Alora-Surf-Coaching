@@ -1,0 +1,13 @@
+{
+  "$description": "TopBar tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: top-bar.background, top-bar.border, typography.heading-medium, size.space.medium, size.layout.control-height.",
+  "top-bar": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.canvas}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    }
+  }
+}

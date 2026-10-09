@@ -1,5 +1,5 @@
 {
-  "$description": "DataList tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.background, card.border, card.radius, color.background.brand-subtle, size.space.medium.",
+  "$description": "DataList tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.background, card.border, card.radius, color.background.brand-subtle, color.background.surface, size.space.medium.",
   "card": {
     "background": {
       "$type": "color",

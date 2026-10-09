@@ -206,6 +206,25 @@
           "$value": "{color.coral.600}",
           "$description": "Destructive action text without a container (Sign out)."
         }
+      },
+      "highlight": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.sun.50}",
+          "$description": "Warm secondary action (Coach portal)."
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.sun.100}"
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.sun.700}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.sun.300}"
+        }
       }
     },
     "feedback": {
@@ -312,6 +331,28 @@
         "background": {
           "$type": "color",
           "$value": "{color.violet.50}"
+        }
+      },
+      "session": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.pink.700}",
+          "$description": "Plan Session."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.pink.50}"
+        }
+      },
+      "performance": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.sun.700}",
+          "$description": "Plan Performance."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.sun.50}"
         }
       }
     },

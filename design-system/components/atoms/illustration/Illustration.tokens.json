@@ -1,0 +1,3 @@
+{
+  "$description": "Illustration tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: color.background.*, color.text.brand, color.text.highlight, size.layout.illustration-small, size.layout.illustration-medium."
+}

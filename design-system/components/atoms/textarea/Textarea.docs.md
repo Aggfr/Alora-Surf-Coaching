@@ -1,6 +1,6 @@
 # Textarea
 
-**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Textarea](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=9-177)
 
 ## 1. Name and category
@@ -62,6 +62,6 @@ More examples in [`Textarea.examples.md`](./Textarea.examples.md).
 - Using it for a single short value.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

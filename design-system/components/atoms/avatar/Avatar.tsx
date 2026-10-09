@@ -1,7 +1,7 @@
 import { cx } from '../../../lib/cx';
 
-export type AvatarSize = 'small' | 'medium' | 'large';
-export type AvatarTone = 'brand' | 'elite' | 'progression' | 'neutral';
+export type AvatarSize = 'small' | 'medium' | 'large' | 'xlarge';
+export type AvatarTone = 'brand' | 'elite' | 'progression' | 'session' | 'performance' | 'neutral';
 
 export interface AvatarProps {
   name: string;
@@ -12,7 +12,7 @@ export interface AvatarProps {
 
 function initials(name: string, size: AvatarSize): string {
   const parts = name.trim().split(/\s+/);
-  const letters = size === 'large' ? parts.slice(0, 2) : parts.slice(0, 1);
+  const letters = size === 'large' || size === 'xlarge' ? parts.slice(0, 2) : parts.slice(0, 1);
   return letters.map((part) => part[0]?.toUpperCase() ?? '').join('');
 }
 

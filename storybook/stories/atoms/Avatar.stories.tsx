@@ -21,6 +21,7 @@ export const Sizes: Story = {
       <Avatar {...args} size="small" />
       <Avatar {...args} size="medium" />
       <Avatar {...args} size="large" />
+      <Avatar {...args} size="xlarge" />
     </div>
   ),
 };
@@ -28,7 +29,7 @@ export const Sizes: Story = {
 export const Tones: Story = {
   render: (args) => (
     <div className="sb-row">
-      {(['brand', 'elite', 'progression', 'neutral'] as const).map((tone) => <Avatar key={tone} {...args} tone={tone} size="large" />)}
+      {(['brand', 'elite', 'progression', 'session', 'performance', 'neutral'] as const).map((tone) => <Avatar key={tone} {...args} tone={tone} size="large" />)}
     </div>
   ),
 };

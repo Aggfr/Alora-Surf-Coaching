@@ -1,0 +1,21 @@
+{
+  "$description": "Dropzone tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: dropzone.background, dropzone.border, dropzone.background-error, dropzone.border-error, icon-tile.*, size.border.default, card.radius.",
+  "dropzone": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    },
+    "background-error": {
+      "$type": "color",
+      "$value": "{color.feedback.danger.background}"
+    },
+    "border-error": {
+      "$type": "color",
+      "$value": "{color.border.danger}"
+    }
+  }
+}

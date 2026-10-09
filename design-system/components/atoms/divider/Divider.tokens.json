@@ -1,5 +1,5 @@
 {
-  "$description": "Divider tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: divider.color, size.border.default.",
+  "$description": "Divider tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: divider.color, size.border.default, typography.overline, color.text.tertiary.",
   "divider": {
     "color": {
       "$type": "color",

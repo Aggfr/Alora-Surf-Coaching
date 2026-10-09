@@ -50,14 +50,14 @@ export function CoachQueuePage({ onOpenSubmission }: { onOpenSubmission: (id: st
   const [filter, setFilter] = useState<(typeof filters)[number]>('All');
 
   const visible = useMemo(() => submissions.filter((item) => {
-    const matchesQuery = item.surfer.name.toLowerCase().includes(query.toLowerCase());
+    const matchesQuery = (item.surfer?.name ?? '').toLowerCase().includes(query.toLowerCase());
     const matchesFilter = filter === 'All' || item.status === filter.toLowerCase().replace(' ', '-');
     return matchesQuery && matchesFilter;
   }), [query, filter]);
 
   return (
     <DashboardTemplate
-      navigation={{ product: 'coach', activeHref: '/queue' }}
+      navigation={{ product: 'coach', activeHref: '/' }}
       header={
         <PageHeader
           title="Welcome, Alejandro"

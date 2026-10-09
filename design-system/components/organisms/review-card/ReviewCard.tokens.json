@@ -1,0 +1,3 @@
+{
+  "$description": "ReviewCard tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.*, icon-tile.*, color.action.highlight.*, typography.heading-small, typography.body-small, motion.transition-fast."
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "./docs/manifest.schema.json",
   "name": "Alora Design System",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-10-09",
   "figmaFile": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
   "themes": [
@@ -19,19 +19,19 @@
   ],
   "summary": {
     "tokens": {
-      "primitive": 198,
-      "semantic": 131,
-      "semanticLightOverrides": 72,
-      "component": 86
+      "primitive": 218,
+      "semantic": 162,
+      "semanticLightOverrides": 80,
+      "component": 131
     },
     "components": {
-      "atom": 16,
-      "molecule": 9,
-      "organism": 7
+      "atom": 22,
+      "molecule": 18,
+      "organism": 12
     },
     "templates": 2,
     "pages": 2,
-    "planned": 7
+    "planned": 5
   },
   "docs": {
     "readme": "README.md",
@@ -47,7 +47,7 @@
       "name": "Button",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Triggers an action in the current view.",
       "path": "components/atoms/button",
       "files": {
@@ -65,7 +65,9 @@
         "button.secondary.*",
         "button.ghost.*",
         "button.danger.*",
+        "button.highlight.*",
         "button.disabled.*",
+        "button.primary.opacity-disabled",
         "button.radius",
         "button.gap",
         "button.padding-horizontal.*",
@@ -78,7 +80,8 @@
           "primary",
           "secondary",
           "ghost",
-          "danger"
+          "danger",
+          "highlight"
         ],
         "size": [
           "small",
@@ -103,7 +106,7 @@
       "name": "Icon",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Shows a line pictogram from the Alora icon set.",
       "path": "components/atoms/icon",
       "files": {
@@ -146,7 +149,7 @@
       "name": "Label",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Names a form control.",
       "path": "components/atoms/label",
       "files": {
@@ -176,7 +179,7 @@
       "name": "Text",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Shows reading text and metadata with a type role and a semantic tone.",
       "path": "components/atoms/text",
       "files": {
@@ -221,7 +224,7 @@
       "name": "Heading",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Titles a view, section or card while respecting the document hierarchy.",
       "path": "components/atoms/heading",
       "files": {
@@ -258,7 +261,7 @@
       "name": "Input",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Collects one line of text.",
       "path": "components/atoms/input",
       "files": {
@@ -302,7 +305,7 @@
       "name": "Textarea",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Collects multiple lines of text.",
       "path": "components/atoms/textarea",
       "files": {
@@ -334,7 +337,7 @@
       "name": "Checkbox",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Lets the user check one or more independent options.",
       "path": "components/atoms/checkbox",
       "files": {
@@ -375,7 +378,7 @@
       "name": "Radio",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Lets the user pick one option within a group.",
       "path": "components/atoms/radio",
       "files": {
@@ -413,7 +416,7 @@
       "name": "Switch",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Turns a setting on or off with immediate effect.",
       "path": "components/atoms/switch",
       "files": {
@@ -451,7 +454,7 @@
       "name": "Avatar",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Represents a person with their initials.",
       "path": "components/atoms/avatar",
       "files": {
@@ -466,18 +469,23 @@
         "avatar.foreground",
         "avatar.radius",
         "color.plan.*.foreground",
-        "color.text.inverse"
+        "color.text.inverse",
+        "size.layout.avatar-xlarge",
+        "elevation.halo-brand"
       ],
       "variants": {
         "size": [
           "small",
           "medium",
-          "large"
+          "large",
+          "xlarge"
         ],
         "tone": [
           "brand",
           "elite",
           "progression",
+          "session",
+          "performance",
           "neutral"
         ]
       },
@@ -493,7 +501,7 @@
       "name": "Badge",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Non-interactive label that shows a status or a plan.",
       "path": "components/atoms/badge",
       "files": {
@@ -502,13 +510,17 @@
         "examples": "components/atoms/badge/Badge.examples.md",
         "tokens": "components/atoms/badge/Badge.tokens.json"
       },
-      "dependencies": [],
+      "dependencies": [
+        "Icon"
+      ],
       "tokens": [
         "badge.radius",
         "badge.padding-horizontal",
         "badge.padding-vertical",
         "badge.typography",
         "color.status.*",
+        "color.status.*.solid",
+        "color.text.on-action",
         "color.plan.*",
         "color.feedback.neutral.*"
       ],
@@ -521,7 +533,13 @@
           "neutral",
           "plan-pay-as-you-go",
           "plan-elite",
-          "plan-progression"
+          "plan-progression",
+          "plan-session",
+          "plan-performance"
+        ],
+        "appearance": [
+          "subtle",
+          "solid"
         ]
       },
       "states": [
@@ -536,7 +554,7 @@
       "name": "Tag",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Informational pill with an optional icon.",
       "path": "components/atoms/tag",
       "files": {
@@ -579,7 +597,7 @@
       "name": "Spinner",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Indicates a wait of unknown duration.",
       "path": "components/atoms/spinner",
       "files": {
@@ -593,13 +611,16 @@
         "spinner.track",
         "spinner.indicator",
         "size.border.focus",
+        "size.border.heavy",
+        "size.layout.avatar-xlarge",
         "motion.loop-duration"
       ],
       "variants": {
         "size": [
           "small",
           "medium",
-          "large"
+          "large",
+          "xlarge"
         ]
       },
       "states": [
@@ -614,7 +635,7 @@
       "name": "Divider",
       "category": "atom",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Separates groups of content.",
       "path": "components/atoms/divider",
       "files": {
@@ -626,7 +647,9 @@
       "dependencies": [],
       "tokens": [
         "divider.color",
-        "size.border.default"
+        "size.border.default",
+        "typography.overline",
+        "color.text.tertiary"
       ],
       "variants": {
         "orientation": [
@@ -646,7 +669,7 @@
       "name": "Tooltip",
       "category": "atom",
       "status": "beta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Briefly describes a control on hover or focus.",
       "path": "components/atoms/tooltip",
       "files": {
@@ -679,10 +702,262 @@
       }
     },
     {
+      "name": "Logo",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Shows the Alora brand mark, with or without the ALORA wordmark.",
+      "path": "components/atoms/logo",
+      "files": {
+        "component": "components/atoms/logo/Logo.tsx",
+        "docs": "components/atoms/logo/Logo.docs.md",
+        "examples": "components/atoms/logo/Logo.examples.md",
+        "tokens": "components/atoms/logo/Logo.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "color.text.brand",
+        "color.text.highlight",
+        "color.text.primary",
+        "typography.overline",
+        "size.space.2xs"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "medium",
+          "large"
+        ],
+        "hasWordmark": [
+          "true",
+          "false"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "54:37"
+      }
+    },
+    {
+      "name": "Link",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Text action that navigates or triggers a light, secondary action.",
+      "path": "components/atoms/link",
+      "files": {
+        "component": "components/atoms/link/Link.tsx",
+        "docs": "components/atoms/link/Link.docs.md",
+        "examples": "components/atoms/link/Link.examples.md",
+        "tokens": "components/atoms/link/Link.tokens.json"
+      },
+      "dependencies": [
+        "Icon"
+      ],
+      "tokens": [
+        "color.text.brand",
+        "color.feedback.danger.foreground",
+        "color.text.primary",
+        "typography.label",
+        "typography.body-small",
+        "size.space.2xs"
+      ],
+      "variants": {
+        "tone": [
+          "brand",
+          "danger",
+          "neutral"
+        ],
+        "size": [
+          "small",
+          "medium"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "54:89"
+      }
+    },
+    {
+      "name": "IconButton",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Square button that shows only an icon.",
+      "path": "components/atoms/icon-button",
+      "files": {
+        "component": "components/atoms/icon-button/IconButton.tsx",
+        "docs": "components/atoms/icon-button/IconButton.docs.md",
+        "examples": "components/atoms/icon-button/IconButton.examples.md",
+        "tokens": "components/atoms/icon-button/IconButton.tokens.json"
+      },
+      "dependencies": [
+        "Icon"
+      ],
+      "tokens": [
+        "button.secondary.*",
+        "button.ghost.*",
+        "button.disabled.*",
+        "button.radius",
+        "size.layout.control-height",
+        "size.layout.control-height-small"
+      ],
+      "variants": {
+        "variant": [
+          "secondary",
+          "ghost"
+        ],
+        "size": [
+          "small",
+          "medium"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "54:129"
+      }
+    },
+    {
+      "name": "IconTile",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Tinted square or circle that frames an icon or a letter.",
+      "path": "components/atoms/icon-tile",
+      "files": {
+        "component": "components/atoms/icon-tile/IconTile.tsx",
+        "docs": "components/atoms/icon-tile/IconTile.docs.md",
+        "examples": "components/atoms/icon-tile/IconTile.examples.md",
+        "tokens": "components/atoms/icon-tile/IconTile.tokens.json"
+      },
+      "dependencies": [
+        "Icon"
+      ],
+      "tokens": [
+        "icon-tile.background",
+        "icon-tile.foreground",
+        "icon-tile.border",
+        "icon-tile.radius",
+        "size.layout.icon-tile-*",
+        "color.feedback.danger.*",
+        "color.action.highlight.*",
+        "color.action.primary.background",
+        "elevation.halo-brand",
+        "elevation.halo-danger"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "medium",
+          "large",
+          "xlarge"
+        ],
+        "tone": [
+          "brand",
+          "danger",
+          "highlight",
+          "neutral",
+          "solid"
+        ],
+        "shape": [
+          "square",
+          "circle"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "54:293"
+      }
+    },
+    {
+      "name": "ProgressBar",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Shows measurable progress or how much of a limit is used.",
+      "path": "components/atoms/progress-bar",
+      "files": {
+        "component": "components/atoms/progress-bar/ProgressBar.tsx",
+        "docs": "components/atoms/progress-bar/ProgressBar.docs.md",
+        "examples": "components/atoms/progress-bar/ProgressBar.examples.md",
+        "tokens": "components/atoms/progress-bar/ProgressBar.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "progress-bar.track",
+        "progress-bar.indicator",
+        "progress-bar.height",
+        "size.radius.pill"
+      ],
+      "variants": {},
+      "states": [
+        "empty",
+        "partial",
+        "complete"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "54:303"
+      }
+    },
+    {
+      "name": "Illustration",
+      "category": "atom",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Draws one of the Alora illustrations with theme colors.",
+      "path": "components/atoms/illustration",
+      "files": {
+        "component": "components/atoms/illustration/Illustration.tsx",
+        "docs": "components/atoms/illustration/Illustration.docs.md",
+        "examples": "components/atoms/illustration/Illustration.examples.md",
+        "tokens": "components/atoms/illustration/Illustration.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "color.background.*",
+        "color.text.brand",
+        "color.text.highlight",
+        "size.layout.illustration-small",
+        "size.layout.illustration-medium"
+      ],
+      "variants": {
+        "name": [
+          "auth-background",
+          "surfers",
+          "nothing-reviewed"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "54:353"
+      }
+    },
+    {
       "name": "FormField",
       "category": "molecule",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Groups a field's Label, Input, helper text and error message.",
       "path": "components/molecules/form-field",
       "files": {
@@ -719,7 +994,7 @@
       "name": "SearchField",
       "category": "molecule",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Search field with an icon and a clear button.",
       "path": "components/molecules/search-field",
       "files": {
@@ -756,7 +1031,7 @@
       "name": "ListItem",
       "category": "molecule",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "List row with three formats: person, definition or navigation.",
       "path": "components/molecules/list-item",
       "files": {
@@ -767,9 +1042,11 @@
       },
       "dependencies": [
         "Avatar",
+        "Badge",
         "Heading",
         "Text",
         "Button",
+        "Link",
         "Icon",
         "Divider"
       ],
@@ -801,7 +1078,7 @@
       "name": "TagChip",
       "category": "molecule",
       "status": "beta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Selectable or removable chip.",
       "path": "components/molecules/tag-chip",
       "files": {
@@ -837,7 +1114,7 @@
       "name": "Stat",
       "category": "molecule",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Shows a metric with its label and an optional trend.",
       "path": "components/molecules/stat",
       "files": {
@@ -857,12 +1134,19 @@
         "card.radius",
         "size.space.xl",
         "typography.metric",
-        "color.feedback.success.foreground"
+        "color.feedback.success.foreground",
+        "color.background.brand-subtle",
+        "typography.display"
       ],
       "variants": {
         "trend": [
           "none",
           "up"
+        ],
+        "variant": [
+          "default",
+          "featured",
+          "compact"
         ]
       },
       "states": [
@@ -877,7 +1161,7 @@
       "name": "Notification",
       "category": "molecule",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Communicates a system message with a tone, an action and a dismiss button.",
       "path": "components/molecules/notification",
       "files": {
@@ -906,6 +1190,10 @@
           "success",
           "warning",
           "danger"
+        ],
+        "density": [
+          "default",
+          "compact"
         ]
       },
       "states": [
@@ -921,7 +1209,7 @@
       "name": "Breadcrumb",
       "category": "molecule",
       "status": "beta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Shows where the user is within a hierarchy.",
       "path": "components/molecules/breadcrumb",
       "files": {
@@ -954,7 +1242,7 @@
       "name": "Pagination",
       "category": "molecule",
       "status": "beta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Moves between pages of a long list.",
       "path": "components/molecules/pagination",
       "files": {
@@ -986,7 +1274,7 @@
       "name": "NavigationItem",
       "category": "molecule",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Main navigation entry with an icon and a label.",
       "path": "components/molecules/navigation-item",
       "files": {
@@ -1016,10 +1304,366 @@
       }
     },
     {
+      "name": "OptionCard",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Large selectable card for one choice among a few, with a title and an optional description.",
+      "path": "components/molecules/option-card",
+      "files": {
+        "component": "components/molecules/option-card/OptionCard.tsx",
+        "docs": "components/molecules/option-card/OptionCard.docs.md",
+        "examples": "components/molecules/option-card/OptionCard.examples.md",
+        "tokens": "components/molecules/option-card/OptionCard.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "option-card.background",
+        "option-card.border",
+        "option-card.background-selected",
+        "option-card.border-selected",
+        "option-card.radius",
+        "radio.*",
+        "size.space.large"
+      ],
+      "variants": {
+        "hasIndicator": [
+          "true",
+          "false"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:124"
+      }
+    },
+    {
+      "name": "SegmentedControl",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Row of mutually exclusive options shown side by side.",
+      "path": "components/molecules/segmented-control",
+      "files": {
+        "component": "components/molecules/segmented-control/SegmentedControl.tsx",
+        "docs": "components/molecules/segmented-control/SegmentedControl.docs.md",
+        "examples": "components/molecules/segmented-control/SegmentedControl.examples.md",
+        "tokens": "components/molecules/segmented-control/SegmentedControl.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "segmented-control.background",
+        "segmented-control.border",
+        "segmented-control.selected-brand",
+        "segmented-control.on-selected-brand",
+        "segmented-control.selected-highlight",
+        "segmented-control.on-selected-highlight",
+        "size.radius.pill",
+        "typography.label"
+      ],
+      "variants": {
+        "tone": [
+          "brand",
+          "highlight"
+        ],
+        "layout": [
+          "fill",
+          "hug"
+        ],
+        "size": [
+          "small",
+          "medium"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:184"
+      }
+    },
+    {
+      "name": "Stepper",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Shows where the user is in a multi-step flow.",
+      "path": "components/molecules/stepper",
+      "files": {
+        "component": "components/molecules/stepper/Stepper.tsx",
+        "docs": "components/molecules/stepper/Stepper.docs.md",
+        "examples": "components/molecules/stepper/Stepper.examples.md",
+        "tokens": "components/molecules/stepper/Stepper.tokens.json"
+      },
+      "dependencies": [
+        "ProgressBar",
+        "Icon"
+      ],
+      "tokens": [
+        "stepper.step-background",
+        "stepper.step-foreground",
+        "stepper.step-current",
+        "stepper.step-on-current",
+        "progress-bar.*",
+        "size.layout.icon-tile-small"
+      ],
+      "variants": {},
+      "states": [
+        "first",
+        "middle",
+        "last"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:242"
+      }
+    },
+    {
+      "name": "Dropzone",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Area to pick or drop files for upload.",
+      "path": "components/molecules/dropzone",
+      "files": {
+        "component": "components/molecules/dropzone/Dropzone.tsx",
+        "docs": "components/molecules/dropzone/Dropzone.docs.md",
+        "examples": "components/molecules/dropzone/Dropzone.examples.md",
+        "tokens": "components/molecules/dropzone/Dropzone.tokens.json"
+      },
+      "dependencies": [
+        "IconTile"
+      ],
+      "tokens": [
+        "dropzone.background",
+        "dropzone.border",
+        "dropzone.background-error",
+        "dropzone.border-error",
+        "icon-tile.*",
+        "size.border.default",
+        "card.radius"
+      ],
+      "variants": {
+        "state": [
+          "default",
+          "error"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "drag-over",
+        "focus",
+        "error",
+        "disabled"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:269"
+      }
+    },
+    {
+      "name": "ClipItem",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Row for one video clip: thumbnail, title, facts and a light action.",
+      "path": "components/molecules/clip-item",
+      "files": {
+        "component": "components/molecules/clip-item/ClipItem.tsx",
+        "docs": "components/molecules/clip-item/ClipItem.docs.md",
+        "examples": "components/molecules/clip-item/ClipItem.examples.md",
+        "tokens": "components/molecules/clip-item/ClipItem.tokens.json"
+      },
+      "dependencies": [
+        "Badge",
+        "Link",
+        "Icon"
+      ],
+      "tokens": [
+        "size.layout.thumbnail-width",
+        "size.layout.thumbnail-height",
+        "color.media.background",
+        "color.media.scrim",
+        "card.radius",
+        "color.status.*.solid",
+        "typography.heading-small",
+        "typography.body-small"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "medium"
+        ]
+      },
+      "states": [
+        "default",
+        "with-status",
+        "with-action"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:320"
+      }
+    },
+    {
+      "name": "SummaryRow",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Labelled fact with a leading icon, used to summarize what happened.",
+      "path": "components/molecules/summary-row",
+      "files": {
+        "component": "components/molecules/summary-row/SummaryRow.tsx",
+        "docs": "components/molecules/summary-row/SummaryRow.docs.md",
+        "examples": "components/molecules/summary-row/SummaryRow.examples.md",
+        "tokens": "components/molecules/summary-row/SummaryRow.tokens.json"
+      },
+      "dependencies": [
+        "IconTile"
+      ],
+      "tokens": [
+        "icon-tile.*",
+        "typography.overline",
+        "typography.body-medium",
+        "color.text.tertiary",
+        "color.text.primary",
+        "size.space.medium"
+      ],
+      "variants": {},
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:324"
+      }
+    },
+    {
+      "name": "StatGroup",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Two to four small metrics side by side inside one card.",
+      "path": "components/molecules/stat-group",
+      "files": {
+        "component": "components/molecules/stat-group/StatGroup.tsx",
+        "docs": "components/molecules/stat-group/StatGroup.docs.md",
+        "examples": "components/molecules/stat-group/StatGroup.examples.md",
+        "tokens": "components/molecules/stat-group/StatGroup.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "stat.background",
+        "stat.label",
+        "stat.value",
+        "color.text.brand",
+        "color.text.highlight",
+        "divider.color",
+        "typography.metric"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "medium"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:371"
+      }
+    },
+    {
+      "name": "SectionHeader",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Title of a simple page or of a section inside it, with an optional icon, subtitle and action.",
+      "path": "components/molecules/section-header",
+      "files": {
+        "component": "components/molecules/section-header/SectionHeader.tsx",
+        "docs": "components/molecules/section-header/SectionHeader.docs.md",
+        "examples": "components/molecules/section-header/SectionHeader.examples.md",
+        "tokens": "components/molecules/section-header/SectionHeader.tokens.json"
+      },
+      "dependencies": [
+        "Heading",
+        "IconTile"
+      ],
+      "tokens": [
+        "typography.heading-large",
+        "typography.heading-small",
+        "typography.body-small",
+        "color.text.secondary",
+        "icon-tile.*",
+        "size.space.medium"
+      ],
+      "variants": {
+        "size": [
+          "small",
+          "large"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:417"
+      }
+    },
+    {
+      "name": "PeriodStepper",
+      "category": "molecule",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Moves backward and forward between periods (weeks, pay periods).",
+      "path": "components/molecules/period-stepper",
+      "files": {
+        "component": "components/molecules/period-stepper/PeriodStepper.tsx",
+        "docs": "components/molecules/period-stepper/PeriodStepper.docs.md",
+        "examples": "components/molecules/period-stepper/PeriodStepper.examples.md",
+        "tokens": "components/molecules/period-stepper/PeriodStepper.tokens.json"
+      },
+      "dependencies": [
+        "IconButton"
+      ],
+      "tokens": [
+        "button.secondary.*",
+        "typography.overline",
+        "typography.heading-small",
+        "size.space.small"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "first",
+        "last"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "62:421"
+      }
+    },
+    {
       "name": "Sidebar",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Fixed main navigation on desktop.",
       "path": "components/organisms/sidebar",
       "files": {
@@ -1029,7 +1673,8 @@
         "tokens": "components/organisms/sidebar/Sidebar.tokens.json"
       },
       "dependencies": [
-        "NavigationItem"
+        "NavigationItem",
+        "Logo"
       ],
       "tokens": [
         "sidebar.background",
@@ -1054,7 +1699,7 @@
       "name": "PageHeader",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Header of each view with a title, subtitle and actions.",
       "path": "components/organisms/page-header",
       "files": {
@@ -1071,6 +1716,7 @@
       ],
       "tokens": [
         "typography.display",
+        "typography.heading-large",
         "color.text.brand",
         "size.space.small",
         "size.space.medium",
@@ -1080,6 +1726,10 @@
         "context": [
           "coach",
           "surfer"
+        ],
+        "size": [
+          "display",
+          "large"
         ]
       },
       "states": [
@@ -1094,7 +1744,7 @@
       "name": "SubmissionCard",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Summarizes a clip submitted for review and its main action.",
       "path": "components/organisms/submission-card",
       "files": {
@@ -1118,6 +1768,8 @@
         "card.padding",
         "card.gap",
         "color.background.surface-sunken",
+        "color.plan.*",
+        "typography.overline",
         "size.layout.content-width"
       ],
       "variants": {
@@ -1139,7 +1791,7 @@
       "name": "DataList",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Read-only data section with a title and definition rows.",
       "path": "components/organisms/data-list",
       "files": {
@@ -1158,9 +1810,19 @@
         "card.border",
         "card.radius",
         "color.background.brand-subtle",
+        "color.background.surface",
         "size.space.medium"
       ],
-      "variants": {},
+      "variants": {
+        "layout": [
+          "stacked",
+          "inline"
+        ],
+        "isStriped": [
+          "false",
+          "true"
+        ]
+      },
       "states": [
         "—"
       ],
@@ -1173,7 +1835,7 @@
       "name": "EmptyState",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Explains why an area is empty and offers the next action.",
       "path": "components/organisms/empty-state",
       "files": {
@@ -1184,6 +1846,7 @@
       },
       "dependencies": [
         "Icon",
+        "Illustration",
         "Text",
         "Button"
       ],
@@ -1198,6 +1861,10 @@
         "action": [
           "false",
           "true"
+        ],
+        "variant": [
+          "card",
+          "inline"
         ]
       },
       "states": [
@@ -1212,7 +1879,7 @@
       "name": "Modal",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Dialog for a decision or short task that interrupts the flow.",
       "path": "components/organisms/modal",
       "files": {
@@ -1226,6 +1893,7 @@
         "Text",
         "Button",
         "Icon",
+        "IconTile",
         "FormField"
       ],
       "tokens": [
@@ -1241,6 +1909,10 @@
         "tone": [
           "default",
           "danger"
+        ],
+        "icon": [
+          "false",
+          "true"
         ]
       },
       "states": [
@@ -1256,7 +1928,7 @@
       "name": "FormSection",
       "category": "organism",
       "status": "stable",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Complete form with fields and actions.",
       "path": "components/organisms/form-section",
       "files": {
@@ -1288,11 +1960,208 @@
       }
     },
     {
+      "name": "TopBar",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Header of a detail or task screen with a back button and a title.",
+      "path": "components/organisms/top-bar",
+      "files": {
+        "component": "components/organisms/top-bar/TopBar.tsx",
+        "docs": "components/organisms/top-bar/TopBar.docs.md",
+        "examples": "components/organisms/top-bar/TopBar.examples.md",
+        "tokens": "components/organisms/top-bar/TopBar.tokens.json"
+      },
+      "dependencies": [
+        "IconButton",
+        "Heading"
+      ],
+      "tokens": [
+        "top-bar.background",
+        "top-bar.border",
+        "typography.heading-medium",
+        "size.space.medium",
+        "size.layout.control-height"
+      ],
+      "variants": {
+        "back": [
+          "true",
+          "false"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "63:229"
+      }
+    },
+    {
+      "name": "ResultState",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Full-screen outcome of a task: success with a summary, or failure with a way to retry.",
+      "path": "components/organisms/result-state",
+      "files": {
+        "component": "components/organisms/result-state/ResultState.tsx",
+        "docs": "components/organisms/result-state/ResultState.docs.md",
+        "examples": "components/organisms/result-state/ResultState.examples.md",
+        "tokens": "components/organisms/result-state/ResultState.tokens.json"
+      },
+      "dependencies": [
+        "IconTile",
+        "Heading",
+        "Text",
+        "Button"
+      ],
+      "tokens": [
+        "icon-tile.*",
+        "result-state.halo-success",
+        "result-state.halo-danger",
+        "typography.display",
+        "typography.heading-large",
+        "size.layout.form-width",
+        "size.space.xl"
+      ],
+      "variants": {
+        "tone": [
+          "success",
+          "danger"
+        ]
+      },
+      "states": [
+        "—"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "63:338"
+      }
+    },
+    {
+      "name": "ReviewCard",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Delivered review in History, collapsed to a summary and expanded to show the coach note.",
+      "path": "components/organisms/review-card",
+      "files": {
+        "component": "components/organisms/review-card/ReviewCard.tsx",
+        "docs": "components/organisms/review-card/ReviewCard.docs.md",
+        "examples": "components/organisms/review-card/ReviewCard.examples.md",
+        "tokens": "components/organisms/review-card/ReviewCard.tokens.json"
+      },
+      "dependencies": [
+        "IconTile",
+        "Badge",
+        "Button",
+        "Icon",
+        "Text"
+      ],
+      "tokens": [
+        "card.*",
+        "icon-tile.*",
+        "color.action.highlight.*",
+        "typography.heading-small",
+        "typography.body-small",
+        "motion.transition-fast"
+      ],
+      "variants": {
+        "expanded": [
+          "false",
+          "true"
+        ]
+      },
+      "states": [
+        "collapsed",
+        "expanded",
+        "hover",
+        "focus"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "63:400"
+      }
+    },
+    {
+      "name": "VideoPlayer",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Plays a surf clip with Alora controls.",
+      "path": "components/organisms/video-player",
+      "files": {
+        "component": "components/organisms/video-player/VideoPlayer.tsx",
+        "docs": "components/organisms/video-player/VideoPlayer.docs.md",
+        "examples": "components/organisms/video-player/VideoPlayer.examples.md",
+        "tokens": "components/organisms/video-player/VideoPlayer.tokens.json"
+      },
+      "dependencies": [
+        "Icon"
+      ],
+      "tokens": [
+        "video-player.background",
+        "video-player.foreground",
+        "video-player.track",
+        "video-player.progress",
+        "video-player.scrim",
+        "card.radius",
+        "size.layout.control-height-small"
+      ],
+      "variants": {},
+      "states": [
+        "paused",
+        "playing",
+        "muted",
+        "focus"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "63:446"
+      }
+    },
+    {
+      "name": "AvailabilityGrid",
+      "category": "organism",
+      "status": "stable",
+      "version": "1.1.0",
+      "description": "Weekly grid where a coach marks the hours they are available.",
+      "path": "components/organisms/availability-grid",
+      "files": {
+        "component": "components/organisms/availability-grid/AvailabilityGrid.tsx",
+        "docs": "components/organisms/availability-grid/AvailabilityGrid.docs.md",
+        "examples": "components/organisms/availability-grid/AvailabilityGrid.examples.md",
+        "tokens": "components/organisms/availability-grid/AvailabilityGrid.tokens.json"
+      },
+      "dependencies": [],
+      "tokens": [
+        "availability-grid.cell",
+        "availability-grid.cell-alternate",
+        "availability-grid.cell-selected",
+        "availability-grid.line",
+        "availability-grid.header",
+        "typography.overline",
+        "typography.caption"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected"
+      ],
+      "figma": {
+        "file": "https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System",
+        "nodeId": "63:450"
+      }
+    },
+    {
       "name": "DashboardTemplate",
       "category": "template",
       "status": "stable",
-      "version": "1.0.0",
-      "description": "Authenticated view: Sidebar + an 810px content column with header and content slots.",
+      "version": "1.1.0",
+      "description": "Authenticated view: Sidebar + a content column (810px narrow, or full width with width=wide) with header and content slots.",
       "path": "templates/dashboard",
       "files": {
         "component": "templates/dashboard/DashboardTemplate.tsx",
@@ -1314,8 +2183,8 @@
       "name": "AuthTemplate",
       "category": "template",
       "status": "stable",
-      "version": "1.0.0",
-      "description": "Authentication and onboarding: centered canvas with a 400px form slot.",
+      "version": "1.1.0",
+      "description": "Authentication and onboarding: centered canvas with a 400px form slot, optional Logo and illustrated background.",
       "path": "templates/auth",
       "files": {
         "component": "templates/auth/AuthTemplate.tsx",
@@ -1323,7 +2192,9 @@
       },
       "dependencies": [
         "Heading",
-        "Text"
+        "Text",
+        "Logo",
+        "Illustration"
       ],
       "slots": [
         "form"
@@ -1337,7 +2208,7 @@
       "name": "CoachQueuePage",
       "category": "page",
       "status": "example",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Coach queue with real content: PageHeader, Stat row, search and filters, SubmissionCard ×3 and an EmptyState for no results.",
       "path": "pages/coach-queue",
       "files": {
@@ -1365,7 +2236,7 @@
       "name": "SurferLoginPage",
       "category": "page",
       "status": "example",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Surfer log in: AuthTemplate + FormSection.",
       "path": "pages/surfer-login",
       "files": {
@@ -1414,18 +2285,6 @@
       "category": "atom",
       "status": "planned",
       "description": "Single selection among more than 5 options."
-    },
-    {
-      "name": "ProgressBar",
-      "category": "atom",
-      "status": "planned",
-      "description": "Measurable video upload progress."
-    },
-    {
-      "name": "ReviewCard",
-      "category": "organism",
-      "status": "planned",
-      "description": "Delivered review in History with video and coach notes."
     }
   ],
   "tokens": [
@@ -2438,6 +3297,78 @@
       "status": "stable"
     },
     {
+      "name": "color.alpha.pink.18",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-alpha-pink-18",
+      "figmaVariable": "color/alpha/pink/18",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.50",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-50",
+      "figmaVariable": "color/pink/50",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.100",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-100",
+      "figmaVariable": "color/pink/100",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.300",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-300",
+      "figmaVariable": "color/pink/300",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.400",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-400",
+      "figmaVariable": "color/pink/400",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.500",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-500",
+      "figmaVariable": "color/pink/500",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.600",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-600",
+      "figmaVariable": "color/pink/600",
+      "status": "stable"
+    },
+    {
+      "name": "color.pink.700",
+      "layer": "primitive",
+      "type": "color",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-color-pink-700",
+      "figmaVariable": "color/pink/700",
+      "status": "stable"
+    },
+    {
       "name": "typography.family.display",
       "layer": "primitive",
       "type": "fontFamily",
@@ -2865,6 +3796,15 @@
       "status": "stable"
     },
     {
+      "name": "size.border.400",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-border-400",
+      "figmaVariable": "size/border/400",
+      "status": "stable"
+    },
+    {
       "name": "size.icon.xs",
       "layer": "primitive",
       "type": "dimension",
@@ -2973,6 +3913,78 @@
       "status": "stable"
     },
     {
+      "name": "size.media.tile-md",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-tile-md",
+      "figmaVariable": "size/media/tile-md",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.tile-lg",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-tile-lg",
+      "figmaVariable": "size/media/tile-lg",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.tile-xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-tile-xl",
+      "figmaVariable": "size/media/tile-xl",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.avatar-xl",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-avatar-xl",
+      "figmaVariable": "size/media/avatar-xl",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.thumbnail-width",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-thumbnail-width",
+      "figmaVariable": "size/media/thumbnail-width",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.thumbnail-height",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-thumbnail-height",
+      "figmaVariable": "size/media/thumbnail-height",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.illustration-sm",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-illustration-sm",
+      "figmaVariable": "size/media/illustration-sm",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.illustration-md",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-illustration-md",
+      "figmaVariable": "size/media/illustration-md",
+      "status": "stable"
+    },
+    {
       "name": "shadow.glow-small",
       "layer": "primitive",
       "type": "shadow",
@@ -3030,6 +4042,24 @@
       "figmaVariable": "shadow/ring",
       "status": "stable",
       "description": "Focus ring."
+    },
+    {
+      "name": "shadow.halo-brand",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-halo-brand",
+      "figmaVariable": "shadow/halo-brand",
+      "status": "stable"
+    },
+    {
+      "name": "shadow.halo-danger",
+      "layer": "primitive",
+      "type": "shadow",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-shadow-halo-danger",
+      "figmaVariable": "shadow/halo-danger",
+      "status": "stable"
     },
     {
       "name": "motion.duration.instant",
@@ -3220,6 +4250,15 @@
       "figmaVariable": "breakpoint/2xl",
       "status": "stable",
       "description": "Design width of the Coach and Surfer files."
+    },
+    {
+      "name": "opacity.50",
+      "layer": "primitive",
+      "type": "number",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-opacity-50",
+      "figmaVariable": "opacity/50",
+      "status": "stable"
     },
     {
       "name": "color.background.canvas",
@@ -3792,6 +4831,85 @@
       }
     },
     {
+      "name": "color.action.highlight.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-highlight-background",
+      "figmaVariable": "color/action/highlight/background",
+      "status": "stable",
+      "references": "color.alpha.sun.12",
+      "description": "Warm secondary action (Coach portal).",
+      "themes": {
+        "dark": "{color.alpha.sun.12}",
+        "light": "{color.sun.50}"
+      }
+    },
+    {
+      "name": "color.action.highlight.background-hover",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-highlight-background-hover",
+      "figmaVariable": "color/action/highlight/background-hover",
+      "status": "stable",
+      "references": "color.alpha.sun.18",
+      "themes": {
+        "dark": "{color.alpha.sun.18}",
+        "light": "{color.sun.100}"
+      }
+    },
+    {
+      "name": "color.action.highlight.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-highlight-foreground",
+      "figmaVariable": "color/action/highlight/foreground",
+      "status": "stable",
+      "references": "color.sun.400",
+      "themes": {
+        "dark": "{color.sun.400}",
+        "light": "{color.sun.700}"
+      }
+    },
+    {
+      "name": "color.action.highlight.border",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-highlight-border",
+      "figmaVariable": "color/action/highlight/border",
+      "status": "stable",
+      "references": "color.alpha.sun.30",
+      "themes": {
+        "dark": "{color.alpha.sun.30}",
+        "light": "{color.sun.300}"
+      }
+    },
+    {
+      "name": "color.action.highlight.solid",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-highlight-solid",
+      "figmaVariable": "color/action/highlight/solid",
+      "status": "stable",
+      "references": "color.sun.400",
+      "description": "Selected warm option (segmented control)."
+    },
+    {
+      "name": "color.action.highlight.on-solid",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-action-highlight-on-solid",
+      "figmaVariable": "color/action/highlight/on-solid",
+      "status": "stable",
+      "references": "color.navy.950",
+      "description": "Text on the solid warm option."
+    },
+    {
       "name": "color.feedback.success.foreground",
       "layer": "semantic",
       "type": "color",
@@ -4089,6 +5207,64 @@
       }
     },
     {
+      "name": "color.plan.session.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-session-foreground",
+      "figmaVariable": "color/plan/session/foreground",
+      "status": "stable",
+      "references": "color.pink.400",
+      "description": "Plan Session.",
+      "themes": {
+        "dark": "{color.pink.400}",
+        "light": "{color.pink.700}"
+      }
+    },
+    {
+      "name": "color.plan.session.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-session-background",
+      "figmaVariable": "color/plan/session/background",
+      "status": "stable",
+      "references": "color.alpha.pink.18",
+      "themes": {
+        "dark": "{color.alpha.pink.18}",
+        "light": "{color.pink.50}"
+      }
+    },
+    {
+      "name": "color.plan.performance.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-performance-foreground",
+      "figmaVariable": "color/plan/performance/foreground",
+      "status": "stable",
+      "references": "color.sun.400",
+      "description": "Plan Performance.",
+      "themes": {
+        "dark": "{color.sun.400}",
+        "light": "{color.sun.700}"
+      }
+    },
+    {
+      "name": "color.plan.performance.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-plan-performance-background",
+      "figmaVariable": "color/plan/performance/background",
+      "status": "stable",
+      "references": "color.alpha.sun.18",
+      "themes": {
+        "dark": "{color.alpha.sun.18}",
+        "light": "{color.sun.50}"
+      }
+    },
+    {
       "name": "color.status.pending.foreground",
       "layer": "semantic",
       "type": "color",
@@ -4116,6 +5292,17 @@
         "dark": "{color.alpha.sun.12}",
         "light": "{color.sun.50}"
       }
+    },
+    {
+      "name": "color.status.pending.solid",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-pending-solid",
+      "figmaVariable": "color/status/pending/solid",
+      "status": "stable",
+      "references": "color.amber.700",
+      "description": "Solid pending label over media (thumbnails)."
     },
     {
       "name": "color.status.in-review.foreground",
@@ -4147,6 +5334,17 @@
       }
     },
     {
+      "name": "color.status.in-review.solid",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-in-review-solid",
+      "figmaVariable": "color/status/in-review/solid",
+      "status": "stable",
+      "references": "color.ocean.700",
+      "description": "Solid in-review label over media."
+    },
+    {
       "name": "color.status.review-ready.foreground",
       "layer": "semantic",
       "type": "color",
@@ -4176,6 +5374,17 @@
       }
     },
     {
+      "name": "color.status.review-ready.solid",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-review-ready-solid",
+      "figmaVariable": "color/status/review-ready/solid",
+      "status": "stable",
+      "references": "color.green.700",
+      "description": "Solid review-ready label over media."
+    },
+    {
       "name": "color.status.overdue.foreground",
       "layer": "semantic",
       "type": "color",
@@ -4203,6 +5412,17 @@
         "dark": "{color.alpha.coral.12}",
         "light": "{color.coral.50}"
       }
+    },
+    {
+      "name": "color.status.overdue.solid",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-status-overdue-solid",
+      "figmaVariable": "color/status/overdue/solid",
+      "status": "stable",
+      "references": "color.coral.600",
+      "description": "Solid overdue label over media."
     },
     {
       "name": "color.disabled.background",
@@ -4278,6 +5498,50 @@
         "dark": "{color.ocean.400}",
         "light": "{color.ocean.600}"
       }
+    },
+    {
+      "name": "color.media.background",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-media-background",
+      "figmaVariable": "color/media/background",
+      "status": "stable",
+      "references": "color.black",
+      "description": "Behind video and photos, in both themes."
+    },
+    {
+      "name": "color.media.foreground",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-media-foreground",
+      "figmaVariable": "color/media/foreground",
+      "status": "stable",
+      "references": "color.white",
+      "description": "Controls and text over video, in both themes."
+    },
+    {
+      "name": "color.media.track",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-media-track",
+      "figmaVariable": "color/media/track",
+      "status": "stable",
+      "references": "color.alpha.white.40",
+      "description": "Unplayed part of the video timeline."
+    },
+    {
+      "name": "color.media.scrim",
+      "layer": "semantic",
+      "type": "color",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-color-media-scrim",
+      "figmaVariable": "color/media/scrim",
+      "status": "stable",
+      "references": "color.alpha.black.55",
+      "description": "Behind controls over video."
     },
     {
       "name": "size.space.none",
@@ -4540,6 +5804,105 @@
       "description": "Minimum width of a Stat before it wraps to a new row."
     },
     {
+      "name": "size.layout.icon-tile-medium",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-icon-tile-medium",
+      "figmaVariable": "size/layout/icon-tile-medium",
+      "status": "stable",
+      "references": "size.media.tile-md",
+      "description": "Icon tile next to a section title."
+    },
+    {
+      "name": "size.layout.icon-tile-large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-icon-tile-large",
+      "figmaVariable": "size/layout/icon-tile-large",
+      "status": "stable",
+      "references": "size.media.tile-lg",
+      "description": "Icon tile above a form or dialog."
+    },
+    {
+      "name": "size.layout.icon-tile-xlarge",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-icon-tile-xlarge",
+      "figmaVariable": "size/layout/icon-tile-xlarge",
+      "status": "stable",
+      "references": "size.media.tile-xl",
+      "description": "Result icon (success, error)."
+    },
+    {
+      "name": "size.layout.avatar-xlarge",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-avatar-xlarge",
+      "figmaVariable": "size/layout/avatar-xlarge",
+      "status": "stable",
+      "references": "size.media.avatar-xl",
+      "description": "Profile avatar and full-screen spinner."
+    },
+    {
+      "name": "size.layout.thumbnail-width",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-thumbnail-width",
+      "figmaVariable": "size/layout/thumbnail-width",
+      "status": "stable",
+      "references": "size.media.thumbnail-width",
+      "description": "Clip thumbnail width in lists."
+    },
+    {
+      "name": "size.layout.thumbnail-height",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-thumbnail-height",
+      "figmaVariable": "size/layout/thumbnail-height",
+      "status": "stable",
+      "references": "size.media.thumbnail-height",
+      "description": "Clip thumbnail height in lists."
+    },
+    {
+      "name": "size.layout.illustration-small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-illustration-small",
+      "figmaVariable": "size/layout/illustration-small",
+      "status": "stable",
+      "references": "size.media.illustration-sm",
+      "description": "Empty-state illustration width."
+    },
+    {
+      "name": "size.layout.illustration-medium",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-illustration-medium",
+      "figmaVariable": "size/layout/illustration-medium",
+      "status": "stable",
+      "references": "size.media.illustration-md",
+      "description": "Large empty-state illustration width."
+    },
+    {
+      "name": "size.layout.progress-height",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-progress-height",
+      "figmaVariable": "size/layout/progress-height",
+      "status": "stable",
+      "references": "size.space.100",
+      "description": "Height of progress bars and the stepper track."
+    },
+    {
       "name": "size.icon.extra-small",
       "layer": "semantic",
       "type": "dimension",
@@ -4624,6 +5987,17 @@
       "figmaVariable": "size/border/focus",
       "status": "stable",
       "references": "size.border.200"
+    },
+    {
+      "name": "size.border.heavy",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-border-heavy",
+      "figmaVariable": "size/border/heavy",
+      "status": "stable",
+      "references": "size.border.400",
+      "description": "Full-screen spinner stroke."
     },
     {
       "name": "typography.display",
@@ -4790,6 +6164,28 @@
       "description": "Visible keyboard focus ring."
     },
     {
+      "name": "elevation.halo-brand",
+      "layer": "semantic",
+      "type": "shadow",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-elevation-halo-brand",
+      "figmaVariable": "elevation/halo-brand",
+      "status": "stable",
+      "references": "shadow.halo-brand",
+      "description": "Soft glow behind success icons and large avatars."
+    },
+    {
+      "name": "elevation.halo-danger",
+      "layer": "semantic",
+      "type": "shadow",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-elevation-halo-danger",
+      "figmaVariable": "elevation/halo-danger",
+      "status": "stable",
+      "references": "shadow.halo-danger",
+      "description": "Soft glow behind error icons."
+    },
+    {
       "name": "motion.transition-fast",
       "layer": "semantic",
       "type": "transition",
@@ -4908,6 +6304,17 @@
       "description": "Tooltips, always on top."
     },
     {
+      "name": "opacity.disabled",
+      "layer": "semantic",
+      "type": "number",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-opacity-disabled",
+      "figmaVariable": "opacity/disabled",
+      "status": "stable",
+      "references": "opacity.50",
+      "description": "Opacity of a disabled primary action, which keeps its brand color."
+    },
+    {
       "name": "button.primary.background",
       "layer": "component",
       "type": "color",
@@ -4968,6 +6375,16 @@
       "figmaVariable": "button/primary/shadow",
       "status": "stable",
       "references": "elevation.action"
+    },
+    {
+      "name": "button.primary.opacity-disabled",
+      "layer": "component",
+      "type": "number",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-primary-opacity-disabled",
+      "figmaVariable": "button/primary/opacity-disabled",
+      "status": "stable",
+      "references": "opacity.disabled"
     },
     {
       "name": "button.secondary.background",
@@ -5138,6 +6555,46 @@
       "figmaVariable": "button/typography",
       "status": "stable",
       "references": "typography.button"
+    },
+    {
+      "name": "button.highlight.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-highlight-background",
+      "figmaVariable": "button/highlight/background",
+      "status": "stable",
+      "references": "color.action.highlight.background"
+    },
+    {
+      "name": "button.highlight.background-hover",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-highlight-background-hover",
+      "figmaVariable": "button/highlight/background-hover",
+      "status": "stable",
+      "references": "color.action.highlight.background-hover"
+    },
+    {
+      "name": "button.highlight.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-highlight-foreground",
+      "figmaVariable": "button/highlight/foreground",
+      "status": "stable",
+      "references": "color.action.highlight.foreground"
+    },
+    {
+      "name": "button.highlight.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-button-highlight-border",
+      "figmaVariable": "button/highlight/border",
+      "status": "stable",
+      "references": "color.action.highlight.border"
     },
     {
       "name": "input.background",
@@ -5768,6 +7225,406 @@
       "figmaVariable": "notification/radius",
       "status": "stable",
       "references": "size.radius.large"
+    },
+    {
+      "name": "icon-tile.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-icon-tile-background",
+      "figmaVariable": "icon-tile/background",
+      "status": "stable",
+      "references": "color.background.brand-subtle"
+    },
+    {
+      "name": "icon-tile.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-icon-tile-foreground",
+      "figmaVariable": "icon-tile/foreground",
+      "status": "stable",
+      "references": "color.icon.brand"
+    },
+    {
+      "name": "icon-tile.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-icon-tile-border",
+      "figmaVariable": "icon-tile/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "icon-tile.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-icon-tile-radius",
+      "figmaVariable": "icon-tile/radius",
+      "status": "stable",
+      "references": "size.radius.medium"
+    },
+    {
+      "name": "progress-bar.track",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-progress-bar-track",
+      "figmaVariable": "progress-bar/track",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "progress-bar.indicator",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-progress-bar-indicator",
+      "figmaVariable": "progress-bar/indicator",
+      "status": "stable",
+      "references": "color.border.brand"
+    },
+    {
+      "name": "progress-bar.height",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-progress-bar-height",
+      "figmaVariable": "progress-bar/height",
+      "status": "stable",
+      "references": "size.layout.progress-height"
+    },
+    {
+      "name": "stepper.step-background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stepper-step-background",
+      "figmaVariable": "stepper/step-background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "stepper.step-foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stepper-step-foreground",
+      "figmaVariable": "stepper/step-foreground",
+      "status": "stable",
+      "references": "color.text.secondary"
+    },
+    {
+      "name": "stepper.step-current",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stepper-step-current",
+      "figmaVariable": "stepper/step-current",
+      "status": "stable",
+      "references": "color.action.primary.background"
+    },
+    {
+      "name": "stepper.step-on-current",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-stepper-step-on-current",
+      "figmaVariable": "stepper/step-on-current",
+      "status": "stable",
+      "references": "color.text.on-action"
+    },
+    {
+      "name": "option-card.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-option-card-background",
+      "figmaVariable": "option-card/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "option-card.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-option-card-border",
+      "figmaVariable": "option-card/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "option-card.background-selected",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-option-card-background-selected",
+      "figmaVariable": "option-card/background-selected",
+      "status": "stable",
+      "references": "color.background.brand-subtle"
+    },
+    {
+      "name": "option-card.border-selected",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-option-card-border-selected",
+      "figmaVariable": "option-card/border-selected",
+      "status": "stable",
+      "references": "color.border.brand"
+    },
+    {
+      "name": "option-card.radius",
+      "layer": "component",
+      "type": "dimension",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-option-card-radius",
+      "figmaVariable": "option-card/radius",
+      "status": "stable",
+      "references": "size.radius.large"
+    },
+    {
+      "name": "segmented-control.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-segmented-control-background",
+      "figmaVariable": "segmented-control/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "segmented-control.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-segmented-control-border",
+      "figmaVariable": "segmented-control/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "segmented-control.selected-brand",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-segmented-control-selected-brand",
+      "figmaVariable": "segmented-control/selected-brand",
+      "status": "stable",
+      "references": "color.action.primary.background"
+    },
+    {
+      "name": "segmented-control.on-selected-brand",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-segmented-control-on-selected-brand",
+      "figmaVariable": "segmented-control/on-selected-brand",
+      "status": "stable",
+      "references": "color.action.primary.foreground"
+    },
+    {
+      "name": "segmented-control.selected-highlight",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-segmented-control-selected-highlight",
+      "figmaVariable": "segmented-control/selected-highlight",
+      "status": "stable",
+      "references": "color.action.highlight.solid"
+    },
+    {
+      "name": "segmented-control.on-selected-highlight",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-segmented-control-on-selected-highlight",
+      "figmaVariable": "segmented-control/on-selected-highlight",
+      "status": "stable",
+      "references": "color.action.highlight.on-solid"
+    },
+    {
+      "name": "dropzone.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-dropzone-background",
+      "figmaVariable": "dropzone/background",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "dropzone.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-dropzone-border",
+      "figmaVariable": "dropzone/border",
+      "status": "stable",
+      "references": "color.border.brand"
+    },
+    {
+      "name": "dropzone.background-error",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-dropzone-background-error",
+      "figmaVariable": "dropzone/background-error",
+      "status": "stable",
+      "references": "color.feedback.danger.background"
+    },
+    {
+      "name": "dropzone.border-error",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-dropzone-border-error",
+      "figmaVariable": "dropzone/border-error",
+      "status": "stable",
+      "references": "color.border.danger"
+    },
+    {
+      "name": "top-bar.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-top-bar-background",
+      "figmaVariable": "top-bar/background",
+      "status": "stable",
+      "references": "color.background.canvas"
+    },
+    {
+      "name": "top-bar.border",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-top-bar-border",
+      "figmaVariable": "top-bar/border",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "video-player.background",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-video-player-background",
+      "figmaVariable": "video-player/background",
+      "status": "stable",
+      "references": "color.media.background"
+    },
+    {
+      "name": "video-player.foreground",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-video-player-foreground",
+      "figmaVariable": "video-player/foreground",
+      "status": "stable",
+      "references": "color.media.foreground"
+    },
+    {
+      "name": "video-player.track",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-video-player-track",
+      "figmaVariable": "video-player/track",
+      "status": "stable",
+      "references": "color.media.track"
+    },
+    {
+      "name": "video-player.progress",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-video-player-progress",
+      "figmaVariable": "video-player/progress",
+      "status": "stable",
+      "references": "color.border.brand"
+    },
+    {
+      "name": "video-player.scrim",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-video-player-scrim",
+      "figmaVariable": "video-player/scrim",
+      "status": "stable",
+      "references": "color.media.scrim"
+    },
+    {
+      "name": "availability-grid.cell",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-availability-grid-cell",
+      "figmaVariable": "availability-grid/cell",
+      "status": "stable",
+      "references": "color.background.surface"
+    },
+    {
+      "name": "availability-grid.cell-alternate",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-availability-grid-cell-alternate",
+      "figmaVariable": "availability-grid/cell-alternate",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "availability-grid.cell-selected",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-availability-grid-cell-selected",
+      "figmaVariable": "availability-grid/cell-selected",
+      "status": "stable",
+      "references": "color.action.primary.background"
+    },
+    {
+      "name": "availability-grid.line",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-availability-grid-line",
+      "figmaVariable": "availability-grid/line",
+      "status": "stable",
+      "references": "color.border.subtle"
+    },
+    {
+      "name": "availability-grid.header",
+      "layer": "component",
+      "type": "color",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-availability-grid-header",
+      "figmaVariable": "availability-grid/header",
+      "status": "stable",
+      "references": "color.background.surface-raised"
+    },
+    {
+      "name": "result-state.halo-success",
+      "layer": "component",
+      "type": "shadow",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-result-state-halo-success",
+      "figmaVariable": "result-state/halo-success",
+      "status": "stable",
+      "references": "elevation.halo-brand"
+    },
+    {
+      "name": "result-state.halo-danger",
+      "layer": "component",
+      "type": "shadow",
+      "file": "tokens/component.tokens.json",
+      "cssVariable": "--ds-result-state-halo-danger",
+      "figmaVariable": "result-state/halo-danger",
+      "status": "stable",
+      "references": "elevation.halo-danger"
     }
   ]
 }

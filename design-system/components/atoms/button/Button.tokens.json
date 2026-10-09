@@ -1,5 +1,5 @@
 {
-  "$description": "Button tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: button.primary.*, button.secondary.*, button.ghost.*, button.danger.*, button.disabled.*, button.radius, button.gap, button.padding-horizontal.*, button.typography, elevation.focus, size.layout.control-height*.",
+  "$description": "Button tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: button.primary.*, button.secondary.*, button.ghost.*, button.danger.*, button.highlight.*, button.disabled.*, button.primary.opacity-disabled, button.radius, button.gap, button.padding-horizontal.*, button.typography, elevation.focus, size.layout.control-height*.",
   "button": {
     "primary": {
       "background": {
@@ -27,6 +27,10 @@
       "shadow": {
         "$type": "shadow",
         "$value": "{elevation.action}"
+      },
+      "opacity-disabled": {
+        "$type": "number",
+        "$value": "{opacity.disabled}"
       }
     },
     "secondary": {
@@ -106,6 +110,24 @@
     "typography": {
       "$type": "typography",
       "$value": "{typography.button}"
+    },
+    "highlight": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.highlight.background}"
+      },
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.highlight.background-hover}"
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.action.highlight.foreground}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.action.highlight.border}"
+      }
     }
   }
 }

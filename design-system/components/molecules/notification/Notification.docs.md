@@ -1,6 +1,6 @@
 # Notification
 
-**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Notification](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-209)
 
 ## 1. Name and category
@@ -31,9 +31,11 @@ Communicates a system message with a tone, an action and a dismiss button.
 | `description` | `string` | — | No | Detail. |
 | `action` | `{ label: string; onPress: () => void }` | — | No | Action. |
 | `onDismiss` | `() => void` | — | No | Shows a dismiss button. |
+| `density` | `'default' \| 'compact'` | `'default'` | No | compact: one line, title only (form errors such as “Incorrect email or password”). |
 
 ## 7. Variants and states
 - **tone:** `info`, `success`, `warning`, `danger`
+- **density:** `default`, `compact`
 - **States:** `visible`, `dismissed`
 
 ## 8. Tokens used
@@ -68,6 +70,7 @@ More examples in [`Notification.examples.md`](./Notification.examples.md).
 - Error messages that disappear on their own.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added the compact density; danger uses the alert-circle icon; warning has a tinted background.

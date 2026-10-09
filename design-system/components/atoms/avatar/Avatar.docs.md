@@ -1,6 +1,6 @@
 # Avatar
 
-**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Avatar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=12-119)
 
 ## 1. Name and category
@@ -23,12 +23,12 @@ Represents a person with their initials.
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
 | `name` | `string` | — | Yes | Full name; initials are derived from it. |
-| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | 24 / 32 / 64 px. |
-| `tone` | `'brand' \| 'elite' \| 'progression' \| 'neutral'` | `'brand'` | No | Background color; plan tones go with a plan Badge. |
+| `size` | `'small' \| 'medium' \| 'large' \| 'xlarge'` | `'medium'` | No | 24 / 32 / 64 / 80 px. large and xlarge show two initials; xlarge adds a brand halo (profile). |
+| `tone` | `'brand' \| 'elite' \| 'progression' \| 'session' \| 'performance' \| 'neutral'` | `'brand'` | No | Background color; plan tones go with a plan Badge. |
 
 ## 7. Variants and states
-- **size:** `small`, `medium`, `large`
-- **tone:** `brand`, `elite`, `progression`, `neutral`
+- **size:** `small`, `medium`, `large`, `xlarge`
+- **tone:** `brand`, `elite`, `progression`, `session`, `performance`, `neutral`
 - **States:** `—`
 
 ## 8. Tokens used
@@ -37,6 +37,8 @@ Represents a person with their initials.
 - `avatar.radius`
 - `color.plan.*.foreground`
 - `color.text.inverse`
+- `size.layout.avatar-xlarge`
+- `elevation.halo-brand`
 
 The component's own tokens live in [`Avatar.tokens.json`](./Avatar.tokens.json). Primitive tokens are never used directly.
 
@@ -59,6 +61,7 @@ More examples in [`Avatar.examples.md`](./Avatar.examples.md).
 - Communicating the plan only through the avatar color.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added the xlarge size and the session and performance tones.

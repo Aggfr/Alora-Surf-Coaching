@@ -1,5 +1,5 @@
 {
-  "$description": "SubmissionCard tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.background, card.border, card.radius, card.padding, card.gap, color.background.surface-sunken, size.layout.content-width.",
+  "$description": "SubmissionCard tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: card.background, card.border, card.radius, card.padding, card.gap, color.background.surface-sunken, color.plan.*, typography.overline, size.layout.content-width.",
   "card": {
     "background": {
       "$type": "color",

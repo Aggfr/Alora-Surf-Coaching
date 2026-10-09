@@ -1,0 +1,21 @@
+{
+  "$description": "IconTile tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: icon-tile.background, icon-tile.foreground, icon-tile.border, icon-tile.radius, size.layout.icon-tile-*, color.feedback.danger.*, color.action.highlight.*, color.action.primary.background, elevation.halo-brand, elevation.halo-danger.",
+  "icon-tile": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.background.brand-subtle}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.icon.brand}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{size.radius.medium}"
+    }
+  }
+}

@@ -494,7 +494,44 @@
           "$type": "color",
           "$value": "#0000008c"
         }
+      },
+      "pink": {
+        "18": {
+          "$type": "color",
+          "$value": "#ed3ae42e"
+        }
       }
+    },
+    "pink": {
+      "50": {
+        "$type": "color",
+        "$value": "#fdf0fc"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#fbdcf9"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#f47cee"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#f05ce9"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#ed3ae4"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#c71fbe"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#9b1894"
+      },
+      "$description": "Session plan magenta in Coach (#ed3ae4, surfers list)."
     }
   },
   "typography": {
@@ -719,6 +756,10 @@
       "200": {
         "$type": "dimension",
         "$value": "2px"
+      },
+      "400": {
+        "$type": "dimension",
+        "$value": "4px"
       }
     },
     "icon": {
@@ -775,6 +816,41 @@
       "lg": {
         "$type": "dimension",
         "$value": "52px"
+      }
+    },
+    "media": {
+      "$description": "Fixed media sizes measured in the 1440px Coach and Surfer designs.",
+      "tile-md": {
+        "$type": "dimension",
+        "$value": "36px"
+      },
+      "tile-lg": {
+        "$type": "dimension",
+        "$value": "56px"
+      },
+      "tile-xl": {
+        "$type": "dimension",
+        "$value": "96px"
+      },
+      "avatar-xl": {
+        "$type": "dimension",
+        "$value": "80px"
+      },
+      "thumbnail-width": {
+        "$type": "dimension",
+        "$value": "168px"
+      },
+      "thumbnail-height": {
+        "$type": "dimension",
+        "$value": "94px"
+      },
+      "illustration-sm": {
+        "$type": "dimension",
+        "$value": "130px"
+      },
+      "illustration-md": {
+        "$type": "dimension",
+        "$value": "200px"
       }
     }
   },
@@ -843,6 +919,26 @@
         "spread": "3px"
       },
       "$description": "Focus ring."
+    },
+    "halo-brand": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.ocean.40}",
+        "offsetX": "0px",
+        "offsetY": "0px",
+        "blur": "48px",
+        "spread": "0px"
+      }
+    },
+    "halo-danger": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{color.alpha.coral.30}",
+        "offsetX": "0px",
+        "offsetY": "0px",
+        "blur": "48px",
+        "spread": "0px"
+      }
     }
   },
   "motion": {
@@ -954,6 +1050,13 @@
       "$type": "dimension",
       "$value": "1440px",
       "$description": "Design width of the Coach and Surfer files."
+    }
+  },
+  "opacity": {
+    "$description": "Opacity steps.",
+    "50": {
+      "$type": "number",
+      "$value": 0.5
     }
   }
 }

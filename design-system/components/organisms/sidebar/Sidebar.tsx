@@ -1,20 +1,19 @@
 import { cx } from '../../../lib/cx';
+import { Logo } from '../../atoms/logo/Logo';
 import { NavigationItem, type NavigationItemProps } from '../../molecules/navigation-item/NavigationItem';
 
 type SidebarItem = Omit<NavigationItemProps, 'isActive' | 'className'>;
 
 const defaultItems: Record<'coach' | 'surfer', SidebarItem[]> = {
   coach: [
-    { label: 'Home', icon: 'home', href: '/' },
-    { label: 'Queue', icon: 'list', href: '/queue' },
+    { label: 'Queue', icon: 'play-circle', href: '/' },
     { label: 'Surfers', icon: 'users', href: '/surfers' },
-    { label: 'Calendar', icon: 'calendar', href: '/calendar' },
+    { label: 'Schedule', icon: 'calendar', href: '/schedule' },
     { label: 'Profile', icon: 'user', href: '/profile' },
   ],
   surfer: [
-    { label: 'Home', icon: 'home', href: '/' },
-    { label: 'Sessions', icon: 'play-circle', href: '/sessions' },
-    { label: 'Upload', icon: 'upload', href: '/upload' },
+    { label: 'Dashboard', icon: 'home', href: '/' },
+    { label: 'History', icon: 'list', href: '/history' },
     { label: 'Profile', icon: 'user', href: '/profile' },
   ],
 };
@@ -37,6 +36,7 @@ export function Sidebar({ product, activeHref, items = defaultItems[product], cl
           </li>
         ))}
       </ul>
+      <Logo size="small" className="ds-sidebar__logo" />
     </nav>
   );
 }

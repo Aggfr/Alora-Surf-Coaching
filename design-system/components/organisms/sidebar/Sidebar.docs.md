@@ -1,6 +1,6 @@
 # Sidebar
 
-**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Sidebar](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-84)
 
 ## 1. Name and category
@@ -22,7 +22,7 @@ Fixed main navigation on desktop.
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `product` | `'coach' \| 'surfer'` | — | Yes | Sets the default items. |
+| `product` | `'coach' \| 'surfer'` | — | Yes | Sets the default items: Coach Queue, Surfers, Schedule, Profile; Surfer Dashboard, History, Profile. |
 | `activeHref` | `string` | — | Yes | Active item. |
 | `items` | `Array<NavigationItemProps>` | `from product` | No | Overrides the items (max. 5). |
 
@@ -46,11 +46,11 @@ The component's own tokens live in [`Sidebar.tokens.json`](./Sidebar.tokens.json
 ## 11. Composition rules
 - Items slot (max. 5) + Logo.
 - Not customizable: width, background, logo position.
-- Depends on: `NavigationItem`.
+- Depends on: `NavigationItem`, `Logo`.
 
 ## 12. Code examples
 ```tsx
-<Sidebar product="coach" activeHref="/queue" />
+<Sidebar product="coach" activeHref="/" />
 ```
 More examples in [`Sidebar.examples.md`](./Sidebar.examples.md).
 
@@ -58,6 +58,7 @@ More examples in [`Sidebar.examples.md`](./Sidebar.examples.md).
 - Adding actions (buttons) to the Sidebar.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Default items follow the redesign (Coach: Queue, Surfers, Schedule, Profile; Surfer: Dashboard, History, Profile) and the Logo sits at the bottom.

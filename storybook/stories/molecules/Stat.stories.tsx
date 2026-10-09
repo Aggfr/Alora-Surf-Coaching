@@ -26,3 +26,7 @@ export const Row: Story = {
     </div>
   ),
 };
+
+export const Featured: Story = { args: { variant: 'featured', label: 'Total earnings', value: '€1,240', caption: 'Sep 15 - Sep 30', trend: undefined } };
+
+export const Compact: Story = { args: { variant: 'compact', label: 'Reviews this period', value: 31, trend: undefined }, decorators: [(Story) => <div className="sb-narrow"><Story /></div>] };

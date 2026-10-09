@@ -206,6 +206,35 @@
           "$value": "{color.coral.300}",
           "$description": "Destructive action text without a container (Sign out)."
         }
+      },
+      "highlight": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.sun.12}",
+          "$description": "Warm secondary action (Coach portal)."
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.alpha.sun.18}"
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.sun.400}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.alpha.sun.30}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.sun.400}",
+          "$description": "Selected warm option (segmented control)."
+        },
+        "on-solid": {
+          "$type": "color",
+          "$value": "{color.navy.950}",
+          "$description": "Text on the solid warm option."
+        }
       }
     },
     "feedback": {
@@ -313,6 +342,28 @@
           "$type": "color",
           "$value": "{color.alpha.violet.18}"
         }
+      },
+      "session": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.pink.400}",
+          "$description": "Plan Session."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.pink.18}"
+        }
+      },
+      "performance": {
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.sun.400}",
+          "$description": "Plan Performance."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.sun.18}"
+        }
       }
     },
     "status": {
@@ -325,6 +376,11 @@
         "background": {
           "$type": "color",
           "$value": "{color.alpha.sun.12}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.amber.700}",
+          "$description": "Solid pending label over media (thumbnails)."
         }
       },
       "in-review": {
@@ -336,6 +392,11 @@
         "background": {
           "$type": "color",
           "$value": "{color.alpha.ocean.12}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.ocean.700}",
+          "$description": "Solid in-review label over media."
         }
       },
       "review-ready": {
@@ -347,6 +408,11 @@
         "background": {
           "$type": "color",
           "$value": "{color.alpha.green.12}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.green.700}",
+          "$description": "Solid review-ready label over media."
         }
       },
       "overdue": {
@@ -358,6 +424,11 @@
         "background": {
           "$type": "color",
           "$value": "{color.alpha.coral.12}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.coral.600}",
+          "$description": "Solid overdue label over media."
         }
       }
     },
@@ -388,6 +459,28 @@
         "$type": "color",
         "$value": "{color.ocean.400}",
         "$description": "Active or brand icons."
+      }
+    },
+    "media": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.black}",
+        "$description": "Behind video and photos, in both themes."
+      },
+      "foreground": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "Controls and text over video, in both themes."
+      },
+      "track": {
+        "$type": "color",
+        "$value": "{color.alpha.white.40}",
+        "$description": "Unplayed part of the video timeline."
+      },
+      "scrim": {
+        "$type": "color",
+        "$value": "{color.alpha.black.55}",
+        "$description": "Behind controls over video."
       }
     }
   },
@@ -512,6 +605,51 @@
         "$type": "dimension",
         "$value": "{size.container.stat}",
         "$description": "Minimum width of a Stat before it wraps to a new row."
+      },
+      "icon-tile-medium": {
+        "$type": "dimension",
+        "$value": "{size.media.tile-md}",
+        "$description": "Icon tile next to a section title."
+      },
+      "icon-tile-large": {
+        "$type": "dimension",
+        "$value": "{size.media.tile-lg}",
+        "$description": "Icon tile above a form or dialog."
+      },
+      "icon-tile-xlarge": {
+        "$type": "dimension",
+        "$value": "{size.media.tile-xl}",
+        "$description": "Result icon (success, error)."
+      },
+      "avatar-xlarge": {
+        "$type": "dimension",
+        "$value": "{size.media.avatar-xl}",
+        "$description": "Profile avatar and full-screen spinner."
+      },
+      "thumbnail-width": {
+        "$type": "dimension",
+        "$value": "{size.media.thumbnail-width}",
+        "$description": "Clip thumbnail width in lists."
+      },
+      "thumbnail-height": {
+        "$type": "dimension",
+        "$value": "{size.media.thumbnail-height}",
+        "$description": "Clip thumbnail height in lists."
+      },
+      "illustration-small": {
+        "$type": "dimension",
+        "$value": "{size.media.illustration-sm}",
+        "$description": "Empty-state illustration width."
+      },
+      "illustration-medium": {
+        "$type": "dimension",
+        "$value": "{size.media.illustration-md}",
+        "$description": "Large empty-state illustration width."
+      },
+      "progress-height": {
+        "$type": "dimension",
+        "$value": "{size.space.100}",
+        "$description": "Height of progress bars and the stepper track."
       }
     },
     "icon": {
@@ -554,6 +692,11 @@
       "focus": {
         "$type": "dimension",
         "$value": "{size.border.200}"
+      },
+      "heavy": {
+        "$type": "dimension",
+        "$value": "{size.border.400}",
+        "$description": "Full-screen spinner stroke."
       }
     }
   },
@@ -712,6 +855,16 @@
       "$type": "shadow",
       "$value": "{shadow.ring}",
       "$description": "Visible keyboard focus ring."
+    },
+    "halo-brand": {
+      "$type": "shadow",
+      "$value": "{shadow.halo-brand}",
+      "$description": "Soft glow behind success icons and large avatars."
+    },
+    "halo-danger": {
+      "$type": "shadow",
+      "$value": "{shadow.halo-danger}",
+      "$description": "Soft glow behind error icons."
     }
   },
   "motion": {
@@ -784,6 +937,13 @@
       "$type": "number",
       "$value": "{z-index.tooltip}",
       "$description": "Tooltips, always on top."
+    }
+  },
+  "opacity": {
+    "disabled": {
+      "$type": "number",
+      "$value": "{opacity.50}",
+      "$description": "Opacity of a disabled primary action, which keeps its brand color."
     }
   }
 }

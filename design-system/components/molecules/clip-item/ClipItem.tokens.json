@@ -1,0 +1,3 @@
+{
+  "$description": "ClipItem tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: size.layout.thumbnail-width, size.layout.thumbnail-height, color.media.background, color.media.scrim, card.radius, color.status.*.solid, typography.heading-small, typography.body-small."
+}

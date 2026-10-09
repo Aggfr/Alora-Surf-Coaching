@@ -2,7 +2,7 @@
 
 The design system for the **Coach** and **Surfer** platforms of Alora Surf Coaching. The single source of truth for designers, developers and AI agents: W3C/DTCG tokens, 32 documented React components, templates, example pages and the Figma library.
 
-**Figma:** [Design System](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System) · **Version:** 1.0.0 · **Themes:** dark (default) and light
+**Figma:** [Design System](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System) · **Version:** 1.1.0 · **Themes:** dark (default) and light
 
 ## Getting started
 | If you are… | Read |
@@ -71,12 +71,12 @@ design-system/
 ```
 
 ## Inventory
-- **Atoms (16):** Button, Icon, Label, Text, Heading, Input, Textarea, Checkbox, Radio, Switch, Avatar, Badge, Tag, Spinner, Divider, Tooltip
-- **Molecules (9):** FormField, SearchField, ListItem, TagChip, Stat, Notification, Breadcrumb, Pagination, NavigationItem
-- **Organisms (7):** Sidebar, PageHeader, SubmissionCard, DataList, EmptyState, Modal, FormSection
+- **Atoms (22):** Button, Icon, Label, Text, Heading, Input, Textarea, Checkbox, Radio, Switch, Avatar, Badge, Tag, Spinner, Divider, Tooltip, Logo, Link, IconButton, IconTile, ProgressBar, Illustration
+- **Molecules (18):** FormField, SearchField, ListItem, TagChip, Stat, Notification, Breadcrumb, Pagination, NavigationItem, OptionCard, SegmentedControl, Stepper, Dropzone, ClipItem, SummaryRow, StatGroup, SectionHeader, PeriodStepper
+- **Organisms (12):** Sidebar, PageHeader, SubmissionCard, DataList, EmptyState, Modal, FormSection, TopBar, ResultState, ReviewCard, VideoPlayer, AvailabilityGrid
 - **Templates (2):** DashboardTemplate, AuthTemplate
 - **Pages (2):** CoachQueuePage (dark and light), SurferLoginPage
-- **Planned:** NavigationBar, DataTable, CommandPalette, Footer, Select, ProgressBar, ReviewCard
+- **Planned:** NavigationBar, DataTable, CommandPalette, Footer, Select
 
 ## Figma
 | Page | Content |

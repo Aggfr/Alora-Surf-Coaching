@@ -1,6 +1,6 @@
 # TagChip
 
-**Atomic Design category:** Molecule · **Status:** `beta` · **Version:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `beta` · **Version:** 1.1.0
 **Figma:** [TagChip](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-139)
 
 ## 1. Name and category
@@ -62,6 +62,6 @@ More examples in [`TagChip.examples.md`](./TagChip.examples.md).
 - Using TagChip for system states.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `beta`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.

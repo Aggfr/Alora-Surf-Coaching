@@ -33,6 +33,19 @@ export const Plans: Story = {
       <Badge tone="plan-pay-as-you-go">Pay as you go</Badge>
       <Badge tone="plan-elite">Elite</Badge>
       <Badge tone="plan-progression">Progression</Badge>
+      <Badge tone="plan-session">Session</Badge>
+      <Badge tone="plan-performance">Performance</Badge>
+    </div>
+  ),
+};
+
+export const Solid: Story = {
+  render: () => (
+    <div className="sb-row">
+      <Badge tone="pending" appearance="solid">Waiting</Badge>
+      <Badge tone="in-review" appearance="solid">In review</Badge>
+      <Badge tone="review-ready" appearance="solid" icon="check">Reviewed</Badge>
+      <Badge tone="overdue" appearance="solid">Failed</Badge>
     </div>
   ),
 };

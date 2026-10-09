@@ -30,6 +30,7 @@ export const Variants: Story = {
       <Button {...args} variant="secondary">Secondary</Button>
       <Button {...args} variant="ghost">Ghost</Button>
       <Button {...args} variant="danger">Danger</Button>
+      <Button {...args} variant="highlight">Highlight</Button>
     </div>
   ),
 };
@@ -62,3 +63,5 @@ export const FullWidth: Story = {
   args: { isFullWidth: true, size: 'large', leadingIcon: 'log-in', children: 'Log in' },
   decorators: [(Story) => <div className="sb-narrow"><Story /></div>],
 };
+
+export const DisabledPrimary: Story = { args: { isDisabled: true, size: 'large', isFullWidth: true, leadingIcon: undefined, children: 'Create account' }, decorators: [(Story) => <div className="sb-narrow"><Story /></div>] };

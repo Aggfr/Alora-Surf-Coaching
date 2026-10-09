@@ -1,0 +1,17 @@
+{
+  "$description": "ProgressBar tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: progress-bar.track, progress-bar.indicator, progress-bar.height, size.radius.pill.",
+  "progress-bar": {
+    "track": {
+      "$type": "color",
+      "$value": "{color.background.surface-raised}"
+    },
+    "indicator": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.layout.progress-height}"
+    }
+  }
+}

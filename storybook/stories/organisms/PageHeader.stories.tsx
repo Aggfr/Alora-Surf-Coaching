@@ -32,3 +32,5 @@ export const Surfer: Story = {
 };
 
 export const TitleOnly: Story = { args: { subtitle: undefined, actions: undefined, title: 'Sessions' } };
+
+export const Large: Story = { args: { size: 'large', title: 'Schedule', subtitle: 'Set the hours you can review clips.', actions: undefined } };

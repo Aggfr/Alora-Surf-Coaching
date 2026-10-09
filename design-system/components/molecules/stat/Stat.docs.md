@@ -1,6 +1,6 @@
 # Stat
 
-**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Molecule · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Stat](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=13-154)
 
 ## 1. Name and category
@@ -26,9 +26,12 @@ Shows a metric with its label and an optional trend.
 | `label` | `string` | — | Yes | What is measured. |
 | `value` | `string \| number` | — | Yes | Formatted value. |
 | `trend` | `{ direction: 'up' \| 'down'; label: string }` | — | No | Change. |
+| `caption` | `string` | — | No | Line under the label (“Paid on Oct 1”). |
+| `variant` | `'default' \| 'featured' \| 'compact'` | `'default'` | No | featured: big centered total (earnings). compact: label and value on one row. |
 
 ## 7. Variants and states
 - **trend:** `none`, `up`
+- **variant:** `default`, `featured`, `compact`
 - **States:** `—`
 
 ## 8. Tokens used
@@ -39,6 +42,8 @@ Shows a metric with its label and an optional trend.
 - `size.space.xl`
 - `typography.metric`
 - `color.feedback.success.foreground`
+- `color.background.brand-subtle`
+- `typography.display`
 
 The component's own tokens live in [`Stat.tokens.json`](./Stat.tokens.json). Primitive tokens are never used directly.
 
@@ -63,6 +68,7 @@ More examples in [`Stat.examples.md`](./Stat.examples.md).
 - Trend shown only with color.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added caption and the featured and compact variants.

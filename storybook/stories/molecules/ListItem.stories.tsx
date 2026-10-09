@@ -26,3 +26,7 @@ export const Navigation: Story = { args: { type: 'navigation', title: 'Notificat
 export const DangerAction: Story = {
   args: { type: 'definition', title: 'Account', description: 'lucia@example.com', action: { label: 'Delete', tone: 'danger', onPress: fn() } },
 };
+
+export const LinkedPerson: Story = {
+  args: { type: 'person', title: 'Lucía Marín', description: 'Last clip 2 days ago', avatarName: 'Lucía Marín', avatarTone: 'session', badge: { label: 'Session', tone: 'plan-session' }, href: '#lucia', action: undefined },
+};

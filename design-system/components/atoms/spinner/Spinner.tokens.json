@@ -1,5 +1,5 @@
 {
-  "$description": "Spinner tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: spinner.track, spinner.indicator, size.border.focus, motion.loop-duration.",
+  "$description": "Spinner tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: spinner.track, spinner.indicator, size.border.focus, size.border.heavy, size.layout.avatar-xlarge, motion.loop-duration.",
   "spinner": {
     "track": {
       "$type": "color",

@@ -1,5 +1,5 @@
 {
-  "$description": "Avatar tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: avatar.background, avatar.foreground, avatar.radius, color.plan.*.foreground, color.text.inverse.",
+  "$description": "Avatar tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: avatar.background, avatar.foreground, avatar.radius, color.plan.*.foreground, color.text.inverse, size.layout.avatar-xlarge, elevation.halo-brand.",
   "avatar": {
     "background": {
       "$type": "color",

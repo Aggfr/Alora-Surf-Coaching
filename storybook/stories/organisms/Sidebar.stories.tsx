@@ -7,8 +7,8 @@ const meta = {
   title: 'Organisms/Sidebar',
   component: Sidebar,
   parameters: { ...docsFrom(docs, 'components/organisms/sidebar'), layout: 'fullscreen' },
-  args: { product: 'coach', activeHref: '/queue' },
-  argTypes: { activeHref: { control: 'select', options: ['/', '/queue', '/surfers', '/calendar', '/sessions', '/upload', '/profile'] } },
+  args: { product: 'coach', activeHref: '/' },
+  argTypes: { activeHref: { control: 'select', options: ['/', '/surfers', '/schedule', '/history', '/profile'] } },
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;
@@ -16,4 +16,4 @@ type Story = StoryObj<typeof meta>;
 
 export const Coach: Story = {};
 
-export const Surfer: Story = { args: { product: 'surfer', activeHref: '/sessions' } };
+export const Surfer: Story = { args: { product: 'surfer', activeHref: '/history' } };

@@ -1,6 +1,6 @@
 # Button
 
-**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Atom · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [Button](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=8-425)
 
 ## 1. Name and category
@@ -29,7 +29,7 @@ Triggers an action in the current view.
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
 | `children` | `ReactNode` | — | Yes | Visible button text. Verb + object: 'Send request'. |
-| `variant` | `'primary' \| 'secondary' \| 'ghost' \| 'danger'` | `'primary'` | No | Visual hierarchy of the action. |
+| `variant` | `'primary' \| 'secondary' \| 'ghost' \| 'danger' \| 'highlight'` | `'primary'` | No | Visual hierarchy of the action. highlight is the warm secondary (Change coach, Get more submissions). |
 | `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | Height 32 / 44 / 52 px. |
 | `leadingIcon` | `IconName` | — | No | Icon before the text. |
 | `trailingIcon` | `IconName` | — | No | Icon after the text. |
@@ -40,7 +40,7 @@ Triggers an action in the current view.
 | `onPress` | `() => void` | — | No | Action on press (click, Enter, Space). |
 
 ## 7. Variants and states
-- **variant:** `primary`, `secondary`, `ghost`, `danger`
+- **variant:** `primary`, `secondary`, `ghost`, `danger`, `highlight`
 - **size:** `small`, `medium`, `large`
 - **States:** `default`, `hover`, `pressed`, `focus`, `disabled`, `loading`
 
@@ -49,7 +49,9 @@ Triggers an action in the current view.
 - `button.secondary.*`
 - `button.ghost.*`
 - `button.danger.*`
+- `button.highlight.*`
 - `button.disabled.*`
+- `button.primary.opacity-disabled`
 - `button.radius`
 - `button.gap`
 - `button.padding-horizontal.*`
@@ -69,7 +71,7 @@ The component's own tokens live in [`Button.tokens.json`](./Button.tokens.json).
 - Visible focus: 2px `color.border.focus` outline outside the button.
 - Icon-only buttons need an `aria-label` and a `Tooltip`.
 - Primary keeps the Coach Platform CTA gradient (ocean 600→400, #3b8eaa → #5aaec8). White text on it is 3.7–2.5:1, below WCAG AA 4.5:1: a known exception chosen by product design. Secondary, ghost and danger meet 4.5:1.
-- Disabled uses `aria-disabled` so screen readers can still find it.
+- Disabled uses `aria-disabled` so screen readers can still find it. A disabled primary keeps its gradient at 50% opacity (Create account before the form is valid); the other variants use `button.disabled.*`.
 
 ## 11. Composition rules
 - At most one primary per view or per Modal.
@@ -87,9 +89,12 @@ More examples in [`Button.examples.md`](./Button.examples.md).
 - Two primary buttons in the same view.
 - Changing colors with ad-hoc styles instead of `variant`.
 - Using `ghost` for destructive actions.
+- A red text-only action: use Link tone=danger.
 - Generic text ('Click here', 'OK').
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added the highlight variant.
+- 2026-10-09 · 1.1.0 · A disabled primary now keeps its faded brand gradient.

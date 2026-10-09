@@ -1,0 +1,25 @@
+{
+  "$description": "VideoPlayer tokens. Source: tokens/component.tokens.json. Additional semantic references it consumes: video-player.background, video-player.foreground, video-player.track, video-player.progress, video-player.scrim, card.radius, size.layout.control-height-small.",
+  "video-player": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.media.background}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.media.foreground}"
+    },
+    "track": {
+      "$type": "color",
+      "$value": "{color.media.track}"
+    },
+    "progress": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    },
+    "scrim": {
+      "$type": "color",
+      "$value": "{color.media.scrim}"
+    }
+  }
+}

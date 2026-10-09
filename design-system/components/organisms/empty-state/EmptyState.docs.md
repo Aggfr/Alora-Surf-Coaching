@@ -1,6 +1,6 @@
 # EmptyState
 
-**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.0.0
+**Atomic Design category:** Organism · **Status:** `stable` · **Version:** 1.1.0
 **Figma:** [EmptyState](https://www.figma.com/design/GZRi3cvtWVfu0MTxPvPEcY/Design-System?node-id=14-277)
 
 ## 1. Name and category
@@ -16,19 +16,26 @@ Explains why an area is empty and offers the next action.
 - Errors: danger Notification.
 
 ## 5. Anatomy
-1. Decorative icon
-2. Message
-3. Optional action (Button)
+1. Decorative icon or Illustration
+2. Optional title
+3. Message
+4. Optional hint
+5. Optional action (Button)
 
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
+| `title` | `string` | — | No | Short headline (“Nothing reviewed yet”). |
 | `message` | `string` | — | Yes | Current state in the user's language. |
+| `hint` | `string` | — | No | Small line with the next step. |
 | `icon` | `IconName` | `'info'` | No | Icon. |
-| `action` | `{ label: string; icon?: IconName; onPress: () => void }` | — | No | Next step. |
+| `illustration` | `IllustrationName` | — | No | Illustration instead of the icon. |
+| `variant` | `'card' \| 'inline'` | `'card'` | No | inline: no card, left aligned, inside another section. |
+| `action` | `{ label: string; icon?: IconName; variant?: 'primary' \| 'secondary'; onPress: () => void }` | — | No | Next step. |
 
 ## 7. Variants and states
 - **action:** `false`, `true`
+- **variant:** `card`, `inline`
 - **States:** `—`
 
 ## 8. Tokens used
@@ -48,7 +55,7 @@ The component's own tokens live in [`EmptyState.tokens.json`](./EmptyState.token
 
 ## 11. Composition rules
 - Takes the place of the empty list.
-- Depends on: `Icon`, `Text`, `Button`.
+- Depends on: `Icon`, `Illustration`, `Text`, `Button`.
 
 ## 12. Code examples
 ```tsx
@@ -60,6 +67,7 @@ More examples in [`EmptyState.examples.md`](./EmptyState.examples.md).
 - Messages that blame the user.
 
 ## 14. Version, status and changelog
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.0.0 · First version, extracted from Coach Platform and Surfer Platform.
+- 2026-10-09 · 1.1.0 · Added title, hint, illustration, the inline variant and the action variant.
