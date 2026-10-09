@@ -3575,7 +3575,7 @@
       "figmaVariable": "color/action/primary/background",
       "status": "stable",
       "references": "color.ocean.700",
-      "description": "Main action of the view. One per view. Darker than the original design so white text meets 4.5:1.",
+      "description": "Solid brand fill for selected controls and avatars (checkbox, switch, avatar). Darker than the CTA gradient so white content meets 4.5:1.",
       "themes": {
         "dark": "{color.ocean.700}",
         "light": "{color.ocean.700}"
@@ -3589,11 +3589,11 @@
       "cssVariable": "--ds-color-action-primary-background-start",
       "figmaVariable": "color/action/primary/background-start",
       "status": "stable",
-      "references": "color.ocean.800",
-      "description": "Start of the primary button gradient. The original (#3b8eaa → #5aaec8) gave 2.5–3.7:1 with white text; ocean.800 → ocean.700 guarantees ≥ 5.4:1 across the whole gradient.",
+      "references": "color.ocean.600",
+      "description": "Start of the primary button gradient, taken from the Coach Platform CTA (#3b8eaa → #5aaec8). White text on this gradient is 3.7–2.5:1, below WCAG AA 4.5:1; kept on purpose to match the product design.",
       "themes": {
-        "dark": "{color.ocean.800}",
-        "light": "{color.ocean.800}"
+        "dark": "{color.ocean.600}",
+        "light": "{color.ocean.600}"
       }
     },
     {
@@ -3604,11 +3604,11 @@
       "cssVariable": "--ds-color-action-primary-background-end",
       "figmaVariable": "color/action/primary/background-end",
       "status": "stable",
-      "references": "color.ocean.700",
-      "description": "End of the primary button gradient.",
+      "references": "color.ocean.400",
+      "description": "End of the primary button gradient (#5aaec8).",
       "themes": {
-        "dark": "{color.ocean.700}",
-        "light": "{color.ocean.700}"
+        "dark": "{color.ocean.400}",
+        "light": "{color.ocean.400}"
       }
     },
     {
@@ -3619,11 +3619,11 @@
       "cssVariable": "--ds-color-action-primary-background-hover",
       "figmaVariable": "color/action/primary/background-hover",
       "status": "stable",
-      "references": "color.ocean.800",
+      "references": "color.ocean.700",
       "description": "Main action on hover.",
       "themes": {
-        "dark": "{color.ocean.800}",
-        "light": "{color.ocean.800}"
+        "dark": "{color.ocean.700}",
+        "light": "{color.ocean.700}"
       }
     },
     {
@@ -3634,11 +3634,11 @@
       "cssVariable": "--ds-color-action-primary-background-pressed",
       "figmaVariable": "color/action/primary/background-pressed",
       "status": "stable",
-      "references": "color.ocean.900",
+      "references": "color.ocean.800",
       "description": "Main action when pressed.",
       "themes": {
-        "dark": "{color.ocean.900}",
-        "light": "{color.ocean.900}"
+        "dark": "{color.ocean.800}",
+        "light": "{color.ocean.800}"
       }
     },
     {

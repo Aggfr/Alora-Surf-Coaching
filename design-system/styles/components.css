@@ -84,7 +84,7 @@
 .ds-button--full-width { width: 100%; }
 
 .ds-button--primary {
-  background: linear-gradient(to right, var(--ds-button-primary-background), var(--ds-button-primary-background-end));
+  background: linear-gradient(to bottom right, var(--ds-button-primary-background), var(--ds-button-primary-background-end));
   color: var(--ds-button-primary-foreground);
   box-shadow: var(--ds-button-primary-shadow);
 }

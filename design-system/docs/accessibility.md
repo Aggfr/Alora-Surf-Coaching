@@ -11,7 +11,7 @@ Measured on `color.background.surface-raised` (cards), compositing translucent b
 | `text.secondary` | 5.9:1 | 8.0:1 | 4.5 |
 | `text.tertiary` | 4.6:1 | 5.4:1 | 4.5 |
 | `text.brand` | 6.2:1 | 5.5:1 | 4.5 |
-| Primary button: white on the `ocean.800 → ocean.700` gradient | 8.1 → 5.5:1 | same | 4.5 |
+| Primary button: white on the `ocean.600 → ocean.400` gradient (#3b8eaa → #5aaec8) | 3.7 → 2.5:1 ⚠️ | same | 4.5 |
 | Danger button: white on `coral.600` | 6.5:1 | 6.5:1 | 4.5 |
 | Status badges (pending / in review / ready / overdue) | 7.4 · 5.3 · 6.7 · 5.2 | 4.9 · 5.0 · 5.2 · 5.8 | 4.5 |
 | Plan badges (elite / progression / pay as you go) | 5.3 · 4.7 · 4.9 | 4.8 · 6.5 · 6.9 | 4.5 |
@@ -20,10 +20,12 @@ Measured on `color.background.surface-raised` (cards), compositing translucent b
 ### Changes from the original designs
 | Element | Original | Now | Reason |
 |---|---|---|---|
-| Primary button gradient | `#3b8eaa → #5aaec8` (2.5–3.7:1) | `ocean.800 → ocean.700` (≥ 5.4:1) | 14px white text needs 4.5:1 |
 | Tertiary text (dark) | lighter | `navy.400 #6b8fa9` (4.6:1) | Metadata was unreadable |
 | Error text | base coral | `coral.300 #ea8282` | 4.5:1 on dark cards |
 | Danger button background | base coral | `coral.600` | 4.5:1 with white text |
+
+### Known exception
+- **Primary button.** It keeps the exact Coach Platform CTA gradient (`#3b8eaa → #5aaec8`) by product decision on 2026-10-09. White text on it is 3.7:1 at the start and 2.5:1 at the end, below the 4.5:1 AA minimum for text under 24px (or 18.66px bold). To make it compliant later, change only `color.action.primary.background-start` / `background-end` (for example to `ocean.800 → ocean.700`, 8.1 → 5.5:1); no component needs to change.
 
 ## Focus
 - Every interactive element shows a `size.border.focus` (2px) outline in `color.border.focus` with a 2px offset, for keyboard users only (`:focus-visible`).
