@@ -119,8 +119,8 @@ The *planned* organisms are listed in `MANIFEST.json → planned` so nobody inve
 ## Templates (2)
 | Template | Slots | Figma |
 |---|---|---|
-| [DashboardTemplate](../templates/dashboard/DashboardTemplate.docs.md) | header, content | 14:511 |
-| [AuthTemplate](../templates/auth/AuthTemplate.docs.md) | form | 14:550 |
+| [DashboardTemplate](../templates/dashboard/DashboardTemplate.docs.md) | header, content | 70:1113 |
+| [AuthTemplate](../templates/auth/AuthTemplate.docs.md) | form | 70:1073 |
 
 ## Pages (2, examples)
 | Page | Template | Figma |

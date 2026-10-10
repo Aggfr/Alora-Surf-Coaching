@@ -928,7 +928,7 @@ SPECS = [
         examples_bad='<Card><b>Frontside snap</b><button className="blue">View</button></Card>',
     ),
     dict(
-        name="DataList", category="organism", status="stable", figma="14:224",
+        name="DataList", category="organism", status="stable", figma="70:63",
         purpose="Read-only data section with a title and definition rows.",
         when=["Account & Billing, Surf Profile, Legal."],
         when_not=["Comparable tabular data: DataTable (planned)."],
