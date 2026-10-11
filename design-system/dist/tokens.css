@@ -186,6 +186,8 @@
   --ds-size-media-avatar-xl: 80px;
   --ds-size-media-thumbnail-width: 168px;
   --ds-size-media-thumbnail-height: 94px;
+  --ds-size-media-thumbnail-sm-width: 136px;
+  --ds-size-media-thumbnail-sm-height: 56px;
   --ds-size-media-illustration-sm: 130px;
   --ds-size-media-illustration-md: 200px;
   --ds-shadow-glow-small: 0px 2px 10px 0px #3b8eaa40;
@@ -338,6 +340,8 @@
   --ds-size-layout-avatar-xlarge: 80px;
   --ds-size-layout-thumbnail-width: 168px;
   --ds-size-layout-thumbnail-height: 94px;
+  --ds-size-layout-thumbnail-small-width: 136px;
+  --ds-size-layout-thumbnail-small-height: 56px;
   --ds-size-layout-illustration-small: 130px;
   --ds-size-layout-illustration-medium: 200px;
   --ds-size-layout-progress-height: 4px;

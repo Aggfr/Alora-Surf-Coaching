@@ -844,6 +844,14 @@
         "$type": "dimension",
         "$value": "94px"
       },
+      "thumbnail-sm-width": {
+        "$type": "dimension",
+        "$value": "136px"
+      },
+      "thumbnail-sm-height": {
+        "$type": "dimension",
+        "$value": "56px"
+      },
       "illustration-sm": {
         "$type": "dimension",
         "$value": "130px"

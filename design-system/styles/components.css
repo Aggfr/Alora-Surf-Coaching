@@ -816,7 +816,7 @@
 }
 .ds-clip-item__media { position: relative; flex-shrink: 0; overflow: hidden; border-radius: var(--ds-size-radius-medium); background: var(--ds-color-media-background); }
 .ds-clip-item--medium .ds-clip-item__media { width: var(--ds-size-layout-thumbnail-width); height: var(--ds-size-layout-thumbnail-height); }
-.ds-clip-item--small .ds-clip-item__media { height: var(--ds-size-layout-icon-tile-large); aspect-ratio: 16 / 9; }
+.ds-clip-item--small .ds-clip-item__media { width: var(--ds-size-layout-thumbnail-small-width); height: var(--ds-size-layout-thumbnail-small-height); }
 .ds-clip-item__thumbnail { display: block; width: 100%; height: 100%; object-fit: cover; }
 .ds-clip-item__play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--ds-color-media-foreground); }
 .ds-clip-item__status { position: absolute; top: var(--ds-size-space-small); left: var(--ds-size-space-small); }

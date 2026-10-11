@@ -753,6 +753,14 @@
       "type": "dimension",
       "value": "94px"
     },
+    "size.media.thumbnail-sm-width": {
+      "type": "dimension",
+      "value": "136px"
+    },
+    "size.media.thumbnail-sm-height": {
+      "type": "dimension",
+      "value": "56px"
+    },
     "size.media.illustration-sm": {
       "type": "dimension",
       "value": "130px"
@@ -1423,6 +1431,14 @@
     "size.layout.thumbnail-height": {
       "type": "dimension",
       "value": "94px"
+    },
+    "size.layout.thumbnail-small-width": {
+      "type": "dimension",
+      "value": "136px"
+    },
+    "size.layout.thumbnail-small-height": {
+      "type": "dimension",
+      "value": "56px"
     },
     "size.layout.illustration-small": {
       "type": "dimension",
@@ -3113,6 +3129,14 @@
       "type": "dimension",
       "value": "94px"
     },
+    "size.media.thumbnail-sm-width": {
+      "type": "dimension",
+      "value": "136px"
+    },
+    "size.media.thumbnail-sm-height": {
+      "type": "dimension",
+      "value": "56px"
+    },
     "size.media.illustration-sm": {
       "type": "dimension",
       "value": "130px"
@@ -3783,6 +3807,14 @@
     "size.layout.thumbnail-height": {
       "type": "dimension",
       "value": "94px"
+    },
+    "size.layout.thumbnail-small-width": {
+      "type": "dimension",
+      "value": "136px"
+    },
+    "size.layout.thumbnail-small-height": {
+      "type": "dimension",
+      "value": "56px"
     },
     "size.layout.illustration-small": {
       "type": "dimension",
