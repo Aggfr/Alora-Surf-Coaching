@@ -636,6 +636,16 @@
         "$value": "{size.media.thumbnail-height}",
         "$description": "Clip thumbnail height in lists."
       },
+      "thumbnail-small-width": {
+        "$type": "dimension",
+        "$value": "{size.media.thumbnail-sm-width}",
+        "$description": "Clip thumbnail width in a compact clip row (new submission)."
+      },
+      "thumbnail-small-height": {
+        "$type": "dimension",
+        "$value": "{size.media.thumbnail-sm-height}",
+        "$description": "Clip thumbnail height in a compact clip row (new submission)."
+      },
       "illustration-small": {
         "$type": "dimension",
         "$value": "{size.media.illustration-sm}",

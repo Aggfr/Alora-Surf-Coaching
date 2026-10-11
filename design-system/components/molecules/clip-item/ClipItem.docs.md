@@ -35,7 +35,7 @@ Row for one video clip: thumbnail, title, facts and a light action.
 | `status` | `{ label: string; tone: 'pending' \| 'in-review' \| 'review-ready' \| 'overdue' }` | — | No | Status shown on the thumbnail. |
 | `isPlayable` | `boolean` | `false` | No | Shows a play icon on the thumbnail. |
 | `action` | `{ label: string; icon?: IconName; tone?: 'brand' \| 'danger'; onPress: () => void }` | — | No | Row action ('Delete clip'). |
-| `size` | `'small' \| 'medium'` | `'medium'` | No | Thumbnail 56 or 94 px tall (16:9). |
+| `size` | `'small' \| 'medium'` | `'medium'` | No | small: 136 × 56 px thumbnail for compact rows (new submission). medium: 168 × 94 px (16:9) for lists. |
 
 ## 7. Variants and states
 - **size:** `small`, `medium`
@@ -44,6 +44,8 @@ Row for one video clip: thumbnail, title, facts and a light action.
 ## 8. Tokens used
 - `size.layout.thumbnail-width`
 - `size.layout.thumbnail-height`
+- `size.layout.thumbnail-small-width`
+- `size.layout.thumbnail-small-height`
 - `color.media.background`
 - `color.media.scrim`
 - `card.radius`

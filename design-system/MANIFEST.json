@@ -19,8 +19,8 @@
   ],
   "summary": {
     "tokens": {
-      "primitive": 218,
-      "semantic": 162,
+      "primitive": 220,
+      "semantic": 164,
       "semanticLightOverrides": 80,
       "component": 131
     },
@@ -1494,6 +1494,8 @@
       "tokens": [
         "size.layout.thumbnail-width",
         "size.layout.thumbnail-height",
+        "size.layout.thumbnail-small-width",
+        "size.layout.thumbnail-small-height",
         "color.media.background",
         "color.media.scrim",
         "card.radius",
@@ -3967,6 +3969,24 @@
       "status": "stable"
     },
     {
+      "name": "size.media.thumbnail-sm-width",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-thumbnail-sm-width",
+      "figmaVariable": "size/media/thumbnail-sm-width",
+      "status": "stable"
+    },
+    {
+      "name": "size.media.thumbnail-sm-height",
+      "layer": "primitive",
+      "type": "dimension",
+      "file": "tokens/primitives.tokens.json",
+      "cssVariable": "--ds-size-media-thumbnail-sm-height",
+      "figmaVariable": "size/media/thumbnail-sm-height",
+      "status": "stable"
+    },
+    {
       "name": "size.media.illustration-sm",
       "layer": "primitive",
       "type": "dimension",
@@ -5868,6 +5888,28 @@
       "status": "stable",
       "references": "size.media.thumbnail-height",
       "description": "Clip thumbnail height in lists."
+    },
+    {
+      "name": "size.layout.thumbnail-small-width",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-thumbnail-small-width",
+      "figmaVariable": "size/layout/thumbnail-small-width",
+      "status": "stable",
+      "references": "size.media.thumbnail-sm-width",
+      "description": "Clip thumbnail width in a compact clip row (new submission)."
+    },
+    {
+      "name": "size.layout.thumbnail-small-height",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-thumbnail-small-height",
+      "figmaVariable": "size/layout/thumbnail-small-height",
+      "status": "stable",
+      "references": "size.media.thumbnail-sm-height",
+      "description": "Clip thumbnail height in a compact clip row (new submission)."
     },
     {
       "name": "size.layout.illustration-small",

@@ -6,6 +6,18 @@ All notable changes to `@aggfr/alora-design-system`. The package follows [Semant
 - **Minor:** a new token, component, variant or prop, or a deprecation (with its alias kept).
 - **Patch:** a bug fix, a docs fix, or a visual fix that brings code back in line with Figma.
 
+## Unreleased
+**Tokens**
+- New `size.layout.thumbnail-small-width` (136px) and `size.layout.thumbnail-small-height` (56px), from `size.media.thumbnail-sm-*`.
+
+**Components**
+- `ClipItem` `size="small"` now uses a 136 × 56 px thumbnail, matching the new submission screen.
+
+**Figma only**
+- `Stepper` has a `Steps` property (4 or 5) so flows with five steps can be drawn; the code already takes any number of steps.
+- `Textarea` has a `Filled` property, like `Input`, so typed text shows in the primary text color.
+- Icons swapped into `Button` and `Link` take the color of the variant or tone. Each icon is now a single vector layer.
+
 ## 1.1.0 (2026-10-09)
 Everything needed to build the Coach and Surfer redesign screens with the system. Typography is unchanged (Outfit headings, Inter body).
 
