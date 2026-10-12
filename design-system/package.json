@@ -22,13 +22,15 @@
     "./tokens.resolved.json": "./dist/tokens.resolved.json",
     "./tokens/*.json": "./tokens/*.json",
     "./manifest.json": "./MANIFEST.json",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./assets/*": "./assets/*"
   },
   "sideEffects": [
     "*.css"
   ],
   "files": [
     "build",
+    "assets",
     "dist",
     "styles",
     "tokens",

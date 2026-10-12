@@ -337,6 +337,9 @@
   --ds-size-layout-icon-tile-medium: 36px;
   --ds-size-layout-icon-tile-large: 56px;
   --ds-size-layout-icon-tile-xlarge: 96px;
+  --ds-size-layout-logo-small: 40px;
+  --ds-size-layout-logo-medium: 56px;
+  --ds-size-layout-logo-large: 96px;
   --ds-size-layout-avatar-xlarge: 80px;
   --ds-size-layout-thumbnail-width: 168px;
   --ds-size-layout-thumbnail-height: 94px;

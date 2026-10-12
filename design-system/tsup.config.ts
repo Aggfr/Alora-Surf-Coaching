@@ -10,4 +10,6 @@ export default defineConfig({
   clean: true,
   target: 'es2022',
   external: ['react', 'react-dom', 'react/jsx-runtime'],
+  // The brand image ships inside the bundle, byte for byte, so the package needs no asset setup.
+  loader: { '.png': 'dataurl' },
 });

@@ -1420,6 +1420,18 @@
       "type": "dimension",
       "value": "96px"
     },
+    "size.layout.logo-small": {
+      "type": "dimension",
+      "value": "40px"
+    },
+    "size.layout.logo-medium": {
+      "type": "dimension",
+      "value": "56px"
+    },
+    "size.layout.logo-large": {
+      "type": "dimension",
+      "value": "96px"
+    },
     "size.layout.avatar-xlarge": {
       "type": "dimension",
       "value": "80px"
@@ -3793,6 +3805,18 @@
       "value": "56px"
     },
     "size.layout.icon-tile-xlarge": {
+      "type": "dimension",
+      "value": "96px"
+    },
+    "size.layout.logo-small": {
+      "type": "dimension",
+      "value": "40px"
+    },
+    "size.layout.logo-medium": {
+      "type": "dimension",
+      "value": "56px"
+    },
+    "size.layout.logo-large": {
       "type": "dimension",
       "value": "96px"
     },

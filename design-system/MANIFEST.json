@@ -20,7 +20,7 @@
   "summary": {
     "tokens": {
       "primitive": 220,
-      "semantic": 164,
+      "semantic": 167,
       "semanticLightOverrides": 80,
       "component": 131
     },
@@ -706,7 +706,7 @@
       "category": "atom",
       "status": "stable",
       "version": "1.1.0",
-      "description": "Shows the Alora brand mark, with or without the ALORA wordmark.",
+      "description": "Shows the Alora brand image: mountains, sun and the ALORA wordmark.",
       "path": "components/atoms/logo",
       "files": {
         "component": "components/atoms/logo/Logo.tsx",
@@ -716,21 +716,15 @@
       },
       "dependencies": [],
       "tokens": [
-        "color.text.brand",
-        "color.text.highlight",
-        "color.text.primary",
-        "typography.overline",
-        "size.space.2xs"
+        "size.layout.logo-small",
+        "size.layout.logo-medium",
+        "size.layout.logo-large"
       ],
       "variants": {
         "size": [
           "small",
           "medium",
           "large"
-        ],
-        "hasWordmark": [
-          "true",
-          "false"
         ]
       },
       "states": [
@@ -5855,6 +5849,39 @@
       "status": "stable",
       "references": "size.media.tile-xl",
       "description": "Result icon (success, error)."
+    },
+    {
+      "name": "size.layout.logo-small",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-logo-small",
+      "figmaVariable": "size/layout/logo-small",
+      "status": "stable",
+      "references": "size.space.1000",
+      "description": "Logo in the Sidebar."
+    },
+    {
+      "name": "size.layout.logo-medium",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-logo-medium",
+      "figmaVariable": "size/layout/logo-medium",
+      "status": "stable",
+      "references": "size.media.tile-lg",
+      "description": "Logo inside content."
+    },
+    {
+      "name": "size.layout.logo-large",
+      "layer": "semantic",
+      "type": "dimension",
+      "file": "tokens/semantic.tokens.json",
+      "cssVariable": "--ds-size-layout-logo-large",
+      "figmaVariable": "size/layout/logo-large",
+      "status": "stable",
+      "references": "size.media.tile-xl",
+      "description": "Logo at the top of the auth screens."
     },
     {
       "name": "size.layout.avatar-xlarge",

@@ -7,7 +7,7 @@ const meta = {
   title: 'Atoms/Logo',
   component: Logo,
   parameters: docsFrom(docs, 'components/atoms/logo'),
-  args: { size: 'medium', hasWordmark: true },
+  args: { size: 'medium' },
 } satisfies Meta<typeof Logo>;
 
 export default meta;
@@ -24,5 +24,3 @@ export const Sizes: Story = {
     </div>
   ),
 };
-
-export const MarkOnly: Story = { args: { hasWordmark: false } };

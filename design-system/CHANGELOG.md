@@ -8,9 +8,11 @@ All notable changes to `@aggfr/alora-design-system`. The package follows [Semant
 
 ## Unreleased
 **Tokens**
+- New `size.layout.logo-small` (40px), `size.layout.logo-medium` (56px) and `size.layout.logo-large` (96px).
 - New `size.layout.thumbnail-small-width` (136px) and `size.layout.thumbnail-small-height` (56px), from `size.media.thumbnail-sm-*`.
 
 **Components**
+- `Logo` shows the brand PNG (`assets/logo-alora.png`) exactly as delivered, instead of a hand-drawn SVG, at 40 / 56 / 96 px like the Figma component. `hasWordmark` is deprecated: the image always includes the wordmark.
 - `ClipItem` `size="small"` now uses a 136 × 56 px thumbnail, matching the new submission screen.
 
 **Figma only**

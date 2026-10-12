@@ -621,6 +621,21 @@
         "$value": "{size.media.tile-xl}",
         "$description": "Result icon (success, error)."
       },
+      "logo-small": {
+        "$type": "dimension",
+        "$value": "{size.space.1000}",
+        "$description": "Logo in the Sidebar."
+      },
+      "logo-medium": {
+        "$type": "dimension",
+        "$value": "{size.media.tile-lg}",
+        "$description": "Logo inside content."
+      },
+      "logo-large": {
+        "$type": "dimension",
+        "$value": "{size.media.tile-xl}",
+        "$description": "Logo at the top of the auth screens."
+      },
       "avatar-xlarge": {
         "$type": "dimension",
         "$value": "{size.media.avatar-xl}",

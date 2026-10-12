@@ -438,22 +438,10 @@
 }
 
 /* Logo */
-.ds-logo { display: inline-flex; flex-direction: column; align-items: center; gap: var(--ds-size-space-2xs); }
-.ds-logo__mark { width: auto; aspect-ratio: 60 / 36; }
-.ds-logo--small .ds-logo__mark { height: var(--ds-size-icon-large); }
-.ds-logo--medium .ds-logo__mark { height: var(--ds-size-layout-icon-tile-medium); }
-.ds-logo--large .ds-logo__mark { height: var(--ds-size-layout-icon-tile-large); }
-.ds-logo__mountains { fill: var(--ds-color-text-brand); }
-.ds-logo__sun { fill: var(--ds-color-text-highlight); }
-.ds-logo__wordmark {
-  color: var(--ds-color-text-brand);
-  font-family: var(--ds-typography-overline-font-family);
-  font-size: var(--ds-typography-overline-font-size);
-  font-weight: var(--ds-typography-overline-font-weight);
-  letter-spacing: var(--ds-typography-overline-letter-spacing);
-  line-height: var(--ds-typography-overline-line-height);
-}
-.ds-logo--large .ds-logo__wordmark { font-size: var(--ds-typography-body-small-font-size); }
+.ds-logo { display: block; width: auto; aspect-ratio: 1; }
+.ds-logo--small { height: var(--ds-size-layout-logo-small); }
+.ds-logo--medium { height: var(--ds-size-layout-logo-medium); }
+.ds-logo--large { height: var(--ds-size-layout-logo-large); }
 
 /* Link */
 .ds-link {

@@ -11,4 +11,4 @@ import { Logo } from '@alora/design-system';
 ```tsx
 <img src="logo.png" width="57" />
 ```
-Why: Recoloring the mark.
+Why: Recoloring, cropping, vectorizing or redrawing the image.

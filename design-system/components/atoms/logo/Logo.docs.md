@@ -7,7 +7,7 @@
 `Logo` — Atom.
 
 ## 2. Purpose
-Shows the Alora brand mark, with or without the ALORA wordmark.
+Shows the Alora brand image: mountains, sun and the ALORA wordmark.
 
 ## 3. When to use
 - Top of the auth screens (log in, sign up, profile selector).
@@ -18,26 +18,22 @@ Shows the Alora brand mark, with or without the ALORA wordmark.
 - As a home link with no text: wrap it in a link with an accessible name.
 
 ## 5. Anatomy
-1. Mark: mountains (`color.text.brand`) and sun (`color.text.highlight`)
-2. Optional wordmark ALORA (`typography.overline`)
+1. Brand image `assets/logo-alora.png` (372 × 372 px PNG, mark and wordmark), used exactly as delivered
 
 ## 6. Props
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
-| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | Mark height 24 / 36 / 56 px. |
-| `hasWordmark` | `boolean` | `true` | No | Shows ALORA under the mark. |
+| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | No | Image height 40 / 56 / 96 px; width follows the square image. |
+| `hasWordmark` | `boolean` | — | No | Deprecated: the image always includes the wordmark, so this has no effect. |
 
 ## 7. Variants and states
 - **size:** `small`, `medium`, `large`
-- **hasWordmark:** `true`, `false`
 - **States:** `—`
 
 ## 8. Tokens used
-- `color.text.brand`
-- `color.text.highlight`
-- `color.text.primary`
-- `typography.overline`
-- `size.space.2xs`
+- `size.layout.logo-small`
+- `size.layout.logo-medium`
+- `size.layout.logo-large`
 
 The component's own tokens live in [`Logo.tokens.json`](./Logo.tokens.json). Primitive tokens are never used directly.
 
@@ -45,7 +41,7 @@ The component's own tokens live in [`Logo.tokens.json`](./Logo.tokens.json). Pri
 - Not interactive.
 
 ## 10. Accessibility
-- `role=img` with `aria-label="Alora"`; the SVG and the wordmark are hidden from screen readers.
+- `<img>` with `alt="Alora"`.
 
 ## 11. Composition rules
 - AuthTemplate (hasLogo) and Sidebar render it; screens do not place it by hand.
@@ -57,10 +53,11 @@ The component's own tokens live in [`Logo.tokens.json`](./Logo.tokens.json). Pri
 More examples in [`Logo.examples.md`](./Logo.examples.md).
 
 ## 13. Anti-patterns
-- Recoloring the mark.
+- Recoloring, cropping, vectorizing or redrawing the image.
 - Stretching it: change `size` instead.
 
 ## 14. Version, status and changelog
 - Version: `1.1.0`
 - Status: `stable`
 - 2026-10-09 · 1.1.0 · First version, added for the Coach and Surfer redesign screens.
+- 2026-10-09 · 1.1.0 · The mark is the brand PNG, unaltered, instead of a hand-drawn SVG. Sizes follow the Figma component (40 / 56 / 96 px) and `hasWordmark` is deprecated.
